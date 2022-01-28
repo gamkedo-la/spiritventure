@@ -23,10 +23,10 @@ function loadImageForTileCode(tileCode, fileName) {
 function loadImages() {
 
   var imageList = [
-    {varName:playerPic, theFile:"warrior.png"},
+    {varName:playerPic, theFile:"soul.png"},
     
     {tileType:TILE_GROUND, theFile:"world_ground.png"},
-    {tileType:TILE_WALL, theFile:"world_wall.png"},
+    {tileType:TILE_WALL, theFile:"spotwall.png"},
     {tileType:TILE_GOAL, theFile:"world_goal.png"},
     {tileType:TILE_KEY, theFile:"world_key.png"},
     {tileType:TILE_DOOR, theFile:"world_door.png"}

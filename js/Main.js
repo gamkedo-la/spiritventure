@@ -2,12 +2,15 @@
 var canvas, canvasContext;
 
 var p1 = new warriorClass();
+var music = new Audio ("play.wav");
+music.loop = true;
 
 window.onload = function() {
   canvas = document.getElementById('gameCanvas');
   canvasContext = canvas.getContext('2d');
   
   loadImages();
+  
 }
 
 function loadingDoneSoStartGame() {
@@ -20,6 +23,7 @@ function loadingDoneSoStartGame() {
   
   p1.init(playerPic, "Blue");
   initInput();  
+  music.play();
 }
 
 function moveEverything() {

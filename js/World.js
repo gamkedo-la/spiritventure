@@ -19,9 +19,6 @@ var roomGrid =
 const TILE_W = 50;
 const TILE_H = 50;
 
-const HALF_TILE_W = TILE_W * 0.5;
-const HALF_TILE_H = TILE_H * 0.5;
-
 const TILE_GROUND = 0;
 const TILE_WALL = 1;
 const TILE_PLAYER = 2;

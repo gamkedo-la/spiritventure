@@ -1,5 +1,5 @@
 // tuning constants
-const PLAYER_MOVE_SPEED = 4.0;
+const PLAYER_MOVE_SPEED = 3.0;
 
 function warriorClass() {
   // variables to keep track of position
@@ -49,27 +49,21 @@ function warriorClass() {
   this.move = function() {
     var nextX = this.x;
     var nextY = this.y;
-    var moveBorderX = nextX;
-    var moveBorderY = nextY;
 
     if(this.keyHeld_North) {
       nextY -= PLAYER_MOVE_SPEED;
-      moveBorderY = nextY - HALF_TILE_H;
     }
     if(this.keyHeld_East) {
       nextX += PLAYER_MOVE_SPEED;
-      moveBorderX = nextX + HALF_TILE_W;
     }
     if(this.keyHeld_South) {
       nextY += PLAYER_MOVE_SPEED;
-      moveBorderY = nextY + HALF_TILE_H;
     }
     if(this.keyHeld_West) {
       nextX -= PLAYER_MOVE_SPEED;
-      moveBorderX = nextX - HALF_TILE_W;
     }
-    
-    var walkIntoTileIndex = getTileIndexAtPixelCoord(moveBorderX,moveBorderY);
+        
+    var walkIntoTileIndex = getTileIndexAtPixelCoord(nextX,nextY);
     var walkIntoTileType = TILE_WALL;
     
     if( walkIntoTileIndex != undefined) {
