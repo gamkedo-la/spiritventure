@@ -45,11 +45,11 @@ function beginLoadingImage(imgVar, fileName) {
 function loadImages() {
 	imageList = [
 	   //PORTRAITS
-	    {imgName: despond, theFile: "john.png", speaker:Speaker.Despond},
-	    {imgName: incense, theFile: "john2.png", speaker:Speaker.Incense},
-	    {imgName: tripath, theFile: "rose.png", speaker:Speaker.Tripath},
-		{imgName: gemini, theFile: "rose2.png", speaker:Speaker.Gemini},
-		{imgName: soul, theFile: "julie1.png", speaker:Speaker.Soul}, 
+	    {imgName: despond, theFile: "soul.png", speaker:Speaker.Despond},
+	    {imgName: incense, theFile: "spotwall.png", speaker:Speaker.Incense},
+	    {imgName: tripath, theFile: "warrior.png", speaker:Speaker.Tripath},
+		{imgName: gemini, theFile: "world_door.png", speaker:Speaker.Gemini},
+		{imgName: soul, theFile: "world_key", speaker:Speaker.Soul}, 
 		
 	];
 
