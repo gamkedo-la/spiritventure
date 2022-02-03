@@ -38,7 +38,7 @@ function DialogImage(frame, image, speaker) {
 		this.frame.x += deltaX;
 		this.frame.y += deltaY;
 	};
-	
+	/*
 	this.draw = function() {
 		//Draw the image
 		canvasContext.drawImage(this.image, this.frame.x, this.frame.y, this.frame.width, this.frame.height);
@@ -52,7 +52,7 @@ function DialogImage(frame, image, speaker) {
 
 		strokeRectangle(canvasContext, x, y, this.frame.width, this.frame.height, COLORS.line, borderThickness);	
 	};
-	
+	*/
 	this.setFocus = function(x, y) {
 		this.inFocus = true;
 	};
