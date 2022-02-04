@@ -45,14 +45,15 @@ const LineWidth = {
 };
 //List all characters who participate in dialog here
 const Speaker = {
+	Soul:'Soul',
 	Despond:'Despond',
 	Incense:'Incense',
 	Tripath:'Tripath',
 	Gemini:'Gemini',
-	Soul:'Soul',
+	
 };
-//DespondColor is special, don't need to call out other colors separately
-const DespondColor = {
+//SoulColor is special, don't need to call out other colors separately
+const SoulColor = {
 	Fill:'lightBlue',
 	Line:'darkBlue'
 };
@@ -60,9 +61,13 @@ const DespondColor = {
 function colorsForSpeaker(speaker) {
 	let colors = {bkgd:'darkGray', line:'white'};
 	switch(speaker) {
+		case Speaker.Soul:
+			colors.bkgd = SoulColor.Fill;
+			colors.line = SoulColor.Line;
+		break;
 		case Speaker.Despond:
-			colors.bkgd = DespondColor.Fill;
-			colors.line = DespondColor.Line;
+			colors.bkgd = 'pink';
+			colors.line = 'red';
 		break;
 		case Speaker.Incense:
 			colors.bkgd = 'pink';
