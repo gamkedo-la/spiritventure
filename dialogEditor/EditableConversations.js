@@ -27,7 +27,7 @@ let ATestDialog = [
         choices: null,
 
         position: {x: 472.5, y: 133}
-    },
+    },/*
     {
         scene: "neutral",
         who: "incense",
@@ -384,7 +384,7 @@ let ATestDialog = [
         choices: null,
 
         position: {x: 1373.5, y: 3155}
-    }
+    }*/
 ];
 
 //CONVERSATIONS.push(ATestDialog);
