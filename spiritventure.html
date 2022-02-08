@@ -3,12 +3,27 @@
 <head>
 <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
 <meta content="utf-8" http-equiv="encoding">
+<style>
+    body { margin:0; padding:0; background:black; width:100%; height:100%;}
+    p { position:absolute; bottom:0px; margin:8px; padding:8px; background:#555555; }
+    canvas {
+        position:absolute;
+        top:0px;
+        left:0px;
+        width:100%;
+        max-height:100%;
+        image-rendering: -moz-crisp-edges;
+        image-rendering: -webkit-crisp-edges;
+        image-rendering: pixelated;
+        image-rendering: crisp-edges;
+    }
+</style>
 </head>
 <body>
 <canvas id="gameCanvas" width="800" height="600"></canvas>
 
 
-<p id="debugText">(recent text display or temporary debug output)</p>
+<p id="debugText">Debug Text</p>
 
 <script src="js/GraphicsCommon.js"></script>
 <script src="js/Sound.js"></script>
