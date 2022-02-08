@@ -38,3 +38,7 @@ function keyPressed(evt) {
 function keyReleased(evt) {
   setKeyHoldState(evt.keyCode, p1, false);
 }
+
+function mouseupHandler() {
+  backgroundMusic.startOrStopMusic();
+}

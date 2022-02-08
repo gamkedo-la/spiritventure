@@ -4,6 +4,7 @@ var canvas, canvasContext;
 var p1 = new warriorClass();
 var music = new Audio ("play.wav");
 music.loop = true;
+var backgroundMusic = new BackgroundMusicClass();
 
 window.onload = function() {
   canvas = document.getElementById('gameCanvas');
@@ -23,7 +24,9 @@ function loadingDoneSoStartGame() {
   
   p1.init(playerPic, "Blue");
   initInput();  
+
   music.play();
+  backgroundMusic.loopSong("../sound/play");
 }
 
 function moveEverything() {
