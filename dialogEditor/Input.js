@@ -115,11 +115,13 @@ function calculateMousePos(evt) {
     const oldY = mouseY;
     mouseX = evt.clientX - rect.left;
     mouseY = evt.clientY - rect.top;
-    if(mouseButtonHeld) {
-	    dialogEditor.updateDrag(mouseX - oldX, mouseY - oldY);
-    } else {
-		dialogEditor.updateHover(mouseX, mouseY);
-    }
+	if(dialogEditor){
+		if(mouseButtonHeld) {
+			dialogEditor.updateDrag(mouseX - oldX, mouseY - oldY);
+		} else {
+			dialogEditor.updateHover(mouseX, mouseY);
+		}
+	}
 }
 
 function onMouseDown(evt) {
