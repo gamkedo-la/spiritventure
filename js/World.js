@@ -53,7 +53,9 @@ function getTileIndexAtPixelCoord(pixelX,pixelY) {
 function tileTypeHasTransparency(checkTileType) {
   return (checkTileType == TILE_GOAL ||
           checkTileType == TILE_KEY ||
-          checkTileType == TILE_DOOR);
+          checkTileType == TILE_DOOR ||
+          checkTileType == TILE_MIND
+          );
 }
 
 function drawRoom() {
