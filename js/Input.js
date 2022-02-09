@@ -7,6 +7,7 @@ const KEY_LETTER_W = 87;
 const KEY_LETTER_A = 65;
 const KEY_LETTER_S = 83;
 const KEY_LETTER_D = 68;
+const KEY_SPACE = 32;
 
 function initInput() {
   document.addEventListener("keydown", keyPressed);
@@ -36,8 +37,14 @@ function keyPressed(evt) {
 }
 
 function keyReleased(evt) {
+  switch(evt.keyCode){
+    case KEY_SPACE:
+      advanceDialog();
+      break;
+  }
   setKeyHoldState(evt.keyCode, p1, false);
 }
+
 
 function mouseupHandler() {
   backgroundMusic.startOrStopMusic();

@@ -94,7 +94,7 @@ function warriorClass() {
         roomGrid[walkIntoTileIndex] = TILE_GROUND; // remove key
         break;
       case TILE_MIND:
-        document.getElementById("debugText").innerHTML = trying[0].text;
+        document.getElementById("debugText").innerHTML = convo[dialogConvoStep].text;
         break;
       case TILE_WALL:
       default:
