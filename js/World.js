@@ -8,7 +8,7 @@ var roomGrid =
   1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
   1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
   1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
-  1, 0, 4, 0, 4, 0, 4, 0, 1, 0, 0, 0, 0, 0, 0, 1,
+  1, 0, 4, 0, 4, 0, 4, 0, 6, 0, 0, 0, 0, 0, 0, 1,
   5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5,
   1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
   1, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 1,
@@ -25,6 +25,7 @@ const TILE_PLAYER = 2;
 const TILE_GOAL = 3;
 const TILE_KEY = 4;
 const TILE_DOOR = 5;
+const TILE_MIND = 6;
 
 function roomTileToIndex(tileCol, tileRow) {
   return (tileCol + ROOM_COLS*tileRow);
