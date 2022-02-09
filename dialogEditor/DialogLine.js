@@ -778,7 +778,7 @@ function DialogLine(position) {
 		}
 		
 		saveString += ",\n        ";
-		
+		/* //MAY NEED TO CHANGE HOW WE LOAD SAVE DATA TO IGNORE THESE
 		saveString += "leftPic: ";
 		if(this.leftImageDropDown.childToDraw != null) {
 			const imageName = this.imageNameStringForImage(this.leftImageDropDown.childToDraw.image);
@@ -826,7 +826,7 @@ function DialogLine(position) {
 		}
 		
 		saveString += ",\n\n        ";
-
+		*/
 		saveString += "choices: ";
 		if(choices.length > 1) {
 			saveString += "[[\"";

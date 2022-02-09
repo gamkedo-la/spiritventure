@@ -93,6 +93,9 @@ function warriorClass() {
 
         roomGrid[walkIntoTileIndex] = TILE_GROUND; // remove key
         break;
+      case TILE_MIND:
+        document.getElementById("debugText").innerHTML = trying[0].text;
+        break;
       case TILE_WALL:
       default:
         // any other tile type number was found... do nothing, for now
