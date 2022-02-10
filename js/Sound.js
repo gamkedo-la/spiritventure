@@ -5,7 +5,7 @@ function setFormat() {
   if (audio.canPlayType("audio/mp3")) {
       audioFormat = ".mp3";
   } else {
-      audioFormat = ".ogg";
+    audioFormat = ".ogg";
   }
 }
 

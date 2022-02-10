@@ -4,7 +4,7 @@ var canvas, canvasContext;
 var camX = 0
 var camY = 0
 var p1 = new warriorClass();
-var music = new Audio ("play.wav");
+var music = new Audio ("Lurking Sadness.mp3"); //"play.mp3");
 music.loop = true;
 var backgroundMusic = new BackgroundMusicClass();
 
@@ -27,7 +27,7 @@ function loadingDoneSoStartGame() {
   initInput();  
 
   music.play();
-  backgroundMusic.loopSong("../sound/play");
+  backgroundMusic.loopSong("../sound/Lurking Sadness") //"../sound/play");
 }
 
 function moveEverything() {
