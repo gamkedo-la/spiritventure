@@ -104,7 +104,8 @@ function warriorClass() {
         roomGrid[walkIntoTileIndex] = TILE_GROUND; // remove key
         break;
       case TILE_MIND:
-        document.getElementById("debugText").innerHTML = convo[dialogConvoStep].text;
+        var pos = getPixelCoordAtTileIndex(walkIntoTileIndex);
+        setupDialog(testConvo, pos[0] - (dialogW/2) + (TILE_W/2), pos[1] - dialogH - (TILE_H*2.4));
         break;
       case TILE_WALL:
       default:

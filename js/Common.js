@@ -11,6 +11,14 @@ function keyToNumber(key) {
   return -1;
 }
 
+var gameStartTimer = 0;
+function getDelta() {
+    let timeNow = (new Date()).getTime();
+    let elapsed = timeNow - gameStartTimer;
+    gameStartTimer = timeNow;
+    return elapsed;
+}
+
 function save(data) {
   var a = document.body.appendChild(document.createElement("a"));
   a.download = "tilemap.txt";

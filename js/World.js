@@ -5,6 +5,7 @@ const ROOM_ROWS = 12;
 // --> TILEMAP EDITOR
 // Press TAB to toggle the Tilemap Editor (indicated by debug text and hovered purple tile)
 // Hover over any tile and press any tile NUMBER to edit/change the tile type
+// OR you can also use mouse WHEEL for changing tile type
 // Press BACKSPACE to save/download the edited tilemap and paste it here overriding the current roomGrid array
 // Player is NOT added so, you have to add the player tile yourself (add 2 in any array index)
 
@@ -45,6 +46,27 @@ function roomTileToIndex(tileCol, tileRow) {
   return (tileCol + ROOM_COLS*tileRow);
 }
 
+function tilemapEditorWheel(e) {
+  if(tilemapEditor && editorTileIndex >= 0) {
+    roomGrid[editorTileIndex] += e.deltaY > 0 ? 1 : e.deltaY < 0 ? -1 : 0;
+    if(roomGrid[editorTileIndex] < 0) roomGrid[editorTileIndex] = TOTAL_TILES - 1
+    else if(roomGrid[editorTileIndex] >= TOTAL_TILES) roomGrid[editorTileIndex] = 0
+    else if(roomGrid[editorTileIndex] == TILE_PLAYER) roomGrid[editorTileIndex] += e.deltaY > 0 ? 1 : e.deltaY < 0 ? -1 : 0;
+  }
+}
+
+function tilemapEditorKeyInput(key) {
+  if(tilemapEditor) {
+    if(editorTileIndex >= 0) {
+      var no = keyToNumber(key);
+      if(no > -1 && no != TILE_PLAYER && no < TOTAL_TILES) roomGrid[editorTileIndex] = no;
+    }
+    if(key == KEY_BACKSPACE) {
+      save(roomGrid);
+    }
+  }
+}
+
 function getTileIndexAtPixelCoord(pixelX,pixelY) {
   var tileCol = pixelX / TILE_W;
   var tileRow = pixelY / TILE_H;
@@ -62,6 +84,12 @@ function getTileIndexAtPixelCoord(pixelX,pixelY) {
   
   var tileIndex = roomTileToIndex(tileCol, tileRow);
   return tileIndex;
+}
+
+function getPixelCoordAtTileIndex(index) {
+  var x = index % ROOM_COLS;
+  var y = index / ROOM_ROWS;
+  return [ x = x * TILE_W, y = y * TILE_H ];
 }
 
 function tileTypeHasTransparency(checkTileType) {

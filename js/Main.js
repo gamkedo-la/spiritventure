@@ -7,10 +7,12 @@ var p1 = new warriorClass();
 var music = new Audio ("Lurking Sadness.mp3"); //"play.mp3");
 music.loop = true;
 var backgroundMusic = new BackgroundMusicClass();
+var deltaTime = 0;
 
 window.onload = function() {
   canvas = document.getElementById('gameCanvas');
   canvasContext = canvas.getContext('2d');
+  canvasContext.font = dialogFontSize.toString() + "px Georgia";
   
   loadImages();
 }
@@ -19,7 +21,7 @@ function loadingDoneSoStartGame() {
   // these next few lines set up our game logic and render to happen 30 times per second
   var framesPerSecond = 30;
   setInterval(function() {
-      moveEverything();
+      updateEverything();
       drawEverything();
     }, 1000/framesPerSecond);
   
@@ -30,19 +32,27 @@ function loadingDoneSoStartGame() {
   backgroundMusic.loopSong("../sound/Lurking Sadness") //"../sound/play");
 }
 
-function moveEverything() {
-  p1.move();
+function updateEverything() {
+  deltaTime = getDelta();
 
   //Camera Lerping
   camX = lerp(camX, canvas.width/2 - p1.x, 0.1);
   camY = lerp(camY, canvas.height/2 - p1.y, 0.1);
+
+  processDialog();
+
+  //No movement during dialogues
+  if(dialogActiveConvo != null) return;
+
+  p1.move();
 }
 
 function drawEverything() {
+  //Drawing black background to avoid visual glitches
   canvasContext.fillStyle = "#000000FF";
   canvasContext.fillRect(0, 0, canvas.width, canvas.height);
 
   drawRoom();
-  
   p1.draw();
+  drawDialog();
 }

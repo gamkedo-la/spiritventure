@@ -18,6 +18,7 @@ var mouseY = 0;
 
 function initInput() {
   document.addEventListener("mousemove", mouseMove);
+  document.addEventListener("wheel", tilemapEditorWheel);
   document.addEventListener("keydown", keyPressed);
   document.addEventListener("keyup", keyReleased);
   
@@ -45,15 +46,6 @@ function setKeyHoldState(thisKey, thisPlayer, setTo) {
   if(thisKey == thisPlayer.controlKeyForSprint) {
     thisPlayer.keyHeld_Sprint = setTo;
   }
-
-  if(tilemapEditor && editorTileIndex >= 0) {
-    var no = keyToNumber(thisKey);
-    if(no > -1 && no != TILE_PLAYER && no < TOTAL_TILES) roomGrid[editorTileIndex] = no;
-  }
-
-  if(thisKey == KEY_BACKSPACE) {
-    save(roomGrid);
-  }
 }
 
 function mouseMove(evt) {
@@ -64,6 +56,8 @@ function mouseMove(evt) {
 
 function keyPressed(evt) {
   setKeyHoldState(evt.keyCode, p1, true);
+  tilemapEditorKeyInput(evt.keyCode);
+  selectDialogChoice(evt.keyCode);
   evt.preventDefault(); // without this, arrow keys scroll the browser!
 }
 
