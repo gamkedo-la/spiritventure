@@ -71,9 +71,9 @@ function drawRoom() {
 
       var tileTypeHere = roomGrid[ tileIndex ]; // getting the tile code for this index
       if( tileTypeHasTransparency(tileTypeHere) ) {
-        canvasContext.drawImage(tilePics[TILE_GROUND], tileLeftEdgeX, tileTopEdgeY);
+        canvasContext.drawImage(tilePics[TILE_GROUND], tileLeftEdgeX + camX, tileTopEdgeY + camY);
       }
-      canvasContext.drawImage(tilePics[tileTypeHere], tileLeftEdgeX, tileTopEdgeY);
+      canvasContext.drawImage(tilePics[tileTypeHere], tileLeftEdgeX + camX, tileTopEdgeY + camY);
       
       tileIndex++; // increment which index we're going to next check for in the room
       tileLeftEdgeX += TILE_W; // jump horizontal draw position to next tile over by tile width

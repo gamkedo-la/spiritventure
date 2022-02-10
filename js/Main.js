@@ -1,6 +1,8 @@
 // save the canvas for dimensions, and its 2d context for drawing to it
 var canvas, canvasContext;
 
+var camX = 0
+var camY = 0
 var p1 = new warriorClass();
 var music = new Audio ("play.wav");
 music.loop = true;
@@ -11,7 +13,6 @@ window.onload = function() {
   canvasContext = canvas.getContext('2d');
   
   loadImages();
-  
 }
 
 function loadingDoneSoStartGame() {
@@ -31,9 +32,16 @@ function loadingDoneSoStartGame() {
 
 function moveEverything() {
   p1.move();
+
+  //Camera Lerping
+  camX = lerp(camX, canvas.width/2 - p1.x, 0.1);
+  camY = lerp(camY, canvas.height/2 - p1.y, 0.1);
 }
 
 function drawEverything() {
+  canvasContext.fillColor = "#000000FF";
+  canvasContext.fillRect(0, 0, canvas.width, canvas.height);
+
   drawRoom();
   
   p1.draw();

@@ -111,7 +111,7 @@ function warriorClass() {
   }
   
   this.draw = function() {
-    drawBitmapCenteredAtLocationWithRotation( this.myBitmap, this.x, this.y, 0.0 );
+    drawBitmapCenteredAtLocationWithRotation( this.myBitmap, this.x + camX, this.y + camY, 0.0 );
   }
 
 } // end of class
