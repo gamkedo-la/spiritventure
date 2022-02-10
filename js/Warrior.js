@@ -38,23 +38,14 @@ function warriorClass() {
   
   this.reset = function() {
     this.keysHeld = 0;
-    if(this.homeX == undefined) {
-      for(var i=0; i<roomGrid.length; i++) {
-        if( roomGrid[i] == TILE_PLAYER) {
-          var tileRow = Math.floor(i/ROOM_COLS);
-          var tileCol = i%ROOM_COLS;
-          this.homeX = tileCol * TILE_W + 0.5*TILE_W;
-          this.homeY = tileRow * TILE_H + 0.5*TILE_H;
-          roomGrid[i] = TILE_GROUND;
-          break; // found it, so no need to keep searching 
-        } // end of if
-      } // end of for
-    } // end of if position not saved yet
-    
+    rooms[roomIndex][COLS] = startingRoom[0];
+    rooms[roomIndex][ROWS] = startingRoom[1];
+    rooms[roomIndex][GRID] = startingRoom[2];
+    this.homeX = TILE_W * 7.5;
+    this.homeY = TILE_H * 8.5;
     this.x = this.homeX;
     this.y = this.homeY;
-
-  } // end of reset
+  }
   
   this.move = function() {
     var nextX = this.x;
@@ -75,9 +66,41 @@ function warriorClass() {
         
     var walkIntoTileIndex = getTileIndexAtPixelCoord(nextX,nextY);
     var walkIntoTileType = TILE_WALL;
-    
+
+    //No clip (can move through walls) when tilemap editor is ON!
+    if(tilemapEditor) {
+      this.x = nextX;
+      this.y = nextY;
+      return;
+    }
+
     if( walkIntoTileIndex != undefined) {
-      walkIntoTileType = roomGrid[walkIntoTileIndex];
+      walkIntoTileType = rooms[roomIndex][GRID][walkIntoTileIndex];
+    } else {
+      var side = getTileOutOfBoundsSide(nextX,nextY);
+      console.log(side);
+      if(side > -1) {
+        roomIndex = rooms[roomIndex][GRID+side];
+        switch(side) {
+          case 1:
+            this.y = (rooms[roomIndex][ROWS] * TILE_H) - 64;
+            camY = -canvas.height*1.5;
+            break;
+          case 2:
+            this.y = 64;
+            camY = canvas.height*1.5;
+            break;
+          case 3:
+            this.x = (rooms[roomIndex][COLS] * TILE_W) - 64;
+            camX = -canvas.width*1.5;
+            break;
+          case 4:
+            this.x = 64;
+            camX = canvas.width*1.5;
+            break;
+        }
+        return;
+      }
     }
     
     switch( walkIntoTileType ) {
@@ -94,14 +117,14 @@ function warriorClass() {
           this.keysHeld--; // one less key
           document.getElementById("debugText").innerHTML = "Keys: "+this.keysHeld;
 
-          roomGrid[walkIntoTileIndex] = TILE_GROUND; // remove door
+          rooms[roomIndex][GRID][walkIntoTileIndex] = TILE_GROUND; // remove door
         }
         break;
       case TILE_KEY:
         this.keysHeld++; // gain key
         document.getElementById("debugText").innerHTML = "Keys: "+this.keysHeld;
 
-        roomGrid[walkIntoTileIndex] = TILE_GROUND; // remove key
+        rooms[roomIndex][GRID][walkIntoTileIndex] = TILE_GROUND; // remove key
         break;
       case TILE_MIND:
         var pos = getPixelCoordAtTileIndex(walkIntoTileIndex);

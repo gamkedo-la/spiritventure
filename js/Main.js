@@ -26,7 +26,7 @@ function loadingDoneSoStartGame() {
     }, 1000/framesPerSecond);
   
   p1.init(playerPic, "Blue");
-  initInput();  
+  initInput();
 
   music.play();
   backgroundMusic.loopSong("../sound/Lurking Sadness") //"../sound/play");
