@@ -1,5 +1,6 @@
 // tuning constants
 const PLAYER_MOVE_SPEED = 6.0;
+const PLAYER_SPRINT_MULTIPLIER = 1.8;
 
 function warriorClass() {
   // variables to keep track of position
@@ -11,13 +12,15 @@ function warriorClass() {
   this.keyHeld_East = false;
   this.keyHeld_South = false;
   this.keyHeld_West = false;
+  this.keyHeld_Sprint = false;
 
   // key controls used for this
-  this.setupControls = function(northKey,eastKey,southKey,westKey) {
+  this.setupControls = function(northKey,eastKey,southKey,westKey,sprintKey) {
     this.controlKeyForNorth = northKey;
     this.controlKeyForEast = eastKey;
     this.controlKeyForSouth = southKey;
     this.controlKeyForWest = westKey;
+    this.controlKeyForSprint = sprintKey;
   }
 
   this.setupAltControls = function(northKey,eastKey,southKey,westKey) {
@@ -58,16 +61,16 @@ function warriorClass() {
     var nextY = this.y;
 
     if(this.keyHeld_North) {
-      nextY -= PLAYER_MOVE_SPEED;
+      nextY -= PLAYER_MOVE_SPEED * (this.keyHeld_Sprint ? PLAYER_SPRINT_MULTIPLIER : 1.0);
     }
     if(this.keyHeld_East) {
-      nextX += PLAYER_MOVE_SPEED;
+      nextX += PLAYER_MOVE_SPEED * (this.keyHeld_Sprint ? PLAYER_SPRINT_MULTIPLIER : 1.0);;
     }
     if(this.keyHeld_South) {
-      nextY += PLAYER_MOVE_SPEED;
+      nextY += PLAYER_MOVE_SPEED * (this.keyHeld_Sprint ? PLAYER_SPRINT_MULTIPLIER : 1.0);;
     }
     if(this.keyHeld_West) {
-      nextX -= PLAYER_MOVE_SPEED;
+      nextX -= PLAYER_MOVE_SPEED * (this.keyHeld_Sprint ? PLAYER_SPRINT_MULTIPLIER : 1.0);;
     }
         
     var walkIntoTileIndex = getTileIndexAtPixelCoord(nextX,nextY);
