@@ -14,19 +14,24 @@ function initInput() {
   document.addEventListener("keyup", keyReleased);
   
   p1.setupControls(KEY_UP_ARROW,KEY_RIGHT_ARROW,KEY_DOWN_ARROW,KEY_LEFT_ARROW);
+  p1.setupAltControls(KEY_LETTER_W,KEY_LETTER_D,KEY_LETTER_S,KEY_LETTER_A);
 }
 
 function setKeyHoldState(thisKey, thisPlayer, setTo) {
-  if(thisKey == thisPlayer.controlKeyForNorth) {
+  if(thisKey == thisPlayer.controlKeyForNorth
+    || thisKey == thisPlayer.controlAltKeyForNorth) {
     thisPlayer.keyHeld_North = setTo;
   }
-  if(thisKey == thisPlayer.controlKeyForEast) {
+  if(thisKey == thisPlayer.controlKeyForEast
+    || thisKey == thisPlayer.controlAltKeyForEast) {
     thisPlayer.keyHeld_East = setTo;
   }
-  if(thisKey == thisPlayer.controlKeyForSouth) {
+  if(thisKey == thisPlayer.controlKeyForSouth
+    || thisKey == thisPlayer.controlAltKeyForSouth) {
     thisPlayer.keyHeld_South = setTo;
   }
-  if(thisKey == thisPlayer.controlKeyForWest) {
+  if(thisKey == thisPlayer.controlKeyForWest
+    || thisKey == thisPlayer.controlAltKeyForWest) {
     thisPlayer.keyHeld_West = setTo;
   }
 }

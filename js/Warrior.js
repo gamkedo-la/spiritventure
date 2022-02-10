@@ -20,6 +20,13 @@ function warriorClass() {
     this.controlKeyForWest = westKey;
   }
 
+  this.setupAltControls = function(northKey,eastKey,southKey,westKey) {
+    this.controlAltKeyForNorth = northKey;
+    this.controlAltKeyForEast = eastKey;
+    this.controlAltKeyForSouth = southKey;
+    this.controlAltKeyForWest = westKey;
+  }
+
   this.init = function(whichGraphic,whichName) {
     this.myBitmap = whichGraphic;
     this.myName = whichName;
