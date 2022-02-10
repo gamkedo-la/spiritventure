@@ -39,7 +39,7 @@ function moveEverything() {
 }
 
 function drawEverything() {
-  canvasContext.fillColor = "#000000FF";
+  canvasContext.fillStyle = "#000000FF";
   canvasContext.fillRect(0, 0, canvas.width, canvas.height);
 
   drawRoom();

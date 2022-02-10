@@ -13,7 +13,11 @@ const KEY_TAB = 9;
 const KEY_ENTER = 13;
 const KEY_SHIFT = 16;
 
+var mouseX = 0;
+var mouseY = 0;
+
 function initInput() {
+  document.addEventListener("mousemove", mouseMove);
   document.addEventListener("keydown", keyPressed);
   document.addEventListener("keyup", keyReleased);
   
@@ -41,6 +45,21 @@ function setKeyHoldState(thisKey, thisPlayer, setTo) {
   if(thisKey == thisPlayer.controlKeyForSprint) {
     thisPlayer.keyHeld_Sprint = setTo;
   }
+
+  if(tilemapEditor && editorTileIndex >= 0) {
+    var no = keyToNumber(thisKey);
+    if(no > -1 && no != TILE_PLAYER && no < TOTAL_TILES) roomGrid[editorTileIndex] = no;
+  }
+
+  if(thisKey == KEY_BACKSPACE) {
+    save(roomGrid);
+  }
+}
+
+function mouseMove(evt) {
+  var targetRect = evt.target.getBoundingClientRect();
+  mouseX = remap(evt.clientX, 0, window.innerWidth, targetRect.x, canvas.width);
+  mouseY = remap(evt.clientY, 0, window.innerHeight, targetRect.y, canvas.height);
 }
 
 function keyPressed(evt) {
@@ -52,6 +71,10 @@ function keyReleased(evt) {
   switch(evt.keyCode){
     case KEY_SPACE:
       advanceDialog();
+      break;
+    case KEY_TAB:
+      tilemapEditor = !tilemapEditor;
+      document.getElementById("debugText").innerHTML = "Tilemap Editor: " + tilemapEditor;
       break;
   }
   setKeyHoldState(evt.keyCode, p1, false);

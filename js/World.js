@@ -2,8 +2,17 @@
 const ROOM_COLS = 16;
 const ROOM_ROWS = 12;
 
+// --> TILEMAP EDITOR
+// Press TAB to toggle the Tilemap Editor (indicated by debug text and hovered purple tile)
+// Hover over any tile and press any tile NUMBER to edit/change the tile type
+// Press BACKSPACE to save/download the edited tilemap and paste it here overriding the current roomGrid array
+// Player is NOT added so, you have to add the player tile yourself (add 2 in any array index)
+
+var tilemapEditor = false;
+var editorTileIndex = -1;
+
 var roomGrid =
-[ 1, 1, 1, 1, 1, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1,
+/*[ 1, 1, 1, 1, 1, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1,
   1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
   1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
   1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
@@ -14,7 +23,10 @@ var roomGrid =
   1, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 1,
   1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
   1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
-  1, 1, 1, 1, 1, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1];
+  1, 1, 1, 1, 1, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1];*/
+
+  /* new level created via built-in tilemap editor*/
+  [1,1,1,1,1,1,1,1,5,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,1,0,0,0,4,1,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,1,0,4,0,4,0,0,6,0,0,5,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,5,1,1,1,1,1,1,0,0,2,0,1,1,0,1,1,1,1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1,1,0,3,0,0,1,1,1,1,1,1,0,0,0,4,1,1,0,0,0,0,5,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,5,1,1,1,1,1,1,1];
 
 const TILE_W = 50;
 const TILE_H = 50;
@@ -26,6 +38,8 @@ const TILE_GOAL = 3;
 const TILE_KEY = 4;
 const TILE_DOOR = 5;
 const TILE_MIND = 6;
+
+const TOTAL_TILES = 7;
 
 function roomTileToIndex(tileCol, tileRow) {
   return (tileCol + ROOM_COLS*tileRow);
@@ -60,20 +74,29 @@ function tileTypeHasTransparency(checkTileType) {
 
 function drawRoom() {
   var tileIndex = 0;
-  var tileLeftEdgeX = 0;
-  var tileTopEdgeY = 0;
-  
+  var tileLeftEdgeX = camX;
+  var tileTopEdgeY = camY;
+
+  editorTileIndex = -1;
+
   for(var eachRow=0; eachRow<ROOM_ROWS; eachRow++) { // deal with one row at a time
     
-    tileLeftEdgeX = 0; // resetting horizontal draw position for tiles to left edge
+    tileLeftEdgeX = camX; // resetting horizontal draw position for tiles to left edge
     
     for(var eachCol=0; eachCol<ROOM_COLS; eachCol++) { // left to right in each row
 
       var tileTypeHere = roomGrid[ tileIndex ]; // getting the tile code for this index
       if( tileTypeHasTransparency(tileTypeHere) ) {
-        canvasContext.drawImage(tilePics[TILE_GROUND], tileLeftEdgeX + camX, tileTopEdgeY + camY);
+        canvasContext.drawImage(tilePics[TILE_GROUND], tileLeftEdgeX, tileTopEdgeY);
       }
-      canvasContext.drawImage(tilePics[tileTypeHere], tileLeftEdgeX + camX, tileTopEdgeY + camY);
+      canvasContext.drawImage(tilePics[tileTypeHere], tileLeftEdgeX, tileTopEdgeY);
+
+      if(tilemapEditor && mouseX >= tileLeftEdgeX && mouseX < tileLeftEdgeX + TILE_W
+        && mouseY >= tileTopEdgeY && mouseY < tileTopEdgeY + TILE_H) {
+        canvasContext.fillStyle = "#FF00FF88";
+        canvasContext.fillRect(tileLeftEdgeX, tileTopEdgeY, TILE_W, TILE_H);
+        editorTileIndex = tileIndex;
+      }
       
       tileIndex++; // increment which index we're going to next check for in the room
       tileLeftEdgeX += TILE_W; // jump horizontal draw position to next tile over by tile width
