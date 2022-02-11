@@ -173,7 +173,18 @@ let testConvo = [
         voice: null,
         text: "",
         nextPage: null,
-        choices: [["To 'hello hi'", 0], ["To 'How are you'", 1], ["To 'i ok'", 2]],
+        choices: [["To 'hello hi'", 0], ["To 'How are you'", 1], ["Proceed", 5]],
+
+        position: {x: 164.5, y: 895}
+    },
+    {
+        scene: "",
+        who: null,
+        nameCol: null,
+        voice: null,
+        text: "that's the end!",
+        nextPage: null,
+        choices: null,
 
         position: {x: 164.5, y: 895}
     },
