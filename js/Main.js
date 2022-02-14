@@ -8,6 +8,7 @@ var music = new Audio ("Lurking Sadness.mp3"); //"play.mp3");
 music.loop = true;
 var backgroundMusic = new BackgroundMusicClass();
 var deltaTime = 0;
+var debugText;
 
 window.onload = function() {
   canvas = document.getElementById('gameCanvas');
@@ -55,4 +56,11 @@ function drawEverything() {
   drawRoom();
   p1.draw();
   drawDialog();
+
+  if(dialogActiveConvo) {
+    debugText = dialogCurrentText;
+  } else {
+    debugText = 'Debug Text';
+  }
+  document.querySelector('#debugText').innerHTML = debugText;
 }
