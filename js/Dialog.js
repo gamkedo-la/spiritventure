@@ -127,7 +127,7 @@ let testConvo = [
         who: "Despond",
         nameCol: "undefined",
         voice: undefined,
-        text: "hello hi",
+        text: "hello hi, longer writing to test the wordwrap, with lots of letters and words.",
         nextPage: 1,
         choices: null,
 
