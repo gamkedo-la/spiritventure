@@ -121,71 +121,45 @@ function drawDialog() {
             canvasContext.fillText((i+1).toString() + ". " + dialogActiveConvo[dialogConvoStep].choices[i][0], dialogCurrentX + camX + dialogChoiceOffsetX + dialogTextOffset, dialogCurrentY + camY + dialogChoiceOffsetY + dialogFontSize + dialogTextOffset + (dialogChoiceHeight * i), dialogChoiceWidth, dialogChoiceHeight);
 }
 
-let testConvo = [
-    {
-        scene: "neutral",
-        who: "Despond",
-        nameCol: "undefined",
-        voice: undefined,
-        text: "hello hi, longer text to see what happens when text is wider than the box.",
-        nextPage: 1,
-        choices: null,
-
-        position: {x: 396.5, y: 42}
-    },
-    {
-        scene: "",
-        who: "Gemini",
-        nameCol: "undefined",
-        voice: undefined,
-        text: "How are you",
-        nextPage: 2,
-        choices: null,
-
-        position: {x: 198.5, y: 363}
-    },
-    {
-        scene: "",
-        who: "Incense",
-        nameCol: "undefined",
-        voice: undefined,
-        text: "i ok",
-        nextPage: 3,
-        choices: null,
-
-        position: {x: 682.5, y: 525}
-    },
-    {
-        scene: "",
-        who: null,
-        nameCol: null,
-        voice: null,
-        text: "you ok",
-        nextPage: 4,
-        choices: null,
-
-        position: {x: 164.5, y: 695}
-    },
-    {
-        scene: "",
-        who: null,
-        nameCol: null,
-        voice: null,
-        text: "",
-        nextPage: null,
-        choices: [["To 'hello hi'", 0], ["To 'How are you'", 1], ["Proceed", 5]],
-
-        position: {x: 164.5, y: 895}
-    },
-    {
-        scene: "",
-        who: null,
-        nameCol: null,
-        voice: null,
-        text: "that's the end!",
-        nextPage: null,
-        choices: null,
-
-        position: {x: 164.5, y: 895}
-    },
+var wrapText = [
+"Well, it’s certainly not that. I know that you’re important, and this strong sense that you can guide me on what to do next."
 ];
+    
+function lineWrap() { // note: gets calling immediately after definition!
+    const newCut = [];
+    var maxLineChar = 50;
+    var findEnd;
+
+    for(let i = 0; i < wrapText.length; i++) {// dealing with multiple lines
+    const currentLine = wrapText[i];
+    for(let j = 0; j < currentLine.length; j++) {
+        if(j === currentLine.length - 1) {
+        if((i === 0) || (i >= wrapText.length - 2)) {
+            newCut.push(currentLine);
+        } else {
+            newCut.push(currentLine.substring(0, currentLine.length));
+        }
+        }
+    }
+    }
+
+    const newerCut = [];
+    for(var i=0;i<newCut.length;i++) {// combines words up to the length of each line
+    while(newCut[i].length > 0) {
+        findEnd = maxLineChar;
+        if(newCut[i].length > maxLineChar) {
+        for(var ii=findEnd;ii>0;ii--) {
+            if(newCut[i].charAt(ii) == " ") {
+            findEnd=ii;
+            break;
+            }
+        }
+        }
+        newerCut.push(newCut[i].substring(0, findEnd));
+        newCut[i] = newCut[i].substring(findEnd, newCut[i].length);
+    }
+    }
+
+    wrapText = newerCut; // overwrite previous list with newly chopped up list
+}
+lineWrap(); // note: calling immediately as part of init, outside the function
