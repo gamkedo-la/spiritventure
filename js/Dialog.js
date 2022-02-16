@@ -125,27 +125,36 @@ function drawDialog() {
     dialogPanelGrad.addColorStop(0, dialogPanelColor1);
     dialogPanelGrad.addColorStop(1, dialogPanelColor2);
     canvasContext.fillStyle = dialogPanelGrad;
+
     canvasContext.fillRect(dialogCurrentX + camX, dialogCurrentY + camY, dialogCurrentW, dialogCurrentH);
     canvasContext.fillRect(dialogCurrentX + camX - dialogFontSize - dialogTextOffset*2, dialogCurrentY + camY - dialogFontSize - dialogTextOffset*2, dialogCurrentW/3, dialogCurrentH/3);
-    if(dialogActiveConvo[dialogConvoStep].choices != null)
-        for(let i = 0; i < dialogActiveConvo[dialogConvoStep].choices.length; i++)
+    if(dialogActiveConvo[dialogConvoStep].choices != null) {
+        for(let i = 0; i < dialogActiveConvo[dialogConvoStep].choices.length; i++) {
             canvasContext.fillRect(dialogCurrentX + camX + dialogChoiceOffsetX, dialogCurrentY + camY + dialogChoiceOffsetY + (dialogChoiceHeight * i), dialogChoiceWidth, dialogChoiceHeight);
+        }
+    }
 
     canvasContext.strokeStyle = dialogOutlineColor;
     canvasContext.strokeRect(dialogCurrentX + camX, dialogCurrentY + camY, dialogCurrentW, dialogCurrentH);
     canvasContext.strokeRect(dialogCurrentX + camX - dialogFontSize - dialogTextOffset*2, dialogCurrentY + camY - dialogFontSize - dialogTextOffset*2, dialogCurrentW/3, dialogCurrentH/3);
-    if(dialogActiveConvo[dialogConvoStep].choices != null)
-        for(let i = 0; i < dialogActiveConvo[dialogConvoStep].choices.length; i++)
+    if(dialogActiveConvo[dialogConvoStep].choices != null) {
+        for(let i = 0; i < dialogActiveConvo[dialogConvoStep].choices.length; i++) {
             canvasContext.strokeRect(dialogCurrentX + camX + dialogChoiceOffsetX, dialogCurrentY + camY + dialogChoiceOffsetY + (dialogChoiceHeight * i), dialogChoiceWidth, dialogChoiceHeight);
+        }
+    }
 
     canvasContext.fillStyle = dialogTextColor;
     canvasContext.fillText(dialogActiveConvo[dialogConvoStep].who, dialogCurrentX + camX - dialogFontSize - dialogTextOffset, dialogCurrentY + camY + dialogFontSize - dialogFontSize - dialogTextOffset);
-    for(var i = 0; i<dialogCurrentText.length; i++){
+    for(var i = 0; i<dialogCurrentText.length; i++) {
         canvasContext.fillText(dialogCurrentText[i], dialogCurrentX + camX + dialogTextOffset, dialogCurrentY + camY + dialogFontSize * (i+1) + dialogTextOffset);
     }
-    if(dialogActiveConvo[dialogConvoStep].choices != null)
-        for(let i = 0; i < dialogActiveConvo[dialogConvoStep].choices.length; i++)
+    
+    if(dialogActiveConvo[dialogConvoStep].choices != null) {
+        for(let i = 0; i < dialogActiveConvo[dialogConvoStep].choices.length; i++) {
             canvasContext.fillText((i+1).toString() + ". " + dialogActiveConvo[dialogConvoStep].choices[i][0], dialogCurrentX + camX + dialogChoiceOffsetX + dialogTextOffset, dialogCurrentY + camY + dialogChoiceOffsetY + dialogFontSize + dialogTextOffset + (dialogChoiceHeight * i), dialogChoiceWidth, dialogChoiceHeight);
+        }
+    }
+
 }
 
 var wrapText = [
