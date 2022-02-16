@@ -22,14 +22,14 @@ var dialogCurrentX = 0;
 var dialogCurrentY = 0;
 var dialogCurrentW = 0;
 var dialogCurrentH = 0;
-var dialogCurrentText = "";
+var dialogCurrentText = ["","","",""];
 var dialogCurrentTextIndex = 0;
 var dialogTextCharTimer = 0;
 
 function advanceDialog() {
     if(dialogActiveConvo != null && dialogActiveConvo[dialogConvoStep].choices == null) {
         if(dialogCurrentText.length < dialogActiveConvo[dialogConvoStep].text.length) {
-            dialogCurrentText = dialogActiveConvo[dialogConvoStep].text;
+            wrapNextText(dialogActiveConvo[dialogConvoStep].text);
         }
         else
         {
@@ -51,11 +51,21 @@ function selectDialogChoice(key) {
         resetDialogText();
     }
 }
-
+function wrapNextText(textToWrap){
+    wrapText = ["" + textToWrap];
+    lineWrap();
+    //dialogCurrentText = wrapText;
+    dialogCurrentText = [];
+    for(var i = 0; i<wrapText.length;i++){
+        dialogCurrentText.push("");
+    }
+}
 function resetDialogText() {
-    dialogCurrentText = "";
+    dialogCurrentText = [""];
     dialogCurrentTextIndex = 0;
     dialogTextCharTimer = 0;
+    currentPrintLine = 0;
+    
 }
 
 function setupDialog(convoObj, posX, posY) {
@@ -68,8 +78,9 @@ function setupDialog(convoObj, posX, posY) {
     dialogCurrentY = posY + dialogH/2;
     dialogCurrentW = dialogCurrentH = 0;
     resetDialogText();
+    wrapNextText(dialogActiveConvo[dialogConvoStep].text);
 }
-
+var currentPrintLine = 0;
 function processDialog() {
     if(dialogActiveConvo == null) return;
 
@@ -78,13 +89,19 @@ function processDialog() {
     dialogCurrentW = lerp(dialogCurrentW, dialogW, dialogLerpSpeed);
     dialogCurrentH = lerp(dialogCurrentH, dialogH, dialogLerpSpeed);
 
+    var lineToPrint = wrapText[currentPrintLine];// dialogActiveConvo[dialogConvoStep].text;
+
     if(dialogTextCharTimer <= 0 && dialogCurrentW > dialogW / 1.25)
     {
-        if(dialogCurrentText.length < dialogActiveConvo[dialogConvoStep].text.length)
+        if(dialogCurrentText[currentPrintLine].length < lineToPrint.length)
         {
-            dialogCurrentText += dialogActiveConvo[dialogConvoStep].text[dialogCurrentTextIndex];
+            dialogCurrentText[currentPrintLine] += lineToPrint[dialogCurrentTextIndex];
             dialogCurrentTextIndex++;
             dialogTextCharTimer = dialogTextCharDelay;
+        }
+        else if(currentPrintLine<wrapText.length-1){
+            currentPrintLine++;
+            dialogCurrentTextIndex = 0;
         }
     }
     else
@@ -115,7 +132,9 @@ function drawDialog() {
 
     canvasContext.fillStyle = dialogTextColor;
     canvasContext.fillText(dialogActiveConvo[dialogConvoStep].who, dialogCurrentX + camX - dialogFontSize - dialogTextOffset, dialogCurrentY + camY + dialogFontSize - dialogFontSize - dialogTextOffset);
-    canvasContext.fillText(dialogCurrentText, dialogCurrentX + camX + dialogTextOffset, dialogCurrentY + camY + dialogFontSize + dialogTextOffset);
+    for(var i = 0; i<dialogCurrentText.length; i++){
+        canvasContext.fillText(dialogCurrentText[i], dialogCurrentX + camX + dialogTextOffset, dialogCurrentY + camY + dialogFontSize * (i+1) + dialogTextOffset);
+    }
     if(dialogActiveConvo[dialogConvoStep].choices != null)
         for(let i = 0; i < dialogActiveConvo[dialogConvoStep].choices.length; i++)
             canvasContext.fillText((i+1).toString() + ". " + dialogActiveConvo[dialogConvoStep].choices[i][0], dialogCurrentX + camX + dialogChoiceOffsetX + dialogTextOffset, dialogCurrentY + camY + dialogChoiceOffsetY + dialogFontSize + dialogTextOffset + (dialogChoiceHeight * i), dialogChoiceWidth, dialogChoiceHeight);
@@ -127,7 +146,7 @@ var wrapText = [
     
 function lineWrap() { // note: gets calling immediately after definition!
     const newCut = [];
-    var maxLineChar = 50;
+    var maxLineChar = 27; // Currently based on letter count
     var findEnd;
 
     for(let i = 0; i < wrapText.length; i++) {// dealing with multiple lines
@@ -162,4 +181,3 @@ function lineWrap() { // note: gets calling immediately after definition!
 
     wrapText = newerCut; // overwrite previous list with newly chopped up list
 }
-lineWrap(); // note: calling immediately as part of init, outside the function
