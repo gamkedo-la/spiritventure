@@ -122,7 +122,7 @@ function drawDialog() {
 }
 
 var wrapText = [
-"Well, it’s certainly not that. I know that you’re important, and this strong sense that you can guide me on what to do next."
+"Replace text with text you want to wrap"
 ];
     
 function lineWrap() { // note: gets calling immediately after definition!

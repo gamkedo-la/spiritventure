@@ -57,10 +57,10 @@ function drawEverything() {
   p1.draw();
   drawDialog();
 
-  if(dialogActiveConvo) {
+  /*if(dialogActiveConvo) {
     debugText = dialogCurrentText;
   } else {
     debugText = 'Debug Text';
-  }
+  }*/
   document.querySelector('#debugText').innerHTML = debugText;
 }

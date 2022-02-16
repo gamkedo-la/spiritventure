@@ -4,7 +4,7 @@ let testConvo = [
         who: "Despond",
         nameCol: "undefined",
         voice: undefined,
-        text: "hello hi, longer text to see what happens when text is wider than the box.",
+        text: "Well, it's certainly not that. I know that you're important, and this strong sense that you can guide me on what to do next.",
         nextPage: 1,
         choices: null,
 
