@@ -150,9 +150,14 @@ function drawDialog() {
     }
     
     if(dialogActiveConvo[dialogConvoStep].choices != null) {
+        //console.log(dialogActiveConvo[dialogConvoStep].choices.length+" AVAILABLE CHOICES AT DIALOG STEP "+dialogConvoStep);
         for(let i = 0; i < dialogActiveConvo[dialogConvoStep].choices.length; i++) {
-            canvasContext.fillText((i+1).toString() + ". " + dialogActiveConvo[dialogConvoStep].choices[i][0], dialogCurrentX + camX + dialogChoiceOffsetX + dialogTextOffset, dialogCurrentY + camY + dialogChoiceOffsetY + dialogFontSize + dialogTextOffset + (dialogChoiceHeight * i), dialogChoiceWidth, dialogChoiceHeight);
+            let choiceString = (i+1).toString() + ". " + dialogActiveConvo[dialogConvoStep].choices[i][0];
+            //console.log("CHOICE: "+choiceString);
+            canvasContext.fillText(choiceString, dialogCurrentX + camX + dialogChoiceOffsetX + dialogTextOffset, dialogCurrentY + camY + dialogChoiceOffsetY + dialogFontSize + dialogTextOffset + (dialogChoiceHeight * i), dialogChoiceWidth, dialogChoiceHeight);
         }
+    } else {
+        //console.log("NO CHOICES AT DIALOG STEP "+dialogConvoStep);
     }
 
 }

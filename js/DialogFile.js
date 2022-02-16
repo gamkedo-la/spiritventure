@@ -4,10 +4,19 @@ let testConvo = [
         who: "Despond",
         nameCol: "undefined",
         voice: undefined,
+        text: "This is a test dialog with three choices!",
+        nextPage: 1,
+        choices: [["Pardon?", 0], ["Awesome!", 1], ["Later.", 2]],
+        position: {x: 396.5, y: 42}
+    },
+    {
+        scene: "neutral",
+        who: "Despond",
+        nameCol: "undefined",
+        voice: undefined,
         text: "Well, it's certainly not that. I know that you're important, and this strong sense that you can guide me on what to do next.",
         nextPage: 1,
         choices: null,
-
         position: {x: 396.5, y: 42}
     },
     {
@@ -15,7 +24,7 @@ let testConvo = [
         who: "Gemini",
         nameCol: "undefined",
         voice: undefined,
-        text: "How are you",
+        text: "See you!",
         nextPage: 2,
         choices: null,
 
