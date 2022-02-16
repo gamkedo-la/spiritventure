@@ -28,8 +28,13 @@ var dialogTextCharTimer = 0;
 
 function advanceDialog() {
     if(dialogActiveConvo != null && dialogActiveConvo[dialogConvoStep].choices == null) {
-        if(dialogCurrentText.length < dialogActiveConvo[dialogConvoStep].text.length) {
+        var doneTyping = true;//dialogCurrentText.length < dialogActiveConvo[dialogConvoStep].text.length
+        //to do: now that text wraps we need a better way to tell that it's done typing
+        //hint: previously it checked if the line was done was being typed but we also need to know that we've done all lines
+        if(doneTyping ==false) {
+            
             wrapNextText(dialogActiveConvo[dialogConvoStep].text);
+            
         }
         else
         {
@@ -39,6 +44,7 @@ function advanceDialog() {
                 dialogConvoStep = 0;
                 dialogActiveConvo = null;
             }
+            wrapNextText(dialogActiveConvo[dialogConvoStep].text);
         }
     }
 }
@@ -49,6 +55,8 @@ function selectDialogChoice(key) {
     if(option != -1 && option <= dialogActiveConvo[dialogConvoStep].choices.length) {
         dialogConvoStep = dialogActiveConvo[dialogConvoStep].choices[option - 1][1];
         resetDialogText();
+        wrapNextText(dialogActiveConvo[dialogConvoStep].text);
+
     }
 }
 function wrapNextText(textToWrap){
