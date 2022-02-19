@@ -20,8 +20,9 @@ const TILE_GOAL = 3;
 const TILE_KEY = 4;
 const TILE_DOOR = 5;
 const TILE_MIND = 6;
+const TILE_VASE = 7;
 
-const TOTAL_TILES = 7;
+const TOTAL_TILES = 8;
 
 function roomTileToIndex(tileCol, tileRow) {
   return (tileCol + rooms[roomIndex][COLS]*tileRow);
@@ -87,7 +88,8 @@ function tileTypeHasTransparency(checkTileType) {
   return (checkTileType == TILE_GOAL ||
           checkTileType == TILE_KEY ||
           checkTileType == TILE_DOOR ||
-          checkTileType == TILE_MIND
+          checkTileType == TILE_MIND ||
+          checkTileType == TILE_VASE
           );
 }
 

@@ -31,7 +31,8 @@ function loadImages() {
     {tileType:TILE_GOAL, theFile:"world_goal.png"},
     {tileType:TILE_KEY, theFile:"world_key.png"},
     {tileType:TILE_DOOR, theFile:"world_door.png"},
-    {tileType:TILE_MIND, theFile:"heart.png"}
+    {tileType:TILE_MIND, theFile:"heart.png"},
+    {tileType:TILE_VASE, theFile:"sad_vase.png"}
     ];
 
   picsToLoad = imageList.length;
