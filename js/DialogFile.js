@@ -15,7 +15,7 @@ let testConvo = [
         nameCol: "undefined",
         voice: undefined,
         text: "Well, it's certainly not that. I know that you're important, and this strong sense that you can guide me on what to do next.",
-        nextPage: 1,
+        nextPage: null,
         choices: null,
         position: {x: 396.5, y: 42}
     },
@@ -25,7 +25,7 @@ let testConvo = [
         nameCol: "undefined",
         voice: undefined,
         text: "See you!",
-        nextPage: 2,
+        nextPage: null,
         choices: null,
 
         position: {x: 198.5, y: 363}

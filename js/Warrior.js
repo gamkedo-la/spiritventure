@@ -128,7 +128,9 @@ function warriorClass() {
         break;
       case TILE_MIND:
         var pos = getPixelCoordAtTileIndex(walkIntoTileIndex);
-        setupDialog(testConvo, pos[0] - (dialogW/2) + (TILE_W/2), pos[1] - dialogH - (TILE_H*2.4));
+        wrapText = [testConvo[0].text];
+        lineWrap();
+        setupDialog(testConvo, pos[0] - (dialogW/2) + (TILE_W/2), pos[1] - (dialogHOffset + (dialogHPerLine * wrapText.length)) - (TILE_H*2.4));
         break;
       case TILE_WALL:
       default:
