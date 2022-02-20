@@ -21,8 +21,10 @@ const TILE_KEY = 4;
 const TILE_DOOR = 5;
 const TILE_MIND = 6;
 const TILE_VASE = 7;
+const TILE_GROUND2 = 8;
+const TILE_GROUND3 = 9;
 
-const TOTAL_TILES = 8;
+const TOTAL_TILES = 10;
 
 function roomTileToIndex(tileCol, tileRow) {
   return (tileCol + rooms[roomIndex][COLS]*tileRow);
