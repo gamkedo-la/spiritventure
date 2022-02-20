@@ -35,6 +35,7 @@ function loadImages() {
     {tileType:TILE_VASE, theFile:"sad_vase.png"},
     {tileType:TILE_GROUND2, theFile:"tile_reflect.png"},
     {tileType:TILE_GROUND3, theFile:"tile_checkered.png"},
+    {tileType:TILE_ROSE, theFile:"tile_rose.png"},
     ];
 
   picsToLoad = imageList.length;
