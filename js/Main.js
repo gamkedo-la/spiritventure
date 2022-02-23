@@ -48,6 +48,8 @@ function updateEverything() {
   p1.move();
 }
 
+
+
 function drawEverything() {
   //Drawing black background to avoid visual glitches
   canvasContext.fillStyle = "#000000FF";
@@ -56,6 +58,7 @@ function drawEverything() {
   drawRoom();
   p1.draw();
   drawDialog();
+  drawAnimatedInventory();
 
   /*if(dialogActiveConvo) {
     debugText = dialogCurrentText;
