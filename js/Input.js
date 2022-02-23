@@ -12,6 +12,7 @@ const KEY_BACKSPACE = 8;
 const KEY_TAB = 9;
 const KEY_ENTER = 13;
 const KEY_SHIFT = 16;
+const KEY_I = 73; // Inventory
 
 var mouseX = 0;
 var mouseY = 0;
@@ -69,6 +70,9 @@ function keyReleased(evt) {
     case KEY_TAB:
       tilemapEditor = !tilemapEditor;
       document.getElementById("debugText").innerHTML = "Tilemap Editor: " + tilemapEditor;
+      break;
+    case KEY_I:
+      showingInventory = !showingInventory; //toggle
       break;
   }
   setKeyHoldState(evt.keyCode, p1, false);

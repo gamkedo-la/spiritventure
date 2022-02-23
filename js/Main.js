@@ -52,8 +52,7 @@ function updateEverything() {
 
 function drawEverything() {
   //Drawing black background to avoid visual glitches
-  canvasContext.fillStyle = "#000000FF";
-  canvasContext.fillRect(0, 0, canvas.width, canvas.height);
+  colorRect(0, 0, canvas.width, canvas.height, "#000000FF");
 
   drawRoom();
   p1.draw();
