@@ -24,8 +24,9 @@ const TILE_VASE = 7;
 const TILE_GROUND2 = 8;
 const TILE_GROUND3 = 9;
 const TILE_ROSE = 10;
+const TILE_DESPOND = 11;
 
-const TOTAL_TILES = 11;
+const TOTAL_TILES = 12;
 
 function roomTileToIndex(tileCol, tileRow) {
   return (tileCol + rooms[roomIndex][COLS]*tileRow);
@@ -92,6 +93,7 @@ function tileTypeHasTransparency(checkTileType) {
           checkTileType == TILE_KEY ||
           checkTileType == TILE_DOOR ||
           checkTileType == TILE_MIND ||
+          checkTileType == TILE_DESPOND ||
           checkTileType == TILE_VASE
           );
 }
