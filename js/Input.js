@@ -12,6 +12,12 @@ const KEY_BACKSPACE = 8;
 const KEY_TAB = 9;
 const KEY_ENTER = 13;
 const KEY_SHIFT = 16;
+const KEY_LETTER_U = 85;
+const KEY_LETTER_H = 72;
+const KEY_LETTER_J = 74;
+const KEY_LETTER_K = 75;
+
+
 const KEY_I = 73; // Inventory
 
 var mouseX = 0;
@@ -74,6 +80,25 @@ function keyReleased(evt) {
     case KEY_I:
       showingInventory = !showingInventory; //toggle
       break;
+    case KEY_LETTER_U:
+      console.log("Decrease Row");
+      rooms[roomIndex][ROWS]--;
+      rooms[roomIndex][GRID].splice(-rooms[roomIndex][COLS],rooms[roomIndex][COLS]);
+      break;
+    case KEY_LETTER_H:
+      console.log("Decrease Column");
+      break;
+    case KEY_LETTER_J:
+      console.log("Increase Row");
+      rooms[roomIndex][ROWS]++;
+      for(var i = 0; i<rooms[roomIndex][COLS];i++){
+        rooms[roomIndex][GRID].push(TILE_GROUND);
+      }
+      break;
+    case KEY_LETTER_K:
+      console.log("Increase Column");
+      break;
+
   }
   setKeyHoldState(evt.keyCode, p1, false);
 }
