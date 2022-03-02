@@ -47,7 +47,7 @@ function tilemapEditorKeyInput(key) {
       if(no > -1 && no < TOTAL_TILES) rooms[roomIndex][GRID][editorTileIndex] = no;
     }
     if(key == KEY_BACKSPACE) {
-      save(rooms[roomIndex][GRID]);
+      save(rooms[roomIndex]);
     }
   }
 }
