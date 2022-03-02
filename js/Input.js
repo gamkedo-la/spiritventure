@@ -87,6 +87,10 @@ function keyReleased(evt) {
       break;
     case KEY_LETTER_H:
       console.log("Decrease Column");
+      rooms[roomIndex][COLS]--;
+      for(var i = 0; i<rooms[roomIndex][ROWS];i++){
+        rooms[roomIndex][GRID].splice((i+1)*rooms[roomIndex][COLS],1);
+      }
       break;
     case KEY_LETTER_J:
       console.log("Increase Row");
@@ -97,8 +101,11 @@ function keyReleased(evt) {
       break;
     case KEY_LETTER_K:
       console.log("Increase Column");
+      rooms[roomIndex][COLS]++;
+      for(var i = 0; i<rooms[roomIndex][ROWS];i++){
+        rooms[roomIndex][GRID].splice((i+1)*rooms[roomIndex][COLS]-1,0,TILE_GROUND);
+      }
       break;
-
   }
   setKeyHoldState(evt.keyCode, p1, false);
 }
