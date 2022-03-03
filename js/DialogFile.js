@@ -27,7 +27,6 @@ let testConvo = [
         text: "See you!",
         nextPage: null,
         choices: null,
-
         position: {x: 198.5, y: 363}
     },
     {
@@ -38,7 +37,6 @@ let testConvo = [
         text: "i ok",
         nextPage: 3,
         choices: null,
-
         position: {x: 682.5, y: 525}
     },
     {
@@ -49,7 +47,6 @@ let testConvo = [
         text: "you ok",
         nextPage: 4,
         choices: null,
-
         position: {x: 164.5, y: 695}
     },
     {
@@ -60,7 +57,6 @@ let testConvo = [
         text: "",
         nextPage: null,
         choices: [["To 'hello hi'", 0], ["To 'How are you'", 1], ["Proceed", 5]],
-
         position: {x: 164.5, y: 895}
     },
     {
@@ -71,7 +67,61 @@ let testConvo = [
         text: "that's the end!",
         nextPage: null,
         choices: null,
-
         position: {x: 164.5, y: 895}
+    },
+];
+
+///////////
+
+let testConvo2 = [
+    {
+        scene: "",
+        who: "Gemini",
+        nameCol: "undefined",
+        voice: undefined,
+        text: "This is test dialog with a different character",
+        nextPage: null,
+        choices: [["Blah blah blah", 1], ["Second option", 2]],
+        position: {x: 129.5, y: 110}
+    },
+    {
+        scene: "",
+        who: "Gemini",
+        nameCol: "undefined",
+        voice: undefined,
+        text: "Bleeeee",
+        nextPage: 3,
+        choices: null,
+        position: {x: 22.5, y: 415}
+    },
+    {
+        scene: "",
+        who: "Gemini",
+        nameCol: "undefined",
+        voice: undefined,
+        text: "Test 2",
+        nextPage: 4,
+        choices: null,
+        position: {x: 447.5, y: 417}
+    },
+    {
+        scene: "",
+        who: "Gemini",
+        nameCol: "undefined",
+        voice: undefined,
+        text: "Blah ",
+        nextPage: 2,
+        choices: null,
+        position: {x: 20.5, y: 694}
+    },
+    {
+        scene: "",
+        who: "Gemini",
+        nameCol: "undefined",
+        voice: undefined,
+        text: "Test 3",
+        nextPage: 5,
+        choices: null,
+        position: {x: 501.5, y: 700}
     },
 ];

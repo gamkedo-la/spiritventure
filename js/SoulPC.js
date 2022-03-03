@@ -135,9 +135,9 @@ function warriorClass() {
       case TILE_DESPOND:
         // TODO: Initiate different dialog
         var pos = getPixelCoordAtTileIndex(walkIntoTileIndex);
-        wrapText = [testConvo[0].text];
+        wrapText = [testConvo2[0].text];
         lineWrap();
-        setupDialog(testConvo, pos[0] - (dialogW/2) + (TILE_W/2), pos[1] - (dialogHOffset + (dialogHPerLine * wrapText.length)) - (TILE_H*2.4));
+        setupDialog(testConvo2, pos[0] - (dialogW/2) + (TILE_W/2), pos[1] - (dialogHOffset + (dialogHPerLine * wrapText.length)) - (TILE_H*2.4));
         break;
       case TILE_WALL:
       default:
