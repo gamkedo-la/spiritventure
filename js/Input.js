@@ -58,7 +58,11 @@ function setKeyHoldState(thisKey, thisPlayer, setTo) {
 function mouseMove(evt) {
   var targetRect = evt.target.getBoundingClientRect();
   mouseX = remap(evt.clientX, 0, window.innerWidth, targetRect.x, canvas.width);
-  mouseY = remap(evt.clientY, 0, window.innerHeight, targetRect.y, canvas.height);
+  // keeping mouseY based on proportional scale
+  var horizontalProportion = window.innerWidth / canvas.width
+  mouseY = evt.clientY / horizontalProportion;
+  // This mouseY remap doesn't track well when there's black space below the canvas!
+  // mouseY = remap(evt.clientY, 0, window.innerHeight, targetRect.y, canvas.height);
 }
 
 function keyPressed(evt) {
