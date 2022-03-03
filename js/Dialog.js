@@ -6,8 +6,8 @@ var dialogY = 0;
 var dialogW = 300;
 var dialogHOffset = 10;
 var dialogHPerLine = 25;
-var dialogPanelColor1 = "rgba(0,0,0,0.9)";
-var dialogPanelColor2 = "rgba(0,0,0,0.7)";
+var dialogPanelColor1 = "rgba(0,0,0,0.8)";
+var dialogPanelColor2 = "rgba(0,0,0,0.6)";
 var dialogOutlineColor = "#000000";
 var dialogTextColor = "#ffffff";
 var dialogFontSize = 24;
@@ -50,6 +50,19 @@ function advanceDialog() {
             }
         }
     }
+}
+
+function setSpeakerNameColor(speakerName) {
+    let nameColor = dialogTextColor;
+    switch (speakerName){
+        case "Despond":
+            nameColor = '#f56262';
+            break
+        default:
+            nameColor = dialogTextColor;
+            break  
+    }
+    return nameColor
 }
 
 function selectDialogChoice(key) {
@@ -162,7 +175,7 @@ function drawDialog() {
     let speakerName = dialogActiveConvo[dialogConvoStep].who;
     let speakerX = dialogCurrentX + camX - dialogFontSize - dialogTextOffset;
     let speakerY = dialogCurrentY + camY + dialogFontSize - dialogFontSize - dialogTextOffset
-    drawSpeakerName(speakerName, speakerX, speakerY, 'pink')
+    drawSpeakerName(speakerName, speakerX, speakerY, setSpeakerNameColor(speakerName))
 
     // typewriter for main dialog
     canvasContext.fillStyle = dialogTextColor;
