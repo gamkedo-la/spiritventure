@@ -9,7 +9,7 @@ var dialogHPerLine = 25;
 var dialogPanelColor1 = "rgba(0,0,0,0.8)";
 var dialogPanelColor2 = "rgba(0,0,0,0.6)";
 var dialogOutlineColor = "#000000";
-var dialogTextColor = "#ffffff";
+var dialogTextColor = "#fcfcfc";
 var dialogFontSize = 24;
 var dialogTextOffset = 4;
 var dialogTextCharDelay = 16;
@@ -56,13 +56,38 @@ function setSpeakerNameColor(speakerName) {
     let nameColor = dialogTextColor;
     switch (speakerName){
         case "Despond":
-            nameColor = '#f56262';
+            nameColor = dialogTextColor;
+            break
+        case "Char3":
+            style = '#000000'; // warm yellow
             break
         default:
             nameColor = dialogTextColor;
             break  
     }
     return nameColor
+}
+
+function setSpeakerBg(speakerName) {
+    let style = "#000000";
+    switch (speakerName){
+        case "Despond":
+            style = '#EF476F'; // redpink
+            break
+        case "Char2":
+            style = '#26547C'; // blue
+            break
+        case "Char3":
+            style = '#FFD166'; // warm yellow
+            break
+        case "Char3":
+            style = '#06D6A0'; // cool green
+            break
+        default:
+            style = '#000000';
+            break  
+    }
+    return style
 }
 
 function selectDialogChoice(key) {
@@ -154,7 +179,6 @@ function drawDialog() {
     canvasContext.fillStyle = dialogPanelGrad;
 
     canvasContext.fillRect(dialogCurrentX + camX, dialogCurrentY + camY, dialogCurrentW, dialogCurrentH);
-    canvasContext.fillRect(dialogCurrentX + camX - dialogFontSize - dialogTextOffset * 2, dialogCurrentY + camY - dialogFontSize - dialogTextOffset * 2, dialogCurrentW / 3, dialogHOffset + dialogHPerLine);
     if (dialogActiveConvo[dialogConvoStep].choices != null) {
         for (let i = 0; i < dialogActiveConvo[dialogConvoStep].choices.length; i++) {
             canvasContext.fillRect(dialogCurrentX + camX + dialogChoiceOffsetX, dialogCurrentY + camY + dialogChoiceOffsetY + (dialogChoiceHeight * i), dialogChoiceWidth, dialogChoiceHeight);
@@ -170,9 +194,15 @@ function drawDialog() {
         }
     }
 
-
-    // handle speaker name
+    // handle speaker details
     let speakerName = dialogActiveConvo[dialogConvoStep].who;
+
+    canvasContext.fillStyle = setSpeakerBg(speakerName)
+    canvasContext.fillRect(dialogCurrentX + camX - dialogFontSize - dialogTextOffset * 2, 
+        dialogCurrentY + camY - dialogFontSize - dialogTextOffset * 2, 
+        dialogCurrentW / 3, 
+        dialogHOffset + dialogHPerLine);
+
     let speakerX = dialogCurrentX + camX - dialogFontSize - dialogTextOffset;
     let speakerY = dialogCurrentY + camY + dialogFontSize - dialogFontSize - dialogTextOffset
     drawSpeakerName(speakerName, speakerX, speakerY, setSpeakerNameColor(speakerName))
