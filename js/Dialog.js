@@ -6,10 +6,10 @@ var dialogY = 0;
 var dialogW = 300;
 var dialogHOffset = 10;
 var dialogHPerLine = 25;
-var dialogPanelColor1 = "#CD853F";
-var dialogPanelColor2 = "#FFF8DCDD";
-var dialogOutlineColor = "#000000FF";
-var dialogTextColor = "#000000FF";
+var dialogPanelColor1 = "rgba(0,0,0,0.9)";
+var dialogPanelColor2 = "rgba(0,0,0,0.7)";
+var dialogOutlineColor = "#000000";
+var dialogTextColor = "#ffffff";
 var dialogFontSize = 24;
 var dialogTextOffset = 4;
 var dialogTextCharDelay = 16;
@@ -127,6 +127,11 @@ function processDialog() {
     }
 }
 
+function drawSpeakerName(speakerName, x, y, textColor) {
+    canvasContext.fillStyle = textColor;
+    canvasContext.fillText(speakerName, x, y)
+}
+
 function drawDialog() {
     if (dialogActiveConvo == null) return;
 
@@ -152,17 +157,25 @@ function drawDialog() {
         }
     }
 
+
+    // handle speaker name
+    let speakerName = dialogActiveConvo[dialogConvoStep].who;
+    let speakerX = dialogCurrentX + camX - dialogFontSize - dialogTextOffset;
+    let speakerY = dialogCurrentY + camY + dialogFontSize - dialogFontSize - dialogTextOffset
+    drawSpeakerName(speakerName, speakerX, speakerY, 'pink')
+
+    // typewriter for main dialog
     canvasContext.fillStyle = dialogTextColor;
-    canvasContext.fillText(dialogActiveConvo[dialogConvoStep].who, dialogCurrentX + camX - dialogFontSize - dialogTextOffset, dialogCurrentY + camY + dialogFontSize - dialogFontSize - dialogTextOffset);
     for (var i = 0; i < dialogCurrentText.length; i++) {
         canvasContext.fillText(dialogCurrentText[i], dialogCurrentX + camX + dialogTextOffset, dialogCurrentY + camY + dialogFontSize * (i + 1) + dialogTextOffset);
     }
 
+    // draw choice options
     if (dialogActiveConvo[dialogConvoStep].choices != null) {
         //console.log(dialogActiveConvo[dialogConvoStep].choices.length+" AVAILABLE CHOICES AT DIALOG STEP "+dialogConvoStep);
         for (let i = 0; i < dialogActiveConvo[dialogConvoStep].choices.length; i++) {
             let choiceString = (i + 1).toString() + ". " + dialogActiveConvo[dialogConvoStep].choices[i][0];
-            //console.log("CHOICE: "+choiceString);
+            // console.log("CHOICE: "+choiceString);
             canvasContext.fillText(choiceString, dialogCurrentX + camX + dialogChoiceOffsetX + dialogTextOffset, dialogCurrentY + camY + dialogChoiceOffsetY + dialogFontSize + dialogTextOffset + (dialogChoiceHeight * i), dialogChoiceWidth, dialogChoiceHeight);
         }
     } else {
