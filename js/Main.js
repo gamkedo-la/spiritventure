@@ -9,11 +9,12 @@ music.loop = true;
 var backgroundMusic = new BackgroundMusicClass();
 var deltaTime = 0;
 var debugText;
+var gameFont = 'Georgia, Arial, sans-serif';
 
 window.onload = function() {
   canvas = document.getElementById('gameCanvas');
   canvasContext = canvas.getContext('2d');
-  canvasContext.font = dialogFontSize.toString() + "px Georgia";
+  canvasContext.font = dialogFontSize.toString() + "px " + gameFont;
   
   loadImages();
 }
