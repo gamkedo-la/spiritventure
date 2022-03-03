@@ -63,7 +63,6 @@ function mouseMove(evt) {
 
   if (canvasRatio > windowRatio){
     // This mouseY remap doesn't track well when there's black space below the canvas!
-    console.log(canvasRatio, windowRatio)
     mouseY = remap(evt.clientY, 0, window.innerHeight, targetRect.y, canvas.height);
   } else {
     // keeping mouseY based on proportional scale

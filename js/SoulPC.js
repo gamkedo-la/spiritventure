@@ -132,6 +132,13 @@ function warriorClass() {
         lineWrap();
         setupDialog(testConvo, pos[0] - (dialogW/2) + (TILE_W/2), pos[1] - (dialogHOffset + (dialogHPerLine * wrapText.length)) - (TILE_H*2.4));
         break;
+      case TILE_DESPOND:
+        // TODO: Initiate different dialog
+        var pos = getPixelCoordAtTileIndex(walkIntoTileIndex);
+        wrapText = [testConvo[0].text];
+        lineWrap();
+        setupDialog(testConvo, pos[0] - (dialogW/2) + (TILE_W/2), pos[1] - (dialogHOffset + (dialogHPerLine * wrapText.length)) - (TILE_H*2.4));
+        break;
       case TILE_WALL:
       default:
         // any other tile type number was found... do nothing, for now
