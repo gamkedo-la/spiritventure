@@ -58,8 +58,8 @@ function setSpeakerNameColor(speakerName) {
         case "Despond":
             nameColor = dialogTextColor;
             break
-        case "Char3":
-            style = '#000000'; // warm yellow
+        case "Gemini":
+            nameColor = '#000000'; // warm yellow
             break
         default:
             nameColor = dialogTextColor;
@@ -77,7 +77,7 @@ function setSpeakerBg(speakerName) {
         case "Char2":
             style = '#26547C'; // blue
             break
-        case "Char3":
+        case "Gemini":
             style = '#FFD166'; // warm yellow
             break
         case "Char3":
