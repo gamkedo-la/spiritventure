@@ -120,7 +120,7 @@ let testConvo2 = [
         nameCol: "undefined",
         voice: undefined,
         text: "Test 3",
-        nextPage: 5,
+        nextPage: null,
         choices: null,
         position: {x: 501.5, y: 700}
     },
