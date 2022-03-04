@@ -325,15 +325,13 @@ function DialogEditor() {
 					scene: "",
 					who: speakerString,
 					nameCol: null,
-					voice: null,
+					// voice: null,
 					text: statementString,
 					nextPage: null,
-					leftPic: null,
-					rightPic: null,
-					
-					leftPicLeave: null,
-					rightPicLeave: null,
-					
+					// leftPic: null,
+					// rightPic: null,
+					// leftPicLeave: null,
+					// rightPicLeave: null,
 					choices: null
 				};
 				
