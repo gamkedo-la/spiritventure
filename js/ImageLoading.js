@@ -1,5 +1,6 @@
 var playerPic=document.createElement("img");
 var teardropAnim=document.createElement("img");
+var boxingGlove=document.createElement("img");
 var tilePics = [];
 
 var picsToLoad = 0;
@@ -26,6 +27,7 @@ function loadImages() {
   var imageList = [
     {varName:playerPic, theFile:"soul.png"},
     {varName:teardropAnim, theFile:"teardrop-sprite.png"},
+    {varName:boxingGlove, theFile:"boxing_glove.png"},
     //tileTypes below
     {tileType:TILE_GROUND, theFile:"world_ground.png"},
     {tileType:TILE_WALL, theFile:"spotwall.png"},
