@@ -41,22 +41,41 @@ function drawAnimatedInventory(){
     }
 
     //background
-    canvasContext.globalAlpha = 0.7; //how solid is the background
-    colorRect(inventoryMargin, inventoryMargin, canvas.width-inventoryMargin*2, canvas.height-inventoryMargin*2, "grey");
+    canvasContext.globalAlpha = 0.8; //how solid is the background
+    fillRoundedRectangle(
+        canvasContext,
+        inventoryMargin,
+        inventoryMargin,
+        canvas.width-inventoryMargin*2, 
+        canvas.height-inventoryMargin*2, 
+        "#dbc8af",
+        10
+    )
     canvasContext.globalAlpha = 1.0;
 
     //menu heading
+    let headerHeight = 50;
+    let headerWidth = 200;
+    fillRoundedRectangle(
+        canvasContext,
+        (canvas.width - inventoryMargin*2)/2 - headerWidth/2, //x, TODO: Center properly over the menu
+        inventoryMargin - headerHeight/2, //y
+        headerWidth,
+        headerHeight,
+        "#424554",
+        5
+    )
     canvasContext.fillStyle = '#ffffff';
     canvasContext.fillText(
         "INVENTORY", 
-        inventoryMargin + 20,
-        inventoryMargin + 40
+        (canvas.width - inventoryMargin*2)/2 - headerWidth/2 + 20, //x 
+        inventoryMargin + 10 // y
     )
 
     //items 
     for(let i = 0; i < inventoryItems.length; i++){
         drawInventoryItemIcon(inventoryItems[i].animation, inventoryItems[i].frames, inventoryItems[i].x, inventoryItems[i].y);
-        drawInventoryItemLabel(inventoryItems[i].name, inventoryItems[i].x, inventoryItems[i].y, "yellow", canvasContext.fillStyle);
+        drawInventoryItemLabel(inventoryItems[i].name, inventoryItems[i].x, inventoryItems[i].y, "#424554", canvasContext.fillStyle);
     }
 }
 
