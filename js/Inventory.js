@@ -8,6 +8,8 @@ var showingInventory = false;
 var inventoryAnimFrame = 0; //use for all inventory animations
 var inventoryAnimFrameDelay = INVENTORY_ANIM_FRAME_WAIT;
 
+var inventoryMargin = 50;
+
 function drawAnimatedInventory(){
     if(showingInventory == false){
         return;
@@ -18,8 +20,7 @@ function drawAnimatedInventory(){
         inventoryAnimFrame++;
     }
     canvasContext.globalAlpha = 0.6; //how solid is the background
-    var margin = 50;
-    colorRect(margin, margin, canvas.width-margin*2, canvas.height-margin*2, "blue");
+    colorRect(inventoryMargin, inventoryMargin, canvas.width-inventoryMargin*2, canvas.height-inventoryMargin*2, "blue");
     canvasContext.globalAlpha = 1.0;
     var teardropX = 40;
     var teardropY = 65;
@@ -30,20 +31,23 @@ function drawAnimatedInventory(){
     canvasContext.drawImage(teardropAnim,
         (inventoryAnimFrame%INVENTORY_FRAMES_TEARDROP)*INVENTORY_ITEM_W, 0, // source corner x, y
         INVENTORY_ITEM_W, INVENTORY_ITEM_H, //source width and height
-        teardropX+margin, teardropY+margin, //dest corner x, y
+        teardropX+inventoryMargin, teardropY+inventoryMargin, //dest corner x, y
         INVENTORY_ITEM_W, INVENTORY_ITEM_H); //dest width and height
 
     // boxing glove
     canvasContext.drawImage(boxingGlove,
         (inventoryAnimFrame%INVENTORY_FRAMES_BOXING_GLOVE)*INVENTORY_ITEM_W, 0, // source corner x, y
         INVENTORY_ITEM_W, INVENTORY_ITEM_H, //source width and height
-        boxingGloveX+margin, boxingGloveY+margin, //dest corner x, y
+        boxingGloveX+inventoryMargin, boxingGloveY+inventoryMargin, //dest corner x, y
         INVENTORY_ITEM_W, INVENTORY_ITEM_H); //dest width and height
 
-    canvasContext.fillStyle = "yellow";
-
-    canvasContext.fillText("teardrop", teardropX+margin, teardropY+25+margin+INVENTORY_ITEM_H);
-    canvasContext.fillText("boxing glove", boxingGloveX+margin, boxingGloveY+25+margin+INVENTORY_ITEM_H);
-
+    drawInventoryItemLabel("teardrop", teardropX, teardropY, "yellow");
+    drawInventoryItemLabel("boxing glove", boxingGloveX, boxingGloveY, "yellow");
 }
 
+function drawInventoryItemLabel(text, x, y, fillStyle, oldFillStyle){
+    canvasContext.fillStyle = fillStyle;
+    canvasContext.fillText(text, x+inventoryMargin, y+25+inventoryMargin+INVENTORY_ITEM_H);
+    canvasContext.fillStyle = oldFillStyle;
+}
+    
