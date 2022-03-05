@@ -9,6 +9,7 @@ var inventoryAnimFrameDelay = INVENTORY_ANIM_FRAME_WAIT;
 var inventoryMargin = 50;
 
 function drawAnimatedInventory(){
+    // TODO: Make inventory items an external variable that can get manipulated by other code to handle events where new items get added to inventory
     var inventoryItems = [
         {
             "name": "Teardrop",
@@ -38,13 +39,24 @@ function drawAnimatedInventory(){
         inventoryAnimFrameDelay = INVENTORY_ANIM_FRAME_WAIT;
         inventoryAnimFrame++;
     }
-    canvasContext.globalAlpha = 0.6; //how solid is the background
-    colorRect(inventoryMargin, inventoryMargin, canvas.width-inventoryMargin*2, canvas.height-inventoryMargin*2, "blue");
+
+    //background
+    canvasContext.globalAlpha = 0.7; //how solid is the background
+    colorRect(inventoryMargin, inventoryMargin, canvas.width-inventoryMargin*2, canvas.height-inventoryMargin*2, "grey");
     canvasContext.globalAlpha = 1.0;
 
+    //menu heading
+    canvasContext.fillStyle = '#ffffff';
+    canvasContext.fillText(
+        "INVENTORY", 
+        inventoryMargin + 20,
+        inventoryMargin + 40
+    )
+
+    //items 
     for(let i = 0; i < inventoryItems.length; i++){
         drawInventoryItemIcon(inventoryItems[i].animation, inventoryItems[i].frames, inventoryItems[i].x, inventoryItems[i].y);
-        drawInventoryItemLabel(inventoryItems[i].name, inventoryItems[i].x, inventoryItems[i].y, "yellow");
+        drawInventoryItemLabel(inventoryItems[i].name, inventoryItems[i].x, inventoryItems[i].y, "yellow", canvasContext.fillStyle);
     }
 }
 
