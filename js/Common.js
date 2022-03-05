@@ -38,6 +38,25 @@ function colorCircle(centerX, centerY, radius, fillColor) {
   canvasContext.fill();
 }
   
+function outlineCircle(context, centerX, centerY, radius, strokeColor, lineWidth = 1) {
+	context.save();
+    context.strokeStyle = strokeColor;
+    context.beginPath();
+    context.arc(centerX, centerY, radius, 0, Math.PI * 2, true);
+    context.lineWidth = lineWidth;
+    context.stroke();
+    context.restore();
+}
+
+function doubleOutlineCircle(context,centerX, centerY, radius, strokeColor, lineWidth = 1, spacing, inward) {
+	outlineCircle(context,centerX, centerY, radius, strokeColor, lineWidth);
+	if(inward) {
+		outlineCircle(context,centerX, centerY, radius - spacing, strokeColor, lineWidth);
+	} else {
+		outlineCircle(context,centerX, centerY, radius + spacing, strokeColor, lineWidth);
+	}
+}
+
 function setRoundedRectPath(context, topLeftX, topLeftY, boxWidth, boxHeight, cornerRadius) {
 	context.beginPath();
 	context.moveTo(topLeftX + cornerRadius, topLeftY);

@@ -72,11 +72,21 @@ function drawAnimatedInventory(){
         inventoryMargin + 10 // y
     )
 
+    //grid
+    let rows = 3;
+    let columns = 4;
+    let inventoryStartX = 100;
+    let inventoryStartY = 100;
+
+    drawGrid(inventoryStartX, inventoryStartY, 30, 
+        0, //strokeWidth 
+        10, rows, columns, inventoryItems);
+
     //items 
-    for(let i = 0; i < inventoryItems.length; i++){
-        drawInventoryItemIcon(inventoryItems[i].animation, inventoryItems[i].frames, inventoryItems[i].x, inventoryItems[i].y);
-        drawInventoryItemLabel(inventoryItems[i].name, inventoryItems[i].x, inventoryItems[i].y, "#424554", canvasContext.fillStyle);
-    }
+    // for(let i = 0; i < inventoryItems.length; i++){
+    //     drawInventoryItemIcon(inventoryItems[i].animation, inventoryItems[i].frames, inventoryItems[i].x, inventoryItems[i].y);
+    //     drawInventoryItemLabel(inventoryItems[i].name, inventoryItems[i].x, inventoryItems[i].y, "#424554", canvasContext.fillStyle);
+    // }
 }
 
 function drawInventoryItemIcon(animation, frames, destX, destY){
@@ -93,3 +103,26 @@ function drawInventoryItemLabel(text, x, y, fillStyle, oldFillStyle){
     canvasContext.fillStyle = oldFillStyle;
 }
     
+function drawGrid(startX, startY, radius, strokeWidth, padding, rows, cols, inventoryItems){
+    let index = 0;
+    for (let i=0; i < rows; i++){
+        for (let j=0; j < cols; j++){
+            if( i > 0 ){
+                index = j + i
+            } else {
+                index = j
+            }
+            index =  i*j + j;
+            console.log(index);
+            x = startX + j*(padding + 2*radius);
+            y = startY + i*(padding + 2*radius);
+            // colorCircle(x, y, radius, 'grey');
+            // outlineCircle(canvasContext, x, y, radius, 'black', strokeWidth);
+
+            if(inventoryItems.length > index){
+                colorCircle(x, y, radius, 'grey');
+                drawInventoryItemIcon(inventoryItems[index].animation, inventoryItems[index].frames, x-100, y-100);
+            }
+        }
+    }
+}
