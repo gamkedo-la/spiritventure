@@ -27,22 +27,19 @@ function drawAnimatedInventory(){
     var boxingGloveX = 180;
     var boxingGloveY = 65;
 
-    // teardrop
-    canvasContext.drawImage(teardropAnim,
-        (inventoryAnimFrame%INVENTORY_FRAMES_TEARDROP)*INVENTORY_ITEM_W, 0, // source corner x, y
-        INVENTORY_ITEM_W, INVENTORY_ITEM_H, //source width and height
-        teardropX+inventoryMargin, teardropY+inventoryMargin, //dest corner x, y
-        INVENTORY_ITEM_W, INVENTORY_ITEM_H); //dest width and height
-
-    // boxing glove
-    canvasContext.drawImage(boxingGlove,
-        (inventoryAnimFrame%INVENTORY_FRAMES_BOXING_GLOVE)*INVENTORY_ITEM_W, 0, // source corner x, y
-        INVENTORY_ITEM_W, INVENTORY_ITEM_H, //source width and height
-        boxingGloveX+inventoryMargin, boxingGloveY+inventoryMargin, //dest corner x, y
-        INVENTORY_ITEM_W, INVENTORY_ITEM_H); //dest width and height
+    drawInventoryItemIcon(teardropAnim, INVENTORY_FRAMES_TEARDROP, teardropX, teardropY);
+    drawInventoryItemIcon(boxingGlove, INVENTORY_FRAMES_BOXING_GLOVE, boxingGloveX, boxingGloveY);
 
     drawInventoryItemLabel("teardrop", teardropX, teardropY, "yellow");
     drawInventoryItemLabel("boxing glove", boxingGloveX, boxingGloveY, "yellow");
+}
+
+function drawInventoryItemIcon(animation, frames, destX, destY){
+    canvasContext.drawImage(animation,
+        (inventoryAnimFrame % frames) * INVENTORY_ITEM_W, 0, // source corner x, y
+        INVENTORY_ITEM_W, INVENTORY_ITEM_H, //source width and height
+        destX + inventoryMargin, destY + inventoryMargin, //dest corner x, y
+        INVENTORY_ITEM_W, INVENTORY_ITEM_H); //dest width and height
 }
 
 function drawInventoryItemLabel(text, x, y, fillStyle, oldFillStyle){
