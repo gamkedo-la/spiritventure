@@ -80,6 +80,8 @@ function warriorClass() {
       var side = getTileOutOfBoundsSide(nextX,nextY);
       console.log(side);
       if(side > -1) {
+        console.log("changing rooms!");
+        if (doorSFX) doorSFX.play();
         roomIndex = rooms[roomIndex][GRID+side];
         switch(side) {
           case 1:
@@ -122,6 +124,9 @@ function warriorClass() {
         break;
       case TILE_KEY:
         this.keysHeld++; // gain key
+        console.log("picked up a key!");
+        if (keySFX) keySFX.play();
+
         document.getElementById("debugText").innerHTML = "Keys: "+this.keysHeld;
 
         rooms[roomIndex][GRID][walkIntoTileIndex] = TILE_GROUND; // remove key

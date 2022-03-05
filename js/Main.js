@@ -5,7 +5,7 @@ var camX = 0
 var camY = 0
 var p1 = new warriorClass();
 
-var music;
+var music, doorSFX, keySFX;
 
 var deltaTime = 0;
 var debugText;
@@ -17,6 +17,10 @@ function maybeStartMusic(e) {
         music = new Audio ("sound/Lurking Sadness.mp3");
         music.loop = true;
         music.play();
+
+        doorSFX = new Audio ("sound/door_open_dra.wav");
+        keySFX = new Audio ("sound/pickup_key.mp3");
+
     }
 }
 
