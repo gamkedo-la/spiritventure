@@ -4,18 +4,31 @@ var canvas, canvasContext;
 var camX = 0
 var camY = 0
 var p1 = new warriorClass();
-var music = new Audio ("Lurking Sadness.mp3"); //"play.mp3");
-music.loop = true;
-var backgroundMusic = new BackgroundMusicClass();
+
+var music;
+
 var deltaTime = 0;
 var debugText;
 var gameFont = 'Georgia, Arial, sans-serif';
+
+function maybeStartMusic(e) { 
+    if (!music) {
+        console.log("first click! now we are allowed to start the music.");
+        music = new Audio ("sound/Lurking Sadness.mp3");
+        music.loop = true;
+        music.play();
+    }
+}
 
 window.onload = function() {
   canvas = document.getElementById('gameCanvas');
   canvasContext = canvas.getContext('2d');
   canvasContext.font = dialogFontSize.toString() + "px " + gameFont;
   
+  // browsers force us to wait for a click or keypress until playing sounds
+  document.addEventListener("click", maybeStartMusic);
+  document.addEventListener("keydown", maybeStartMusic);
+
   loadImages();
 }
 
@@ -30,8 +43,6 @@ function loadingDoneSoStartGame() {
   p1.init(playerPic, "Blue");
   initInput();
 
-  music.play();
-  backgroundMusic.loopSong("../sound/Lurking Sadness") //"../sound/play");
 }
 
 function updateEverything() {

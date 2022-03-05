@@ -22,7 +22,7 @@ function BackgroundMusicClass() {
     }
     musicSound = new Audio(filenameWithPath+audioFormat);
     musicSound.loop = true;
-    musicSound.play();
+    musicSound.play(); // this causes an error if the user didn't just click
   }
   
   this.startOrStopMusic = function() {
