@@ -1,8 +1,6 @@
 const INVENTORY_ANIM_FRAME_WAIT = 15;
 const INVENTORY_ITEM_W = 50;
 const INVENTORY_ITEM_H = 50;
-const INVENTORY_FRAMES_TEARDROP = 3; 
-const INVENTORY_FRAMES_BOXING_GLOVE = 1; 
 
 var showingInventory = false;
 var inventoryAnimFrame = 0; //use for all inventory animations
@@ -11,6 +9,27 @@ var inventoryAnimFrameDelay = INVENTORY_ANIM_FRAME_WAIT;
 var inventoryMargin = 50;
 
 function drawAnimatedInventory(){
+    var inventoryItems = [
+        {
+            "name": "Teardrop",
+            "frames": 3,
+            "visible": true,
+            "animation": teardropAnim,
+            "x": 40,
+            "y": 65,
+            "flavor": "Some flavor text can go here later"
+        },
+        {
+            "name": "Boxing Glove",
+            "frames": 1,
+            "visible": true,
+            "animation": boxingGlove,
+            "x": 180,
+            "y": 65,
+            "flavor": "Some flavor text can go here later"
+        }
+    ]
+
     if(showingInventory == false){
         return;
     }
@@ -22,16 +41,11 @@ function drawAnimatedInventory(){
     canvasContext.globalAlpha = 0.6; //how solid is the background
     colorRect(inventoryMargin, inventoryMargin, canvas.width-inventoryMargin*2, canvas.height-inventoryMargin*2, "blue");
     canvasContext.globalAlpha = 1.0;
-    var teardropX = 40;
-    var teardropY = 65;
-    var boxingGloveX = 180;
-    var boxingGloveY = 65;
 
-    drawInventoryItemIcon(teardropAnim, INVENTORY_FRAMES_TEARDROP, teardropX, teardropY);
-    drawInventoryItemIcon(boxingGlove, INVENTORY_FRAMES_BOXING_GLOVE, boxingGloveX, boxingGloveY);
-
-    drawInventoryItemLabel("teardrop", teardropX, teardropY, "yellow");
-    drawInventoryItemLabel("boxing glove", boxingGloveX, boxingGloveY, "yellow");
+    for(let i = 0; i < inventoryItems.length; i++){
+        drawInventoryItemIcon(inventoryItems[i].animation, inventoryItems[i].frames, inventoryItems[i].x, inventoryItems[i].y);
+        drawInventoryItemLabel(inventoryItems[i].name, inventoryItems[i].x, inventoryItems[i].y, "yellow");
+    }
 }
 
 function drawInventoryItemIcon(animation, frames, destX, destY){
