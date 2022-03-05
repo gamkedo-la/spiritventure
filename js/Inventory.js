@@ -16,6 +16,7 @@ function drawAnimatedInventory(){
             "frames": 3,
             "visible": true,
             "animation": teardropAnim,
+            "selected": false,
             "x": 40,
             "y": 65,
             "flavor": "Some flavor text can go here later"
@@ -25,6 +26,7 @@ function drawAnimatedInventory(){
             "frames": 1,
             "visible": true,
             "animation": boxingGlove,
+            "selected": false,
             "x": 180,
             "y": 65,
             "flavor": "Some flavor text can go here later"
@@ -75,18 +77,16 @@ function drawAnimatedInventory(){
     //grid
     let rows = 3;
     let columns = 4;
-    let inventoryStartX = 100;
-    let inventoryStartY = 100;
+    let inventoryStartX = 120;
+    let inventoryStartY = 135;
 
-    drawGrid(inventoryStartX, inventoryStartY, 30, 
-        0, //strokeWidth 
-        10, rows, columns, inventoryItems);
+    drawGrid(inventoryStartX, inventoryStartY, 
+        40,//radius 
+        6, //strokeWidth 
+        20,//padding 
+        rows, columns, inventoryItems);
 
-    //items 
-    // for(let i = 0; i < inventoryItems.length; i++){
-    //     drawInventoryItemIcon(inventoryItems[i].animation, inventoryItems[i].frames, inventoryItems[i].x, inventoryItems[i].y);
-    //     drawInventoryItemLabel(inventoryItems[i].name, inventoryItems[i].x, inventoryItems[i].y, "#424554", canvasContext.fillStyle);
-    // }
+    drawInfoPanel(500, 60, inventoryItems[0])
 }
 
 function drawInventoryItemIcon(animation, frames, destX, destY){
@@ -105,24 +105,34 @@ function drawInventoryItemLabel(text, x, y, fillStyle, oldFillStyle){
     
 function drawGrid(startX, startY, radius, strokeWidth, padding, rows, cols, inventoryItems){
     let index = 0;
+    inventoryItems[0].selected = true;
+
     for (let i=0; i < rows; i++){
         for (let j=0; j < cols; j++){
-            if( i > 0 ){
-                index = j + i
-            } else {
-                index = j
-            }
-            index =  i*j + j;
-            console.log(index);
+            index =  j + (i*cols);
             x = startX + j*(padding + 2*radius);
             y = startY + i*(padding + 2*radius);
-            // colorCircle(x, y, radius, 'grey');
-            // outlineCircle(canvasContext, x, y, radius, 'black', strokeWidth);
 
             if(inventoryItems.length > index){
-                colorCircle(x, y, radius, 'grey');
-                drawInventoryItemIcon(inventoryItems[index].animation, inventoryItems[index].frames, x-100, y-100);
+                if(inventoryItems[index].selected){
+                    outlineCircle(canvasContext, x, y, radius, '#ffffff', strokeWidth);
+                }
+                colorCircle(x, y, radius, 'rgba(0,0,0,0.8)');
+                drawInventoryItemIcon(inventoryItems[index].animation, inventoryItems[index].frames, x-75, y-75);
+            } else {
+                colorCircle(x, y, radius, 'rgba(0,0,0,0.1)');
             }
         }
     }
+}
+
+function drawInfoPanel(startX, startY, invItem){
+    let width = 240;
+    let padding = 10;
+    fillRoundedRectangle(canvasContext, startX, startY, 240, 330, 'rgba(0,0,0,0.8)', 5)
+    canvasContext.fillStyle = '#f7f6f2';
+    canvasContext.fillText(invItem.name, startX+10, startY+30, width-2*padding);
+    
+    // handle wrapping text into the info panel box later
+    canvasContext.fillText(invItem.flavor, startX+10, startY+60, width-2*padding);
 }
