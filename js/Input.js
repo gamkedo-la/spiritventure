@@ -17,7 +17,9 @@ const KEY_LETTER_H = 72;
 const KEY_LETTER_J = 74;
 const KEY_LETTER_K = 75;
 
-
+// game nav controls
+const KEY_ESC = 27; // Pause menu?
+const KEY_M = 77; // Mute music
 const KEY_I = 73; // Inventory
 
 var mouseX = 0;
@@ -89,6 +91,9 @@ function keyReleased(evt) {
       break;
     case KEY_I:
       showingInventory = !showingInventory; //toggle
+      break;
+    case KEY_M:
+      toggleMuteMusic();
       break;
     case KEY_LETTER_U:
       console.log("Decrease Row");

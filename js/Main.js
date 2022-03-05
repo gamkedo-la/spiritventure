@@ -24,6 +24,10 @@ function maybeStartMusic(e) {
     }
 }
 
+function toggleMuteMusic(){
+  music.volume === 1 ? music.volume = 0 : music.volume = 1
+}
+
 window.onload = function() {
   canvas = document.getElementById('gameCanvas');
   canvasContext = canvas.getContext('2d');
