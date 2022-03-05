@@ -25,7 +25,7 @@ function maybeStartMusic(e) {
 }
 
 function toggleMuteMusic(){
-  music.volume === 1 ? music.volume = 0 : music.volume = 1
+  music.muted = !(music.muted);
 }
 
 window.onload = function() {
