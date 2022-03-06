@@ -144,6 +144,8 @@ function warriorClass() {
 
           rooms[roomIndex][GRID][walkIntoTileIndex] = TILE_GROUND; // remove door
           //TODO: decrement keys in inventory
+          let keyIndex = this.inventory.map(object => object.name).indexOf('Door Key');
+          this.inventory[keyIndex].quantity -= 1;
         }
         break;
       case TILE_KEY:
