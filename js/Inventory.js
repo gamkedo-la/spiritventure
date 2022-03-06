@@ -8,30 +8,68 @@ var inventoryAnimFrameDelay = INVENTORY_ANIM_FRAME_WAIT;
 
 var inventoryMargin = 50;
 
+const allPossibleItems = [
+    {
+        "name": "Door Key",
+        "frames": 1,
+        "visible": true,
+        "quantity": 1,
+        "animation": keyAnim,
+        "selected": false,
+        "x": 40,
+        "y": 65,
+        "flavor": "Maybe this can be used with a door around here?"
+    },
+    {
+        "name": "Teardrop",
+        "frames": 3,
+        "visible": true,
+        "quantity": 1,
+        "animation": teardropAnim,
+        "selected": false,
+        "x": 40,
+        "y": 65,
+        "flavor": "Some flavor text can go here later"
+    },
+    {
+        "name": "Boxing Glove",
+        "frames": 1,
+        "visible": true,
+        "quantity": 1,
+        "animation": boxingGlove,
+        "selected": false,
+        "x": 180,
+        "y": 65,
+        "flavor": "Some flavor text can go here later"
+    }
+]
+
 function drawAnimatedInventory(){
     // TODO: Make inventory items an external variable that can get manipulated by other code to handle events where new items get added to inventory
-    var inventoryItems = [
-        {
-            "name": "Teardrop",
-            "frames": 3,
-            "visible": true,
-            "animation": teardropAnim,
-            "selected": false,
-            "x": 40,
-            "y": 65,
-            "flavor": "Some flavor text can go here later"
-        },
-        {
-            "name": "Boxing Glove",
-            "frames": 1,
-            "visible": true,
-            "animation": boxingGlove,
-            "selected": false,
-            "x": 180,
-            "y": 65,
-            "flavor": "Some flavor text can go here later"
-        }
-    ]
+    // var inventoryItems = [
+    //     {
+    //         "name": "Teardrop",
+    //         "frames": 3,
+    //         "visible": true,
+    //         "quantity": 1,
+    //         "animation": teardropAnim,
+    //         "selected": false,
+    //         "x": 40,
+    //         "y": 65,
+    //         "flavor": "Some flavor text can go here later"
+    //     },
+    //     {
+    //         "name": "Boxing Glove",
+    //         "frames": 1,
+    //         "visible": true,
+    //         "quantity": 1,
+    //         "animation": boxingGlove,
+    //         "selected": false,
+    //         "x": 180,
+    //         "y": 65,
+    //         "flavor": "Some flavor text can go here later"
+    //     }
+    // ]
 
     if(showingInventory == false){
         return;
@@ -84,9 +122,9 @@ function drawAnimatedInventory(){
         40,//radius 
         6, //strokeWidth 
         20,//padding 
-        rows, columns, inventoryItems);
+        rows, columns, p1.inventory);
 
-    drawInfoPanel(500, 60, inventoryItems[0])
+    drawInfoPanel(500, 60, p1.inventory[0])
 }
 
 function drawInventoryItemIcon(animation, frames, destX, destY){

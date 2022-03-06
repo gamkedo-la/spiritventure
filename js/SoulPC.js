@@ -14,6 +14,9 @@ function warriorClass() {
   this.keyHeld_West = false;
   this.keyHeld_Sprint = false;
 
+  // to track inventory
+  this.inventory = [];
+
   // key controls used for this
   this.setupControls = function(northKey,eastKey,southKey,westKey,sprintKey) {
     this.controlKeyForNorth = northKey;
@@ -37,6 +40,7 @@ function warriorClass() {
   }
   
   this.reset = function() {
+    this.inventory = [];
     this.keysHeld = 0;
     rooms[roomIndex][COLS] = startingRoom[0];
     rooms[roomIndex][ROWS] = startingRoom[1];
@@ -120,9 +124,30 @@ function warriorClass() {
           document.getElementById("debugText").innerHTML = "Keys: "+this.keysHeld;
 
           rooms[roomIndex][GRID][walkIntoTileIndex] = TILE_GROUND; // remove door
+          //TODO: decrement keys in inventory
         }
         break;
       case TILE_KEY:
+        let keyObj ={
+          "name": "Door Key",
+          "frames": 1,
+          "visible": true,
+          "quantity": 1,
+          "animation": keyAnim,
+          "selected": false,
+          "x": 40,
+          "y": 65,
+          "flavor": "Maybe this can be used with a door around here?"
+        }
+
+        let keyIndex = this.inventory.map(object => object.name).indexOf('Door Key');
+
+        if (keyIndex >= 0){
+          this.inventory[keyIndex].quantity += 1
+        } else {
+          this.inventory.push(keyObj)
+        }
+
         this.keysHeld++; // gain key
         console.log("picked up a key!");
         if (keySFX) keySFX.play();
