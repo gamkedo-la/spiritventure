@@ -133,6 +133,15 @@ function warriorClass() {
         this.x = nextX;
         this.y = nextY;
         break;
+      case TILE_GROUND2:
+        this.x = nextX;
+        this.y = nextY;
+        break;
+      case TILE_GROUND3:
+        this.x = nextX;
+        this.y = nextY;
+        break;
+      
       case TILE_GOAL:
         document.getElementById("debugText").innerHTML = this.myName + " won";
         this.reset();

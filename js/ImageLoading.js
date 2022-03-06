@@ -40,8 +40,8 @@ function loadImages() {
     {tileType:TILE_MIND, theFile:"heart.png"},
     {tileType:TILE_DESPOND, theFile:"Despond_Lotus_(Brahma).png"},
     {tileType:TILE_VASE, theFile:"sad_vase.png"},
-    {tileType:TILE_GROUND2, theFile:"tile_reflect.png"},
-    {tileType:TILE_GROUND3, theFile:"tile_checkered.png"},
+    {tileType:TILE_GROUND2, theFile:"tile_marble1.png"},
+    {tileType:TILE_GROUND3, theFile:"tile_marble2.png"},
     {tileType:TILE_ROSE, theFile:"tile_rose.png"},
     ];
 
