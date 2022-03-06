@@ -16,7 +16,7 @@ function maybeStartMusic(e) {
         console.log("first click! now we are allowed to start the music.");
         music = new Audio ("sound/Lurking Sadness.mp3");
         music.loop = true;
-        // music.play();
+        music.play();
 
         doorSFX = new Audio ("sound/door_open_dra.wav");
         keySFX = new Audio ("sound/pickup_key.mp3");
