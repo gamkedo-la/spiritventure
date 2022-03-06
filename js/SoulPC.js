@@ -14,8 +14,6 @@ function warriorClass() {
   this.keyHeld_West = false;
   this.keyHeld_Sprint = false;
 
-  // to track inventory
-  this.inventory = [];
 
   // key controls used for this
   this.setupControls = function(northKey,eastKey,southKey,westKey,sprintKey) {
@@ -36,11 +34,32 @@ function warriorClass() {
   this.init = function(whichGraphic,whichName) {
     this.myBitmap = whichGraphic;
     this.myName = whichName;
+    // to track inventory
+    this.inventory = [
+      {
+          "name": "Teardrop",
+          "frames": 3,
+          "visible": true,
+          "quantity": 1,
+          "animation": teardropAnim,
+          "selected": false,
+          "flavor": "Some flavor text can go here later"
+      },
+      {
+          "name": "Boxing Glove",
+          "frames": 1,
+          "visible": true,
+          "quantity": 1,
+          "animation": boxingGlove,
+          "selected": false,
+          "flavor": "Some flavor text can go here later"
+      }
+    ];
     this.reset();
   }
   
   this.reset = function() {
-    this.inventory = [];
+    // this.inventory = [];
     this.keysHeld = 0;
     rooms[roomIndex][COLS] = startingRoom[0];
     rooms[roomIndex][ROWS] = startingRoom[1];

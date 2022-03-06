@@ -8,41 +8,7 @@ var inventoryAnimFrameDelay = INVENTORY_ANIM_FRAME_WAIT;
 
 var inventoryMargin = 50;
 
-const allPossibleItems = [
-    {
-        "name": "Door Key",
-        "frames": 1,
-        "visible": true,
-        "quantity": 1,
-        "animation": keyAnim,
-        "selected": false,
-        "x": 40,
-        "y": 65,
-        "flavor": "Maybe this can be used with a door around here?"
-    },
-    {
-        "name": "Teardrop",
-        "frames": 3,
-        "visible": true,
-        "quantity": 1,
-        "animation": teardropAnim,
-        "selected": false,
-        "x": 40,
-        "y": 65,
-        "flavor": "Some flavor text can go here later"
-    },
-    {
-        "name": "Boxing Glove",
-        "frames": 1,
-        "visible": true,
-        "quantity": 1,
-        "animation": boxingGlove,
-        "selected": false,
-        "x": 180,
-        "y": 65,
-        "flavor": "Some flavor text can go here later"
-    }
-]
+// currently all items are defines in p1 class initalization. See SoulPC.js for details
 
 function drawAnimatedInventory(){
     if(showingInventory == false){
