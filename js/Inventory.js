@@ -45,32 +45,6 @@ const allPossibleItems = [
 ]
 
 function drawAnimatedInventory(){
-    // TODO: Make inventory items an external variable that can get manipulated by other code to handle events where new items get added to inventory
-    // var inventoryItems = [
-    //     {
-    //         "name": "Teardrop",
-    //         "frames": 3,
-    //         "visible": true,
-    //         "quantity": 1,
-    //         "animation": teardropAnim,
-    //         "selected": false,
-    //         "x": 40,
-    //         "y": 65,
-    //         "flavor": "Some flavor text can go here later"
-    //     },
-    //     {
-    //         "name": "Boxing Glove",
-    //         "frames": 1,
-    //         "visible": true,
-    //         "quantity": 1,
-    //         "animation": boxingGlove,
-    //         "selected": false,
-    //         "x": 180,
-    //         "y": 65,
-    //         "flavor": "Some flavor text can go here later"
-    //     }
-    // ]
-
     if(showingInventory == false){
         return;
     }
@@ -143,7 +117,9 @@ function drawInventoryItemLabel(text, x, y, fillStyle, oldFillStyle){
     
 function drawGrid(startX, startY, radius, strokeWidth, padding, rows, cols, inventoryItems){
     let index = 0;
-    inventoryItems[0].selected = true;
+    if (inventoryItems.length > 0) {
+        inventoryItems[0].selected = true;
+    };
 
     for (let i=0; i < rows; i++){
         for (let j=0; j < cols; j++){
@@ -157,6 +133,12 @@ function drawGrid(startX, startY, radius, strokeWidth, padding, rows, cols, inve
                 }
                 colorCircle(x, y, radius, 'rgba(0,0,0,0.8)');
                 drawInventoryItemIcon(inventoryItems[index].animation, inventoryItems[index].frames, x-75, y-75);
+                
+                // quantity counter
+                let inventoryCoord = ((radius**2)/2)**0.5;
+                colorCircle(x+inventoryCoord, y+inventoryCoord, radius/3, 'rgba(225,225,225,1)');
+                canvasContext.fillStyle = 'black';
+                canvasContext.fillText(inventoryItems[index].quantity, x+inventoryCoord, y+inventoryCoord);
             } else {
                 colorCircle(x, y, radius, 'rgba(0,0,0,0.1)');
             }
