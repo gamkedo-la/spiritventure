@@ -135,10 +135,12 @@ function drawGrid(startX, startY, radius, strokeWidth, padding, rows, cols, inve
                 drawInventoryItemIcon(inventoryItems[index].animation, inventoryItems[index].frames, x-75, y-75);
                 
                 // quantity counter
-                let inventoryCoord = ((radius**2)/2)**0.5;
-                colorCircle(x+inventoryCoord, y+inventoryCoord, radius/3, 'rgba(225,225,225,1)');
-                canvasContext.fillStyle = 'black';
-                canvasContext.fillText(inventoryItems[index].quantity, x+inventoryCoord, y+inventoryCoord);
+                if (inventoryItems[index].quantity > 1){
+                    let inventoryCoord = ((radius**2)/2)**0.5;
+                    colorCircle(x+inventoryCoord, y+inventoryCoord, radius/3, 'rgba(225,225,225,1)');
+                    canvasContext.fillStyle = 'black';
+                    canvasContext.fillText(inventoryItems[index].quantity, x+inventoryCoord, y+inventoryCoord);
+                }
             } else {
                 colorCircle(x, y, radius, 'rgba(0,0,0,0.1)');
             }
