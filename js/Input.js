@@ -27,6 +27,7 @@ var mouseY = 0;
 
 function initInput() {
   document.addEventListener("mousemove", mouseMove);
+  document.addEventListener("click", mouseClick);
   document.addEventListener("wheel", tilemapEditorWheel);
   document.addEventListener("keydown", keyPressed);
   document.addEventListener("keyup", keyReleased);
@@ -73,8 +74,15 @@ function mouseMove(evt) {
   }
 }
 
+function mouseClick(evt) {
+  // browsers force us to wait for a click or keypress until playing sounds
+  maybeStartMusic(evt);
+  advanceDialog();
+}
+
 function keyPressed(evt) {
   setKeyHoldState(evt.keyCode, p1, true);
+  maybeStartMusic(evt); // browsers force us to wait for a click or keypress until playing sounds
   tilemapEditorKeyInput(evt.keyCode);
   selectDialogChoice(evt.keyCode);
   evt.preventDefault(); // without this, arrow keys scroll the browser!

@@ -32,10 +32,6 @@ window.onload = function() {
   canvas = document.getElementById('gameCanvas');
   canvasContext = canvas.getContext('2d');
   canvasContext.font = dialogFontSize.toString() + "px " + gameFont;
-  
-  // browsers force us to wait for a click or keypress until playing sounds
-  document.addEventListener("click", maybeStartMusic);
-  document.addEventListener("keydown", maybeStartMusic);
 
   loadImages();
 }
