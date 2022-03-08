@@ -43,7 +43,7 @@ function warriorClass() {
           "quantity": 1,
           "animation": teardropAnim,
           "selected": false,
-          "flavor": "Some flavor text can go here later"
+          "flavor": "A single tear falling to earth."
       },
       {
           "name": "Boxing Glove",
@@ -52,7 +52,7 @@ function warriorClass() {
           "quantity": 1,
           "animation": boxingGlove,
           "selected": false,
-          "flavor": "Some flavor text can go here later"
+          "flavor": "Protect the fragile hand."
       }
     ];
     this.reset();
