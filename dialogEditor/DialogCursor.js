@@ -74,9 +74,39 @@ function DialogCursor(position, font, boxWidth) {
 			}
 		}
 	};
-	
+	this.injectString = function(stringIn){
+		for(var i =stringIn.length-1;i>=0; i--){
+			this.insertCharacter(stringIn.charAt(i));
+		}
+	}
 	this.keyboardEvent = function(newKey, oldKeys) {
-		if(isPrintableKey(newKey)) {
+		if(newKey==KEY_OPEN_BRACKET){
+			//console.log("pasting "+navigator.clipboard.readText());
+			navigator.permissions.query({ name: "clipboard-read" }).then((result) => {
+				// If permission to read the clipboard is granted or if the user will
+				// be prompted to allow it, we proceed.
+			
+				if (result.state == "granted" || result.state == "prompt") {
+					var myCursor = this;
+				  navigator.clipboard.read().then((data) => {
+					for (let i = 0; i < data.length; i++) {
+					  if (!data[i].types.includes("text/plain")) {
+						console.log("Clipboard contains no text data");
+					  } else {
+						data[i].getType("text/plain").then((blob) => {
+							var output = blob.text();              
+							output.then((data)=>
+								//console.log(data);
+								myCursor.injectString(data)
+							  );
+						});
+					  }
+					}
+				  });
+				}
+			  });
+		} 
+		else if(isPrintableKey(newKey)) {
 			
 			if(oldKeys.has(KEY_SHIFT)) {
 				this.insertCharacter(upperStringForKeyCode(newKey));
