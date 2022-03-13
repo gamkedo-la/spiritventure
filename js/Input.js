@@ -78,6 +78,18 @@ function mouseClick(evt) {
   // browsers force us to wait for a click or keypress until playing sounds
   maybeStartMusic(evt);
   advanceDialog();
+  checkDialogChoices();
+}
+
+function checkDialogChoices () {
+  if (dialogChoiceButtons.length > 0) {
+    for (const btn of dialogChoiceButtons) {
+      if (mouseX > btn.x && mouseX < btn.x + btn.width && mouseY > btn.y && mouseY < btn.y + btn.height) {
+        selectDialogChoice(btn.key)
+        break
+      }
+    }
+  }
 }
 
 function keyPressed(evt) {

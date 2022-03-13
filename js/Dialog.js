@@ -18,6 +18,7 @@ var dialogChoiceOffsetX = 240;
 var dialogChoiceOffsetY = 120;
 var dialogChoiceWidth = 160;
 var dialogChoiceHeight = dialogFontSize + (dialogTextOffset * 2);
+var dialogChoiceButtons = [];
 
 var dialogCurrentX = 0;
 var dialogCurrentY = 0;
@@ -123,6 +124,7 @@ function resetDialogText() {
     dialogCurrentTextIndex = 0;
     dialogTextCharTimer = 0;
     currentPrintLine = 0;
+    dialogChoiceButtons.length = 0;
 }
 
 function setupDialog(convoObj, posX, posY) {
@@ -173,6 +175,7 @@ function drawSpeakerName(speakerName, x, y, textColor) {
 function drawDialog() {
     if (dialogActiveConvo == null) return;
 
+    dialogChoiceButtons.length = 0;
     var dialogPanelGrad = canvasContext.createLinearGradient(dialogCurrentX + camX, dialogCurrentY + camY, dialogCurrentX + camX + dialogW / 2, dialogCurrentY + camY + (dialogHOffset + (dialogHPerLine * dialogCurrentText.length)) * 2);
     dialogPanelGrad.addColorStop(0, dialogPanelColor1);
     dialogPanelGrad.addColorStop(1, dialogPanelColor2);
@@ -181,7 +184,16 @@ function drawDialog() {
     canvasContext.fillRect(dialogCurrentX + camX, dialogCurrentY + camY, dialogCurrentW, dialogCurrentH);
     if (dialogActiveConvo[dialogConvoStep].choices != null) {
         for (let i = 0; i < dialogActiveConvo[dialogConvoStep].choices.length; i++) {
-            canvasContext.fillRect(dialogCurrentX + camX + dialogChoiceOffsetX, dialogCurrentY + camY + dialogChoiceOffsetY + (dialogChoiceHeight * i), dialogChoiceWidth, dialogChoiceHeight);
+            var button = {
+                x: dialogCurrentX + camX + dialogChoiceOffsetX,
+                y: dialogCurrentY + camY + dialogChoiceOffsetY + (dialogChoiceHeight * i),
+                width: dialogChoiceWidth,
+                height: dialogChoiceHeight,
+                key: i + 49
+            };
+            dialogChoiceButtons.push(button);
+
+            canvasContext.fillRect(button.x, button.y, button.width, button.height);
         }
     }
 
