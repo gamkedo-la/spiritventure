@@ -310,7 +310,34 @@ function DialogEditor() {
 			let newLineX = newLineFrame.x;
 			let newLineY = newLineFrame.y + 3 * newLineFrame.height;
 			
-			const editableDialogArray = editableDialogString.split("\n");
+			const editableDialogArray = editableDialogString.split("},");
+			for(let j = 0; j < editableDialogArray.length; j++) {
+				if (editableDialogArray[j].length > 0){
+					editableDialogArray[j] += "};"
+				}
+				let clearLine = editableDialogArray[j].split("\n");
+				for(let k = 0; k < clearLine.length; k++){
+					const squareBracketLeft = clearLine[k].indexOf("[");
+					const squareBracketRight = clearLine[k].indexOf("]");
+					if (squareBracketLeft >=0 && squareBracketRight < 0){
+						// trim out everything left of bracket
+						clearLine[k] = clearLine[k].substring(squareBracketLeft+2, clearLine[k].length)
+					}
+					
+					clearLine[k] = clearLine[k].replace('        ', '"');
+					clearLine[k] = clearLine[k].replace('   ', '');
+					const colonIndex = clearLine[k].indexOf(":");
+					if (colonIndex >= 0) {
+						let rightOfColon = clearLine[k].substring(colonIndex + 1, clearLine[k].length);
+						let leftOfColon = clearLine[k].substring(0, colonIndex);
+						clearLine[k] = leftOfColon + '":' + rightOfColon + '\n';
+					}
+
+				}
+				editableDialogArray[j] = clearLine.join('')
+				console.log(editableDialogArray[j])
+			}
+
 			editableDialogArray.pop();//There is an EOF \n which we just remove
 			
 			for(let j = 0; j < editableDialogArray.length; j++) {
@@ -321,7 +348,7 @@ function DialogEditor() {
 					statementString = statementString.substring(1, statementString.length);
 				}
 				
-				const workingData = {
+				var workingData = {
 					scene: "",
 					who: speakerString,
 					nameCol: null,
@@ -334,7 +361,6 @@ function DialogEditor() {
 					// rightPicLeave: null,
 					choices: null
 				};
-				
 				while(statementString.indexOf("{") >= 0) {
 					const startIndex = statementString.indexOf("{") + 1;
 					const endIndex = statementString.indexOf("}");
@@ -369,6 +395,16 @@ function DialogEditor() {
 				}			
 				
 				const newDialogLine = new DialogLine({x:newLineX, y:newLineY});
+				// workingData =  {
+				// 	scene: "neutral",
+				// 	who: "Despond",
+				// 	nameCol: "undefined",
+				// 	voice: undefined,
+				// 	text: "Well, it's certainly not that. I know that you're important, and this strong sense that you can guide me on what to do next.",
+				// 	nextPage: null,
+				// 	choices: null,
+				// 	position: {x: 396.5, y: 42}
+				// };
 				newDialogLine.initializeWithData(workingData, children.length - baseChildCount);
 				children.push(newDialogLine);
 			

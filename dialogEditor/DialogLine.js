@@ -99,28 +99,27 @@ function DialogLine(position) {
 		this.setSpeaker(data.who);
 		speakerDropDown.setChildToDraw(data.who);
 		
-		this.leftImageDropDown.setChildToDraw(data.leftPic);
-		this.rightImageDropDown.setChildToDraw(data.rightPic);
+		// this.leftImageDropDown.setChildToDraw(data.leftPic);
+		// this.rightImageDropDown.setChildToDraw(data.rightPic);
 		
-		if(data.leftPicLeave != null) {
-			if(data.leftPicLeave) {
-				this.leftLeaveDropDown.setChildToDraw("No");
-			} else {
-				this.leftLeaveDropDown.setChildToDraw("Yes");
-			}
-		}
+		// if(data.leftPicLeave != null) {
+		// 	if(data.leftPicLeave) {
+		// 		this.leftLeaveDropDown.setChildToDraw("No");
+		// 	} else {
+		// 		this.leftLeaveDropDown.setChildToDraw("Yes");
+		// 	}
+		// }
 
-		if(data.rightPicLeave != null) {
-			if(data.rightPicLeave) {
-				this.rightLeaveDropDown.setChildToDraw("No");
-			} else {
-				this.rightLeaveDropDown.setChildToDraw("Yes");
-			}
-		}
+		// if(data.rightPicLeave != null) {
+		// 	if(data.rightPicLeave) {
+		// 		this.rightLeaveDropDown.setChildToDraw("No");
+		// 	} else {
+		// 		this.rightLeaveDropDown.setChildToDraw("Yes");
+		// 	}
+		// }
 				
 		if(((data.text === "") && (data.choices === null)) || (data.text != "")) {
 			const transitionList = {origins:[], destinations:[]};
-			
 			textBox.setText(data.text);
 			
 			const textRows = textBox.getText().length;
