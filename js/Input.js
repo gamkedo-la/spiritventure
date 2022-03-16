@@ -25,6 +25,8 @@ const KEY_I = 73; // Inventory
 var mouseX = 0;
 var mouseY = 0;
 
+var firstClick = false;
+
 function initInput() {
   document.addEventListener("mousemove", mouseMove);
   document.addEventListener("click", mouseClick);
@@ -75,8 +77,10 @@ function mouseMove(evt) {
 }
 
 function mouseClick(evt) {
-  // browsers force us to wait for a click or keypress until playing sounds
-  maybeStartMusic(evt);
+  if (!firstClick) {
+    startBGM();
+    firstClick = true;
+  }
   advanceDialog();
   checkDialogChoices();
 }
@@ -93,8 +97,15 @@ function checkDialogChoices () {
 }
 
 function keyPressed(evt) {
+  // // this doesn't work
+  // // neither did the previous maybeStartMusic(evt)
+  // // I get a media not allowed to autoplay error that breaks sounds
+  // // I don't get it...
+  // if (!firstClick) {
+  //   startBGM();
+  //   firstClick = true;
+  // }
   setKeyHoldState(evt.keyCode, p1, true);
-  maybeStartMusic(evt); // browsers force us to wait for a click or keypress until playing sounds
   tilemapEditorKeyInput(evt.keyCode);
   selectDialogChoice(evt.keyCode);
   evt.preventDefault(); // without this, arrow keys scroll the browser!
@@ -113,7 +124,7 @@ function keyReleased(evt) {
       showingInventory = !showingInventory; //toggle
       break;
     case KEY_M:
-      toggleMuteMusic();
+      volumeControl.toggleMute();
       break;
     case KEY_LETTER_U:
       console.log("Decrease Row");

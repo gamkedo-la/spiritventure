@@ -5,24 +5,9 @@ var camX = 0
 var camY = 0
 var p1 = new warriorClass();
 
-var music, doorSFX, keySFX;
-
 var deltaTime = 0;
 var debugText;
 var gameFont = 'Georgia, Arial, sans-serif';
-
-function maybeStartMusic(e) { 
-    if (!music) {
-        console.log("first click! now we are allowed to start the music.");
-        music = new Audio ("sound/Lurking Sadness.mp3");
-        music.loop = true;
-        music.play();
-
-        doorSFX = new Audio ("sound/door_open_dra.wav");
-        keySFX = new Audio ("sound/pickup_key.mp3");
-
-    }
-}
 
 function toggleMuteMusic(){
   music.muted = !(music.muted);

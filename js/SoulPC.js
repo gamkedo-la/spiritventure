@@ -31,10 +31,6 @@ function warriorClass() {
     this.controlAltKeyForWest = westKey;
   }
 
-  this.playSound = function (sfx) {
-    if (sfx) sfx.play();
-  }
-
   this.init = function (whichGraphic, whichName) {
     this.myBitmap = whichGraphic;
     this.myName = whichName;
@@ -108,7 +104,7 @@ function warriorClass() {
       console.log(side);
       if (side > -1) {
         console.log("changing rooms!");
-        this.playSound(doorSFX)
+        playSound("door_open_dra.wav");
         roomIndex = rooms[roomIndex][GRID + side];
         switch (side) {
           case 1:
@@ -192,7 +188,7 @@ function warriorClass() {
 
         this.keysHeld++; // gain key
         console.log("picked up a key!");
-        this.playSound(keySFX);
+        playSound("pickup_key.mp3");
 
         document.getElementById("debugText").innerHTML = "Keys: " + this.keysHeld;
 
