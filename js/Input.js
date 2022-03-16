@@ -101,10 +101,17 @@ function keyPressed(evt) {
   // // neither did the previous maybeStartMusic(evt)
   // // I get a media not allowed to autoplay error that breaks sounds
   // // I don't get it...
-  // if (!firstClick) {
-  //   startBGM();
-  //   firstClick = true;
-  // }
+
+  try {
+    if (!firstClick) {
+      startBGM();
+      firstClick = true;
+    }
+  } catch(e) {
+    console.log("trying to play sound on the first keypress failed. ignoring.");
+    firstClick = false; // let a click do it
+  }
+  
   setKeyHoldState(evt.keyCode, p1, true);
   tilemapEditorKeyInput(evt.keyCode);
   selectDialogChoice(evt.keyCode);
