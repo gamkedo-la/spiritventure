@@ -119,13 +119,16 @@ let volumeControl = {
  * 
  * TODO: some error catching
  */
-function sfx(fileName, loop = false) {
+function sfx(fileName, loop = false, vol=1) {
   if (!currentSFX[fileName]) {
+    // download the file once only
     currentSFX[fileName] = new Audio("sound/" + fileName);
   }
 
-  currentSFX[fileName].play();
-  currentSFX[fileName].volume = 1;
+  try { currentSFX[fileName].play(); }
+  catch(e) { console.log('sound error ignored.'); }
+  
+  currentSFX[fileName].volume = vol;
   currentSFX[fileName].loop = loop;
 }
 

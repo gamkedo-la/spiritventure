@@ -93,6 +93,9 @@ function setSpeakerBg(speakerName) {
 
 function selectDialogChoice(key) {
     if (dialogActiveConvo == null || dialogActiveConvo[dialogConvoStep].choices == null) return;
+
+    sfx('dialog_select.wav');
+
     var option = keyToNumber(key);
     if (option != -1 && option <= dialogActiveConvo[dialogConvoStep].choices.length) {
         dialogConvoStep = dialogActiveConvo[dialogConvoStep].choices[option - 1][1];
@@ -156,6 +159,7 @@ function processDialog() {
             dialogCurrentText[currentPrintLine] += lineToPrint[dialogCurrentTextIndex];
             dialogCurrentTextIndex++;
             dialogTextCharTimer = dialogTextCharDelay;
+            sfx('dialog_advance.wav',false,0.25); // fixme: might happen too often
         }
         else if (currentPrintLine < wrapText.length - 1) {
             currentPrintLine++;
