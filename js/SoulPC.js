@@ -104,7 +104,7 @@ function warriorClass() {
       console.log(side);
       if (side > -1) {
         console.log("changing rooms!");
-        playSound("door_open_dra.wav");
+        playSound(Sound.DoorOpenDra);
         roomIndex = rooms[roomIndex][GRID + side];
         switch (side) {
           case 1:
@@ -188,7 +188,7 @@ function warriorClass() {
 
         this.keysHeld++; // gain key
         console.log("picked up a key!");
-        playSound("pickup_key.mp3");
+        playSound(Sound.PickupKey);
 
         document.getElementById("debugText").innerHTML = "Keys: " + this.keysHeld;
 
