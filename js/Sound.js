@@ -109,7 +109,7 @@ let volumeControl = {
       volumeResult = volumeControl.sfx;
     }
   
-    return currentSFX[track].volume =  volumeResult * this.master;
+    return volumeResult * this.master;
   },
 }
 
