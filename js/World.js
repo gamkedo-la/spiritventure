@@ -117,7 +117,8 @@ function drawRoom() {
       if( tileTypeHasTransparency(tileTypeHere) ) {
         canvasContext.drawImage(tilePics[TILE_GROUND], tileLeftEdgeX, tileTopEdgeY);
       }
-      canvasContext.drawImage(tilePics[tileTypeHere], tileLeftEdgeX, tileTopEdgeY);
+      var extraHeight = tilePics[tileTypeHere].height-TILE_H;
+      canvasContext.drawImage(tilePics[tileTypeHere], tileLeftEdgeX, tileTopEdgeY - extraHeight);
 
       if(tilemapEditor && mouseX >= tileLeftEdgeX && mouseX < tileLeftEdgeX + TILE_W
         && mouseY >= tileTopEdgeY && mouseY < tileTopEdgeY + TILE_H) {
