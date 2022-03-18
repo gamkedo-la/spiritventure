@@ -56,7 +56,7 @@ function drawEverything() {
   colorRect(0, 0, canvas.width, canvas.height, "#000000FF");
 
   drawRoom();
-  p1.draw();
+  //p1.draw();//  happens as part of draw room so the player can walk behind stuff
   drawDialog();
   drawAnimatedInventory();
 

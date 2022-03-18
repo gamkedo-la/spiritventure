@@ -7,7 +7,7 @@
 
 var tilemapEditor = false;
 var editorTileIndex = -1;
-
+var playerDrawOffsetY = -10;
 var roomIndex = 0;
 
 const TILE_W = 50;
@@ -104,9 +104,10 @@ function drawRoom() {
   var tileIndex = 0;
   var tileLeftEdgeX = camX;
   var tileTopEdgeY = camY;
-
+  var playerDrawnYet = false;
   editorTileIndex = -1;
 
+  //ground only, skipping tall objects
   for(var eachRow=0; eachRow<rooms[roomIndex][ROWS]; eachRow++) { // deal with one row at a time
     
     tileLeftEdgeX = camX; // resetting horizontal draw position for tiles to left edge
@@ -118,8 +119,33 @@ function drawRoom() {
         canvasContext.drawImage(tilePics[TILE_GROUND], tileLeftEdgeX, tileTopEdgeY);
       }
       var extraHeight = tilePics[tileTypeHere].height-TILE_H;
-      canvasContext.drawImage(tilePics[tileTypeHere], tileLeftEdgeX, tileTopEdgeY - extraHeight);
+      if(extraHeight<=0){ //doing tall stuff on seperate pass
+        canvasContext.drawImage(tilePics[tileTypeHere], tileLeftEdgeX, tileTopEdgeY - extraHeight);
 
+      }
+      tileIndex++; // increment which index we're going to next check for in the room
+      tileLeftEdgeX += TILE_W; // jump horizontal draw position to next tile over by tile width
+
+    } // end of for eachCol
+    tileTopEdgeY += TILE_H; // jump horizontal draw position down by one full tile height
+
+  } // end of for eachRow  
+  tileIndex = 0;
+  tileLeftEdgeX = camX;
+  tileTopEdgeY = camY;
+  playerDrawnYet = false;  
+  // tall objects only
+  for(var eachRow=0; eachRow<rooms[roomIndex][ROWS]; eachRow++) { // deal with one row at a time
+    
+    tileLeftEdgeX = camX; // resetting horizontal draw position for tiles to left edge
+    
+    for(var eachCol=0; eachCol<rooms[roomIndex][COLS]; eachCol++) { // left to right in each row
+
+      var tileTypeHere = rooms[roomIndex][GRID][ tileIndex ]; // getting the tile code for this index
+      var extraHeight = tilePics[tileTypeHere].height-TILE_H;
+      if(extraHeight>0){
+        canvasContext.drawImage(tilePics[tileTypeHere], tileLeftEdgeX, tileTopEdgeY - extraHeight);
+      }
       if(tilemapEditor && mouseX >= tileLeftEdgeX && mouseX < tileLeftEdgeX + TILE_W
         && mouseY >= tileTopEdgeY && mouseY < tileTopEdgeY + TILE_H) {
         canvasContext.fillStyle = "#FF00FF88";
@@ -131,8 +157,10 @@ function drawRoom() {
       tileLeftEdgeX += TILE_W; // jump horizontal draw position to next tile over by tile width
 
     } // end of for eachCol
-    
     tileTopEdgeY += TILE_H; // jump horizontal draw position down by one full tile height
-    
+    if (playerDrawnYet==false && p1.y+camY<tileTopEdgeY-playerDrawOffsetY){
+      p1.draw();
+      playerDrawnYet = true;
+    }
   } // end of for eachRow    
 } // end of drawRoom()
