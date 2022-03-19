@@ -50,7 +50,11 @@ function advanceDialog() {
                 wrapNextText(dialogActiveConvo[dialogConvoStep].text);
             }
         }
+
+        return true; // meaning we actually did advance the dialog
     }
+
+    return false; // no dialog to advance, so we didn't
 }
 
 function setSpeakerNameColor(speakerName) {

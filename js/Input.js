@@ -81,8 +81,16 @@ function mouseClick(evt) {
     startBGM();
     firstClick = true;
   }
-  advanceDialog();
-  checkDialogChoices();
+  const dialogWasAdvanced = advanceDialog();
+  const dialogChoicesAvailable = checkDialogChoices();
+
+  if (!dialogWasAdvanced && !dialogChoicesAvailable) {
+    p1.moveToPos.x = mouseX - camX; // this.x + camX, this.y + camY
+    p1.moveToPos.y = mouseY - camY;
+  } else {
+    p1.moveToPos.x = null;
+    p1.moveToPos.y = null;
+  }
 }
 
 function checkDialogChoices () {
@@ -93,7 +101,11 @@ function checkDialogChoices () {
         break;
       }
     }
+
+    return true; // meaning we actually did choose a dialog choice
   }
+
+  return false; // no dialog choice to choose
 }
 
 function keyPressed(evt) {
