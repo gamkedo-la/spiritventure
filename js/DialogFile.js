@@ -14,7 +14,7 @@ let testConvo = [
         who: "Despond",
         nameCol: "undefined",
         voice: undefined,
-        text: "Well, it's certainly not that. I know that you're important, and this strong sense that you can guide me on what to do next.",
+        text: "Well, it's certainly not that. I know that you're important, and I have this strong sense that you can guide me on what to do next.",
         nextPage: null,
         choices: null,
         position: {x: 396.5, y: 42}
