@@ -38,8 +38,8 @@ function updateEverything() {
   deltaTime = getDelta();
 
   //Camera Lerping
-  camX = lerp(camX, canvas.width/2 - p1.x, 0.1);
-  camY = lerp(camY, canvas.height/2 - p1.y, 0.1);
+  camX = intLerp(camX, canvas.width/2 - p1.x, 0.1);
+  camY = intLerp(camY, canvas.height/2 - p1.y, 0.1);
 
   processDialog();
 

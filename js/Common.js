@@ -2,6 +2,10 @@ function lerp(v0, v1, t) {
   return (1 - t) * v0 + t * v1;
 }
 
+function intLerp(v0, v1, t) {
+	return Math.floor( (1 - t) * v0 + t * v1 );
+  }
+
 function remap (value, from1, to1, from2, to2) {
   return (value - from1) / (to1 - from1) * (to2 - from2) + from2;
 }
