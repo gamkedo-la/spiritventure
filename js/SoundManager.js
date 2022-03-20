@@ -136,7 +136,7 @@ function sfx(fileName, loop = false, vol=1) {
  * Play looping track, on "bgm" category volume levels.
  * Only allows one bgm track.
  */
-function startBGM(track = Sound.LurkingSadness) {
+function startBGM(track = Sound.ShrillNights) {
     // pause all previous bgm tracks
     for (var thing in currentSFX) {
       if (currentSFX[thing].category == "bgm") {
