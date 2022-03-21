@@ -9,6 +9,11 @@ var deltaTime = 0;
 var debugText;
 var gameFont = 'Georgia, Arial, sans-serif';
 
+const STATE_PLAY = 1;
+const STATE_PAUSE = 2;
+var gameState = STATE_PLAY;
+
+
 function toggleMuteMusic(){
   music.muted = !(music.muted);
 }
@@ -37,18 +42,26 @@ function loadingDoneSoStartGame() {
 function updateEverything() {
   deltaTime = getDelta();
 
-  //Camera Lerping
-  camX = intLerp(camX, canvas.width/2 - p1.x, 0.1);
-  camY = intLerp(camY, canvas.height/2 - p1.y, 0.1);
+  switch (gameState) {
+  
+  case STATE_PLAY:
+    //Camera Lerping
+    camX = intLerp(camX, canvas.width/2 - p1.x, 0.1);
+    camY = intLerp(camY, canvas.height/2 - p1.y, 0.1);
 
-  processDialog();
+    processDialog();
 
-  //No movement during dialogues
-  if(dialogActiveConvo != null) return;
+    //No movement during dialogues
+    if(dialogActiveConvo != null) return;
 
-  p1.move();
+    p1.move();
+    break;
+
+  case STATE_PAUSE:
+    drawPause();
+    break;
+  }
 }
-
 
 
 function drawEverything() {
@@ -60,10 +73,32 @@ function drawEverything() {
   drawDialog();
   drawAnimatedInventory();
 
+  if (gameState == STATE_PAUSE) {
+    drawPause();
+  }
+
   /*if(dialogActiveConvo) {
     debugText = dialogCurrentText;
   } else {
     debugText = 'Debug Text';
   }*/
   document.querySelector('#debugText').innerHTML = debugText;
+}
+
+
+function drawPause() {
+  twoColorText('Paused', 280, 250, 84, 4, 'black', 'white');
+  // drawText('Paused', 200, 300, 64, 'black')
+}
+function drawText(str, x, y, size, colour) {
+  canvasContext.fillStyle = colour;
+  canvasContext.font = size + 'px Arial';
+  canvasContext.fillText(str, x, y);
+}
+function twoColorText(text, atX, atY, size, offset, foregroundColor, backgroundColor){
+  canvasContext.font = size + 'px Arial';
+	canvasContext.fillStyle = backgroundColor;
+	canvasContext.fillText(text, atX + offset, atY + offset)
+	canvasContext.fillStyle = foregroundColor;
+	canvasContext.fillText(text, atX, atY)
 }

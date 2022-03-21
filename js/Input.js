@@ -18,9 +18,10 @@ const KEY_LETTER_J = 74;
 const KEY_LETTER_K = 75;
 
 // game nav controls
-const KEY_ESC = 27; // Pause menu?
+const KEY_ESC = 27; // menu?
 const KEY_M = 77; // Mute music
 const KEY_I = 73; // Inventory
+const KEY_P = 80; // Pause game
 
 var mouseX = 0;
 var mouseY = 0;
@@ -144,6 +145,14 @@ function keyReleased(evt) {
       break;
     case KEY_M:
       volumeControl.toggleMute();
+      break;
+    case KEY_P:
+      if (gameState == STATE_PLAY) {
+        gameState = STATE_PAUSE;
+      } else {
+        gameState = STATE_PLAY;
+      }
+      console.log('P key')
       break;
     case KEY_LETTER_U:
       console.log("Decrease Row");
