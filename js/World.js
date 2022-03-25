@@ -9,6 +9,7 @@ var tilemapEditor = false;
 var editorTileIndex = -1;
 var playerDrawOffsetY = -10;
 var roomIndex = 0;
+var bobPhase = 0;
 
 const TILE_W = 50;
 const TILE_H = 50;
@@ -100,12 +101,19 @@ function tileTypeHasTransparency(checkTileType) {
           );
 }
 
+function tileTypeVerticalBob(checkTileType) {
+  return (
+          checkTileType == TILE_KEY
+          );
+}
+
 function drawRoom() {
   var tileIndex = 0;
   var tileLeftEdgeX = camX;
   var tileTopEdgeY = camY;
   var playerDrawnYet = false;
   editorTileIndex = -1;
+  bobPhase+=0.1;
 
   //ground only, skipping tall objects
   for(var eachRow=0; eachRow<rooms[roomIndex][ROWS]; eachRow++) { // deal with one row at a time
@@ -113,14 +121,18 @@ function drawRoom() {
     tileLeftEdgeX = camX; // resetting horizontal draw position for tiles to left edge
     
     for(var eachCol=0; eachCol<rooms[roomIndex][COLS]; eachCol++) { // left to right in each row
-
+      var verticalBob = 0; 
       var tileTypeHere = rooms[roomIndex][GRID][ tileIndex ]; // getting the tile code for this index
+      verticalBob = 0; 
       if( tileTypeHasTransparency(tileTypeHere) ) {
         canvasContext.drawImage(tilePics[TILE_GROUND], tileLeftEdgeX, tileTopEdgeY);
+        if( tileTypeVerticalBob(tileTypeHere) ){
+          verticalBob = Math.sin(bobPhase+eachCol*0.3+eachRow*0.7)*10;
+        }
       }
       var extraHeight = tilePics[tileTypeHere].height-TILE_H;
       if(extraHeight<=0){ //doing tall stuff on seperate pass
-        canvasContext.drawImage(tilePics[tileTypeHere], tileLeftEdgeX, tileTopEdgeY - extraHeight);
+        canvasContext.drawImage(tilePics[tileTypeHere], tileLeftEdgeX, tileTopEdgeY - extraHeight-verticalBob);
 
       }
       tileIndex++; // increment which index we're going to next check for in the room
