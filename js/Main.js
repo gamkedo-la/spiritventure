@@ -87,7 +87,7 @@ function drawEverything() {
 
 
 function drawPause() {
-  twoColorText('Paused', 280, 250, 84, 4, 'black', 'white');
+  twoColorText('Paused', 280, 250, 84, 7, 'black', 'white');
   // drawText('Paused', 200, 300, 64, 'black')
 }
 function drawText(str, x, y, size, colour) {
