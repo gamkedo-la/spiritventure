@@ -135,21 +135,22 @@ function warriorClass() {
         console.log("changing rooms!");
         playSound(Sound.DoorOpenDra);
         startBGM(Sound.LurkingSadness);
+        console.log(roomIndex, GRID, side, rooms[roomIndex][GRID + side] );
         roomIndex = rooms[roomIndex][GRID + side];
         switch (side) {
-          case 1:
+          case ROOMSIDE_UP:
             this.y = (rooms[roomIndex][ROWS] * TILE_H) - 64;
             camY = -canvas.height * 1.5;
             break;
-          case 2:
+          case ROOMSIDE_DOWN:
             this.y = 64;
             camY = canvas.height * 1.5;
             break;
-          case 3:
+          case ROOMSIDE_LEFT:
             this.x = (rooms[roomIndex][COLS] * TILE_W) - 64;
             camX = -canvas.width * 1.5;
             break;
-          case 4:
+          case ROOMSIDE_RIGHT:
             this.x = 64;
             camX = canvas.width * 1.5;
             break;

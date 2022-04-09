@@ -71,17 +71,20 @@ function getTileIndexAtPixelCoord(pixelX, pixelY) {
   var tileIndex = roomTileToIndex(tileCol, tileRow);
   return tileIndex;
 }
+const ROOMSIDE_UP =1; 
+const ROOMSIDE_DOWN =2;
+const ROOMSIDE_LEFT =3;
+const ROOMSIDE_RIGHT =4;
 
-//Up = 0, Down = 1, Left = 2, Right = 3
 function getTileOutOfBoundsSide(pixelX, pixelY) {
   var tileCol = pixelX / TILE_W;
   var tileRow = pixelY / TILE_H;
   tileCol = Math.floor( tileCol );
   tileRow = Math.floor( tileRow );
-  if(tileRow < 0) return 1;
-  if(tileRow >= rooms[roomIndex][COLS] - 4) return 2;
-  if(tileCol < 0) return 3;
-  if(tileCol >= rooms[roomIndex][ROWS] - 4) return 4;
+  if(tileRow < 0) return ROOMSIDE_UP;
+  if(tileRow >= rooms[roomIndex][COLS] - 4) return ROOMSIDE_DOWN;
+  if(tileCol < 0) return ROOMSIDE_LEFT;
+  if(tileCol >= rooms[roomIndex][ROWS] - 4) return ROOMSIDE_RIGHT;
   return -1;
 }
 
