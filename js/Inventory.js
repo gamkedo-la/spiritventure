@@ -10,6 +10,12 @@ var inventoryMargin = 50;
 
 // currently all items are defines in p1 class initalization. See SoulPC.js for details
 
+function dist(x1, y1, x2, y2){
+	var dx= x2-x1;
+	var dy= y2-y1;
+	return Math.sqrt(dx*dx+dy*dy);
+}
+
 function drawAnimatedInventory() {
     if (showingInventory == false) {
         return;
@@ -83,10 +89,10 @@ function drawInventoryItemLabel(text, x, y, fillStyle, oldFillStyle) {
 
 function drawGrid(startX, startY, radius, strokeWidth, padding, rows, cols, inventoryItems) {
     let index = 0;
-    if (inventoryItems.length > 0) {
-        inventoryItems[0].selected = true;
+    for (var i = 0; i<inventoryItems.length; i++) {
+        inventoryItems[i].selected = false;
     };
-
+    var iconRadius = 75;
     for (let i = 0; i < rows; i++) {
         for (let j = 0; j < cols; j++) {
             index = j + (i * cols);
@@ -97,11 +103,12 @@ function drawGrid(startX, startY, radius, strokeWidth, padding, rows, cols, inve
                 if (inventoryItems[index].quantity == 0) {
                     inventoryItems.splice(index, 1)
                 } else {
+                    inventoryItems[index].selected = dist(x,y,mouseX,mouseY)<radius;
                     if (inventoryItems[index].selected) {
                         outlineCircle(canvasContext, x, y, radius, '#ffffff', strokeWidth);
                     }
                     colorCircle(x, y, radius, 'rgba(0,0,0,0.8)');
-                    drawInventoryItemIcon(inventoryItems[index].animation, inventoryItems[index].frames, x - 75, y - 75);
+                    drawInventoryItemIcon(inventoryItems[index].animation, inventoryItems[index].frames, x - iconRadius, y - iconRadius);
 
                     // quantity counter
                     if (inventoryItems[index].quantity > 1) {

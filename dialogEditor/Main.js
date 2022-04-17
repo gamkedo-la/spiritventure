@@ -215,3 +215,4 @@ function drawBitmapCenteredWithRotation(context, useBitmap, atX, atY, withAng) {
     context.drawImage(useBitmap, -useBitmap.width / 2, -useBitmap.height / 2);
     context.restore();
 }
+
