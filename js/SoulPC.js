@@ -134,9 +134,9 @@ function warriorClass() {
       if (side > -1) {
         console.log("changing rooms!");
         playSound(Sound.DoorOpenDra);
-        startBGM(Sound.LurkingSadness);
         console.log(roomIndex, GRID, side, rooms[roomIndex][GRID + side] );
         roomIndex = rooms[roomIndex][GRID + side];
+        startBGM(roomsSongs[roomIndex]);
         switch (side) {
           case ROOMSIDE_UP:
             this.y = (rooms[roomIndex][ROWS] * TILE_H) - 64;

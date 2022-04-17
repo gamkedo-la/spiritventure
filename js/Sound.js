@@ -4,6 +4,10 @@
  * use : playSound(Sound.LurkingSadness)
  */
 const Sound = {
+    LurkingSadness: "lurking_sadness.mp3",
+    ShrillNights: "shrillnights.wav",
+    Happy: "happy_room_1.ogg",
+    Angry: "Angry_room_longplay.ogg",
     Cancel: "cancel.wav",
     Confirm: "confirm.wav",
     DialogAdvance: "dialog_advance.wav",
@@ -18,14 +22,12 @@ const Sound = {
     Hurt: "hurt.wav",
     Jump: "jump.wav",
     Low: "low.wav",
-    LurkingSadness: "lurking_sadness.mp3",
     Ooh: "ooh.wav",
     Open: "open.wav",
     PickupKey: "pickup_key.mp3",
     Pickup: "pickup.wav",
     Play: "play.mp3",
     Shiny: "shiny.wav",
-    ShrillNights: "shrillnights.wav",
     Squeak: "squeak.wav",
     Teleport: "teleport.wav",
     Throw: "throw.wav",
