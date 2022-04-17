@@ -16,3 +16,4 @@ var leftRoom = [16,12,[3,3,3,3,3,3,3,3,5,3,3,3,3,3,3,3,3,13,13,13,13,13,13,13,13
 
 var rooms = [startingRoom, topRoom, rightRoom, belowRoom, leftRoom];
 var roomsSongs = [Sound.ShrillNights, Sound.Happy, Sound.LurkingSadness, Sound.ShrillNights, Sound.Angry];
+var roomSongVol =[1.0, 0.3, 1.0, 1.0, 0.075]

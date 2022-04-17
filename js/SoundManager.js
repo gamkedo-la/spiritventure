@@ -147,7 +147,7 @@ function startBGM(track = Sound.ShrillNights) {
 
     sfx(track, true);
     currentSFX[track].category = "bgm";
-    currentSFX[track].volume = volumeControl.setVolume(track);
+    currentSFX[track].volume = volumeControl.setVolume(track)*roomSongVol[roomIndex];
 }
 
 /**
