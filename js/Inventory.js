@@ -7,6 +7,7 @@ var inventoryAnimFrame = 0; //use for all inventory animations
 var inventoryAnimFrameDelay = INVENTORY_ANIM_FRAME_WAIT;
 
 var inventoryMargin = 50;
+var inventorySelectedIndex = -1;
 
 // currently all items are defines in p1 class initalization. See SoulPC.js for details
 
@@ -69,8 +70,9 @@ function drawAnimatedInventory() {
         6, //strokeWidth 
         20,//padding 
         rows, columns, p1.inventory);
-
-    drawInfoPanel(500, 60, p1.inventory[0])
+    if (inventorySelectedIndex>=0){
+        drawInfoPanel(500, 60, p1.inventory[inventorySelectedIndex]);
+    }
 }
 
 function drawInventoryItemIcon(animation, frames, destX, destY) {
@@ -105,6 +107,7 @@ function drawGrid(startX, startY, radius, strokeWidth, padding, rows, cols, inve
                 } else {
                     inventoryItems[index].selected = dist(x,y,mouseX,mouseY)<radius;
                     if (inventoryItems[index].selected) {
+                        inventorySelectedIndex = index;
                         outlineCircle(canvasContext, x, y, radius, '#ffffff', strokeWidth);
                     }
                     colorCircle(x, y, radius, 'rgba(0,0,0,0.8)');
