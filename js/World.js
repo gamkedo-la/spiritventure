@@ -200,6 +200,7 @@ Particle.prototype.update = function() {
   if(this.life > 0) {
     this.x += this.xVel;
     this.y += this.yVel;
+    this.size += 0.02;
     this.draw();
   } else {
 
@@ -208,13 +209,13 @@ Particle.prototype.update = function() {
 function makeParticles() {
   particleArray = [];
   for(let i=0; i<50; i++) {
-    let size = 2;
+    let size = 1;
     let life = 150 + Math.random() * 120;
-    let x = p1.x + (Math.random() * 8) - 4;
-    let y = p1.y - 20 + (Math.random() * 8) - 4;
-    let xVel = (Math.random() * 0.4) - 0.2;
-    let yVel = (Math.random() * 0.4) - 0.2;
-    let color = "red";
+    let x = p1.x + camX + (Math.random() * 8) - 4;
+    let y = p1.y + camY + (Math.random() * 8) - 4;
+    let xVel = (Math.random() * 0.6) - 0.3;
+    let yVel = (Math.random() * 0.6) - 0.3;
+    let color = "rgba(255, 0, 0, 0.5)";
     particleArray.push(new Particle(x, y, xVel, yVel, size, color, life));
   }
 }
