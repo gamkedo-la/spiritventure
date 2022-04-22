@@ -208,10 +208,10 @@ Particle.prototype.update = function() {
 function makeParticles() {
   particleArray = [];
   for(let i=0; i<50; i++) {
-    let size = 1;
-    let life = 120 + Math.random() * 60;
+    let size = 2;
+    let life = 150 + Math.random() * 120;
     let x = p1.x + (Math.random() * 8) - 4;
-    let y = p1.y + (Math.random() * 8) - 4;
+    let y = p1.y - 20 + (Math.random() * 8) - 4;
     let xVel = (Math.random() * 0.4) - 0.2;
     let yVel = (Math.random() * 0.4) - 0.2;
     let color = "red";
