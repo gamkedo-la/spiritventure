@@ -55,6 +55,7 @@ function updateEverything() {
     if(dialogActiveConvo != null) return;
 
     p1.move();
+
     break;
 
   case STATE_PAUSE:
@@ -62,9 +63,6 @@ function updateEverything() {
     break;
   }
 
-  if (particleNPCrun) {
-    animateParticles();
-  }
 }
 
 
@@ -76,6 +74,10 @@ function drawEverything() {
   //p1.draw();//  happens as part of draw room so the player can walk behind stuff
   drawDialog();
   drawAnimatedInventory();
+
+  if (particleNPCrun) {
+    animateParticles();
+  }
 
   if (gameState == STATE_PAUSE) {
     drawPause();

@@ -226,6 +226,8 @@ function warriorClass() {
         rooms[roomIndex][GRID][walkIntoTileIndex] = TILE_GROUND; // remove key
         break;
       case TILE_MIND:
+        console.log("MIND encountered");
+        NPCparticles();
         var pos = getPixelCoordAtTileIndex(walkIntoTileIndex);
         wrapText = [testConvo[0].text];
         lineWrap();
@@ -233,8 +235,6 @@ function warriorClass() {
         sfx('dialog_start.wav');
         break;
       case TILE_DESPOND:
-        console.log("DESPOND encountered");
-        NPCparticles();
         // TODO: Initiate different dialog
         var pos = getPixelCoordAtTileIndex(walkIntoTileIndex);
         wrapText = [testConvo2[0].text];

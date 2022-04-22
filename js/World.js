@@ -190,22 +190,26 @@ function Particle(x, y, xVel, yVel, size, color, life) {
   this.life = life;
 }
 Particle.prototype.draw = function() {
-  ctx.beginPath();
-  ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
-  ctx.fillStyle = this.color;
-  ctx.fill();
+  canvasContext.beginPath();
+  canvasContext.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
+  canvasContext.fillStyle = this.color;
+  canvasContext.fill();
 }
 Particle.prototype.update = function() {
-  // stay on screen by bounce off edges
-  this.x += this.xVel;
-  this.y += this.yVel;
-  this.draw();
+  this.life = this.life - 1;
+  if(this.life > 0) {
+    this.x += this.xVel;
+    this.y += this.yVel;
+    this.draw();
+  } else {
+
+  }
 }
 function makeParticles() {
   particleArray = [];
-  for(let i=0; i<40; i++) {
+  for(let i=0; i<50; i++) {
     let size = 1;
-    let life = 20;
+    let life = 120 + Math.random() * 60;
     let x = p1.x + (Math.random() * 8) - 4;
     let y = p1.y + (Math.random() * 8) - 4;
     let xVel = (Math.random() * 0.4) - 0.2;
