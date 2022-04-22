@@ -179,3 +179,47 @@ function drawRoom() {
     }
   } // end of for eachRow    
 } // end of drawRoom()
+
+function Particle(x, y, xVel, yVel, size, color, life) {
+  this.x = x;
+  this.y = y;
+  this.xVel = xVel;
+  this.yVel = yVel;
+  this.size = size;
+  this.color = color;
+  this.life = life;
+}
+Particle.prototype.draw = function() {
+  ctx.beginPath();
+  ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
+  ctx.fillStyle = this.color;
+  ctx.fill();
+}
+Particle.prototype.update = function() {
+  // stay on screen by bounce off edges
+  this.x += this.xVel;
+  this.y += this.yVel;
+  this.draw();
+}
+function makeParticles() {
+  particleArray = [];
+  for(let i=0; i<40; i++) {
+    let size = 1;
+    let life = 20;
+    let x = p1.x + (Math.random() * 8) - 4;
+    let y = p1.y + (Math.random() * 8) - 4;
+    let xVel = (Math.random() * 0.4) - 0.2;
+    let yVel = (Math.random() * 0.4) - 0.2;
+    let color = "red";
+    particleArray.push(new Particle(x, y, xVel, yVel, size, color, life));
+  }
+}
+function animateParticles() {
+  for (let i=0; i < particleArray.length; i++) {
+    particleArray[i].update();
+  }
+}
+function NPCparticles() {
+  makeParticles();
+  particleNPCrun = true;
+}

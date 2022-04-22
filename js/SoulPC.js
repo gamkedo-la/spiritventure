@@ -233,6 +233,8 @@ function warriorClass() {
         sfx('dialog_start.wav');
         break;
       case TILE_DESPOND:
+        console.log("DESPOND encountered");
+        NPCparticles();
         // TODO: Initiate different dialog
         var pos = getPixelCoordAtTileIndex(walkIntoTileIndex);
         wrapText = [testConvo2[0].text];

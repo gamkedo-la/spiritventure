@@ -12,7 +12,7 @@ var gameFont = 'Georgia, Arial, sans-serif';
 const STATE_PLAY = 1;
 const STATE_PAUSE = 2;
 var gameState = STATE_PLAY;
-
+var particleNPCrun = false;
 
 function toggleMuteMusic(){
   music.muted = !(music.muted);
@@ -60,6 +60,10 @@ function updateEverything() {
   case STATE_PAUSE:
     drawPause();
     break;
+  }
+
+  if (particleNPCrun) {
+    animateParticles();
   }
 }
 
