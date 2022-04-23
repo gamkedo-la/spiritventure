@@ -209,8 +209,8 @@ Particle.prototype.update = function() {
 function makeParticles() {
   particleArray = [];
   for(let i=0; i<50; i++) {
-    let size = 1;
-    let life = 150 + Math.random() * 120;
+    let size = 0.25;
+    let life = 150 + Math.random() * 25;
     let x = p1.x + camX + (Math.random() * 8) - 4;
     let y = p1.y + camY + (Math.random() * 8) - 4;
     let xVel = (Math.random() * 0.6) - 0.3;
