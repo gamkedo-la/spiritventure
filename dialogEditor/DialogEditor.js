@@ -468,7 +468,7 @@ function DialogEditor() {
 				childWithFocus.lostFocus();
 				childWithFocus = null;
 			} else {
-				if(newKey === KEY_BACKSPACE) {
+				if(newKey === KEY_BACKSPACE || KEY_DELETE) {
 					if(childWithFocus.type === ChildType.DialogLine) {
 						const didRemoveChild = childWithFocus.remove();
 						if(!didRemoveChild) {

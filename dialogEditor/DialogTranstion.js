@@ -138,7 +138,7 @@ function DialogTransitionOrigin(position, owner) {
 	
 	this.keyboardEvent = function(newKey, oldKeys) {
 		if(this.inFocus) {
-			if(newKey === KEY_BACKSPACE) {
+			if(newKey === KEY_BACKSPACE || KEY_DELETE) {
 				this.remove();
 			}
 		}
@@ -271,7 +271,7 @@ function DialogTransitionDestination(position, owner, origin) {
 	
 	this.keyboardEvent = function(newKey, oldKeys) {
 		if(this.inFocus) {
-			if(newKey === KEY_BACKSPACE) {
+			if(newKey === KEY_BACKSPACE || KEY_DELETE) {
 				this.remove();
 			}
 		}

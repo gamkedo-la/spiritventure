@@ -21,6 +21,8 @@ const KEY_UP = 38;
 const KEY_RIGHT = 39;
 const KEY_DOWN = 40;
 
+const KEY_DELETE = 46;
+
 const DIGIT_0 = 48;
 const DIGIT_1 = 49;
 const DIGIT_2 = 50;
@@ -322,6 +324,7 @@ function isSpecialKey(keyCode) {
 	switch(keyCode) {
 		case KEY_CAPS_LOCK:
 		case KEY_BACKSPACE:
+		case KEY_DELETE:
 		case KEY_SHIFT:
 		case KEY_CTRL:
 		case KEY_ALT:

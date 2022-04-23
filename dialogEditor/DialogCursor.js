@@ -115,7 +115,7 @@ function DialogCursor(position, font, boxWidth) {
 			}
 			cursorIndex++;		
 		} else {
-			if(newKey === KEY_BACKSPACE) {
+			if(newKey === KEY_BACKSPACE || KEY_DELETE) {
 				cursorIndex--;
 				
 				this.removeCharacter();
