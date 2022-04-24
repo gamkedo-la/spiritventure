@@ -36,6 +36,7 @@ function roomTileToIndex(tileCol, tileRow) {
 }
 
 function tilemapEditorWheel(e) {
+  console.log(editorTileIndex);
   if(tilemapEditor && editorTileIndex >= 0) {
     rooms[roomIndex][GRID][editorTileIndex] += e.deltaY > 0 ? 1 : e.deltaY < 0 ? -1 : 0;
     if(rooms[roomIndex][GRID][editorTileIndex] < 0) rooms[roomIndex][GRID][editorTileIndex] = TOTAL_TILES - 1

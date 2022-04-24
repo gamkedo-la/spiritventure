@@ -91,6 +91,26 @@ function drawEverything() {
   document.querySelector('#debugText').innerHTML = debugText;
 }
 
+function handleDialogBasedOnRoom (){
+  switch(roomIndex){
+    case ROOM_STARTING:
+      rooms[roomIndex][GRID][96] = TILE_GROUND;
+      rooms[roomIndex][GRID][184] = TILE_GROUND;
+      rooms[roomIndex][GRID][111] = TILE_GROUND;
+      //rooms[roomIndex][GRID][8] = TILE_GROUND;
+      break;
+    case ROOM_RIGHT:
+      break;
+    case ROOM_BELOW:
+      break;
+    case ROOM_RIGHT:
+      break;
+    case ROOM_LEFT:
+      break;
+    case ROOM_TOP:
+      break; 
+  }
+}
 
 function drawPause() {
   twoColorText('Paused', 280, 250, 84, 7, 'black', 'white');

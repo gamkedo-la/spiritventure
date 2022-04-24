@@ -46,6 +46,7 @@ function advanceDialog() {
             if (dialogConvoStep == null) {
                 dialogConvoStep = 0;
                 dialogActiveConvo = null;
+                handleDialogBasedOnRoom();
             } else {
                 wrapNextText(dialogActiveConvo[dialogConvoStep].text);
             }
