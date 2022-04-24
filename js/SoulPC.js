@@ -250,7 +250,10 @@ function warriorClass() {
   }
 
   this.draw = function () {
-    drawBitmapCenteredAtLocationWithRotation(this.myBitmap, this.x + camX, this.y + camY, 0.0);
+    var horizonBob = Math.sin(bobPhase*0.10)*10;
+    var verticalBob = Math.sin(bobPhase)*10;
+    drawBitmapCenteredAtLocationWithRotation(this.myBitmap, this.x + horizonBob + camX, this.y + verticalBob + camY, 0.0);
+    
   }
 
 } // end of class
