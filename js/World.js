@@ -189,18 +189,28 @@ function Particle(x, y, xVel, yVel, size, color, life) {
   this.size = size;
   this.color = color;
   this.life = life;
+  this.ang = Math.PI*2.0*Math.random();
+  this.angVel = (Math.random() - 0.5)* 0.01;
 }
 Particle.prototype.draw = function() {
-  canvasContext.beginPath();
-  canvasContext.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
+  /*canvasContext.beginPath();
+  canvasContext.arc(this.x +camX, this.y+camY, this.size, 0, Math.PI * 2, false);
   canvasContext.fillStyle = this.color;
-  canvasContext.fill();
+  canvasContext.fill();*/
+  var fade=1.0;
+  if(this.life <20){
+    fade = this.life/20;
+  }
+  canvasContext.globalAlpha = fade;
+  drawBitmapCenteredAtLocationWithRotation(teardropAnim, this.x + camX, this.y + camY, this.ang);
+  canvasContext.globalAlpha = 1.0;
 }
 Particle.prototype.update = function() {
   this.life = this.life - 1;
   if(this.life > 0) {
     this.x += this.xVel;
     this.y += this.yVel;
+    this.ang += this.angVel;
     this.size += 0.02;
     this.draw();
   } else {
@@ -212,8 +222,8 @@ function makeParticles() {
   for(let i=0; i<50; i++) {
     let size = 0.25;
     let life = 150 + Math.random() * 25;
-    let x = p1.x + camX + (Math.random() * 8) - 4;
-    let y = p1.y + camY + (Math.random() * 8) - 4;
+    let x = p1.x + (Math.random() * 8) - 4;
+    let y = p1.y + (Math.random() * 8) - 4;
     let xVel = (Math.random() * 0.6) - 0.3;
     let yVel = (Math.random() * 0.6) - 0.3;
     let color = "rgba(255, 0, 0, 0.5)";
