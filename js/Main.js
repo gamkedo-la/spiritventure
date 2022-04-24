@@ -14,6 +14,10 @@ const STATE_PAUSE = 2;
 var gameState = STATE_PLAY;
 var particleNPCrun = false;
 
+var leftDialogRoomFin = false;
+var rightDialogRoomFin = false;
+var belowDialogRoomFin = false;
+
 function toggleMuteMusic(){
   music.muted = !(music.muted);
 }
@@ -100,15 +104,23 @@ function handleDialogBasedOnRoom (){
       //rooms[roomIndex][GRID][8] = TILE_GROUND;
       break;
     case ROOM_RIGHT:
+      rightDialogRoomFin = true;
+      console.log("done right");
       break;
     case ROOM_BELOW:
-      break;
-    case ROOM_RIGHT:
+      belowDialogRoomFin = true;
+      console.log("done below");
       break;
     case ROOM_LEFT:
+      leftDialogRoomFin = true;
+      console.log("done left");
       break;
     case ROOM_TOP:
+      console.log("To do endgame");
       break; 
+  }
+  if(rightDialogRoomFin && leftDialogRoomFin && belowDialogRoomFin){
+    rooms[ROOM_STARTING][GRID][8] = TILE_GROUND;
   }
 }
 
