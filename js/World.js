@@ -15,21 +15,33 @@ const TILE_W = 50;
 const TILE_H = 50;
 
 const TILE_GROUND = 0;
-const TILE_WALL = 1;
-const TILE_WALL2 = 2;
-const TILE_GOAL = 3;
-const TILE_KEY = 4;
-const TILE_DOOR = 5;
-const TILE_MIND = 6;
-const TILE_VASE = 7;
-const TILE_GROUND2 = 8;
-const TILE_GROUND3 = 9;
-const TILE_ROSE = 10;
-const TILE_DESPOND = 11;
-const TILE_MARBLE_BLUE = 12;
-const TILE_MARBLE_PINK = 13;
+const TILE_GROUND2 = 1;
+const TILE_MARBLE_BLUE = 2;
+const TILE_MARBLE_PINK = 3;
+const TILE_GROUND3 = 4;
 
-const TOTAL_TILES = 14;
+const TILE_WALL = 5;
+const TILE_WALL2 = 6;
+const TILE_GOAL = 7;
+const TILE_VINES_1 = 8;
+const TILE_VINES_2 = 9;
+const TILE_CLOCKS_1 = 10;
+const TILE_ANGER_1 = 11;
+const TILE_ANGER_2 = 12;
+const TILE_HAPPY_1 = 13;
+
+const TILE_KEY = 14;
+const TILE_DOOR = 15;
+
+const TILE_VASE = 16;
+const TILE_ROSE = 17;
+
+const TILE_MIND = 18;
+const TILE_DESPOND = 19;
+const TILE_SATAH = 20;
+const TILE_TRIPA = 21;
+
+const TOTAL_TILES = 22;
 
 function roomTileToIndex(tileCol, tileRow) {
   return (tileCol + rooms[roomIndex][COLS]*tileRow);

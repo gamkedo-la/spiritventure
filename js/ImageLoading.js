@@ -45,6 +45,15 @@ function loadImages() {
     {tileType:TILE_MARBLE_BLUE, theFile:"tile_marble3.png"},
     {tileType:TILE_MARBLE_PINK, theFile:"tile_marble4.png"},
     {tileType:TILE_ROSE, theFile:"tile_rose.png"},
+    {tileType:TILE_ANGER_1, theFile:"anger_wall_art.png"},
+    {tileType:TILE_ANGER_2, theFile:"wall_art_fear_2.png"},
+    {tileType:TILE_VINES_1, theFile:"Vines_1.png"},
+    {tileType:TILE_VINES_2, theFile:"Vines_2.png"},
+    {tileType:TILE_TRIPA, theFile:"Tripa.png"},
+    {tileType:TILE_SATAH, theFile:"Satah.png"},
+    {tileType:TILE_CLOCKS_1, theFile:"clocks_1.png"},
+    {tileType:TILE_HAPPY_1, theFile:"happy_wall_art_1.png"},
+    
     ];
 
   picsToLoad = imageList.length;
