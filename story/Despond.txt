@@ -1,0 +1,68 @@
+let Despond = [
+    {
+        scene: "",
+        who: "Soul",
+        nameCol: "yellow",
+        voice: undefined,
+        text: "Hi,I'm soul.",
+        nextPage: 1,
+        choices: null,
+
+        position: {x: 150, y: -215}
+    },
+    {
+        scene: "",
+        who: "Despond",
+        nameCol: "undefined",
+        voice: undefined,
+        text: "",
+        nextPage: null,
+        choices: [["That's a nice name.I'mDespond, and I know why you're here.", 2], ["", ]],
+
+        position: {x: 619, y: -172}
+    },
+    {
+        scene: "",
+        who: "Soul",
+        nameCol: "yellow",
+        voice: undefined,
+        text: "I see, then i must tell you thatI'm not sure how it is thatI'm going to help you outI know how debilitating what you're feeling is.",
+        nextPage: 3,
+        choices: null,
+
+        position: {x: 172, y: 137}
+    },
+    {
+        scene: "",
+        who: "Despond",
+        nameCol: "undefined",
+        voice: undefined,
+        text: "I appreciate your honesty.It is tough, and honestly, why even bother sometim?",
+        nextPage: 2,
+        choices: null,
+
+        position: {x: 648, y: 161}
+    },
+    {
+        scene: "",
+        who: "Soul",
+        nameCol: "yellow",
+        voice: undefined,
+        text: "That's a good point you brought up there, it can get tiring.I must ask, how does it feel lik?",
+        nextPage: 3,
+        choices: null,
+
+        position: {x: 255, y: 508}
+    },
+    {
+        scene: "",
+        who: null,
+        nameCol: null,
+        voice: null,
+        text: "My host does not realise the full extent of their pain, so much so that it's personified into different entities such asI.As forI, everything thatI look at seems so... black.",
+        nextPage: 6,
+        choices: null,
+
+        position: {x: 813, y: 487}
+    },
+];
