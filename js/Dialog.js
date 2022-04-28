@@ -181,17 +181,28 @@ function drawSpeakerName(speakerName, x, y, textColor) {
     canvasContext.fillText(speakerName, x, y)
 }
 
+var bgSlideAng = 0;
+var bgSlideOffset = 65;
+var bgSpinRate = 0.02;
+
 function drawDialog() {
+    bgSlideAng += bgSpinRate;
     if (dialogActiveConvo == null) return;
 
+    var bgScrollX = Math.cos(bgSlideAng)*bgSlideOffset;
+    var bgScrollY = Math.sin(bgSlideAng)*bgSlideOffset;
+
     dialogChoiceButtons.length = 0;
-    var dialogPanelGrad = canvasContext.createLinearGradient(dialogCurrentX + camX, dialogCurrentY + camY, dialogCurrentX + camX + dialogW / 2, dialogCurrentY + camY + (dialogHOffset + (dialogHPerLine * dialogCurrentText.length)) * 2);
+    /*var dialogPanelGrad = canvasContext.createLinearGradient(dialogCurrentX + camX, dialogCurrentY + camY, dialogCurrentX + camX + dialogW / 2, dialogCurrentY + camY + (dialogHOffset + (dialogHPerLine * dialogCurrentText.length)) * 2);
     dialogPanelGrad.addColorStop(0, dialogPanelColor1);
     dialogPanelGrad.addColorStop(1, dialogPanelColor2);
-    //canvasContext.fillStyle = dialogPanelGrad;
+    canvasContext.fillStyle = dialogPanelGrad;*/
     canvasContext.fillStyle = dialogBack;
 
-    canvasContext.fillRect(dialogCurrentX + camX , dialogCurrentY + camY, dialogCurrentW, dialogCurrentH);
+    canvasContext.save();
+    canvasContext.translate(bgScrollX,bgScrollY);
+
+    canvasContext.fillRect(dialogCurrentX + camX -bgScrollX, dialogCurrentY + camY -bgScrollY, dialogCurrentW, dialogCurrentH);
     if (dialogActiveConvo[dialogConvoStep].choices != null) {
         for (let i = 0; i < dialogActiveConvo[dialogConvoStep].choices.length; i++) {
             var button = {
@@ -203,9 +214,10 @@ function drawDialog() {
             };
             dialogChoiceButtons.push(button);
 
-            canvasContext.fillRect(button.x, button.y, button.width, button.height);
+            canvasContext.fillRect(button.x - bgScrollX, button.y -bgScrollY, button.width, button.height);
         }
     }
+    canvasContext.restore();
 
     canvasContext.strokeStyle = dialogOutlineColor;
     canvasContext.strokeRect(dialogCurrentX + camX, dialogCurrentY + camY, dialogCurrentW, dialogCurrentH);

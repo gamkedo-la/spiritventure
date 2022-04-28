@@ -76,12 +76,12 @@ function drawEverything() {
 
   drawRoom();
   //p1.draw();//  happens as part of draw room so the player can walk behind stuff
-  drawDialog();
-  drawAnimatedInventory();
-
   if (particleNPCrun) {
     animateParticles();
   }
+
+  drawDialog();
+  drawAnimatedInventory();
 
   if (gameState == STATE_PAUSE) {
     drawPause();
