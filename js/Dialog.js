@@ -90,7 +90,7 @@ function setSpeakerBg(speakerName) {
             style = '#06D6A0'; // cool green
             break
         default:
-            style = '#000000';
+           style = '#000000';
             break  
     }
     return style
@@ -188,7 +188,8 @@ function drawDialog() {
     var dialogPanelGrad = canvasContext.createLinearGradient(dialogCurrentX + camX, dialogCurrentY + camY, dialogCurrentX + camX + dialogW / 2, dialogCurrentY + camY + (dialogHOffset + (dialogHPerLine * dialogCurrentText.length)) * 2);
     dialogPanelGrad.addColorStop(0, dialogPanelColor1);
     dialogPanelGrad.addColorStop(1, dialogPanelColor2);
-    canvasContext.fillStyle = dialogPanelGrad;
+    //canvasContext.fillStyle = dialogPanelGrad;
+    canvasContext.fillStyle = dialogBack;
 
     canvasContext.fillRect(dialogCurrentX + camX , dialogCurrentY + camY, dialogCurrentW, dialogCurrentH);
     if (dialogActiveConvo[dialogConvoStep].choices != null) {
@@ -219,6 +220,7 @@ function drawDialog() {
     let speakerName = dialogActiveConvo[dialogConvoStep].who;
 
     canvasContext.fillStyle = setSpeakerBg(speakerName)
+
     canvasContext.fillRect(dialogCurrentX + camX + 32 - dialogFontSize - dialogTextOffset * 2, 
         dialogCurrentY + camY - dialogFontSize - dialogTextOffset * 2, 
         dialogCurrentW / 3, 

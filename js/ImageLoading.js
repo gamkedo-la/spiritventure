@@ -2,6 +2,7 @@ var playerPic=document.createElement("img");
 var keyAnim=document.createElement("img")
 var teardropAnim=document.createElement("img");
 var boxingGlove=document.createElement("img");
+var dialogBack=document.createElement("img");
 var tilePics = [];
 
 var picsToLoad = 0;
@@ -9,6 +10,7 @@ var picsToLoad = 0;
 function countLoadedImageAndLaunchIfReady() {
   picsToLoad--;
   if(picsToLoad == 0) { // last image loaded?
+    dialogBack = canvasContext.createPattern(dialogBack,"repeat");
     loadingDoneSoStartGame();
   }
 }
@@ -30,6 +32,7 @@ function loadImages() {
     {varName:teardropAnim, theFile:"teardrop-sprite.png"},
     {varName:boxingGlove, theFile:"boxing_glove.png"},
     {varName:keyAnim, theFile:"world_key.png"},
+    {varName:dialogBack, theFile:"dialog_back.png"},
     //tileTypes below
     {tileType:TILE_GROUND, theFile:"world_ground.png"},
     {tileType:TILE_WALL, theFile:"spotwall.png"},
