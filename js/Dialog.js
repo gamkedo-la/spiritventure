@@ -14,7 +14,7 @@ var dialogFontSize = 24;
 var dialogTextOffset = 4;
 var dialogTextCharDelay = 16;
 var dialogLerpSpeed = 0.2;
-var dialogChoiceOffsetX = 240;
+var dialogChoiceOffsetX = 240 - 90;
 var dialogChoiceOffsetY = 120;
 var dialogChoiceWidth = 160;
 var dialogChoiceHeight = dialogFontSize + (dialogTextOffset * 2);
@@ -202,7 +202,7 @@ function drawDialog() {
             };
             dialogChoiceButtons.push(button);
 
-            canvasContext.fillRect(button.x - 90, button.y, button.width, button.height);
+            canvasContext.fillRect(button.x, button.y, button.width, button.height);
         }
     }
 
@@ -240,7 +240,7 @@ function drawDialog() {
         for (let i = 0; i < dialogActiveConvo[dialogConvoStep].choices.length; i++) {
             let choiceString = (i + 1).toString() + ". " + dialogActiveConvo[dialogConvoStep].choices[i][0];
             // console.log("CHOICE: "+choiceString);
-            canvasContext.fillText(choiceString, dialogCurrentX + camX + dialogChoiceOffsetX + dialogTextOffset - 90, dialogCurrentY + camY + dialogChoiceOffsetY + dialogFontSize + dialogTextOffset + (dialogChoiceHeight * i), dialogChoiceWidth, dialogChoiceHeight);
+            canvasContext.fillText(choiceString, dialogCurrentX + camX + dialogChoiceOffsetX + dialogTextOffset, dialogCurrentY + camY + dialogChoiceOffsetY + dialogFontSize + dialogTextOffset + (dialogChoiceHeight * i), dialogChoiceWidth, dialogChoiceHeight);
         }
     } else {
         //console.log("NO CHOICES AT DIALOG STEP "+dialogConvoStep);
