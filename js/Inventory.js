@@ -45,7 +45,7 @@ function drawAnimatedInventory() {
     let headerWidth = 200;
     fillRoundedRectangle(
         canvasContext,
-        (canvas.width - inventoryMargin * 2) / 2 - headerWidth / 2, //x, TODO: Center properly over the menu
+        (canvas.width - inventoryMargin * 2) / 2 - headerWidth + 300 / 2, //x, TODO: Center properly over the menu
         inventoryMargin - headerHeight / 2, //y
         headerWidth,
         headerHeight,
@@ -55,7 +55,7 @@ function drawAnimatedInventory() {
     canvasContext.fillStyle = '#ffffff';
     canvasContext.fillText(
         "INVENTORY",
-        (canvas.width - inventoryMargin * 2) / 2 - headerWidth / 2 + 20, //x 
+        (canvas.width - inventoryMargin * 2) / 2 - headerWidth / 2 + 80, //x 
         inventoryMargin + 10 // y
     )
 
