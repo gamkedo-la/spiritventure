@@ -102,6 +102,7 @@ function handleDialogBasedOnRoom (){
       rooms[roomIndex][GRID][184] = TILE_GROUND;
       rooms[roomIndex][GRID][111] = TILE_GROUND;
       //rooms[roomIndex][GRID][8] = TILE_GROUND;
+      p1.inventory[ITEM_TEARDROP].quantity = 1;
       break;
     case ROOM_RIGHT:
       rightDialogRoomFin = true;

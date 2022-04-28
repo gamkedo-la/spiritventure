@@ -2,6 +2,9 @@
 const PLAYER_MOVE_SPEED = 6.0;
 const PLAYER_SPRINT_MULTIPLIER = 1.8;
 
+const ITEM_TEARDROP = 0; //should match order of inventory in player initialisation
+const ITEM_BOXING = 1; 
+
 function warriorClass() {
   // variables to keep track of position
   this.x = 75;
@@ -36,12 +39,12 @@ function warriorClass() {
     this.myBitmap = whichGraphic;
     this.myName = whichName;
     // to track inventory
-    this.inventory = [
+    this.inventory = [ //order should match item const above such as ITEM_TEARDROP
       {
         "name": "Teardrop",
         "frames": 3,
         "visible": true,
-        "quantity": 1,
+        "quantity": 0,
         "animation": teardropAnim,
         "selected": false,
         "flavor": "A single tear falling to earth."
@@ -50,7 +53,7 @@ function warriorClass() {
         "name": "Boxing Glove",
         "frames": 1,
         "visible": true,
-        "quantity": 1,
+        "quantity": 0,
         "animation": boxingGlove,
         "selected": false,
         "flavor": "Protect the fragile hand."

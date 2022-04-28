@@ -100,17 +100,18 @@ function drawGrid(startX, startY, radius, strokeWidth, padding, rows, cols, inve
             index = j + (i * cols);
             x = startX + j * (padding + 2 * radius);
             y = startY + i * (padding + 2 * radius);
-
+            colorCircle(x, y, radius, 'rgba(0,0,0,0.1)');
             if (inventoryItems.length > index) {
+                //colorCircle(x, y, radius, 'rgba(0,0,0,0.2)');
                 if (inventoryItems[index].quantity == 0) {
-                    inventoryItems.splice(index, 1)
+                    //inventoryItems.splice(index, 1)
                 } else {
                     inventoryItems[index].selected = dist(x,y,mouseX,mouseY)<radius;
                     if (inventoryItems[index].selected) {
                         inventorySelectedIndex = index;
                         outlineCircle(canvasContext, x, y, radius, '#ffffff', strokeWidth);
                     }
-                    colorCircle(x, y, radius, 'rgba(0,0,0,0.8)');
+                    
                     drawInventoryItemIcon(inventoryItems[index].animation, inventoryItems[index].frames, x - iconRadius, y - iconRadius);
 
                     // quantity counter
@@ -122,9 +123,9 @@ function drawGrid(startX, startY, radius, strokeWidth, padding, rows, cols, inve
                     }
                 }
 
-            } else {
-                colorCircle(x, y, radius, 'rgba(0,0,0,0.1)');
-            }
+            } 
+            
+            
         }
     }
 }
