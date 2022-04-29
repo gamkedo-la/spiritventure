@@ -10,381 +10,127 @@ const voiceLow2 = null;
 
 let editableDialogString ="";
 
-let ATestDialog = [
+let Gemini1 = [
     {
-        scene: "neutral",
-        who: "Despond",
-        nameCol: "lightBlue",
-        voice: voiceLow1,
-        text: "Hi there.",
+        scene: "",
+        who: "Soul",
+        nameCol: "yellow",
+        voice: undefined,
+        text: "Hello, I am here to… I’m not sure why I’m here.",
         nextPage: 1,
-        leftPic: despond,
-        rightPic: null,
-
-        leftPicLeave: false,
-        rightPicLeave: false,
-
         choices: null,
 
-        position: {x: 472.5, y: 133}
-    },/*
+        position: {x: 701, y: -204}
+    },
     {
-        scene: "neutral",
-        who: "incense",
-        nameCol: "pink",
-        voice: voiceHigh2,
-        text: "Hi! How are you?",
+        scene: "",
+        who: "Gemini",
+        nameCol: "undefined",
+        voice: undefined,
+        text: "Another lost soul seeking eternal damnation…",
         nextPage: 2,
-        leftPic: despond,
-        rightPic: incense,
-
-        leftPicLeave: false,
-        rightPicLeave: false,
-
         choices: null,
 
-        position: {x: 472.5, y: 433}
+        position: {x: 533, y: 48}
     },
     {
-        scene: "neutral",
-        who: "Despond",
-        nameCol: "lightBlue",
-        voice: voiceLow1,
-        text: "",
-        nextPage: null,
-        leftPic: despond,
-        rightPic: incense,
+        scene: "",
+        who: "Soul",
+        nameCol: "yellow",
+        voice: undefined,
+        text: "…It’s certainly not that. I know that you’re important, and this strong sense that you can guide me on what to do next.",
+        nextPage: 3,
+        choices: null,
 
-        leftPicLeave: false,
-        rightPicLeave: false,
-
-        choices: [["Good, how about you?", "Good end"], ["Meh", "Bad end"], ["I like tortles", "Tortle end"]],
-
-        position: {x: 472.5, y: 733}
+        position: {x: 682, y: 292}
     },
     {
-        scene: "Good end",
-        who: "Despond",
-        nameCol: "lightBlue",
-        voice: voiceLow1,
-        text: "I'm good. So how've you been?",
+        scene: "",
+        who: "Gemini",
+        nameCol: "undefined",
+        voice: undefined,
+        text: " Guide you? Let me tell you why you’re here.",
         nextPage: 4,
-        leftPic: despond,
-        rightPic: incense,
-
-        leftPicLeave: false,
-        rightPicLeave: false,
-
         choices: null,
 
-        position: {x: 63.5, y: 965}
+        position: {x: 1168, y: -205}
     },
     {
-        scene: "Good end",
-        who: "incense",
-        nameCol: "pink",
-        voice: voiceHigh2,
-        text: "I'm fine.",
+        scene: "",
+        who: "Gemini",
+        nameCol: "undefined",
+        voice: undefined,
+        text: "You’re here to guide me. Not the other way around.You’re here to help me get out of this miserable pit by exploring those forsaken doors.Others have tried, and failed utterly.Don’t think you’re too special. You will fail too.",
         nextPage: 5,
-        leftPic: despond,
-        rightPic: incense,
-
-        leftPicLeave: false,
-        rightPicLeave: false,
-
         choices: null,
 
-        position: {x: 64.5, y: 1226}
+        position: {x: 1184, y: 65}
     },
     {
-        scene: "Good end",
-        who: "Despond",
-        nameCol: "lightBlue",
-        voice: voiceLow1,
-        text: "Oh that's great.",
-        nextPage: 6,
-        leftPic: despond,
-        rightPic: incense,
+        scene: "",
+        who: "Soul",
+        nameCol: "yellow",
+        voice: undefined,
+        text: "",
+        nextPage: null,
+        choices: [["That’s a nice way to get someone’s help.", 6], ["I’m not sure how I can help, but I can try. Besides, I have nothing else to here. ", 7]],
 
-        leftPicLeave: false,
-        rightPicLeave: false,
-
-        choices: null,
-
-        position: {x: 67.5, y: 1489}
+        position: {x: 1184, y: 335}
     },
     {
-        scene: "Good end",
-        who: "Despond",
-        nameCol: "lightBlue",
-        voice: voiceLow1,
-        text: "Hold on, let me just show the player that I also have an angry face portrait.",
-        nextPage: 7,
-        leftPic: despond,
-        rightPic: incense,
-
-        leftPicLeave: false,
-        rightPicLeave: false,
-
-        choices: null,
-
-        position: {x: 70.5, y: 1758}
-    },
-    {
-        scene: "Good end",
-        who: "Despond",
-        nameCol: "lightBlue",
-        voice: voiceLow1,
-        text: "GRRR",
+        scene: "",
+        who: "Gemini",
+        nameCol: "undefined",
+        voice: undefined,
+        text: "I never asked for this,I have no choice here.",
         nextPage: 8,
-        leftPic: despond,
-        rightPic: incense,
-
-        leftPicLeave: false,
-        rightPicLeave: false,
-
         choices: null,
 
-        position: {x: 78.5, y: 2067}
+        position: {x: 883, y: 627}
     },
     {
-        scene: "Good end",
-        who: "incense",
-        nameCol: "pink",
-        voice: voiceHigh2,
-        text: "Uhh, oK, see ya",
-        nextPage: 9,
-        leftPic: despond,
-        rightPic: incense,
-
-        leftPicLeave: false,
-        rightPicLeave: false,
-
-        choices: null,
-
-        position: {x: 85.5, y: 2340}
-    },
-    {
-        scene: "Good end",
-        who: "Despond",
-        nameCol: "lightBlue",
-        voice: voiceLow1,
-        text: "Hey, wait!",
+        scene: "",
+        who: "Gemini",
+        nameCol: "undefined",
+        voice: undefined,
+        text: "Then help. Go through those doors, and be wary of what may greet you.",
         nextPage: 10,
-        leftPic: despond,
-        rightPic: incense,
-
-        leftPicLeave: false,
-        rightPicLeave: true,
-
         choices: null,
 
-        position: {x: 88.5, y: 2614}
+        position: {x: 1394, y: 632}
     },
     {
-        scene: "Good end",
-        who: "Despond",
-        nameCol: "lightBlue",
-        voice: voiceLow1,
-        text: "...",
+        scene: "",
+        who: "Soul",
+        nameCol: "yellow",
+        voice: undefined,
+        text: "I...I'll do whatI can.",
+        nextPage: 9,
+        choices: null,
+
+        position: {x: 928, y: 912}
+    },
+    {
+        scene: "",
+        who: "Gemini",
+        nameCol: "undefined",
+        voice: undefined,
+        text: "How reassruing.",
+        nextPage: 10,
+        choices: null,
+
+        position: {x: 1313, y: 1111}
+    },
+    {
+        scene: "",
+        who: "Soul",
+        nameCol: "yellow",
+        voice: undefined,
+        text: "See you around.",
         nextPage: 11,
-        leftPic: despond,
-        rightPic: null,
-
-        leftPicLeave: false,
-        rightPicLeave: false,
-
         choices: null,
 
-        position: {x: 91.5, y: 2887}
+        position: {x: 1708, y: 896}
     },
-    {
-        scene: "Good end",
-        who: "incense",
-        nameCol: "pink",
-        voice: voiceHigh2,
-        text: "Just kidding!",
-        nextPage: 12,
-        leftPic: despond,
-        rightPic: incense,
-
-        leftPicLeave: false,
-        rightPicLeave: false,
-
-        choices: null,
-
-        position: {x: 94.5, y: 3171}
-    },
-    {
-        scene: "Good end",
-        who: "incense",
-        nameCol: "pink",
-        voice: voiceHigh2,
-        text: "Do you want to talk some more?",
-        nextPage: 13,
-        leftPic: despond,
-        rightPic: incense,
-
-        leftPicLeave: false,
-        rightPicLeave: false,
-
-        choices: null,
-
-        position: {x: 99.5, y: 3445}
-    },
-    {
-        scene: "Good end",
-        who: "incense",
-        nameCol: "pink",
-        voice: voiceHigh2,
-        text: "",
-        nextPage: null,
-        leftPic: despond,
-        rightPic: incense,
-
-        leftPicLeave: false,
-        rightPicLeave: false,
-
-        choices: [["Yes", "Talk more"], ["No", "Really?"]],
-
-        position: {x: 102.5, y: 3725}
-    },
-    {
-        scene: "Talk more",
-        who: "incense",
-        nameCol: "pink",
-        voice: voiceHigh2,
-        text: "Yay! Too bad, I have to go though",
-        nextPage: 15,
-        leftPic: despond,
-        rightPic: incense,
-
-        leftPicLeave: false,
-        rightPicLeave: false,
-
-        choices: null,
-
-        position: {x: 542.5, y: 3862}
-    },
-    {
-        scene: "Talk more",
-        who: "incense",
-        nameCol: "pink",
-        voice: voiceHigh2,
-        text: "Let's talk later!",
-        nextPage: 16,
-        leftPic: despond,
-        rightPic: incense,
-
-        leftPicLeave: false,
-        rightPicLeave: false,
-
-        choices: null,
-
-        position: {x: 545.5, y: 4138}
-    },
-    {
-        scene: "Really?",
-        who: "incense",
-        nameCol: "pink",
-        voice: voiceHigh2,
-        text: "Really, are you sure?",
-        nextPage: 17,
-        leftPic: despond,
-        rightPic: incense,
-
-        leftPicLeave: false,
-        rightPicLeave: false,
-
-        choices: null,
-
-        position: {x: 99.5, y: 4030}
-    },
-    {
-        scene: "Really?",
-        who: "incense",
-        nameCol: "pink",
-        voice: voiceHigh2,
-        text: "",
-        nextPage: null,
-        leftPic: despond,
-        rightPic: incense,
-
-        leftPicLeave: false,
-        rightPicLeave: false,
-
-        choices: [["no", "Bad end"], ["actually, yes", "Talk more"]],
-
-        position: {x: 536.5, y: 3554}
-    },
-    {
-        scene: "Bad end",
-        who: "incense",
-        nameCol: "pink",
-        voice: voiceHigh2,
-        text: "Yeah, I feel you.",
-        nextPage: 19,
-        leftPic: despond,
-        rightPic: incense,
-
-        leftPicLeave: false,
-        rightPicLeave: false,
-
-        choices: null,
-
-        position: {x: 880.5, y: 3101}
-    },
-    {
-        scene: "Bad end",
-        who: "incense",
-        nameCol: "pink",
-        voice: voiceHigh2,
-        text: "Welp, gotta go!",
-        nextPage: 20,
-        leftPic: despond,
-        rightPic: incense,
-
-        leftPicLeave: false,
-        rightPicLeave: false,
-
-        choices: null,
-
-        position: {x: 952.5, y: 3379}
-    },
-    {
-        scene: "Tortle end",
-        who: "incense",
-        nameCol: "pink",
-        voice: voiceHigh2,
-        text: "JONATHAN IS THAT YOU",
-        nextPage: 21,
-        leftPic: despond,
-        rightPic: incense,
-
-        leftPicLeave: false,
-        rightPicLeave: false,
-
-        choices: null,
-
-        position: {x: 1299.5, y: 2876}
-    },
-    {
-        scene: "Tortle end",
-        who: "incense",
-        nameCol: "pink",
-        voice: voiceHigh2,
-        text: "BOI",
-        nextPage: 22,
-        leftPic: despond,
-        rightPic: incense,
-
-        leftPicLeave: false,
-        rightPicLeave: false,
-
-        choices: null,
-
-        position: {x: 1373.5, y: 3155}
-    }*/
 ];
-
 //CONVERSATIONS.push(ATestDialog);
