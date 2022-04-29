@@ -38,9 +38,16 @@ window.onload = function() {
 function loadingDoneSoStartGame() {  
   p1.init(playerPic, "Blue");
   initInput();
-  drawTitle(); // the logo and titlescreen image
-  DrawClickToPlay(); // FIXME: replace with main menu, credits, etc
+  animateTitlescreen();
   loadComplete = true;
+}
+
+function animateTitlescreen() {
+    drawTitle(); // the logo and titlescreen image
+    DrawClickToPlay(); // FIXME: replace with main menu, credits, etc
+    if (!gameloop) { // repeat until the game starts:
+        window.requestAnimationFrame(animateTitlescreen);
+    }
 }
 
 function StartGame() {
@@ -139,7 +146,8 @@ function drawTitle() {
   //twoColorText('Spiritventure', 80, 150, 84, 7, 'grey', 'white');
 }
 function DrawClickToPlay() {
-  drawText('Click to Play', 50, 425, 42, 'grey');
+  var wobble = Math.cos(performance.now()/1000)*25;
+  drawText('Click to Play', 275, 400+wobble, 42, 'grey');
 }
 function drawPause() {
   twoColorText('Paused', 280, 250, 84, 7, 'black', 'white');
