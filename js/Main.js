@@ -42,6 +42,8 @@ function loadingDoneSoStartGame() {
   p1.init(playerPic, "Blue");
   initInput();
 
+  drawTitleBackground(); // requires the image to have been loaded
+  drawTitle();
   DrawClickToPlay();
   loadComplete = true;
 }
@@ -136,9 +138,19 @@ function handleDialogBasedOnRoom (){
   }
 }
 
+var titleBackgroundPattern;
+// FIXME: no effect! even if this is "red" I have no idea why =(
+function drawTitleBackground() {
+  // draw a tiled background
+  //console.log(tilePics[TILE_MARBLE_BLUE]); // this appears to be fine
+  if (!titleBackgroundPattern) titleBackgroundPattern = canvasContext.createPattern(tilePics[TILE_MARBLE_BLUE],"repeat");
+  canvasContext.rect(0, 0, canvasContext.width, canvasContext.height);
+  canvasContext.fillStyle = titleBackgroundPattern; 
+  canvasContext.fill();
+  canvasContext.fillStyle = "white"; // reset
+}
 function drawTitle() {
   twoColorText('Spiritventure', 80, 150, 84, 7, 'grey', 'white');
-  // drawText('Paused', 200, 300, 64, 'black')
 }
 function DrawClickToPlay() {
   drawText('Click to Play', 50, 425, 42, 'grey');
