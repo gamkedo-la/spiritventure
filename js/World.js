@@ -113,6 +113,8 @@ function tileTypeHasTransparency(checkTileType) {
           checkTileType == TILE_DOOR ||
           checkTileType == TILE_MIND ||
           checkTileType == TILE_DESPOND ||
+          checkTileType == TILE_SATAH ||
+          checkTileType == TILE_TRIPA ||
           checkTileType == TILE_VASE
           );
 }
@@ -141,7 +143,7 @@ function drawRoom() {
       var tileTypeHere = rooms[roomIndex][GRID][ tileIndex ]; // getting the tile code for this index
       verticalBob = 0; 
       if( tileTypeHasTransparency(tileTypeHere) ) {
-        canvasContext.drawImage(tilePics[TILE_GROUND], tileLeftEdgeX, tileTopEdgeY);
+        canvasContext.drawImage(tilePics[TILE_GROUND2], tileLeftEdgeX, tileTopEdgeY);
         if( tileTypeVerticalBob(tileTypeHere) ){
           verticalBob = Math.sin(bobPhase+eachCol*0.3+eachRow*0.7)*10;
         }

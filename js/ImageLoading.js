@@ -35,8 +35,8 @@ function loadImages() {
     {varName:dialogBack, theFile:"dialog_back.png"},
     //tileTypes below
     {tileType:TILE_GROUND, theFile:"world_ground.png"},
-    {tileType:TILE_WALL, theFile:"spotwall.png"},
-    {tileType:TILE_WALL2, theFile:"wall_dark.png"},
+    {tileType:TILE_WALL, theFile:"Tile_ar_2.png"},
+    {tileType:TILE_WALL2, theFile:"Tile_ar_3.png"},
     {tileType:TILE_GOAL, theFile:"wall_moredark.png"},
     {tileType:TILE_KEY, theFile:"world_key.png"},
     {tileType:TILE_DOOR, theFile:"world_door.png"},
