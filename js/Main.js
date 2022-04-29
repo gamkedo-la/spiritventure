@@ -32,19 +32,14 @@ window.onload = function() {
   canvas = document.getElementById('gameCanvas');
   canvasContext = canvas.getContext('2d');
   canvasContext.font = dialogFontSize.toString() + "px " + gameFont;
-
   loadImages();
-
-  drawTitle();
 }
 
 function loadingDoneSoStartGame() {  
   p1.init(playerPic, "Blue");
   initInput();
-
-  drawTitleBackground(); // requires the image to have been loaded
-  drawTitle();
-  DrawClickToPlay();
+  drawTitle(); // the logo and titlescreen image
+  DrawClickToPlay(); // FIXME: replace with main menu, credits, etc
   loadComplete = true;
 }
 
@@ -138,26 +133,16 @@ function handleDialogBasedOnRoom (){
   }
 }
 
-var titleBackgroundPattern;
-// FIXME: no effect! even if this is "red" I have no idea why =(
-function drawTitleBackground() {
-  // draw a tiled background
-  //console.log(tilePics[TILE_MARBLE_BLUE]); // this appears to be fine
-  if (!titleBackgroundPattern) titleBackgroundPattern = canvasContext.createPattern(tilePics[TILE_MARBLE_BLUE],"repeat");
-  canvasContext.rect(0, 0, canvasContext.width, canvasContext.height);
-  canvasContext.fillStyle = titleBackgroundPattern; 
-  canvasContext.fill();
-  canvasContext.fillStyle = "white"; // reset
-}
 function drawTitle() {
-  twoColorText('Spiritventure', 80, 150, 84, 7, 'grey', 'white');
+  canvasContext.drawImage(titlescreenBG,0,0);
+  // removed because the logo is in the titlescreen image above:
+  //twoColorText('Spiritventure', 80, 150, 84, 7, 'grey', 'white');
 }
 function DrawClickToPlay() {
   drawText('Click to Play', 50, 425, 42, 'grey');
 }
 function drawPause() {
   twoColorText('Paused', 280, 250, 84, 7, 'black', 'white');
-  // drawText('Paused', 200, 300, 64, 'black')
 }
 function drawText(str, x, y, size, colour) {
   canvasContext.fillStyle = colour;
@@ -166,8 +151,8 @@ function drawText(str, x, y, size, colour) {
 }
 function twoColorText(text, atX, atY, size, offset, foregroundColor, backgroundColor){
   canvasContext.font = size + 'px Arial';
-	canvasContext.fillStyle = backgroundColor;
-	canvasContext.fillText(text, atX + offset, atY + offset)
-	canvasContext.fillStyle = foregroundColor;
-	canvasContext.fillText(text, atX, atY)
+  canvasContext.fillStyle = backgroundColor;
+  canvasContext.fillText(text, atX + offset, atY + offset)
+  canvasContext.fillStyle = foregroundColor;
+  canvasContext.fillText(text, atX, atY)
 }

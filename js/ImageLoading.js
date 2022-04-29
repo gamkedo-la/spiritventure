@@ -3,6 +3,7 @@ var keyAnim=document.createElement("img")
 var teardropAnim=document.createElement("img");
 var boxingGlove=document.createElement("img");
 var dialogBack=document.createElement("img");
+var titlescreenBG=document.createElement("img");
 var tilePics = [];
 
 var picsToLoad = 0;
@@ -33,6 +34,7 @@ function loadImages() {
     {varName:boxingGlove, theFile:"boxing_glove.png"},
     {varName:keyAnim, theFile:"world_key.png"},
     {varName:dialogBack, theFile:"dialog_back.png"},
+    {varName:titlescreenBG, theFile:"titlescreen.png"},
     //tileTypes below
     {tileType:TILE_GROUND, theFile:"world_ground.png"},
     {tileType:TILE_WALL, theFile:"Tile_ar_2.png"},
