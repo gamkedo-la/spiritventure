@@ -235,6 +235,7 @@ Particle.prototype.update = function() {
 
   }
 }
+var particleArray = [];
 function makeParticles() {
   particleArray = [];
   for(let i=0; i<50; i++) {
