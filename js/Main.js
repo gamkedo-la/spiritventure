@@ -9,6 +9,7 @@ var deltaTime = 0;
 var debugText;
 var gameFont = 'Georgia, Arial, sans-serif';
 
+const STATE_TITLE = 0;
 const STATE_PLAY = 1;
 const STATE_PAUSE = 2;
 var gameState = STATE_PLAY;
@@ -17,6 +18,11 @@ var particleNPCrun = false;
 var leftDialogRoomFin = false;
 var rightDialogRoomFin = false;
 var belowDialogRoomFin = false;
+
+// game loop properties
+var loadComplete = false;
+var gameloop;
+const framesPerSecond = 30;
 
 function toggleMuteMusic(){
   music.muted = !(music.muted);
@@ -28,19 +34,24 @@ window.onload = function() {
   canvasContext.font = dialogFontSize.toString() + "px " + gameFont;
 
   loadImages();
+
+  drawTitle();
 }
 
-function loadingDoneSoStartGame() {
-  // these next few lines set up our game logic and render to happen 30 times per second
-  var framesPerSecond = 30;
-  setInterval(function() {
-      updateEverything();
-      drawEverything();
-    }, 1000/framesPerSecond);
-  
+function loadingDoneSoStartGame() {  
   p1.init(playerPic, "Blue");
   initInput();
 
+  DrawClickToPlay();
+  loadComplete = true;
+}
+
+function StartGame() {
+  gameloop =
+  setInterval(function() {
+    updateEverything();
+    drawEverything();
+  }, 1000/framesPerSecond);
 }
 
 function updateEverything() {
@@ -48,23 +59,23 @@ function updateEverything() {
 
   switch (gameState) {
   
-  case STATE_PLAY:
-    //Camera Lerping
-    camX = intLerp(camX, canvas.width/2 - p1.x, 0.1);
-    camY = intLerp(camY, canvas.height/2 - p1.y, 0.1);
+    case STATE_PLAY:
+      //Camera Lerping
+      camX = intLerp(camX, canvas.width/2 - p1.x, 0.1);
+      camY = intLerp(camY, canvas.height/2 - p1.y, 0.1);
 
-    processDialog();
+      processDialog();
 
-    //No movement during dialogues
-    if(dialogActiveConvo != null) return;
+      //No movement during dialogues
+      if(dialogActiveConvo != null) return;
 
-    p1.move();
+      p1.move();
 
-    break;
+      break;
 
-  case STATE_PAUSE:
-    drawPause();
-    break;
+    case STATE_PAUSE:
+      drawPause();
+      break;
   }
 
 }
@@ -125,6 +136,13 @@ function handleDialogBasedOnRoom (){
   }
 }
 
+function drawTitle() {
+  twoColorText('Spiritventure', 80, 150, 84, 7, 'grey', 'white');
+  // drawText('Paused', 200, 300, 64, 'black')
+}
+function DrawClickToPlay() {
+  drawText('Click to Play', 50, 425, 42, 'grey');
+}
 function drawPause() {
   twoColorText('Paused', 280, 250, 84, 7, 'black', 'white');
   // drawText('Paused', 200, 300, 64, 'black')

@@ -178,6 +178,7 @@ function processDialog() {
 
 function drawSpeakerName(speakerName, x, y, textColor) {
     canvasContext.fillStyle = textColor;
+    canvasContext.font = dialogFontSize + 'px Arial';
     canvasContext.fillText(speakerName, x, y)
 }
 
@@ -244,6 +245,7 @@ function drawDialog() {
 
     // typewriter for main dialog
     canvasContext.fillStyle = dialogTextColor;
+    canvasContext.font = dialogFontSize + 'px Arial';
     for (var i = 0; i < dialogCurrentText.length; i++) {
         canvasContext.fillText(dialogCurrentText[i], dialogCurrentX + camX + dialogTextOffset, dialogCurrentY + camY + dialogFontSize * (i + 1) + dialogTextOffset);
     }

@@ -78,19 +78,24 @@ function mouseMove(evt) {
 }
 
 function mouseClick(evt) {
-  if (!firstClick) {
-    startBGM();
-    firstClick = true;
-  }
-  const dialogWasAdvanced = advanceDialog();
-  const dialogChoicesAvailable = checkDialogChoices();
+  if (loadComplete)
+  {
+    if (gameloop != null) {      
+      const dialogWasAdvanced = advanceDialog();
+      const dialogChoicesAvailable = checkDialogChoices();
 
-  if (!dialogWasAdvanced && !dialogChoicesAvailable) {
-    p1.moveToPos.x = mouseX - camX; // this.x + camX, this.y + camY
-    p1.moveToPos.y = mouseY - camY;
-  } else {
-    p1.moveToPos.x = null;
-    p1.moveToPos.y = null;
+      if (!dialogWasAdvanced && !dialogChoicesAvailable) {
+        p1.moveToPos.x = mouseX - camX; // this.x + camX, this.y + camY
+        p1.moveToPos.y = mouseY - camY;
+      } else {
+        p1.moveToPos.x = null;
+        p1.moveToPos.y = null;
+      }
+    }
+    else {
+      startBGM();
+      StartGame();
+    }
   }
 }
 
@@ -110,78 +115,67 @@ function checkDialogChoices () {
 }
 
 function keyPressed(evt) {
-  // // this doesn't work
-  // // neither did the previous maybeStartMusic(evt)
-  // // I get a media not allowed to autoplay error that breaks sounds
-  // // I don't get it...
-
-  try {
-    if (!firstClick) {
-      startBGM();
-      firstClick = true;
-    }
-  } catch(e) {
-    console.log("trying to play sound on the first keypress failed. ignoring.");
-    firstClick = false; // let a click do it
+  if (loadComplete && gameloop != null) {
+    setKeyHoldState(evt.keyCode, p1, true);
+    tilemapEditorKeyInput(evt.keyCode);
+    selectDialogChoice(evt.keyCode);
+    evt.preventDefault(); // without this, arrow keys scroll the browser!
   }
-  
-  setKeyHoldState(evt.keyCode, p1, true);
-  tilemapEditorKeyInput(evt.keyCode);
-  selectDialogChoice(evt.keyCode);
-  evt.preventDefault(); // without this, arrow keys scroll the browser!
 }
 
 function keyReleased(evt) {
-  switch(evt.keyCode){
-    case KEY_SPACE:
-      advanceDialog();
-      break;
-    case KEY_TAB:
-      tilemapEditor = !tilemapEditor;
-      document.getElementById("debugText").innerHTML = "Tilemap Editor: " + tilemapEditor;
-      break;
-    case KEY_I:
-      showingInventory = !showingInventory; //toggle
-      break;
-    case KEY_M:
-      volumeControl.toggleMute();
-      break;
-    case KEY_P:
-      if (gameState == STATE_PLAY) {
-        gameState = STATE_PAUSE;
-      } else {
-        gameState = STATE_PLAY;
-      }
-      console.log('P key')
-      break;
-    case KEY_LETTER_U:
-      console.log("Decrease Row");
-      rooms[roomIndex][ROWS]--;
-      rooms[roomIndex][GRID].splice(-rooms[roomIndex][COLS],rooms[roomIndex][COLS]);
-      break;
-    case KEY_LETTER_H:
-      console.log("Decrease Column");
-      rooms[roomIndex][COLS]--;
-      for(var i = 0; i<rooms[roomIndex][ROWS];i++){
-        rooms[roomIndex][GRID].splice((i+1)*rooms[roomIndex][COLS],1);
-      }
-      break;
-    case KEY_LETTER_J:
-      console.log("Increase Row");
-      rooms[roomIndex][ROWS]++;
-      for(var i = 0; i<rooms[roomIndex][COLS];i++){
-        rooms[roomIndex][GRID].push(TILE_GROUND);
-      }
-      break;
-    case KEY_LETTER_K:
-      console.log("Increase Column");
-      rooms[roomIndex][COLS]++;
-      for(var i = 0; i<rooms[roomIndex][ROWS];i++){
-        rooms[roomIndex][GRID].splice((i+1)*rooms[roomIndex][COLS]-1,0,TILE_GROUND);
-      }
-      break;
-  }
-  setKeyHoldState(evt.keyCode, p1, false);
+  if (loadComplete && gameloop != null) {
+    switch(evt.keyCode){
+      case KEY_SPACE:
+        advanceDialog();
+        break;
+      case KEY_TAB:
+        tilemapEditor = !tilemapEditor;
+        document.getElementById("debugText").innerHTML = "Tilemap Editor: " + tilemapEditor;
+        break;
+      case KEY_I:
+        showingInventory = !showingInventory; //toggle
+        break;
+      case KEY_M:
+        volumeControl.toggleMute();
+        break;
+      case KEY_P:
+        if (gameState == STATE_PLAY) {
+          gameState = STATE_PAUSE;
+        } else {
+          gameState = STATE_PLAY;
+        }
+        console.log('P key')
+        break;
+      case KEY_LETTER_U:
+        console.log("Decrease Row");
+        rooms[roomIndex][ROWS]--;
+        rooms[roomIndex][GRID].splice(-rooms[roomIndex][COLS],rooms[roomIndex][COLS]);
+        break;
+      case KEY_LETTER_H:
+        console.log("Decrease Column");
+        rooms[roomIndex][COLS]--;
+        for(var i = 0; i<rooms[roomIndex][ROWS];i++){
+          rooms[roomIndex][GRID].splice((i+1)*rooms[roomIndex][COLS],1);
+        }
+        break;
+      case KEY_LETTER_J:
+        console.log("Increase Row");
+        rooms[roomIndex][ROWS]++;
+        for(var i = 0; i<rooms[roomIndex][COLS];i++){
+          rooms[roomIndex][GRID].push(TILE_GROUND);
+        }
+        break;
+      case KEY_LETTER_K:
+        console.log("Increase Column");
+        rooms[roomIndex][COLS]++;
+        for(var i = 0; i<rooms[roomIndex][ROWS];i++){
+          rooms[roomIndex][GRID].splice((i+1)*rooms[roomIndex][COLS]-1,0,TILE_GROUND);
+        }
+        break;
+    }
+    setKeyHoldState(evt.keyCode, p1, false);
+  } // if loadComplete
 }
 
 
