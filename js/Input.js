@@ -115,7 +115,7 @@ function checkDialogChoices () {
 }
 
 function keyPressed(evt) {
-  if (loadComplete) {
+  if (loadComplete && gameloop != null) {
     setKeyHoldState(evt.keyCode, p1, true);
     tilemapEditorKeyInput(evt.keyCode);
     selectDialogChoice(evt.keyCode);
@@ -124,7 +124,7 @@ function keyPressed(evt) {
 }
 
 function keyReleased(evt) {
-  if (loadComplete) {
+  if (loadComplete && gameloop != null) {
     switch(evt.keyCode){
       case KEY_SPACE:
         advanceDialog();
