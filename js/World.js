@@ -121,7 +121,11 @@ function tileTypeHasTransparency(checkTileType) {
 
 function tileTypeVerticalBob(checkTileType) {
   return (
-          checkTileType == TILE_KEY
+          checkTileType == TILE_KEY ||
+          checkTileType == TILE_TRIPA ||
+          checkTileType == TILE_SATAH ||
+          checkTileType == TILE_MIND ||
+          checkTileType == TILE_DESPOND
           );
 }
 
@@ -145,7 +149,7 @@ function drawRoom() {
       if( tileTypeHasTransparency(tileTypeHere) ) {
         canvasContext.drawImage(tilePics[TILE_GROUND2], tileLeftEdgeX, tileTopEdgeY);
         if( tileTypeVerticalBob(tileTypeHere) ){
-          verticalBob = Math.sin(bobPhase+eachCol*0.3+eachRow*0.7)*10;
+          verticalBob = Math.sin(bobPhase+eachCol*0.3+eachRow*0.7)*2;
         }
       }
       var extraHeight = tilePics[tileTypeHere].height-TILE_H;
