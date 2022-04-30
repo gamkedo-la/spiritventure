@@ -107,7 +107,6 @@ function DialogCursor(position, font, boxWidth) {
 			  });
 		} 
 		else if(isPrintableKey(newKey)) {
-			
 			if(oldKeys.has(KEY_SHIFT)) {
 				this.insertCharacter(upperStringForKeyCode(newKey));
 			} else {
@@ -115,7 +114,7 @@ function DialogCursor(position, font, boxWidth) {
 			}
 			cursorIndex++;		
 		} else {
-			if(newKey === KEY_BACKSPACE || KEY_DELETE) {
+			if(newKey === KEY_BACKSPACE || newKey === KEY_DELETE) {
 				cursorIndex--;
 				
 				this.removeCharacter();
