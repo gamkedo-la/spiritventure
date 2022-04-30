@@ -1,6 +1,7 @@
 var playerPic=document.createElement("img");
 var keyAnim=document.createElement("img")
 var teardropAnim=document.createElement("img");
+var groundPartAnim=document.createElement("img");
 var boxingGlove=document.createElement("img");
 var dialogBack=document.createElement("img");
 var titlescreenBG=document.createElement("img");
@@ -31,6 +32,7 @@ function loadImages() {
   var imageList = [
     {varName:playerPic, theFile:"soul.png"},
     {varName:teardropAnim, theFile:"teardrop-sprite.png"},
+    {varName:groundPartAnim, theFile:"particle.png"},
     {varName:boxingGlove, theFile:"boxing_glove.png"},
     {varName:keyAnim, theFile:"world_key.png"},
     {varName:dialogBack, theFile:"dialog_back.png"},

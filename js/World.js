@@ -221,7 +221,7 @@ Particle.prototype.draw = function() {
     fade = this.life/20;
   }
   canvasContext.globalAlpha = fade;
-  drawBitmapCenteredAtLocationWithRotation(teardropAnim, this.x + camX, this.y + camY, this.ang);
+  drawBitmapCenteredAtLocationWithRotation(groundPartAnim, this.x + camX, this.y + camY, this.ang);
   canvasContext.globalAlpha = 1.0;
 }
 Particle.prototype.update = function() {
@@ -240,13 +240,13 @@ Particle.prototype.update = function() {
 function makeParticles() {
   particleArray = [];
   for(let i=0; i<50; i++) {
-    let size = 0.25;
-    let life = 150 + Math.random() * 25;
+    let size = 0.1;
+    let life = 10 + Math.random() * 0.1;
     let x = p1.x + (Math.random() * 8) - 4;
     let y = p1.y + (Math.random() * 8) - 4;
     let xVel = (Math.random() * 0.6) - 0.3;
     let yVel = (Math.random() * 0.6) - 0.3;
-    let color = "rgba(255, 0, 0, 0.5)";
+    let color = "rgba(255, 0, 0, 1)";
     particleArray.push(new Particle(x, y, xVel, yVel, size, color, life));
   }
 }
