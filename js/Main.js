@@ -41,7 +41,7 @@ function loadingDoneSoStartGame() {
   animateTitlescreen();
   loadComplete = true;
 }
-
+/*
 function titleScreenExplosion() {
 for(let i=0; i<50; i++) {
     let size = 0.25;
@@ -54,11 +54,11 @@ for(let i=0; i<50; i++) {
     particleArray.push(new Particle(x, y, xVel, yVel, size, color, life));
     }
 }
-
+*/
 function animateTitlescreen() {
     drawTitle(); // the logo and titlescreen image
-    animateParticles();
-    if (Math.random()<0.1) titleScreenExplosion();
+    //animateParticles();
+    //if (Math.random()<0.1) titleScreenExplosion();
     DrawClickToPlay(); // FIXME: replace with main menu, credits, etc
     if (!gameloop) { // repeat until the game starts:
         window.requestAnimationFrame(animateTitlescreen);
@@ -162,8 +162,8 @@ function drawTitle() {
 }
 function DrawClickToPlay() {
   var wobble = Math.cos(performance.now()/1000)*25;
-  drawText('Click to Play',281,311+wobble,42,'black');
-  drawText('Click to Play',280,310+wobble,42,'white');
+  drawText('Click to Play',281,311+wobble,42,'white');
+  drawText('Click to Play',280,310+wobble,42,'black');
 }
 function drawPause() {
   twoColorText('Paused', 280, 250, 84, 7, 'black', 'white');

@@ -241,7 +241,7 @@ function warriorClass() {
         var pos = getPixelCoordAtTileIndex(walkIntoTileIndex);
         wrapText = [testConvo2[0].text];
         lineWrap();
-        setupDialog(testConvo2, pos[0] - (dialogW / 2) + (TILE_W / 2), pos[1] - (dialogHOffset + (dialogHPerLine * wrapText.length)) - (TILE_H * 2.4));
+        setupDialog(testconvo, pos[0] - (dialogW / 2) + (TILE_W / 2), pos[1] - (dialogHOffset + (dialogHPerLine * wrapText.length)) - (TILE_H * 2.4));
         sfx('dialog_start.wav');
         break;
       case TILE_SATAH:

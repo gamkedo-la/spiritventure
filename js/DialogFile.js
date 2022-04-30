@@ -305,3 +305,49 @@ let testConvo2 = [
         position: {x: 142, y: 483}
     },
 ];
+let testconvo = [
+    {
+        scene: "",
+        who: "Soul",
+        nameCol: "yellow",
+        voice: undefined,
+        text: "Hi Hello",
+        nextPage: 1,
+        choices: null,
+
+        position: {x: 145, y: -66}
+    },
+    {
+        scene: "",
+        who: "Incense",
+        nameCol: "undefined",
+        voice: undefined,
+        text: "what you up to",
+        nextPage: 2,
+        choices: null,
+
+        position: {x: 783, y: -65}
+    },
+    {
+        scene: "",
+        who: null,
+        nameCol: null,
+        voice: null,
+        text: "Nothing much, I-",
+        nextPage: null,
+        choices: [["I don't like you", 3], ["I love you", 3]],
+
+        position: {x: 947, y: 201}
+    },
+    {
+        scene: "",
+        who: "Incense",
+        nameCol: "undefined",
+        voice: undefined,
+        text: "great!",
+        nextPage: 4,
+        choices: null,
+
+        position: {x: 446, y: 522}
+    },
+];
