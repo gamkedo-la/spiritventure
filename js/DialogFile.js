@@ -8,7 +8,7 @@ let Gemini1 = [
         nextPage: 1,
         choices: null,
 
-        position: {x: -66, y: -1303}
+        position: {x: 234, y: -906}
     },
     {
         scene: "",
@@ -19,7 +19,7 @@ let Gemini1 = [
         nextPage: 2,
         choices: null,
 
-        position: {x: -66, y: -1013}
+        position: {x: 234, y: -616}
     },
     {
         scene: "",
@@ -30,7 +30,7 @@ let Gemini1 = [
         nextPage: 3,
         choices: null,
 
-        position: {x: -66, y: -723}
+        position: {x: 234, y: -326}
     },
     {
         scene: "",
@@ -41,7 +41,7 @@ let Gemini1 = [
         nextPage: null,
         choices: [["That's a nice way to get someone's help.", 4], ["I'm not sure how I can help, but I can try. Besides, I have nothing else to do here.", 5]],
 
-        position: {x: -67, y: -393}
+        position: {x: 233, y: 4}
     },
     {
         scene: "",
@@ -52,7 +52,7 @@ let Gemini1 = [
         nextPage: 6,
         choices: null,
 
-        position: {x: 409, y: -320}
+        position: {x: 709, y: 77}
     },
     {
         scene: "",
@@ -63,7 +63,7 @@ let Gemini1 = [
         nextPage: 8,
         choices: null,
 
-        position: {x: 101, y: 125}
+        position: {x: 401, y: 522}
     },
     {
         scene: "",
@@ -74,7 +74,7 @@ let Gemini1 = [
         nextPage: 7,
         choices: null,
 
-        position: {x: 565, y: 155}
+        position: {x: 865, y: 552}
     },
     {
         scene: "",
@@ -85,7 +85,7 @@ let Gemini1 = [
         nextPage: 8,
         choices: null,
 
-        position: {x: 565, y: 425}
+        position: {x: 865, y: 822}
     },
     {
         scene: "",
@@ -96,7 +96,7 @@ let Gemini1 = [
         nextPage: 9,
         choices: null,
 
-        position: {x: 142, y: 483}
+        position: {x: 442, y: 880}
     },
 ];
 //

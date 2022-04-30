@@ -98,25 +98,6 @@ function DialogLine(position) {
 		
 		this.setSpeaker(data.who);
 		speakerDropDown.setChildToDraw(data.who);
-		
-		// this.leftImageDropDown.setChildToDraw(data.leftPic);
-		// this.rightImageDropDown.setChildToDraw(data.rightPic);
-		
-		// if(data.leftPicLeave != null) {
-		// 	if(data.leftPicLeave) {
-		// 		this.leftLeaveDropDown.setChildToDraw("No");
-		// 	} else {
-		// 		this.leftLeaveDropDown.setChildToDraw("Yes");
-		// 	}
-		// }
-
-		// if(data.rightPicLeave != null) {
-		// 	if(data.rightPicLeave) {
-		// 		this.rightLeaveDropDown.setChildToDraw("No");
-		// 	} else {
-		// 		this.rightLeaveDropDown.setChildToDraw("Yes");
-		// 	}
-		// }
 				
 		if(((data.text === "") && (data.choices === null)) || (data.text != "")) {
 			const transitionList = {origins:[], destinations:[]};
@@ -133,72 +114,76 @@ function DialogLine(position) {
 				
 				transitionList.origins.push(thisOrigin);
 				transitionList.destinations.push(data.nextPage);
-			} 
+			}
+
+			if (data.choices) {
+				configureChoices(this, data, transitionList)
+			}
 			
 			return transitionList;
 		} else {
 			const transitionList = {origins:[], destinations:[]};
-			
-			textBox.setText(data.choices[0][0]);
-			const textRows = textBox.getText().length;
-			if(textRows > 1) {
-				this.frame.height += ((textRows - 1) * textBox.getBaseHeight());
-			}
-			
-			let thisOrigin = null;
-			if(data.choices[0][1] != null) {
-				thisOrigin = this.addOriginChild(textBox, {x:textBox.frame.x, y:textBox.frame.y});
-			} 
-			
-			transitionList.origins.push(thisOrigin);
-			transitionList.destinations.push(data.choices[0][1]);
-			
-			for(let i = 1; i < data.choices.length; i++) {
-				const text = data.choices[i][0];
-				const firstTextBox = choices[0];
-				
-				let originOffset = 0;
-				if(firstTextBox.dialogOrigin != null) {
-					originOffset = -16;
-				}
-				
-				const lastChoice = choices[choices.length - 1];
-				const lastFrame = lastChoice.frame;
-				const thisFrame = new DialogFrame(firstTextBox.frame.x + originOffset, 
-												  lastFrame.y + lastChoice.cursor.frame.height + CHILD_PADDING,
-											   	  firstTextBox.frame.width,
-											   	  TEXTBOX_HEIGHT);
-											   	  
-				const anotherTextBox = new DialogTextBox(thisFrame, LabelFont.Medium);
-				anotherTextBox.setText(text);
-				const textRows = textBox.getText().length
-				
-				children.push(anotherTextBox);
-				choices.push(anotherTextBox);
-				
-				if(speaker != null) {
-					anotherTextBox.setColors(bkgdColor, lineColor);
-				}
-				
-				dialogEditor.textBoxGrew(anotherTextBox.frame.height + CHILD_PADDING, this);
-				
-				const anotherTextRow = anotherTextBox.getText().length;
-				if(anotherTextRow > 1) {
-					this.frame.height += ((textRows - 1) * anotherTextBox.getBaseHeight());
-				}
-				
-				thisOrigin = null;
-				if(data.choices[i][1] != null) {
-					thisOrigin = this.addOriginChild(anotherTextBox, {x:anotherTextBox.frame.x, y:anotherTextBox.frame.y});
-				} 
-				
-				transitionList.origins.push(thisOrigin);
-				transitionList.destinations.push(data.choices[i][1]);
-			}
+
+			configureChoices(this, data, transitionList)
 			
 			return transitionList;
 		}		
 	};
+
+	const configureChoices = function(self, data, transitionList) {
+		const textRows = textBox.getText().length;
+		if(textRows > 1) {
+			self.frame.height += ((textRows - 1) * textBox.getBaseHeight());
+		}
+		
+		let thisOrigin = null;
+		if(data.choices[0][1] != null) {
+			thisOrigin = self.addOriginChild(textBox, {x:textBox.frame.x, y:textBox.frame.y});
+		}
+		
+		for(let i = 0; i < data.choices.length; i++) {
+			const text = data.choices[i][0];
+			const firstTextBox = choices[0];
+			
+			let originOffset = 0;
+			if(firstTextBox.dialogOrigin != null) {
+				originOffset = -16;
+			}
+			
+			const lastChoice = choices[choices.length - 1];
+			const lastFrame = lastChoice.frame;
+			const thisFrame = new DialogFrame(firstTextBox.frame.x + originOffset, 
+												lastFrame.y + lastChoice.cursor.frame.height + CHILD_PADDING,
+													 firstTextBox.frame.width,
+													 TEXTBOX_HEIGHT);
+													 
+			const anotherTextBox = new DialogTextBox(thisFrame, LabelFont.Medium);
+			anotherTextBox.setText(text);
+			const textRows = textBox.getText().length
+			
+			children.push(anotherTextBox);
+			choices.push(anotherTextBox);
+			
+			if(speaker != null) {
+				anotherTextBox.setColors(bkgdColor, lineColor);
+			}
+			
+			dialogEditor.textBoxGrew(anotherTextBox.frame.height + CHILD_PADDING, self);
+			
+			const anotherTextRow = anotherTextBox.getText().length;
+			if(anotherTextRow > 1) {
+				self.frame.height += ((textRows - 1) * anotherTextBox.getBaseHeight());
+			}
+			
+			thisOrigin = null;
+			if(data.choices[i][1] != null) {
+				thisOrigin = self.addOriginChild(anotherTextBox, {x:anotherTextBox.frame.x, y:anotherTextBox.frame.y});
+			} 
+			
+			transitionList.origins.push(thisOrigin);
+			transitionList.destinations.push(data.choices[i][1]);
+		}
+	}
 	
 	this.buildSceneNameLabel = function() {
 		const sceneNameLabel = new DialogLabel({x:this.frame.x + LINE_SPACING + CHILD_PADDING, 
