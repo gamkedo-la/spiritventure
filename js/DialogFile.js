@@ -50,7 +50,7 @@ let Gemini1 = [
         voice: undefined,
         text: "You’re here to guide me. Not the other way around. You’re here to help me get out of this miserable pit by exploring those forsaken doors. Others have tried, and failed utterly. Don’t think you’re too special. You will fail too.",
         nextPage: 5,
-        choices: null,
+        choices: [["That’s a nice way to get someone’s help.", 6], ["I’m not sure how I can help, but I can try. Besides, I have nothing else to here.", 7]],
 
         position: {x: 1145, y: 574}
     },
@@ -59,7 +59,7 @@ let Gemini1 = [
         who: "Soul",
         nameCol: "yellow",
         voice: undefined,
-        text: "",
+        text: "Replace this one",
         nextPage: null,
         choices: [["That’s a nice way to get someone’s help.", 6], ["I’m not sure how I can help, but I can try. Besides, I have nothing else to here.", 7]],
 

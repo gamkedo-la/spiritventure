@@ -29,7 +29,7 @@ var dialogCurrentTextIndex = 0;
 var dialogTextCharTimer = 0;
 
 function advanceDialog() {
-    if (dialogActiveConvo != null) {
+    if (dialogActiveConvo != null && dialogActiveConvo[dialogConvoStep]) {
         //var doneTyping = true;//dialogCurrentText.length < dialogActiveConvo[dialogConvoStep].text.length
         //to do: now that text wraps we need a better way to tell that it's done typing
         //hint: previously it checked if the line was done was being typed but we also need to know that we've done all lines
@@ -47,7 +47,7 @@ function advanceDialog() {
                 dialogConvoStep = 0;
                 dialogActiveConvo = null;
                 handleDialogBasedOnRoom();
-            } else {
+            } else if (dialogActiveConvo[dialogConvoStep]) {
                 wrapNextText(dialogActiveConvo[dialogConvoStep].text);
             }
         }
@@ -152,6 +152,11 @@ var currentPrintLine = 0;
 function processDialog() {
     if (dialogActiveConvo == null) return;
 
+    if (!dialogActiveConvo[dialogConvoStep]) {
+        dialogActiveConvo = null;
+        return;
+    }
+
     dialogCurrentX = lerp(dialogCurrentX, dialogX, dialogLerpSpeed);
     dialogCurrentY = lerp(dialogCurrentY, dialogY, dialogLerpSpeed);
     dialogCurrentW = lerp(dialogCurrentW, dialogW, dialogLerpSpeed);
@@ -160,6 +165,9 @@ function processDialog() {
     var lineToPrint = wrapText[currentPrintLine];// dialogActiveConvo[dialogConvoStep].text;
 
     if (dialogTextCharTimer <= 0 && dialogCurrentW > dialogW / 1.25) {
+        if (dialogCurrentText[currentPrintLine] === undefined) {
+            console.log('stopping')
+        }
         if (dialogCurrentText[currentPrintLine].length < lineToPrint.length) {
             dialogCurrentText[currentPrintLine] += lineToPrint[dialogCurrentTextIndex];
             dialogCurrentTextIndex++;
@@ -188,7 +196,7 @@ var bgSpinRate = 0.02;
 
 function drawDialog() {
     bgSlideAng += bgSpinRate;
-    if (dialogActiveConvo == null) return;
+    if (dialogActiveConvo == null || !dialogActiveConvo[dialogConvoStep]) return;
 
     var bgScrollX = Math.cos(bgSlideAng)*bgSlideOffset;
     var bgScrollY = Math.sin(bgSlideAng)*bgSlideOffset;
@@ -204,7 +212,7 @@ function drawDialog() {
     canvasContext.translate(bgScrollX,bgScrollY);
 
     canvasContext.fillRect(dialogCurrentX + camX -bgScrollX, dialogCurrentY + camY -bgScrollY, dialogCurrentW, dialogCurrentH);
-    if (dialogActiveConvo[dialogConvoStep].choices != null) {
+    if (dialogActiveConvo[dialogConvoStep] && dialogActiveConvo[dialogConvoStep].choices != null) {
         for (let i = 0; i < dialogActiveConvo[dialogConvoStep].choices.length; i++) {
             var button = {
                 x: dialogCurrentX + camX + dialogChoiceOffsetX,
@@ -223,7 +231,7 @@ function drawDialog() {
     canvasContext.strokeStyle = dialogOutlineColor;
     canvasContext.strokeRect(dialogCurrentX + camX, dialogCurrentY + camY, dialogCurrentW, dialogCurrentH);
     canvasContext.strokeRect(dialogCurrentX + camX + 32 - dialogFontSize - dialogTextOffset * 2, dialogCurrentY + camY - dialogFontSize - dialogTextOffset * 2, dialogCurrentW / 3, dialogHOffset + dialogHPerLine);
-    if (dialogActiveConvo[dialogConvoStep].choices != null) {
+    if (dialogActiveConvo[dialogConvoStep] && dialogActiveConvo[dialogConvoStep].choices != null) {
         for (let i = 0; i < dialogActiveConvo[dialogConvoStep].choices.length; i++) {
             canvasContext.strokeRect(dialogCurrentX + camX + dialogChoiceOffsetX, dialogCurrentY + camY + dialogChoiceOffsetY + (dialogChoiceHeight * i), dialogChoiceWidth, dialogChoiceHeight);
         }
