@@ -165,9 +165,6 @@ function processDialog() {
     var lineToPrint = wrapText[currentPrintLine];// dialogActiveConvo[dialogConvoStep].text;
 
     if (dialogTextCharTimer <= 0 && dialogCurrentW > dialogW / 1.25) {
-        if (dialogCurrentText[currentPrintLine] === undefined) {
-            console.log('stopping')
-        }
         if (dialogCurrentText[currentPrintLine].length < lineToPrint.length) {
             dialogCurrentText[currentPrintLine] += lineToPrint[dialogCurrentTextIndex];
             dialogCurrentTextIndex++;
