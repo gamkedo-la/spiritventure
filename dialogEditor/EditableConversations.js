@@ -16,77 +16,55 @@ let Gemini1 = [
         who: "Soul",
         nameCol: "yellow",
         voice: undefined,
-        text: "Hello, I am here to… I’m not sure why I’m here.",
+        text: "Hello, I am here to... I'm not sure why I'm here.",
         nextPage: 1,
         choices: null,
 
-        position: {x: 701, y: -204}
+        position: {x: -66, y: -1303}
     },
     {
         scene: "",
         who: "Gemini",
         nameCol: "undefined",
         voice: undefined,
-        text: "Another lost soul seeking eternal damnation…",
+        text: "Another lost soul seeking eternal damnation...",
         nextPage: 2,
         choices: null,
 
-        position: {x: 533, y: 48}
+        position: {x: -66, y: -1013}
     },
     {
         scene: "",
         who: "Soul",
         nameCol: "yellow",
         voice: undefined,
-        text: "…It’s certainly not that. I know that you’re important, and this strong sense that you can guide me on what to do next.",
+        text: "...It's certainly not that. I know that you're important, and this strong sense that you can guide me on what to do next.",
         nextPage: 3,
         choices: null,
 
-        position: {x: 682, y: 292}
+        position: {x: -66, y: -723}
     },
     {
         scene: "",
         who: "Gemini",
         nameCol: "undefined",
         voice: undefined,
-        text: " Guide you? Let me tell you why you’re here.",
-        nextPage: 4,
-        choices: null,
-
-        position: {x: 1168, y: -205}
-    },
-    {
-        scene: "",
-        who: "Gemini",
-        nameCol: "undefined",
-        voice: undefined,
-        text: "You’re here to guide me. Not the other way around.You’re here to help me get out of this miserable pit by exploring those forsaken doors.Others have tried, and failed utterly.Don’t think you’re too special. You will fail too.",
-        nextPage: 5,
-        choices: null,
-
-        position: {x: 1184, y: 65}
-    },
-    {
-        scene: "",
-        who: "Soul",
-        nameCol: "yellow",
-        voice: undefined,
-        text: "",
+        text: "Guide you? Let me tell you why you're here. You're here to guide me. Not the other way around. You're here to help me get out of this miserable pit by exploring those forsaken doors. Others have tried, and failed utterly. Don't think you're too special. You will fail too.",
         nextPage: null,
-        choices: [["That’s a nice way to get someone’s help.", 6], ["I’m not sure how I can help, but I can try. Besides, I have nothing else to here. ", 7]],
+        choices: [["That's a nice way to get someone's help.", 4], ["I'm not sure how I can help, but I can try. Besides, I have nothing else to do here.", 5]],
 
-        position: {x: 1184, y: 335}
+        position: {x: -67, y: -393}
     },
     {
         scene: "",
         who: "Gemini",
         nameCol: "undefined",
         voice: undefined,
-        text: "I never asked for this,I have no choice here.",
-        nextPage: 8,
+        text: "I never asked for this, I have no choice here.",
+        nextPage: 6,
         choices: null,
 
-        position: {x: 883, y: 627}
+        position: {x: 409, y: -320}
     },
     {
         scene: "",
@@ -94,32 +72,32 @@ let Gemini1 = [
         nameCol: "undefined",
         voice: undefined,
         text: "Then help. Go through those doors, and be wary of what may greet you.",
-        nextPage: 10,
+        nextPage: 8,
         choices: null,
 
-        position: {x: 1394, y: 632}
+        position: {x: 101, y: 125}
     },
     {
         scene: "",
         who: "Soul",
         nameCol: "yellow",
         voice: undefined,
-        text: "I...I'll do whatI can.",
-        nextPage: 9,
+        text: "I...I'll do what I can.",
+        nextPage: 7,
         choices: null,
 
-        position: {x: 928, y: 912}
+        position: {x: 565, y: 155}
     },
     {
         scene: "",
         who: "Gemini",
         nameCol: "undefined",
         voice: undefined,
-        text: "How reassruing.",
-        nextPage: 10,
+        text: "How reassuring.",
+        nextPage: 8,
         choices: null,
 
-        position: {x: 1313, y: 1111}
+        position: {x: 565, y: 425}
     },
     {
         scene: "",
@@ -127,10 +105,10 @@ let Gemini1 = [
         nameCol: "yellow",
         voice: undefined,
         text: "See you around.",
-        nextPage: 11,
+        nextPage: 9,
         choices: null,
 
-        position: {x: 1708, y: 896}
+        position: {x: 142, y: 483}
     },
 ];
 //CONVERSATIONS.push(ATestDialog);

@@ -4,66 +4,44 @@ let Gemini1 = [
         who: "Soul",
         nameCol: "yellow",
         voice: undefined,
-        text: "Hello, I am here to… I’m not sure why I’m here.",
+        text: "Hello, I am here to... I'm not sure why I'm here.",
         nextPage: 1,
         choices: null,
 
-        position: {x: 662, y: 305}
+        position: {x: -66, y: -1303}
     },
     {
         scene: "",
         who: "Gemini",
         nameCol: "undefined",
         voice: undefined,
-        text: "Another lost soul seeking eternal damnation…",
+        text: "Another lost soul seeking eternal damnation...",
         nextPage: 2,
         choices: null,
 
-        position: {x: 494, y: 557}
+        position: {x: -66, y: -1013}
     },
     {
         scene: "",
         who: "Soul",
         nameCol: "yellow",
         voice: undefined,
-        text: "…It’s certainly not that. I know that you’re important, and this strong sense that you can guide me on what to do next.",
+        text: "...It's certainly not that. I know that you're important, and this strong sense that you can guide me on what to do next.",
         nextPage: 3,
         choices: null,
 
-        position: {x: 643, y: 801}
+        position: {x: -66, y: -723}
     },
     {
         scene: "",
         who: "Gemini",
         nameCol: "undefined",
         voice: undefined,
-        text: " Guide you? Let me tell you why you’re here. You’re here to guide me. Not the other way around. You’re here to help me get out of this miserable pit by exploring those forsaken doors. Others have tried, and failed utterly. Don’t think you’re too special. You will fail too.",
-        nextPage: 4,
-        choices: null,
-
-        position: {x: 1129, y: 304}
-    },
-    {
-        scene: "",
-        who: "Gemini",
-        nameCol: "undefined",
-        voice: undefined,
-        text: "You’re here to guide me. Not the other way around. You’re here to help me get out of this miserable pit by exploring those forsaken doors. Others have tried, and failed utterly. Don’t think you’re too special. You will fail too.",
-        nextPage: 5,
-        choices: [["That’s a nice way to get someone’s help.", 6], ["I’m not sure how I can help, but I can try. Besides, I have nothing else to here.", 7]],
-
-        position: {x: 1145, y: 574}
-    },
-    {
-        scene: "",
-        who: "Soul",
-        nameCol: "yellow",
-        voice: undefined,
-        text: "Replace this one",
+        text: "Guide you? Let me tell you why you're here. You're here to guide me. Not the other way around. You're here to help me get out of this miserable pit by exploring those forsaken doors. Others have tried, and failed utterly. Don't think you're too special. You will fail too.",
         nextPage: null,
-        choices: [["That’s a nice way to get someone’s help.", 6], ["I’m not sure how I can help, but I can try. Besides, I have nothing else to here.", 7]],
+        choices: [["That's a nice way to get someone's help.", 4], ["I'm not sure how I can help, but I can try. Besides, I have nothing else to do here.", 5]],
 
-        position: {x: 1145, y: 844}
+        position: {x: -67, y: -393}
     },
     {
         scene: "",
@@ -71,10 +49,10 @@ let Gemini1 = [
         nameCol: "undefined",
         voice: undefined,
         text: "I never asked for this, I have no choice here.",
-        nextPage: 8,
+        nextPage: 6,
         choices: null,
 
-        position: {x: 844, y: 1136}
+        position: {x: 409, y: -320}
     },
     {
         scene: "",
@@ -82,32 +60,32 @@ let Gemini1 = [
         nameCol: "undefined",
         voice: undefined,
         text: "Then help. Go through those doors, and be wary of what may greet you.",
-        nextPage: 10,
+        nextPage: 8,
         choices: null,
 
-        position: {x: 1355, y: 1141}
+        position: {x: 101, y: 125}
     },
     {
         scene: "",
         who: "Soul",
         nameCol: "yellow",
         voice: undefined,
-        text: "I...I'll do whatI can.",
-        nextPage: 9,
+        text: "I...I'll do what I can.",
+        nextPage: 7,
         choices: null,
 
-        position: {x: 889, y: 1421}
+        position: {x: 565, y: 155}
     },
     {
         scene: "",
         who: "Gemini",
         nameCol: "undefined",
         voice: undefined,
-        text: "How reassruing.",
-        nextPage: 10,
+        text: "How reassuring.",
+        nextPage: 8,
         choices: null,
 
-        position: {x: 1274, y: 1620}
+        position: {x: 565, y: 425}
     },
     {
         scene: "",
@@ -115,83 +93,112 @@ let Gemini1 = [
         nameCol: "yellow",
         voice: undefined,
         text: "See you around.",
-        nextPage: 11,
+        nextPage: 9,
         choices: null,
 
-        position: {x: 1669, y: 1405}
+        position: {x: 142, y: 483}
     },
 ];
 //
 let testConvo = [
     {
-        scene: "neutral",
-        who: "Despond",
-        nameCol: "undefined",
+        scene: "",
+        who: "Soul",
+        nameCol: "yellow",
         voice: undefined,
-        text: "This is a test dialog with three choices!",
+        text: "Hello, I am here to... I'm not sure why I'm here.",
         nextPage: 1,
-        choices: [["Pardon?", 0], ["Awesome!", 1], ["Later.", 2]],
-        position: {x: 396.5, y: 42}
-    },
-    {
-        scene: "neutral",
-        who: "Despond",
-        nameCol: "undefined",
-        voice: undefined,
-        text: "Well, it's certainly not that. I know that you're important, and I have this strong sense that you can guide me on what to do next.",
-        nextPage: null,
         choices: null,
-        position: {x: 396.5, y: 42}
+
+        position: {x: -66, y: -1303}
     },
     {
         scene: "",
         who: "Gemini",
         nameCol: "undefined",
         voice: undefined,
-        text: "See you!",
-        nextPage: null,
+        text: "Another lost soul seeking eternal damnation...",
+        nextPage: 2,
         choices: null,
-        position: {x: 198.5, y: 363}
+
+        position: {x: -66, y: -1013}
     },
     {
         scene: "",
-        who: "Incense",
-        nameCol: "undefined",
+        who: "Soul",
+        nameCol: "yellow",
         voice: undefined,
-        text: "i ok",
+        text: "...It's certainly not that. I know that you're important, and this strong sense that you can guide me on what to do next.",
         nextPage: 3,
         choices: null,
-        position: {x: 682.5, y: 525}
+
+        position: {x: -66, y: -723}
     },
     {
         scene: "",
-        who: null,
-        nameCol: null,
-        voice: null,
-        text: "you ok",
-        nextPage: 4,
-        choices: null,
-        position: {x: 164.5, y: 695}
-    },
-    {
-        scene: "",
-        who: null,
-        nameCol: null,
-        voice: null,
-        text: "",
+        who: "Gemini",
+        nameCol: "undefined",
+        voice: undefined,
+        text: "Guide you? Let me tell you why you're here. You're here to guide me. Not the other way around. You're here to help me get out of this miserable pit by exploring those forsaken doors. Others have tried, and failed utterly. Don't think you're too special. You will fail too.",
         nextPage: null,
-        choices: [["To 'hello hi'", 0], ["To 'How are you'", 1], ["Proceed", 5]],
-        position: {x: 164.5, y: 895}
+        choices: [["That's a nice way to get someone's help.", 4], ["I'm not sure how I can help, but I can try. Besides, I have nothing else to do here.", 5]],
+
+        position: {x: -67, y: -393}
     },
     {
         scene: "",
-        who: null,
-        nameCol: null,
-        voice: null,
-        text: "that's the end!",
-        nextPage: null,
+        who: "Gemini",
+        nameCol: "undefined",
+        voice: undefined,
+        text: "I never asked for this, I have no choice here.",
+        nextPage: 6,
         choices: null,
-        position: {x: 164.5, y: 895}
+
+        position: {x: 409, y: -320}
+    },
+    {
+        scene: "",
+        who: "Gemini",
+        nameCol: "undefined",
+        voice: undefined,
+        text: "Then help. Go through those doors, and be wary of what may greet you.",
+        nextPage: 8,
+        choices: null,
+
+        position: {x: 101, y: 125}
+    },
+    {
+        scene: "",
+        who: "Soul",
+        nameCol: "yellow",
+        voice: undefined,
+        text: "I...I'll do what I can.",
+        nextPage: 7,
+        choices: null,
+
+        position: {x: 565, y: 155}
+    },
+    {
+        scene: "",
+        who: "Gemini",
+        nameCol: "undefined",
+        voice: undefined,
+        text: "How reassuring.",
+        nextPage: 8,
+        choices: null,
+
+        position: {x: 565, y: 425}
+    },
+    {
+        scene: "",
+        who: "Soul",
+        nameCol: "yellow",
+        voice: undefined,
+        text: "See you around.",
+        nextPage: 9,
+        choices: null,
+
+        position: {x: 142, y: 483}
     },
 ];
 
@@ -200,52 +207,101 @@ let testConvo = [
 let testConvo2 = [
     {
         scene: "",
-        who: "Gemini",
-        nameCol: "undefined",
+        who: "Soul",
+        nameCol: "yellow",
         voice: undefined,
-        text: "This is test dialog with a different character",
-        nextPage: null,
-        choices: [["Blah blah blah", 1], ["Second option", 2]],
-        position: {x: 129.5, y: 110}
-    },
-    {
-        scene: "",
-        who: "Gemini",
-        nameCol: "undefined",
-        voice: undefined,
-        text: "Bleeeee",
-        nextPage: 3,
+        text: "Hello, I am here to... I'm not sure why I'm here.",
+        nextPage: 1,
         choices: null,
-        position: {x: 22.5, y: 415}
+
+        position: {x: -66, y: -1303}
     },
     {
         scene: "",
         who: "Gemini",
         nameCol: "undefined",
         voice: undefined,
-        text: "Test 2",
-        nextPage: 4,
-        choices: null,
-        position: {x: 447.5, y: 417}
-    },
-    {
-        scene: "",
-        who: "Gemini",
-        nameCol: "undefined",
-        voice: undefined,
-        text: "Blah ",
+        text: "Another lost soul seeking eternal damnation...",
         nextPage: 2,
         choices: null,
-        position: {x: 20.5, y: 694}
+
+        position: {x: -66, y: -1013}
+    },
+    {
+        scene: "",
+        who: "Soul",
+        nameCol: "yellow",
+        voice: undefined,
+        text: "...It's certainly not that. I know that you're important, and this strong sense that you can guide me on what to do next.",
+        nextPage: 3,
+        choices: null,
+
+        position: {x: -66, y: -723}
     },
     {
         scene: "",
         who: "Gemini",
         nameCol: "undefined",
         voice: undefined,
-        text: "Test 3",
+        text: "Guide you? Let me tell you why you're here. You're here to guide me. Not the other way around. You're here to help me get out of this miserable pit by exploring those forsaken doors. Others have tried, and failed utterly. Don't think you're too special. You will fail too.",
         nextPage: null,
+        choices: [["That's a nice way to get someone's help.", 4], ["I'm not sure how I can help, but I can try. Besides, I have nothing else to do here.", 5]],
+
+        position: {x: -67, y: -393}
+    },
+    {
+        scene: "",
+        who: "Gemini",
+        nameCol: "undefined",
+        voice: undefined,
+        text: "I never asked for this, I have no choice here.",
+        nextPage: 6,
         choices: null,
-        position: {x: 501.5, y: 700}
+
+        position: {x: 409, y: -320}
+    },
+    {
+        scene: "",
+        who: "Gemini",
+        nameCol: "undefined",
+        voice: undefined,
+        text: "Then help. Go through those doors, and be wary of what may greet you.",
+        nextPage: 8,
+        choices: null,
+
+        position: {x: 101, y: 125}
+    },
+    {
+        scene: "",
+        who: "Soul",
+        nameCol: "yellow",
+        voice: undefined,
+        text: "I...I'll do what I can.",
+        nextPage: 7,
+        choices: null,
+
+        position: {x: 565, y: 155}
+    },
+    {
+        scene: "",
+        who: "Gemini",
+        nameCol: "undefined",
+        voice: undefined,
+        text: "How reassuring.",
+        nextPage: 8,
+        choices: null,
+
+        position: {x: 565, y: 425}
+    },
+    {
+        scene: "",
+        who: "Soul",
+        nameCol: "yellow",
+        voice: undefined,
+        text: "See you around.",
+        nextPage: 9,
+        choices: null,
+
+        position: {x: 142, y: 483}
     },
 ];

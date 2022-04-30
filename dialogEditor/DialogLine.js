@@ -184,7 +184,7 @@ function DialogLine(position) {
 				
 				const anotherTextRow = anotherTextBox.getText().length;
 				if(anotherTextRow > 1) {
-					this.frame.height += ((textRows - 1) * anotherTextRow.getBaseHeight());
+					this.frame.height += ((textRows - 1) * anotherTextBox.getBaseHeight());
 				}
 				
 				thisOrigin = null;
@@ -740,16 +740,16 @@ function DialogLine(position) {
 		saveString += ",\n        ";
 		
 		saveString += "text: ";
-		if(choices.length === 1) {
+		// if(choices.length === 1) {
 			const choice0TextArray = choices[0].getText();
 			saveString += "\"";
 			for(let i = 0; i < choice0TextArray.length; i++) {
 				saveString += choice0TextArray[i];
 			}
 			saveString += "\"";
-		} else {
-			saveString += "\"\"";
-		}
+		// } else {
+		// 	saveString += "\"\"";
+		// }
 		
 		saveString += ",\n        ";
 		
@@ -829,7 +829,7 @@ function DialogLine(position) {
 		saveString += "choices: ";
 		if(choices.length > 1) {
 			saveString += "[[\"";
-			for(let i = 0; i < choices.length; i++) {
+			for(let i = 1; i < choices.length; i++) {
 				const thisChoice = choices[i];
 				const choiceText = thisChoice.getText();
 				for(let j = 0; j < choiceText.length; j++) {
