@@ -47,8 +47,8 @@ const LineWidth = {
 const Speaker = {
 	Soul:'Soul',
 	Despond:'Despond',
-	Incense:'Incense',
-	Tripath:'Tripath',
+	Satah:'Satah',
+	Tripa:'Tripa',
 	Gemini:'Gemini',
 	
 };
@@ -69,11 +69,11 @@ function colorsForSpeaker(speaker) {
 			colors.bkgd = 'pink';
 			colors.line = 'red';
 		break;
-		case Speaker.Incense:
+		case Speaker.Satah:
 			colors.bkgd = 'pink';
 			colors.line = 'red';
 		break;
-		case Speaker.Tripath:
+		case Speaker.Tripa:
 			colors.bkgd = 'white';
 			colors.line = '#b12f0c';
 		break;

@@ -58,6 +58,7 @@ function loadImages() {
     {tileType:TILE_SATAH, theFile:"Satah.png"},
     {tileType:TILE_CLOCKS_1, theFile:"clocks_1.png"},
     {tileType:TILE_HAPPY_1, theFile:"happy_wall_art_1.png"},
+    {tileType:TILE_GEMINI_END, theFile:"gemini_endgame.png"},
     
     ];
 

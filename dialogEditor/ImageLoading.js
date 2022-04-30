@@ -5,8 +5,8 @@ const billboardSprites = [];
 let picsToLoad = 0;
 
 const despond = document.createElement("img");
-const incense = document.createElement("img");
-const tripath = document.createElement("img");
+const satah = document.createElement("img");
+const tripa = document.createElement("img");
 const gemini = document.createElement("img");
 const soul = document.createElement("img");
 
@@ -15,8 +15,8 @@ function imageForString(string) {
 	switch(string) {
 		case "despond":
 			return despond;
-		case "incense":
-			return incense;
+		case "satah":
+			return satah;
 		case "tripath":
 			return tripath;
 		case "gemini":
@@ -46,8 +46,8 @@ function loadImages() {
 	imageList = [
 	   //PORTRAITS
 	    {imgName: despond, theFile: "soul.png", speaker:Speaker.Despond},
-	    {imgName: incense, theFile: "spotwall.png", speaker:Speaker.Incense},
-	    {imgName: tripath, theFile: "warrior.png", speaker:Speaker.Tripath},
+	    {imgName: satah, theFile: "spotwall.png", speaker:Speaker.Satah},
+	    {imgName: tripa, theFile: "warrior.png", speaker:Speaker.Tripa},
 		{imgName: gemini, theFile: "world_door.png", speaker:Speaker.Gemini},
 		{imgName: soul, theFile: "world_key", speaker:Speaker.Soul}, 
 		

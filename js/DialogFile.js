@@ -305,6 +305,49 @@ let testConvo2 = [
         position: {x: 142, y: 483}
     },
 ];
+
+let Tripa = [
+    {
+        scene: "",
+        who: "Tripa",
+        nameCol: "undefined",
+        voice: undefined,
+        text: "I need more time!",
+        nextPage: 1,
+        choices: null,
+
+        position: {x: 542.5, y: 223}
+    },
+];
+
+let Gemini_end = [
+    {
+        scene: "",
+        who: "Gemini",
+        nameCol: "undefined",
+        voice: undefined,
+        text: "This is the end.",
+        nextPage: 1,
+        choices: null,
+
+        position: {x: 538.5, y: 140}
+    },
+];
+
+let Satah = [
+    {
+        scene: "",
+        who: "Satah",
+        nameCol: "undefined",
+        voice: undefined,
+        text: "Under construction! ",
+        nextPage: 1,
+        choices: null,
+
+        position: {x: 403.5, y: 228}
+    },
+];
+
 let testconvo = [
     {
         scene: "",
@@ -319,7 +362,7 @@ let testconvo = [
     },
     {
         scene: "",
-        who: "Incense",
+        who: "Satah",
         nameCol: "undefined",
         voice: undefined,
         text: "what you up to",
@@ -341,7 +384,7 @@ let testconvo = [
     },
     {
         scene: "",
-        who: "Incense",
+        who: "Satah",
         nameCol: "undefined",
         voice: undefined,
         text: "great!",

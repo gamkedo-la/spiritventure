@@ -868,9 +868,9 @@ function DialogLine(position) {
 		switch(speaker) {
 			case Speaker.despond:
 				return "voiceLow1";
-			case Speaker.incense:
+			case Speaker.satah:
 				return "voiceHigh2";
-			case Speaker.tripath:
+			case Speaker.tripa:
 				return "voiceHigh2";
 			case Speaker.gemini:
 				return "voiceHigh2";
@@ -884,10 +884,10 @@ function DialogLine(position) {
 		switch(image) {
 			case despond:
 				return "despond";
-			case incense:
-				return "incense";
-			case tripath:
-				return "tripath";
+			case satah:
+				return "satah";
+			case tripa:
+				return "tripa";
 			case gemini:
 				return "gemini";
 			case soul:

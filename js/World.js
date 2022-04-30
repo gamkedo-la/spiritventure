@@ -40,8 +40,9 @@ const TILE_MIND = 18;
 const TILE_DESPOND = 19;
 const TILE_SATAH = 20;
 const TILE_TRIPA = 21;
+const TILE_GEMINI_END = 22
 
-const TOTAL_TILES = 22;
+const TOTAL_TILES = 23;
 
 function roomTileToIndex(tileCol, tileRow) {
   return (tileCol + rooms[roomIndex][COLS]*tileRow);
