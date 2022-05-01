@@ -9,7 +9,7 @@ var dialogHPerLine = 25;
 var dialogPanelColor1 = "rgba(0,0,0,0.8)";
 var dialogPanelColor2 = "rgba(0,0,0,0.6)";
 var dialogOutlineColor = "#000000";
-var dialogTextColor = "#fcfcfc";
+var dialogTextColor = "black";
 var dialogFontSize = 24;
 var dialogTextOffset = 4;
 var dialogTextCharDelay = 16;
@@ -62,13 +62,13 @@ function setSpeakerNameColor(speakerName) {
     let nameColor = dialogTextColor;
     switch (speakerName){
         case "Despond":
-            nameColor = dialogTextColor;
+            nameColor = "white";
             break
         case "Gemini":
-            nameColor = '#000000'; // warm yellow
+            nameColor = "white"; 
             break
         default:
-            nameColor = dialogTextColor;
+            nameColor = "white";
             break  
     }
     return nameColor
@@ -78,16 +78,16 @@ function setSpeakerBg(speakerName) {
     let style = "#000000";
     switch (speakerName){
         case "Despond":
-            style = '#EF476F'; // redpink
+            style = 'blue'; 
             break
-        case "Char2":
-            style = '#26547C'; // blue
+        case "Tripa":
+            style = '#26547C'; 
             break
         case "Gemini":
-            style = '#FFD166'; // warm yellow
+            style = 'red'; 
             break
-        case "Char3":
-            style = '#06D6A0'; // cool green
+        case "Satah":
+            style = 'brown'; 
             break
         default:
            style = '#000000';
