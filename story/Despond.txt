@@ -4,65 +4,164 @@ let Despond = [
         who: "Soul",
         nameCol: "yellow",
         voice: undefined,
-        text: "Hi,I'm soul.",
+        text: "Greetings, I'm here to - ",
         nextPage: 1,
         choices: null,
 
-        position: {x: 150, y: -215}
+        position: {x: -764.5, y: -1573}
     },
     {
         scene: "",
         who: "Despond",
         nameCol: "undefined",
         voice: undefined,
-        text: "",
-        nextPage: null,
-        choices: [["That's a nice name.I'mDespond, and I know why you're here.", 2], ["", ]],
-
-        position: {x: 619, y: -172}
-    },
-    {
-        scene: "",
-        who: "Soul",
-        nameCol: "yellow",
-        voice: undefined,
-        text: "I see, then i must tell you thatI'm not sure how it is thatI'm going to help you outI know how debilitating what you're feeling is.",
-        nextPage: 3,
-        choices: null,
-
-        position: {x: 172, y: 137}
-    },
-    {
-        scene: "",
-        who: "Despond",
-        nameCol: "undefined",
-        voice: undefined,
-        text: "I appreciate your honesty.It is tough, and honestly, why even bother sometim?",
+        text: "Help me. Yes, I know and I appreciate that. However, I - my host does not realise the full extent of their pain. I do. I do not know if this part can recover.",
         nextPage: 2,
         choices: null,
 
-        position: {x: 648, y: 161}
+        position: {x: -235.5, y: -1563}
     },
     {
         scene: "",
         who: "Soul",
         nameCol: "yellow",
         voice: undefined,
-        text: "That's a good point you brought up there, it can get tiring.I must ask, how does it feel lik?",
-        nextPage: 3,
-        choices: null,
+        text: "Is it really that bad? You should perhaps - ",
+        nextPage: null,
+        choices: [["... I need to know more first, can you tell me? This is about Gemini's sadness, yes? ", 4], ["Recovery... I'm sorry to hear that. Gemini is has been in a rough shape.", 10]],
 
-        position: {x: 255, y: 508}
+        position: {x: 270.5, y: -1634}
     },
     {
         scene: "",
-        who: null,
-        nameCol: null,
-        voice: null,
-        text: "My host does not realise the full extent of their pain, so much so that it's personified into different entities such asI.As forI, everything thatI look at seems so... black.",
-        nextPage: 6,
+        who: "Despond",
+        nameCol: "undefined",
+        voice: undefined,
+        text: "Why do you care about Gemini anyway?",
+        nextPage: 5,
         choices: null,
 
-        position: {x: 813, y: 487}
+        position: {x: 350.5, y: -1162}
+    },
+    {
+        scene: "",
+        who: "Despond",
+        nameCol: "undefined",
+        voice: undefined,
+        text: "There is no room to talk about it. It's all been dried up; exhausted. ",
+        nextPage: 3,
+        choices: null,
+
+        position: {x: -262.5, y: -1192}
+    },
+    {
+        scene: "",
+        who: "Soul",
+        nameCol: "yellow",
+        voice: undefined,
+        text: "I care because I - ",
+        nextPage: null,
+        choices: [["I can't stand to see someone in such a remorseful state.", 8], ["It hurts because I was once there.", 6]],
+
+        position: {x: 422.5, y: -853}
+    },
+    {
+        scene: "",
+        who: "Soul",
+        nameCol: "yellow",
+        voice: undefined,
+        text: "And now, it looks like I'm seeing a mirror reflection of me. I want to be their for them, and in a way reflect and pay my due respects.",
+        nextPage: 7,
+        choices: null,
+
+        position: {x: 877.5, y: -754}
+    },
+    {
+        scene: "",
+        who: "Despond",
+        nameCol: "undefined",
+        voice: undefined,
+        text: "... Heavy words, but I can sense that you mean them. ",
+        nextPage: 11,
+        choices: null,
+
+        position: {x: 824.5, y: -335}
+    },
+    {
+        scene: "",
+        who: "Soul",
+        nameCol: "yellow",
+        voice: undefined,
+        text: "It's in my blood to delve into it. Perhaps, a flaw in my functioning but there's nothing I can do about it. ",
+        nextPage: 9,
+        choices: null,
+
+        position: {x: 9.5, y: -680}
+    },
+    {
+        scene: "",
+        who: "Despond",
+        nameCol: "undefined",
+        voice: undefined,
+        text: "Seeing it as a flaw or otherwise is rudimentary. I think you should take it for what it is.",
+        nextPage: 11,
+        choices: null,
+
+        position: {x: 256.5, y: -324}
+    },
+    {
+        scene: "",
+        who: "Despond",
+        nameCol: "undefined",
+        voice: undefined,
+        text: "An undestatement.",
+        nextPage: 3,
+        choices: null,
+
+        position: {x: 823.5, y: -1399}
+    },
+    {
+        scene: "",
+        who: "Despond",
+        nameCol: "undefined",
+        voice: undefined,
+        text: "Very well, imbue their plight. Carry their burden. Foolish? Mayhap. But this cannot last forever, and I'm keeping faith. Go.",
+        nextPage: 12,
+        choices: null,
+
+        position: {x: 504.5, y: 4}
+    },
+    {
+        scene: "",
+        who: "Despond",
+        nameCol: "undefined",
+        voice: undefined,
+        text: "...and thank you.",
+        nextPage: 13,
+        choices: null,
+
+        position: {x: 504.5, y: 336}
+    },
+    {
+        scene: "",
+        who: "Soul",
+        nameCol: "yellow",
+        voice: undefined,
+        text: "...",
+        nextPage: null,
+        choices: [["Your well wishes are all I need, thank you.", ], ["I'm not sure if you put your faith in the right person.", 14]],
+
+        position: {x: 469.5, y: 613}
+    },
+    {
+        scene: "",
+        who: "Soul",
+        nameCol: "yellow",
+        voice: undefined,
+        text: "I am however, here, and unrelenting by forces I cannot see, only know.",
+        nextPage: 15,
+        choices: null,
+
+        position: {x: 976.5, y: 615}
     },
 ];
