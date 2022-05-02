@@ -136,7 +136,7 @@ let Gemini1 = [
         who: "Gemini",
         nameCol: "undefined",
         voice: undefined,
-        text: "Which doors correspond to what? I do not know.",
+        text: "Which doors correspond to what? I do not know. Know that the door behind me cannot be opened now.",
         nextPage: 13,
         choices: null,
 
