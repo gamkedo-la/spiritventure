@@ -14,10 +14,10 @@ var dialogFontSize = 24;
 var dialogTextOffset = 4;
 var dialogTextCharDelay = 16;
 var dialogLerpSpeed = 0.2;
-var dialogChoiceOffsetX = 240 - 90;
-var dialogChoiceOffsetY = 120;
+var dialogChoiceOffsetX = 240 + 60;
+var dialogChoiceOffsetY = 0;
 var dialogChoiceWidth = 160;
-var dialogChoiceHeight = dialogFontSize + (dialogTextOffset * 2);
+var dialogChoiceHeight = dialogFontSize*2.5 + (dialogTextOffset * 2);
 var dialogChoiceButtons = [];
 
 var dialogCurrentX = 0;
