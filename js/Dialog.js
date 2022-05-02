@@ -4,19 +4,21 @@ var dialogActiveConvo = null;
 var dialogX = 0;
 var dialogY = 0;
 var dialogW = 300;
-var dialogHOffset = 10;
+var dialogWOffset = -180;
+var dialogHOffset = 10; // note: h here is for height, not horizontal
 var dialogHPerLine = 25;
 var dialogPanelColor1 = "rgba(0,0,0,0.8)";
 var dialogPanelColor2 = "rgba(0,0,0,0.6)";
 var dialogOutlineColor = "#000000";
 var dialogTextColor = "black";
-var dialogFontSize = 24;
+var dialogFontSize = 18;
+var dialogChoiceFontSize = 12;
 var dialogTextOffset = 4;
 var dialogTextCharDelay = 16;
 var dialogLerpSpeed = 0.2;
 var dialogChoiceOffsetX = 240 + 60;
 var dialogChoiceOffsetY = 0;
-var dialogChoiceWidth = 160;
+var dialogChoiceWidth = 330;
 var dialogChoiceHeight = dialogFontSize*2.5 + (dialogTextOffset * 2);
 var dialogChoiceButtons = [];
 
@@ -138,10 +140,10 @@ function resetDialogText() {
 function setupDialog(convoObj, posX, posY) {
     dialogActiveConvo = convoObj;
     dialogConvoStep = 0;
-    dialogX = posX;
+    dialogX = posX +  + dialogWOffset;
     dialogY = posY;
 
-    dialogCurrentX = posX + dialogW / 2;
+    dialogCurrentX = posX + dialogW / 2 + dialogWOffset;
     dialogCurrentY = posY + (dialogHOffset + (dialogHPerLine * dialogCurrentText.length)) / 2;
     dialogCurrentW = dialogCurrentH = 0;
     resetDialogText();
@@ -258,10 +260,24 @@ function drawDialog() {
     // draw choice options
     if (dialogActiveConvo[dialogConvoStep].choices != null) {
         //console.log(dialogActiveConvo[dialogConvoStep].choices.length+" AVAILABLE CHOICES AT DIALOG STEP "+dialogConvoStep);
+        canvasContext.font = dialogChoiceFontSize + 'px Arial';
         for (let i = 0; i < dialogActiveConvo[dialogConvoStep].choices.length; i++) {
             let choiceString = (i + 1).toString() + ". " + dialogActiveConvo[dialogConvoStep].choices[i][0];
             // console.log("CHOICE: "+choiceString);
-            canvasContext.fillText(choiceString, dialogCurrentX + camX + dialogChoiceOffsetX + dialogTextOffset, dialogCurrentY + camY + dialogChoiceOffsetY + dialogFontSize + dialogTextOffset + (dialogChoiceHeight * i), dialogChoiceWidth, dialogChoiceHeight);
+
+            var textNowXStart = dialogCurrentX + camX + dialogChoiceOffsetX + dialogTextOffset;
+            var textNowX = textNowXStart;
+            var textNowY = dialogCurrentY + camY + dialogChoiceOffsetY + dialogFontSize + dialogTextOffset + (dialogChoiceHeight * i);
+            var wordList = choiceString.split(" ");
+            for(var ii=0;ii<wordList.length;ii++) {
+                var wordWidth = canvasContext.measureText(wordList[ii]+" ").width;
+                if(textNowX+wordWidth>=textNowXStart+dialogChoiceWidth) {
+                    textNowX = textNowXStart;
+                    textNowY += dialogFontSize;
+                }
+                canvasContext.fillText(wordList[ii]+" ", textNowX, textNowY);
+                textNowX += wordWidth;
+            }
         }
     } else {
         //console.log("NO CHOICES AT DIALOG STEP "+dialogConvoStep);
@@ -275,7 +291,7 @@ var wrapText = [
 
 function lineWrap() { // note: gets calling immediately after definition!
     const newCut = [];
-    var maxLineChar = 27; // Currently based on letter count
+    var maxLineChar = 35; // Currently based on letter count
     var findEnd;
 
     for (let i = 0; i < wrapText.length; i++) {// dealing with multiple lines
