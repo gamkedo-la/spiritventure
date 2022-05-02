@@ -185,13 +185,17 @@ function drawInventoryTip() {
   // this is fragile, will need tuning if tooltip font or size changed
   var boxWidth = characters * 12;
 
+  var transparency = toDrawOrNotToDraw > framesPerSecond ?
+    0.75 :
+    0.75 * (toDrawOrNotToDraw / framesPerSecond);
+
   // adjust for hint text
   if (firstItem) {
-    drawRect(5, canvas.height - 70, boxWidth, 65, "black", 0.75);
+    drawRect(5, canvas.height - 70, boxWidth, 65, "black", transparency);
     drawText(txt, 10, canvas.height - 45, 24, 'lightblue');
   }
   else {
-    drawRect(5, canvas.height - 40, boxWidth, 35, "black", 0.75);
+    drawRect(5, canvas.height - 40, boxWidth, 35, "black", transparency);
     drawText(txt, 10, canvas.height - 15, 24, 'lightblue');
   }
 
