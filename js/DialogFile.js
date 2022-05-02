@@ -334,7 +334,7 @@ let Gemini_end = [
         who: "Gemini",
         nameCol: "undefined",
         voice: undefined,
-        text: "This is the end.",
+        text: "This is the end. Thank you for testing! :)",
         nextPage: 1,
         choices: null,
 
