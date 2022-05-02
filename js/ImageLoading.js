@@ -6,6 +6,8 @@ var boxingGlove=document.createElement("img");
 var dialogBack=document.createElement("img");
 var dialogHighlightBack=document.createElement("img");
 var titlescreenBG=document.createElement("img");
+var pageFromABook=document.createElement("img");
+
 var tilePics = [];
 
 var picsToLoad = 0;
@@ -40,6 +42,7 @@ function loadImages() {
     {varName:dialogBack, theFile:"dialog_back.png"},
     {varName:dialogHighlightBack, theFile:"dialog_highlight_back.png"},
     {varName:titlescreenBG, theFile:"titlescreen.png"},
+    {varName:pageFromABook, theFile:"page_from_a_book.png"},
     //tileTypes below
     {tileType:TILE_GROUND, theFile:"world_ground.png"},
     {tileType:TILE_WALL, theFile:"Tile_ar_2.png"},
