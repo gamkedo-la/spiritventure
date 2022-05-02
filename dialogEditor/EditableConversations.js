@@ -20,7 +20,7 @@ let Gemini1 = [
         nextPage: 1,
         choices: null,
 
-        position: {x: -115, y: -944}
+        position: {x: 567, y: -1878}
     },
     {
         scene: "",
@@ -31,7 +31,7 @@ let Gemini1 = [
         nextPage: 2,
         choices: null,
 
-        position: {x: -115, y: -654}
+        position: {x: 567, y: -1588}
     },
     {
         scene: "",
@@ -42,18 +42,18 @@ let Gemini1 = [
         nextPage: 4,
         choices: null,
 
-        position: {x: -115, y: -364}
+        position: {x: 567, y: -1298}
     },
     {
         scene: "",
         who: "Gemini",
         nameCol: "undefined",
         voice: undefined,
-        text: "Then help. Go through those doors, and be wary of what may greet you.",
-        nextPage: 6,
+        text: "...Go through those doors, and be wary of what may greet you.",
+        nextPage: 11,
         choices: null,
 
-        position: {x: 52, y: 484}
+        position: {x: 483, y: -407}
     },
     {
         scene: "",
@@ -64,7 +64,7 @@ let Gemini1 = [
         nextPage: 5,
         choices: null,
 
-        position: {x: -566, y: -5}
+        position: {x: 116, y: -939}
     },
     {
         scene: "",
@@ -75,7 +75,7 @@ let Gemini1 = [
         nextPage: 6,
         choices: null,
 
-        position: {x: -135, y: 0}
+        position: {x: 547, y: -934}
     },
     {
         scene: "",
@@ -86,7 +86,7 @@ let Gemini1 = [
         nextPage: 7,
         choices: null,
 
-        position: {x: 301, y: -88}
+        position: {x: 983, y: -1022}
     },
     {
         scene: "",
@@ -97,7 +97,7 @@ let Gemini1 = [
         nextPage: 8,
         choices: null,
 
-        position: {x: 302, y: 183}
+        position: {x: 973, y: -611}
     },
     {
         scene: "",
@@ -108,7 +108,117 @@ let Gemini1 = [
         nextPage: 9,
         choices: null,
 
-        position: {x: 771, y: 218}
+        position: {x: 554, y: -655}
+    },
+    {
+        scene: "",
+        who: "Soul",
+        nameCol: "yellow",
+        voice: undefined,
+        text: "...",
+        nextPage: null,
+        choices: [["That's a nice way to get someone's help.", 10], ["I’m not sure how I can help, but I can try.", 3]],
+
+        position: {x: 44, y: -608}
+    },
+    {
+        scene: "",
+        who: "Gemini",
+        nameCol: "undefined",
+        voice: undefined,
+        text: "I have no choice. I didn't ask for this.",
+        nextPage: 3,
+        choices: null,
+
+        position: {x: 44, y: -266}
+    },
+    {
+        scene: "",
+        who: "Gemini",
+        nameCol: "undefined",
+        voice: undefined,
+        text: "You'll find my not-so-lovely emotions throwing a tantrum.",
+        nextPage: 12,
+        choices: null,
+
+        position: {x: 992, y: -222}
+    },
+    {
+        scene: "",
+        who: "Gemini",
+        nameCol: "undefined",
+        voice: undefined,
+        text: "Which doors correspond to what? I do not know.",
+        nextPage: 13,
+        choices: null,
+
+        position: {x: 1415, y: -215}
+    },
+    {
+        scene: "",
+        who: "Gemini",
+        nameCol: "undefined",
+        voice: undefined,
+        text: "What will you do in there? I don't care.",
+        nextPage: 14,
+        choices: null,
+
+        position: {x: 1415, y: 75}
+    },
+    {
+        scene: "",
+        who: "Soul",
+        nameCol: "yellow",
+        voice: undefined,
+        text: "...",
+        nextPage: null,
+        choices: [["You do care.", 15], ["Mighty fine guidance there.", 15]],
+
+        position: {x: 700, y: 97}
+    },
+    {
+        scene: "",
+        who: "Soul",
+        nameCol: "yellow",
+        voice: undefined,
+        text: "I'll be seeing you around at the end of this.",
+        nextPage: 16,
+        choices: null,
+
+        position: {x: 700, y: 419}
+    },
+    {
+        scene: "",
+        who: "Gemini",
+        nameCol: "undefined",
+        voice: undefined,
+        text: "Take-",
+        nextPage: 17,
+        choices: null,
+
+        position: {x: 1215, y: 470}
+    },
+    {
+        scene: "",
+        who: "Soul",
+        nameCol: "yellow",
+        voice: undefined,
+        text: "What?",
+        nextPage: 18,
+        choices: null,
+
+        position: {x: 1215, y: 740}
+    },
+    {
+        scene: "",
+        who: "Gemini",
+        nameCol: "undefined",
+        voice: undefined,
+        text: "Nevermind, go.",
+        nextPage: 19,
+        choices: null,
+
+        position: {x: 1215, y: 1010}
     },
 ];
 //CONVERSATIONS.push(ATestDialog);
