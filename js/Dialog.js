@@ -48,10 +48,13 @@ function advanceDialog() {
             if (dialogConvoStep == null) {
                 dialogConvoStep = 0;
                 dialogActiveConvo = null;
-                handleDialogBasedOnRoom();
             } else if (dialogActiveConvo[dialogConvoStep]) {
                 wrapNextText(dialogActiveConvo[dialogConvoStep].text);
             }
+        }
+
+        if(dialogConvoStep == null || dialogConvoStep >= dialogActiveConvo.length) {
+            handleDialogBasedOnRoom();
         }
 
         return true; // meaning we actually did advance the dialog
