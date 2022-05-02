@@ -19,5 +19,5 @@ const ROOM_BELOW = 3;
 const ROOM_LEFT = 4;
 
 var rooms = [startingRoom, topRoom, rightRoom, belowRoom, leftRoom];
-var roomsSongs = [Sound.ShrillNights, Sound.Happy, Sound.LurkingSadness, Sound.ShrillNights, Sound.Angry];
+var roomsSongs = [Sound.ShrillNights, Sound.LurkingSadness, Sound.LurkingSadness, Sound.ShrillNights, Sound.LurkingSadness];
 var roomSongVol =[1.0, 0.3, 1.0, 1.0, 0.075]
