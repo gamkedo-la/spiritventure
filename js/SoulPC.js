@@ -62,6 +62,14 @@ function warriorClass() {
     this.reset();
   }
 
+  this.addInventoryItem = function (inventoryItem) {
+    // add item
+    this.inventory[inventoryItem].quantity = 1;
+
+    // notify re addition
+    console.log("inventory item added");
+  }
+
   this.reset = function () {
     // this.inventory = [];
     this.keysHeld = 0;
