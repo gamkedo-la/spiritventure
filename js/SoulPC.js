@@ -68,7 +68,7 @@ function warriorClass() {
 
     // notify re addition
     console.log("inventory item added");
-    canvasContext.fillText("Inventory item added.", 10, 90);
+    canvasContext.fillText("Inventory item added.", 200, 200);
     canvasContext.fillStyle = "yellow";
   }
 
