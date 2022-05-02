@@ -4,6 +4,7 @@ var teardropAnim=document.createElement("img");
 var groundPartAnim=document.createElement("img");
 var boxingGlove=document.createElement("img");
 var dialogBack=document.createElement("img");
+var dialogHighlightBack=document.createElement("img");
 var titlescreenBG=document.createElement("img");
 var tilePics = [];
 
@@ -13,6 +14,7 @@ function countLoadedImageAndLaunchIfReady() {
   picsToLoad--;
   if(picsToLoad == 0) { // last image loaded?
     dialogBack = canvasContext.createPattern(dialogBack,"repeat");
+    dialogHighlightBack = canvasContext.createPattern(dialogHighlightBack,"repeat");
     loadingDoneSoStartGame();
   }
 }
@@ -36,6 +38,7 @@ function loadImages() {
     {varName:boxingGlove, theFile:"boxing_glove.png"},
     {varName:keyAnim, theFile:"world_key.png"},
     {varName:dialogBack, theFile:"dialog_back.png"},
+    {varName:dialogHighlightBack, theFile:"dialog_highlight_back.png"},
     {varName:titlescreenBG, theFile:"titlescreen.png"},
     //tileTypes below
     {tileType:TILE_GROUND, theFile:"world_ground.png"},

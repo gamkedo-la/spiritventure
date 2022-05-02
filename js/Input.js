@@ -99,6 +99,10 @@ function mouseClick(evt) {
   }
 }
 
+function isMouseHoveringButton(btn) {
+    return (mouseX > btn.x && mouseX < btn.x + btn.width && mouseY > btn.y && mouseY < btn.y + btn.height);
+}
+
 function checkDialogChoices () {
   if (dialogChoiceButtons.length > 0) {
     for (const btn of dialogChoiceButtons) {

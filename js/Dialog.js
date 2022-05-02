@@ -225,6 +225,12 @@ function drawDialog() {
             };
             dialogChoiceButtons.push(button);
 
+            if (isMouseHoveringButton(button)) {
+                canvasContext.fillStyle = dialogHighlightBack; // brighter to show mouse hover state
+            } else {
+                canvasContext.fillStyle = dialogBack; // regular marble scrolling background
+            }
+
             canvasContext.fillRect(button.x - bgScrollX, button.y -bgScrollY, button.width, button.height);
         }
     }
