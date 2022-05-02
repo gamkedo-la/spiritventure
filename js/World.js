@@ -82,7 +82,7 @@ function getTileIndexAtPixelCoord(pixelX, pixelY) {
   // first check whether the tile coords fall within valid bounds
   if(tileCol < 0 || tileCol >= rooms[roomIndex][COLS] ||
      tileRow < 0 || tileRow >= rooms[roomIndex][ROWS]) {
-     document.getElementById("debugText").innerHTML = "out of bounds:"+pixelX+","+pixelY;
+     
      return undefined;
   }
   

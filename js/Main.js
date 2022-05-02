@@ -132,9 +132,9 @@ function drawEverything() {
   /*if(dialogActiveConvo) {
     debugText = dialogCurrentText;
   } else {
-    debugText = 'Debug Text';
+    debugText = ' Text';
   }*/
-  document.querySelector('#debugText').innerHTML = debugText;
+
 }
 
 function handleDialogBasedOnRoom (){

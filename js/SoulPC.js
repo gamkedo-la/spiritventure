@@ -195,13 +195,13 @@ function warriorClass() {
         break;
 
       case TILE_GOAL:
-        document.getElementById("debugText").innerHTML = this.myName + " won";
+        
         this.reset();
         break;
       case TILE_DOOR:
         if (this.keysHeld > 0) {
           this.keysHeld--; // one less key
-          document.getElementById("debugText").innerHTML = "Keys: " + this.keysHeld;
+          
 
           rooms[roomIndex][GRID][walkIntoTileIndex] = TILE_GROUND; // remove door
           //TODO: decrement keys in inventory
@@ -234,7 +234,7 @@ function warriorClass() {
         console.log("picked up a key!");
         playSound(Sound.PickupKey);
 
-        document.getElementById("debugText").innerHTML = "Keys: " + this.keysHeld;
+       
 
         rooms[roomIndex][GRID][walkIntoTileIndex] = TILE_GROUND; // remove key
         break;
