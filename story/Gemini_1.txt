@@ -1,4 +1,4 @@
-let Gemini = [
+let Gemini1 = [
     {
         scene: "",
         who: "Soul",
