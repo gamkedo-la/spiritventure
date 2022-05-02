@@ -195,8 +195,6 @@ function warriorClass() {
         break;
 
       case TILE_GOAL:
-        
-        this.reset();
         break;
       case TILE_DOOR:
         if (this.keysHeld > 0) {

@@ -320,7 +320,7 @@ let Tripa = [
         who: "Tripa",
         nameCol: "undefined",
         voice: undefined,
-        text: "I need more time!",
+        text: "I'm Tripa and I embody the fear of my host. My writing is still being added in. The player will recieve 'A page from a book' inventory item which is a piece of writing with the scrambled thoughts of the host laid out. Goodbye for now.",
         nextPage: 1,
         choices: null,
 
@@ -334,7 +334,7 @@ let Gemini_end = [
         who: "Gemini",
         nameCol: "undefined",
         voice: undefined,
-        text: "This is the end. Thank you for testing! :)",
+        text: "I'm Gemini (The host from the beginning conversation). A interaction will play out again to come full circle with the host (Gemini) and to trigger the end of this short game. Thank you for testing! :)",
         nextPage: 1,
         choices: null,
 
@@ -348,7 +348,7 @@ let Satah = [
         who: "Satah",
         nameCol: "undefined",
         voice: undefined,
-        text: "Under construction! ",
+        text: "I'm Satah and I embody the anger of my host. My writing is still being added in. The player will recieve a 'boxing glove' inventory item, with a brief description of what it means to my host. Bye for now.",
         nextPage: 1,
         choices: null,
 
