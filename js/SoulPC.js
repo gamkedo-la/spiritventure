@@ -69,6 +69,7 @@ function warriorClass() {
     // notify re addition
     console.log("inventory item added");
     canvasContext.fillText("Inventory item added.", 10, 90);
+    canvasContext.fillStyle = "yellow";
   }
 
   this.reset = function () {
@@ -241,7 +242,7 @@ function warriorClass() {
         console.log("MIND encountered");
         NPCparticles();
         var pos = getPixelCoordAtTileIndex(walkIntoTileIndex);
-        wrapText = [testConvo[0].text];
+        wrapText = [testConvo2[0].text];
         lineWrap();
         setupDialog(Gemini1, pos[0] - (dialogW / 2) + (TILE_W / 2), pos[1] - (dialogHOffset + (dialogHPerLine * wrapText.length)) - (TILE_H * 2.4));
         sfx('dialog_start.wav');
@@ -271,7 +272,7 @@ function warriorClass() {
           console.log("end encountered");
           NPCparticles();
           var pos = getPixelCoordAtTileIndex(walkIntoTileIndex);
-          wrapText = [testConvo[0].text];
+          wrapText = [testConvo2[0].text];
           lineWrap();
           setupDialog(Gemini_end, pos[0] - (dialogW / 2) + (TILE_W / 2), pos[1] - (dialogHOffset + (dialogHPerLine * wrapText.length)) - (TILE_H * 2.4));
           sfx('dialog_start.wav');
