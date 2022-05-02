@@ -61,15 +61,15 @@ function warriorClass() {
     ];
     this.reset();
   }
-
   this.addInventoryItem = function (inventoryItem) {
-    // add item
-    this.inventory[inventoryItem].quantity = 1;
+    // check if item has been aquired
+    if (this.inventory[inventoryItem].quantity == 0) {
+      this.inventory[inventoryItem].quantity = 1;
 
-    // notify re addition
-    console.log("inventory item added");
-    canvasContext.fillText("Inventory item added.", 200, 200);
-    canvasContext.fillStyle = "yellow";
+      // toggle text on (see Main.js)
+      addedItem = inventoryItem;
+      toDrawOrNotToDraw = inventoryTooltipTimer; // roughly 5 seconds
+    }
   }
 
   this.reset = function () {

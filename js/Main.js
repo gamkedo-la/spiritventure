@@ -24,6 +24,13 @@ var loadComplete = false;
 var gameloop;
 const framesPerSecond = 30;
 
+// inventory tooltip properties
+const inventoryTooltipTimer = 4 * framesPerSecond;
+var toDrawOrNotToDraw = -1;
+var firstItem = true;
+var addedItem = null;
+
+
 function toggleMuteMusic(){
   music.muted = !(music.muted);
 }
@@ -117,6 +124,11 @@ function drawEverything() {
     drawPause();
   }
 
+  if (toDrawOrNotToDraw > 0) {
+    drawInventoryTip();
+    toDrawOrNotToDraw -= 1;
+  }
+
   /*if(dialogActiveConvo) {
     debugText = dialogCurrentText;
   } else {
@@ -139,6 +151,7 @@ function handleDialogBasedOnRoom (){
     case ROOM_RIGHT:
       rightDialogRoomFin = true;
       console.log("done right");
+      p1.addInventoryItem(ITEM_BOXING); // for testing
       break;
     case ROOM_BELOW:
       belowDialogRoomFin = true;
@@ -156,6 +169,52 @@ function handleDialogBasedOnRoom (){
     rooms[ROOM_STARTING][GRID][8] = TILE_GROUND;
   }
 }
+
+
+function drawInventoryTip() {
+  var itemName = p1.inventory[addedItem].name;
+  var txt = itemName + " added to inventory";
+
+  // how many characters are we drawing:
+  var characters = Array.from(txt).length;
+
+  // don't size smaller than inventory hint
+  if (characters < 33 && firstItem) characters = 33;
+
+  // not perfect :)
+  // this is fragile, will need tuning if tooltip font or size changed
+  var boxWidth = characters * 12;
+
+  // adjust for hint text
+  if (firstItem) {
+    drawRect(5, canvas.height - 70, boxWidth, 65, "black", 0.75);
+    drawText(txt, 10, canvas.height - 45, 24, 'lightblue');
+  }
+  else {
+    drawRect(5, canvas.height - 40, boxWidth, 35, "black", 0.75);
+    drawText(txt, 10, canvas.height - 15, 24, 'lightblue');
+  }
+
+  // draw hint text
+  if (firstItem && toDrawOrNotToDraw > 1) {
+    txt = "press 'I' key to toggle inventory";
+    drawText(txt, 10, canvas.height - 15, 24, 'lightblue');
+  }
+  else if (firstItem && toDrawOrNotToDraw <= 1) {
+    firstItem = false;
+  }
+}
+
+
+function drawRect(topLeftX, topLeftY, boxWidth, boxHeight, fillColor, transparency = null) {
+  if (transparency != null) { canvasContext.globalAlpha = transparency; }
+
+  canvasContext.fillStyle = fillColor;
+  canvasContext.fillRect(topLeftX, topLeftY, boxWidth, boxHeight);
+
+  if (transparency != null) { canvasContext.globalAlpha = 1; }
+}
+
 
 function drawTitle() {
   canvasContext.drawImage(titlescreenBG,0,0);
