@@ -5,7 +5,7 @@ var dialogX = 0;
 var dialogY = 0;
 var dialogW = 300;
 var dialogWOffset = -180;
-var dialogHOffset = 10; // note: h here is for height, not horizontal
+var dialogHOffset = 0; // note: h here is for height, not horizontal
 var dialogHPerLine = 25;
 var dialogPanelColor1 = "rgba(0,0,0,0.8)";
 var dialogPanelColor2 = "rgba(0,0,0,0.6)";
@@ -22,7 +22,7 @@ var dialogChoiceWidth = 330;
 var dialogChoiceHeight = dialogFontSize*2.5 + (dialogTextOffset * 2);
 var dialogChoiceButtons = [];
 
-var dialogCurrentX = 0;
+var dialogCurrentX = 0 ;
 var dialogCurrentY = 0;
 var dialogCurrentW = 0;
 var dialogCurrentH = 0;
@@ -89,7 +89,7 @@ function setSpeakerBg(speakerName) {
             style = '#26547C'; 
             break
         case "Gemini":
-            style = 'red'; 
+            style = '#dc143c'; 
             break
         case "Satah":
             style = 'brown'; 
@@ -143,7 +143,7 @@ function resetDialogText() {
 function setupDialog(convoObj, posX, posY) {
     dialogActiveConvo = convoObj;
     dialogConvoStep = 0;
-    dialogX = posX +  + dialogWOffset;
+    dialogX = posX + + dialogWOffset;
     dialogY = posY;
 
     dialogCurrentX = posX + dialogW / 2 + dialogWOffset;
