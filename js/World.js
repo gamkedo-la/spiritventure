@@ -5,7 +5,7 @@
 // Press BACKSPACE to save/download the edited tilemap and paste it here overriding the current rooms[roomIndex][GRID] array
 // Player is NOT added so, you have to add the player tile yourself (add 2 in any array index)
 
-const tilemapEditor = false;
+var tilemapEditor = false;
 var editorTileIndex = -1;
 var playerDrawOffsetY = -10;
 var roomIndex = 0;
