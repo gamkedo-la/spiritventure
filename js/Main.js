@@ -155,10 +155,12 @@ function handleDialogBasedOnRoom (){
     case ROOM_BELOW:
       belowDialogRoomFin = true;
       console.log("done below");
+      p1.addInventoryItem(ITEM_PAGE);
       break;
     case ROOM_LEFT:
       leftDialogRoomFin = true;
       console.log("done left");
+      p1.addInventoryItem(ITEM_BOXING);
       break;
     case ROOM_TOP:
       console.log("To do endgame");

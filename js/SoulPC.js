@@ -4,6 +4,7 @@ const PLAYER_SPRINT_MULTIPLIER = 1.8;
 
 const ITEM_TEARDROP = 0; //should match order of inventory in player initialisation
 const ITEM_BOXING = 1; 
+const ITEM_PAGE = 2;
 
 function warriorClass() {
   // variables to keep track of position
@@ -57,6 +58,15 @@ function warriorClass() {
         "animation": boxingGlove,
         "selected": false,
         "flavor": "Protect the fragile hand."
+      },
+      {
+        "name": "Page",
+        "frames": 1,
+        "visible": true,
+        "quantity": 0,
+        "animation": pageFromABook,
+        "selected": false,
+        "flavor": "Scribble Scribble."
       }
     ];
     this.reset();
@@ -78,8 +88,8 @@ function warriorClass() {
     rooms[roomIndex][COLS] = startingRoom[0];
     rooms[roomIndex][ROWS] = startingRoom[1];
     rooms[roomIndex][GRID] = startingRoom[2];
-    this.homeX = TILE_W * 7.5;
-    this.homeY = TILE_H * 8.5;
+    this.homeX = TILE_W * 9;
+    this.homeY = TILE_H * 3;
     this.x = this.homeX;
     this.y = this.homeY;
   }
