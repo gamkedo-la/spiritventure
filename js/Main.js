@@ -86,7 +86,8 @@ function updateEverything() {
   switch (gameState) {
   
     case STATE_PLAY:
-      //Camera Lerping
+      if (showingInventory == false){
+         //Camera Lerping
       camX = intLerp(camX, canvas.width/2 - p1.x, 0.1);
       camY = intLerp(camY, canvas.height/2 - p1.y, 0.1);
 
@@ -97,6 +98,8 @@ function updateEverything() {
 
       p1.move();
 
+      }
+     
       break;
 
     case STATE_PAUSE:
