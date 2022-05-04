@@ -90,8 +90,8 @@ function warriorClass() {
     rooms[roomIndex][COLS] = startingRoom[0];
     rooms[roomIndex][ROWS] = startingRoom[1];
     rooms[roomIndex][GRID] = startingRoom[2];
-    this.homeX = TILE_W * 9;
-    this.homeY = TILE_H * 3;
+    this.homeX = TILE_W * 8.5;
+    this.homeY = TILE_H * 8.5;
     this.x = this.homeX;
     this.y = this.homeY;
   }
