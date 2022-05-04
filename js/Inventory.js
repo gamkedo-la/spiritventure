@@ -43,9 +43,10 @@ function drawAnimatedInventory() {
     //menu heading
     let headerHeight = 50;
     let headerWidth = 200;
+    let headerXOffset = - 50; 
     fillRoundedRectangle(
         canvasContext,
-        (canvas.width - inventoryMargin * 2) / 2 - headerWidth + 300 / 2, //x, TODO: Center properly over the menu
+        (canvas.width - inventoryMargin * 2) / 2 - headerWidth + 300 / 2 + headerXOffset, //x, TODO: Center properly over the menu
         inventoryMargin - headerHeight / 2, //y
         headerWidth,
         headerHeight,
@@ -53,9 +54,10 @@ function drawAnimatedInventory() {
         5
     )
     canvasContext.fillStyle = '#ffffff';
+    canvasContext.font = 26 + 'px Arial';
     canvasContext.fillText(
         "INVENTORY",
-        (canvas.width - inventoryMargin * 2) / 2 - headerWidth / 2 + 80, //x 
+        (canvas.width - inventoryMargin * 2) / 2 - headerWidth / 2 + 80 + headerXOffset, //x 
         inventoryMargin + 10 // y
     )
 
@@ -70,9 +72,9 @@ function drawAnimatedInventory() {
         6, //strokeWidth 
         20,//padding 
         rows, columns, p1.inventory);
-    if (inventorySelectedIndex>=0){
+    //if (inventorySelectedIndex>=0){
         drawInfoPanel(500, 60, p1.inventory[inventorySelectedIndex]);
-    }
+    //}
 }
 
 function drawInventoryItemIcon(animation, frames, destX, destY) {
@@ -133,10 +135,13 @@ function drawGrid(startX, startY, radius, strokeWidth, padding, rows, cols, inve
 function drawInfoPanel(startX, startY, invItem) {
     let width = 240;
     let padding = 10;
-    fillRoundedRectangle(canvasContext, startX, startY, 240, 330, 'rgba(0,0,0,0.8)', 5)
-    canvasContext.fillStyle = '#f7f6f2';
-    canvasContext.fillText(invItem.name, startX + 10, startY + 30, width - 2 * padding);
+    let verticalExtra = 30;
+    colorRect(startX, startY - verticalExtra, 240, 330 + verticalExtra*2, 'rgba(45,41,37,1.0)');
+    if (invItem){
+        canvasContext.fillStyle = '#f7f6f2';
+        canvasContext.fillText(invItem.name, startX + 10, startY + 30, width - 2 * padding);
 
-    // handle wrapping text into the info panel box later
-    canvasContext.fillText(invItem.flavor, startX + 10, startY + 60, width - 2 * padding);
+        // handle wrapping text into the info panel box later
+        canvasContext.fillText(invItem.flavor, startX + 10, startY + 60, width - 2 * padding);
+    }
 }
