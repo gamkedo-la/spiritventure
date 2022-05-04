@@ -6,6 +6,8 @@ const ITEM_TEARDROP = 0; //should match order of inventory in player initialisat
 const ITEM_BOXING = 1; 
 const ITEM_PAGE = 2;
 
+var dialogDoneFlag = false; 
+
 function warriorClass() {
   // variables to keep track of position
   this.x = 75;
@@ -159,6 +161,7 @@ function warriorClass() {
         playSound(Sound.DoorOpenDra);
         console.log(roomIndex, GRID, side, rooms[roomIndex][GRID + side] );
         roomIndex = rooms[roomIndex][GRID + side];
+        dialogDoneFlag = false; 
         startBGM(roomsSongs[roomIndex]);
         switch (side) {
           case ROOMSIDE_UP:
@@ -248,42 +251,52 @@ function warriorClass() {
         break;
       case TILE_MIND:
         console.log("MIND encountered");
-        NPCparticles();
-        var pos = getPixelCoordAtTileIndex(walkIntoTileIndex);
-        wrapText = [testConvo2[0].text];
-        lineWrap();
-        setupDialog(Gemini1, pos[0] - (dialogW / 2) + (TILE_W / 2), pos[1] - (dialogHOffset + (dialogHPerLine * wrapText.length)) - (TILE_H * 2.4));
-        sfx('dialog_start.wav');
+        if (dialogDoneFlag == false){
+          NPCparticles();
+          var pos = getPixelCoordAtTileIndex(walkIntoTileIndex);
+          wrapText = [testConvo2[0].text];
+          lineWrap();
+          setupDialog(Gemini1, pos[0] - (dialogW / 2) + (TILE_W / 2), pos[1] - (dialogHOffset + (dialogHPerLine * wrapText.length)) - (TILE_H * 2.4));
+          sfx('dialog_start.wav');
+        }
         break;
       case TILE_DESPOND:
-        var pos = getPixelCoordAtTileIndex(walkIntoTileIndex);
-        wrapText = [testConvo2[0].text];
-        lineWrap();
-        setupDialog(Despond, pos[0] - (dialogW / 2) + (TILE_W / 2), pos[1] - (dialogHOffset + (dialogHPerLine * wrapText.length)) - (TILE_H * 2.4));
-        sfx('dialog_start.wav');
+        if (dialogDoneFlag == false){
+          var pos = getPixelCoordAtTileIndex(walkIntoTileIndex);
+          wrapText = [testConvo2[0].text];
+          lineWrap();
+          setupDialog(Despond, pos[0] - (dialogW / 2) + (TILE_W / 2), pos[1] - (dialogHOffset + (dialogHPerLine * wrapText.length)) - (TILE_H * 2.4));
+          sfx('dialog_start.wav');
+        }
         break;
       case TILE_SATAH:
+        if (dialogDoneFlag  == false){
           var pos = getPixelCoordAtTileIndex(walkIntoTileIndex);
           wrapText = [testConvo2[0].text];
           lineWrap();
           setupDialog(Satah, pos[0] - (dialogW / 2) + (TILE_W / 2), pos[1] - (dialogHOffset + (dialogHPerLine * wrapText.length)) - (TILE_H * 2.4));
           sfx('dialog_start.wav');
+        }
           break;
       case TILE_TRIPA:
-          var pos = getPixelCoordAtTileIndex(walkIntoTileIndex);
-          wrapText = [testConvo2[0].text];
-          lineWrap();
-          setupDialog(Tripa, pos[0] - (dialogW / 2) + (TILE_W / 2), pos[1] - (dialogHOffset + (dialogHPerLine * wrapText.length)) - (TILE_H * 2.4));
-          sfx('dialog_start.wav');
+          if (dialogDoneFlag == false){
+            var pos = getPixelCoordAtTileIndex(walkIntoTileIndex);
+            wrapText = [testConvo2[0].text];
+            lineWrap();
+            setupDialog(Tripa, pos[0] - (dialogW / 2) + (TILE_W / 2), pos[1] - (dialogHOffset + (dialogHPerLine * wrapText.length)) - (TILE_H * 2.4));
+            sfx('dialog_start.wav');
+          }
           break;
       case TILE_GEMINI_END:
           console.log("end encountered");
-          NPCparticles();
-          var pos = getPixelCoordAtTileIndex(walkIntoTileIndex);
-          wrapText = [testConvo2[0].text];
-          lineWrap();
-          setupDialog(Gemini_end, pos[0] - (dialogW / 2) + (TILE_W / 2), pos[1] - (dialogHOffset + (dialogHPerLine * wrapText.length)) - (TILE_H * 2.4));
-          sfx('dialog_start.wav');
+          if (dialogDoneFlag == false){
+            NPCparticles();
+            var pos = getPixelCoordAtTileIndex(walkIntoTileIndex);
+            wrapText = [testConvo2[0].text];
+            lineWrap();
+            setupDialog(Gemini_end, pos[0] - (dialogW / 2) + (TILE_W / 2), pos[1] - (dialogHOffset + (dialogHPerLine * wrapText.length)) - (TILE_H * 2.4));
+            sfx('dialog_start.wav');
+          }
           break;
       case TILE_WALL:
       default:

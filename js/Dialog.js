@@ -110,7 +110,9 @@ function selectDialogChoice(key) {
     if (option != -1 && option <= dialogActiveConvo[dialogConvoStep].choices.length) {
         dialogConvoStep = dialogActiveConvo[dialogConvoStep].choices[option - 1][1];
         resetDialogText();
-        wrapNextText(dialogActiveConvo[dialogConvoStep].text);
+        if(dialogActiveConvo[dialogConvoStep]){
+            wrapNextText(dialogActiveConvo[dialogConvoStep].text);
+        }
     }
 }
 
@@ -141,6 +143,7 @@ function resetDialogText() {
 }
 
 function setupDialog(convoObj, posX, posY) {
+    dialogDoneFlag = true;
     dialogActiveConvo = convoObj;
     dialogConvoStep = 0;
     dialogX = posX + + dialogWOffset;

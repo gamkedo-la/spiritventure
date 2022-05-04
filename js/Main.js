@@ -138,6 +138,7 @@ function drawEverything() {
 }
 
 function handleDialogBasedOnRoom (){
+  console.log("Dialog ended.");
   switch(roomIndex){
     case ROOM_STARTING:
       rooms[roomIndex][GRID][96] = TILE_GROUND;
