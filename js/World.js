@@ -154,7 +154,7 @@ function drawRoom() {
       if( tileTypeHasTransparency(tileTypeHere) ) {
         canvasContext.drawImage(tilePics[TILE_GROUND2], tileLeftEdgeX, tileTopEdgeY);
         if( tileTypeVerticalBob(tileTypeHere) ){
-          verticalBob = Math.sin(bobPhase+eachCol*0.3+eachRow*0.7)*2;
+          verticalBob = Math.sin(bobPhase+eachCol*0.3+eachRow*0.7)*2 + 5;
         }
       }
       var extraHeight = tilePics[tileTypeHere].height-TILE_H;
