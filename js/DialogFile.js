@@ -26,7 +26,7 @@ let Gemini1 = [
         who: "Soul",
         nameCol: "yellow",
         voice: undefined,
-        text: "...It's certainly not that. I know that you're important, and this strong sense that you can guide me on what to do next.",
+        text: "...It's certainly not that. I know that you're important, and I have this strong sense that you can guide me.",
         nextPage: 4,
         choices: null,
 
@@ -48,7 +48,7 @@ let Gemini1 = [
         who: "Gemini",
         nameCol: "undefined",
         voice: undefined,
-        text: "Guide you? Let me tell you why you’re here.",
+        text: "Me, guide you?",
         nextPage: 5,
         choices: null,
 
@@ -59,7 +59,7 @@ let Gemini1 = [
         who: "Gemini",
         nameCol: "undefined",
         voice: undefined,
-        text: "You’re here to guide me. Not the other way around.",
+        text: "You are here to guide me. Not the other way around.",
         nextPage: 6,
         choices: null,
 
@@ -92,7 +92,7 @@ let Gemini1 = [
         who: "Gemini",
         nameCol: "undefined",
         voice: undefined,
-        text: "Don’t think you’re too special. You will fail too.",
+        text: "Don’t think you are special. I am sure you will fail too.",
         nextPage: 9,
         choices: null,
 
@@ -105,7 +105,7 @@ let Gemini1 = [
         voice: undefined,
         text: "...",
         nextPage: null,
-        choices: [["That's a nice way to get someone's help.", 10], ["I’m not sure how I can help, but I can try.", 3]],
+        choices: [["That's quite a way to get someone's help.", 10], ["I’m not sure how I can help, but I will try.", 3]],
 
         position: {x: 44, y: -608}
     },
@@ -136,7 +136,7 @@ let Gemini1 = [
         who: "Gemini",
         nameCol: "undefined",
         voice: undefined,
-        text: "Which doors correspond to what? I do not know. Know that the door behind me cannot be opened now.",
+        text: "Which doors correspond to what? I do not know. Know that the door behind me has never opened.",
         nextPage: 13,
         choices: null,
 
@@ -147,7 +147,7 @@ let Gemini1 = [
         who: "Gemini",
         nameCol: "undefined",
         voice: undefined,
-        text: "What will you do in there? I don't care.",
+        text: "What should you do in there? I don't care.",
         nextPage: 14,
         choices: null,
 
@@ -334,7 +334,7 @@ let Gemini_end = [
         who: "Gemini",
         nameCol: "undefined",
         voice: undefined,
-        text: "I'm Gemini (The host from the beginning conversation). A interaction will play out again to come full circle with the host (Gemini) and to trigger the end of this short game. Thank you for testing! :)",
+        text: "It is I Gemini again. A interaction will play out again to come full circle with the host (Gemini) and to trigger the end of this short game. Thank you for testing! :)",
         nextPage: 1,
         choices: null,
 
@@ -373,7 +373,7 @@ let Despond = [
         who: "Despond",
         nameCol: "undefined",
         voice: undefined,
-        text: "Help me. Yes, I know and I appreciate that. However, I - my host does not realise the full extent of their pain. I do. I do not know if this part can recover.",
+        text: "Help me. Yes, I know and I appreciate that. However, I - my host does not realise the full extent of their pain. I do. This part may recover.",
         nextPage: 2,
         choices: null,
 
@@ -386,7 +386,7 @@ let Despond = [
         voice: undefined,
         text: "Is it really that bad? You should perhaps - ",
         nextPage: null,
-        choices: [["... I need to know more first, can you tell me? This is about Gemini's sadness, yes? ", 4], ["Recovery... I'm sorry to hear that. Gemini is has been in a rough shape.", 10]],
+        choices: [["... I need to know more first. This is about Gemini's sadness, yes? ", 4], ["Recovery... I'm sorry to hear that. Gemini has been in a rough shape.", 10]],
 
         position: {x: 270.5, y: -1634}
     },
@@ -428,7 +428,7 @@ let Despond = [
         who: "Soul",
         nameCol: "yellow",
         voice: undefined,
-        text: "And now, it looks like I'm seeing a mirror reflection of me. I want to be their for them, and in a way reflect and pay my due respects.",
+        text: "And now, it looks like I'm seeing a mirror reflection. I want to be there for them, and in a way reflect and pay my due respects.",
         nextPage: 7,
         choices: null,
 
@@ -472,7 +472,7 @@ let Despond = [
         who: "Despond",
         nameCol: "undefined",
         voice: undefined,
-        text: "An undestatement.",
+        text: "An understatement.",
         nextPage: 3,
         choices: null,
 
@@ -483,7 +483,7 @@ let Despond = [
         who: "Despond",
         nameCol: "undefined",
         voice: undefined,
-        text: "Very well, imbue their plight. Carry their burden. Foolish? Mayhap. But this cannot last forever, and I'm keeping faith. Go.",
+        text: "Very well, imbue their plight. Carry their burden. Foolish? Likely. But this cannot last forever, and I'm keeping faith. Go.",
         nextPage: 12,
         choices: null,
 
