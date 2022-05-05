@@ -147,9 +147,7 @@ function handleDialogBasedOnRoom (){
       rooms[roomIndex][GRID][96] = TILE_GROUND;
       rooms[roomIndex][GRID][184] = TILE_GROUND;
       rooms[roomIndex][GRID][111] = TILE_GROUND;
-      //rooms[roomIndex][GRID][8] = TILE_GROUND;
-      canvasContext.fillText("Inventory item added.", 200, 200);
-      canvasContext.fillStyle = "yellow";
+      playSound(Sound.Teleport);
       break;
     case ROOM_RIGHT:
       rightDialogRoomFin = true;
