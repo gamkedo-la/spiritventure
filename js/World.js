@@ -100,9 +100,9 @@ function getTileOutOfBoundsSide(pixelX, pixelY) {
   tileCol = Math.floor( tileCol );
   tileRow = Math.floor( tileRow );
   if(tileRow < 0) return ROOMSIDE_UP;
-  if(tileRow >= rooms[roomIndex][COLS] - 4) return ROOMSIDE_DOWN;
+  if(tileRow >= rooms[roomIndex][ROWS]) return ROOMSIDE_DOWN;
   if(tileCol < 0) return ROOMSIDE_LEFT;
-  if(tileCol >= rooms[roomIndex][ROWS] - 4) return ROOMSIDE_RIGHT;
+  if(tileCol >= rooms[roomIndex][COLS]) return ROOMSIDE_RIGHT;
   return -1;
 }
 
