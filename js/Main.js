@@ -78,6 +78,9 @@ function StartGame() {
     updateEverything();
     drawEverything();
   }, 1000/framesPerSecond);
+  
+  // opens all doors on game start
+  // DoorCheat();
 }
 
 function updateEverything() {
@@ -138,6 +141,13 @@ function drawEverything() {
     debugText = ' Text';
   }*/
 
+}
+
+function DoorCheat() {
+  rooms[roomIndex][GRID][96] = TILE_GROUND;
+  rooms[roomIndex][GRID][184] = TILE_GROUND;
+  rooms[roomIndex][GRID][111] = TILE_GROUND;
+  rooms[ROOM_STARTING][GRID][8] = TILE_GROUND;
 }
 
 function handleDialogBasedOnRoom (){
