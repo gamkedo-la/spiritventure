@@ -3,7 +3,7 @@ var canvas, canvasContext;
 
 var camX = 0
 var camY = 0
-var p1 = new warriorClass();
+var p1 = new Soul();
 
 var deltaTime = 0;
 var debugText;
@@ -87,16 +87,16 @@ function updateEverything() {
   
     case STATE_PLAY:
       if (showingInventory == false){
-         //Camera Lerping
-      camX = intLerp(camX, canvas.width/2 - p1.x, 0.1);
-      camY = intLerp(camY, canvas.height/2 - p1.y, 0.1);
+        //Camera Lerping
+        camX = intLerp(camX, canvas.width/2 - p1.x, 0.1);
+        camY = intLerp(camY, canvas.height/2 - p1.y, 0.1);
 
-      processDialog();
+        processDialog();
 
-      //No movement during dialogues
-      if(dialogActiveConvo != null) return;
+        //No movement during dialogues
+        if(dialogActiveConvo != null) return;
 
-      p1.move();
+        p1.move();
 
       }
      

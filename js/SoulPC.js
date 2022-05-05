@@ -8,7 +8,7 @@ const ITEM_PAGE = 2;
 
 var dialogDoneFlag = false; 
 
-function warriorClass() {
+function Soul() {
   // variables to keep track of position
   this.x = 75;
   this.y = 75;
