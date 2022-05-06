@@ -196,12 +196,18 @@ function drawRoom() {
       tileLeftEdgeX += TILE_W; // jump horizontal draw position to next tile over by tile width
 
     } // end of for eachCol
+    
     tileTopEdgeY += TILE_H; // jump horizontal draw position down by one full tile height
+
     if (playerDrawnYet==false && p1.y+camY<tileTopEdgeY-playerDrawOffsetY){
       p1.draw();
       playerDrawnYet = true;
     }
+
   } // end of for eachRow    
+
+  drawRoomEnvironmentalEffects();
+
 } // end of drawRoom()
 
 function Particle(x, y, xVel, yVel, size, color, life) {
@@ -262,4 +268,44 @@ function animateParticles() {
 function NPCparticles() {
   makeParticles();
   particleNPCrun = true;
+}
+
+function ambientFX(img) {
+    var x, y, sizex, sizey, speed, alpha;
+    for (let n=1; n<25; n++) {
+        speed = 0.1;
+        sizex = Math.cos(n/3)*600+50;
+        sizey = Math.cos(n/3)*400+50;
+        alpha = Math.abs(Math.cos(performance.now()/1000+n*50));
+        x = 300 + Math.cos(performance.now()/1000*speed+n*50)*sizex;
+        y = Math.sin(performance.now()/1000*speed+n*50)*sizey;
+        canvasContext.globalAlpha = alpha * 0.3; // always very transparent
+        canvasContext.drawImage(img,camX+x,camY+y);
+    }
+    canvasContext.globalAlpha = 1; // reset
+}
+
+function drawRoomEnvironmentalEffects() {
+    
+    //console.log("drawing room ambient fx for room " +roomIndex);
+    
+    if (roomIndex==0) { // main entrance
+        // a simple overlay png with some glows from doorways
+        // and shadows along the wall corners - preset for intro room 800x600 size
+        canvasContext.drawImage(room_light_and_shadows,camX,camY);
+        ambientFX(black_smoke);
+    }
+    if (roomIndex==1) {
+        ambientFX(white_smoke);
+    }
+    if (roomIndex==2) {
+        ambientFX(blue_smoke);
+    }
+    if (roomIndex==3) {
+        ambientFX(green_smoke);
+    }
+    if (roomIndex==4) {
+        ambientFX(red_smoke);
+    }
+
 }

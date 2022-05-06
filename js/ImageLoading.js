@@ -7,6 +7,12 @@ var dialogBack=document.createElement("img");
 var dialogHighlightBack=document.createElement("img");
 var titlescreenBG=document.createElement("img");
 var pageFromABook=document.createElement("img");
+var room_light_and_shadows=document.createElement("img");
+var red_smoke=document.createElement("img");
+var green_smoke=document.createElement("img");
+var blue_smoke=document.createElement("img");
+var black_smoke=document.createElement("img");
+var white_smoke=document.createElement("img");
 
 var tilePics = [];
 
@@ -43,6 +49,12 @@ function loadImages() {
     {varName:dialogHighlightBack, theFile:"dialog_highlight_back.png"},
     {varName:titlescreenBG, theFile:"titlescreen.png"},
     {varName:pageFromABook, theFile:"page_from_a_book.png"},
+    {varName:room_light_and_shadows, theFile:"room_light_and_shadows.png"},
+    {varName:red_smoke, theFile:"red_smoke.png"},
+    {varName:green_smoke, theFile:"green_smoke.png"},
+    {varName:blue_smoke, theFile:"blue_smoke.png"},
+    {varName:black_smoke, theFile:"black_smoke.png"},
+    {varName:white_smoke, theFile:"white_smoke.png"},
     //tileTypes below
     {tileType:TILE_GROUND, theFile:"world_ground.png"},
     {tileType:TILE_WALL, theFile:"Tile_ar_2.png"},
