@@ -81,7 +81,10 @@ function mouseMove(evt) {
 function mouseClick(evt) {
   if (loadComplete)
   {
-    if (gameloop != null) {      
+    if(showCredits) {
+        startBGM();
+        StartGame();
+    } else if (gameloop != null) {      
       const dialogWasAdvanced = advanceDialog();
       const dialogChoicesAvailable = checkDialogChoices();
 
@@ -96,6 +99,7 @@ function mouseClick(evt) {
     else {
       if(mouseY>400) {
         console.log("Show credits");
+        showCredits = true;
       } else {
         startBGM();
         StartGame();
