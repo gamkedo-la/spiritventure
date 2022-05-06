@@ -7,6 +7,7 @@ const KEY_LETTER_W = 87;
 const KEY_LETTER_A = 65;
 const KEY_LETTER_S = 83;
 const KEY_LETTER_D = 68;
+const KEY_LETTER_C = 67;
 const KEY_SPACE = 32;
 const KEY_BACKSPACE = 8;
 const KEY_TAB = 9;
@@ -93,8 +94,12 @@ function mouseClick(evt) {
       }
     }
     else {
-      startBGM();
-      StartGame();
+      if(mouseY>400) {
+        console.log("Show credits");
+      } else {
+        startBGM();
+        StartGame();
+      }
     }
   }
 }
