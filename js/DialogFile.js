@@ -406,18 +406,18 @@ let Gemini1 = [
 
         position: {x: 1869, y: -604}
     },
-    {
+    {// id: 37
         scene: "",
         who: "Satah",
         nameCol: "undefined",
         voice: undefined,
-        text: "In other words, this feeling is the most... familaiar to them. It gives them... comfort.",
-        nextPage: 40,
+        text: "In other words, this feeling is the most... familiar to them. It gives them... comfort.",
+        nextPage: 38,
         choices: null,
 
         position: {x: 2126, y: -290}
     },
-    {
+    {// id: 38
         scene: "",
         who: "Soul",
         nameCol: "yellow",
@@ -428,7 +428,7 @@ let Gemini1 = [
 
         position: {x: 1436, y: -201}
     },
-    {
+    {// id: 39
         scene: "",
         who: "Satah",
         nameCol: "undefined",
