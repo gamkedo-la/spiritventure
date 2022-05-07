@@ -16,55 +16,44 @@ let Gemini1 = [
         who: "Soul",
         nameCol: "yellow",
         voice: undefined,
-        text: "Hello-",
+        text: "Hello.",
         nextPage: 1,
         choices: null,
 
-        position: {x: -770, y: -5835}
+        position: {x: -53, y: -2642}
     },
     {
         scene: "",
-        who: "Satah",
+        who: "Tripa",
         nameCol: "undefined",
         voice: undefined,
-        text: "GAH stay away from me",
+        text: "...",
         nextPage: 2,
         choices: null,
 
-        position: {x: -127, y: -5828}
+        position: {x: 489, y: -2639}
     },
     {
         scene: "",
         who: "Soul",
         nameCol: "yellow",
         voice: undefined,
-        text: "I-I just want to tal-",
-        nextPage: 3,
-        choices: null,
+        text: "...",
+        nextPage: null,
+        choices: [["Hello?", 3], ["Excuse me, is something the matter?", 3]],
 
-        position: {x: 321, y: -5805}
+        position: {x: 1088, y: -2634}
     },
     {
         scene: "",
-        who: "Satah",
+        who: "Tripa",
         nameCol: "undefined",
         voice: undefined,
-        text: "No stop stop stop",
+        text: "...How dare you enter here without my permission?",
         nextPage: 4,
         choices: null,
 
-        position: {x: 833, y: -5819}
-    },
-    {
-        scene: "",
-        who: "Satah",
-        nameCol: "undefined",
-        voice: undefined,
-        text: "I am going to die why am I here help please ",
-        nextPage: 5,
-        choices: null,
-
-        position: {x: 1361, y: -5818}
+        position: {x: 664, y: -2278}
     },
     {
         scene: "",
@@ -73,471 +62,196 @@ let Gemini1 = [
         voice: undefined,
         text: "...",
         nextPage: null,
-        choices: [["You are not going to die. I am right here, nothing bad is going happen.", 7], ["...I-I want to help but I ca-", 6]],
+        choices: [["I-I'm sorry?", 5], ["The door was open, and I did not know what I'd run into it honestly. Now I do.", 5]],
 
-        position: {x: 1434, y: -5546}
+        position: {x: 664, y: -1988}
     },
     {
         scene: "",
-        who: "Satah",
+        who: "Tripa",
         nameCol: "undefined",
         voice: undefined,
-        text: "Help? DId I just hear that, ahhh those sweet words",
-        nextPage: 10,
+        text: "... State your purpose of visit.",
+        nextPage: 6,
         choices: null,
 
-        position: {x: 1742, y: -5244}
+        position: {x: 644, y: -1623}
     },
     {
         scene: "",
-        who: "Satah",
+        who: "Soul",
+        nameCol: "yellow",
+        voice: undefined,
+        text: "You know, why I'm here.",
+        nextPage: 7,
+        choices: null,
+
+        position: {x: 644, y: -1353}
+    },
+    {
+        scene: "",
+        who: "Tripa",
         nameCol: "undefined",
         voice: undefined,
-        text: "Bu-But there's always something bad that happens. Always. Always. I must be prepared.",
+        text: "You really think you quell the fury that resides within me?",
         nextPage: 8,
         choices: null,
 
-        position: {x: 1011, y: -5287}
+        position: {x: 644, y: -1082}
     },
     {
         scene: "",
         who: "Soul",
         nameCol: "yellow",
         voice: undefined,
-        text: "I do agree, you should always be prepared. That's a smart move. Howeve-",
-        nextPage: 9,
-        choices: null,
+        text: "...",
+        nextPage: null,
+        choices: [["Correction: Your host's fury, not yours. But that's not why I'm here.", 9], ["It seems to me that my presence is my bothering you.", 14]],
 
-        position: {x: 811, y: -4998}
+        position: {x: 755, y: -802}
     },
     {
         scene: "",
-        who: "Satah",
+        who: "Soul",
+        nameCol: "yellow",
+        voice: undefined,
+        text: "I'm not here to fix you.",
+        nextPage: 10,
+        choices: null,
+
+        position: {x: 218, y: -432}
+    },
+    {
+        scene: "",
+        who: "Tripa",
         nameCol: "undefined",
         voice: undefined,
-        text: "Smart? You call that smart? That's the first time someone has said that to me... but but the pain the crunch it's too mu-",
-        nextPage: 12,
-        choices: null,
-
-        position: {x: 1006, y: -4685}
-    },
-    {
-        scene: "",
-        who: "Soul",
-        nameCol: "yellow",
-        voice: undefined,
-        text: "...Can we slow down, I'm finding it really hard to keep up...",
+        text: "Why are you, here then?",
         nextPage: 11,
         choices: null,
 
-        position: {x: 1737, y: -4949}
+        position: {x: 217, y: -161}
     },
     {
         scene: "",
-        who: "Satah",
-        nameCol: "undefined",
+        who: "Soul",
+        nameCol: "yellow",
         voice: undefined,
-        text: "How do I slow down what's inside? This piece of machinery, so utterly indescipherable.",
+        text: "I'm here to listen.",
         nextPage: 12,
         choices: null,
 
-        position: {x: 1735, y: -4659}
+        position: {x: 118, y: 106}
     },
     {
         scene: "",
-        who: "Satah",
+        who: "Tripa",
         nameCol: "undefined",
         voice: undefined,
-        text: "*inhales sharply* I'm sorry... oh my that was so bad of me. How could I lash out on you like that-",
+        text: "Isn't the first time I've heard that. ",
         nextPage: 13,
         choices: null,
 
-        position: {x: 1398, y: -4354}
+        position: {x: 239, y: 378}
     },
     {
         scene: "",
-        who: "Soul",
-        nameCol: "yellow",
-        voice: undefined,
-        text: "...",
-        nextPage: null,
-        choices: [["Take your time.", 14], ["You don't have to apologise. Caught you in the wrong time, is all.", 20], ["I'm going to speak now, if for nothing else, for you take a break.", 21]],
-
-        position: {x: 1810, y: -4142}
-    },
-    {
-        scene: "",
-        who: "Satah",
+        who: "Tripa",
         nameCol: "undefined",
         voice: undefined,
-        text: "Yes, I will.",
-        nextPage: 15,
-        choices: null,
-
-        position: {x: 800, y: -3782}
-    },
-    {
-        scene: "",
-        who: "Satah",
-        nameCol: "undefined",
-        voice: undefined,
-        text: "...",
-        nextPage: 16,
-        choices: null,
-
-        position: {x: 799, y: -3512}
-    },
-    {
-        scene: "",
-        who: "Satah",
-        nameCol: "undefined",
-        voice: undefined,
-        text: "You're here to help my host, yes? And in extension, bring peace to me.",
-        nextPage: 17,
-        choices: null,
-
-        position: {x: 799, y: -3242}
-    },
-    {
-        scene: "",
-        who: "Soul",
-        nameCol: "yellow",
-        voice: undefined,
-        text: "I can't promise either of things.",
-        nextPage: 18,
-        choices: null,
-
-        position: {x: 799, y: -2932}
-    },
-    {
-        scene: "",
-        who: "Satah",
-        nameCol: "undefined",
-        voice: undefined,
-        text: "I understand. That's... that's a lot of responsibility for one person.",
-        nextPage: 19,
-        choices: null,
-
-        position: {x: 799, y: -2662}
-    },
-    {
-        scene: "",
-        who: "Satah",
-        nameCol: "undefined",
-        voice: undefined,
-        text: "There is... there is room to help however.",
-        nextPage: 26,
-        choices: null,
-
-        position: {x: 799, y: -2372}
-    },
-    {
-        scene: "",
-        who: "Satah",
-        nameCol: "undefined",
-        voice: undefined,
-        text: "Right, long time indeed...",
-        nextPage: 15,
-        choices: null,
-
-        position: {x: 1376, y: -3651}
-    },
-    {
-        scene: "",
-        who: "Satah",
-        nameCol: "undefined",
-        voice: undefined,
-        text: "That'd be nice... yes.",
-        nextPage: 22,
-        choices: null,
-
-        position: {x: 2067, y: -3818}
-    },
-    {
-        scene: "",
-        who: "Soul",
-        nameCol: "yellow",
-        voice: undefined,
-        text: "I'm here to help, or atleast I think I am. From what I know, your host seems to in distress which is putting it lightly really.",
-        nextPage: 23,
-        choices: null,
-
-        position: {x: 1801, y: -3471}
-    },
-    {
-        scene: "",
-        who: "Soul",
-        nameCol: "yellow",
-        voice: undefined,
-        text: "You're living proof of that. I want to understand more.",
+        text: "Your sentiments are pitiful.",
         nextPage: 24,
         choices: null,
 
-        position: {x: 1801, y: -3141}
-    },
-    {
-        scene: "",
-        who: "Satah",
-        nameCol: "undefined",
-        voice: undefined,
-        text: "This space, is desolate.",
-        nextPage: 25,
-        choices: null,
-
-        position: {x: 1438, y: -2646}
-    },
-    {
-        scene: "",
-        who: "Satah",
-        nameCol: "undefined",
-        voice: undefined,
-        text: "Empty.",
-        nextPage: 26,
-        choices: null,
-
-        position: {x: 1438, y: -2376}
-    },
-    {
-        scene: "",
-        who: "Satah",
-        nameCol: "undefined",
-        voice: undefined,
-        text: "Nobody has visited my host's domain in a long, long time. Excruciatingly long.",
-        nextPage: 48,
-        choices: null,
-
-        position: {x: 1440, y: -2107}
-    },
-    {
-        scene: "",
-        who: "Satah",
-        nameCol: "undefined",
-        voice: undefined,
-        text: "You are here because... because of a connection.",
-        nextPage: 28,
-        choices: null,
-
-        position: {x: 2374, y: -1990}
+        position: {x: 10, y: 658}
     },
     {
         scene: "",
         who: "Soul",
         nameCol: "yellow",
         voice: undefined,
-        text: "Wonderfully vague.",
-        nextPage: 29,
+        text: "I shall make my way to the exit then.",
+        nextPage: 15,
         choices: null,
 
-        position: {x: 1916, y: -1854}
+        position: {x: 963, y: -425}
     },
     {
         scene: "",
-        who: "Satah",
+        who: "Tripa",
         nameCol: "undefined",
         voice: undefined,
-        text: "I don't step out of my quarters, if you'd call it that. I hear voices adjacent, but I can't step out lest this crumbles.",
-        nextPage: 30,
+        text: "No! wait.",
+        nextPage: 16,
         choices: null,
 
-        position: {x: 1390, y: -1688}
-    },
-    {
-        scene: "",
-        who: "Soul",
-        nameCol: "yellow",
-        voice: undefined,
-        text: "Why would this crumble? Sounds like you're... afraid. A delusion. Harsh?",
-        nextPage: 31,
-        choices: null,
-
-        position: {x: 1143, y: -1338}
-    },
-    {
-        scene: "",
-        who: "Satah",
-        nameCol: "undefined",
-        voice: undefined,
-        text: "No, you're bang on with that-",
-        nextPage: 32,
-        choices: null,
-
-        position: {x: 1905, y: -1455}
-    },
-    {
-        scene: "",
-        who: "Soul",
-        nameCol: "yellow",
-        voice: undefined,
-        text: "Bang on, heh.",
-        nextPage: 33,
-        choices: null,
-
-        position: {x: 1912, y: -1184}
-    },
-    {
-        scene: "",
-        who: "Satah",
-        nameCol: "undefined",
-        voice: undefined,
-        text: "What? It's the new lingo I hear.",
-        nextPage: 34,
-        choices: null,
-
-        position: {x: 1903, y: -914}
-    },
-    {
-        scene: "",
-        who: "Soul",
-        nameCol: "yellow",
-        voice: undefined,
-        text: "I just was not expecting... those choice of words. Interesting, so you're able to hear outside voices...",
-        nextPage: 35,
-        choices: null,
-
-        position: {x: 949, y: -1025}
-    },
-    {
-        scene: "",
-        who: "Satah",
-        nameCol: "undefined",
-        voice: undefined,
-        text: "... my host is scared of the other beings that reside here. I can't wander too, my host trusts me the most.",
-        nextPage: 36,
-        choices: null,
-
-        position: {x: 1391, y: -665}
-    },
-    {
-        scene: "",
-        who: "Soul",
-        nameCol: "yellow",
-        voice: undefined,
-        text: "Presumptous, no?",
-        nextPage: 37,
-        choices: null,
-
-        position: {x: 1869, y: -604}
-    },
-    {// id: 37
-        scene: "",
-        who: "Satah",
-        nameCol: "undefined",
-        voice: undefined,
-        text: "In other words, this feeling is the most... familiar to them. It gives them... comfort.",
-        nextPage: 38,
-        choices: null,
-
-        position: {x: 2126, y: -290}
-    },
-    {// id: 38
-        scene: "",
-        who: "Soul",
-        nameCol: "yellow",
-        voice: undefined,
-        text: "...",
-        nextPage: null,
-        choices: [["Fear gives your host comfort... I can relate to that.", 39], ["...How does that even work?", 42]],
-
-        position: {x: 1436, y: -201}
-    },
-    {// id: 39
-        scene: "",
-        who: "Satah",
-        nameCol: "undefined",
-        voice: undefined,
-        text: "I see... then you would know what to do with this newfound knowledge?",
-        nextPage: 40,
-        choices: null,
-
-        position: {x: 988, y: 207}
+        position: {x: 963, y: -135}
     },
     {
         scene: "",
         who: "Soul",
         nameCol: "yellow",
         voice: undefined,
-        text: "I-I... do not.",
-        nextPage: 41,
-        choices: null,
-
-        position: {x: 988, y: 517}
-    },
-    {
-        scene: "",
-        who: "Satah",
-        nameCol: "undefined",
-        voice: undefined,
-        text: "It looks like your fear is talking now.",
-        nextPage: 44,
-        choices: null,
-
-        position: {x: 1225, y: 787}
-    },
-    {
-        scene: "",
-        who: "Satah",
-        nameCol: "undefined",
-        voice: undefined,
-        text: "I understand if you can't wrap your head around it. And I know you're trying, so that's all I can ask for. For my host's sake and mine.",
-        nextPage: 43,
-        choices: null,
-
-        position: {x: 1974, y: 250}
-    },
-    {
-        scene: "",
-        who: "Soul",
-        nameCol: "yellow",
-        voice: undefined,
-        text: "I-I'll do my best to consider what you've told me.",
-        nextPage: 44,
-        choices: null,
-
-        position: {x: 1972, y: 580}
-    },
-    {
-        scene: "",
-        who: "Soul",
-        nameCol: "yellow",
-        voice: undefined,
-        text: "...Farewell.",
-        nextPage: 45,
-        choices: null,
-
-        position: {x: 1603, y: 1084}
-    },
-    {
-        scene: "",
-        who: "Satah",
-        nameCol: "undefined",
-        voice: undefined,
-        text: "I sure hope someone is looking out for you too.",
-        nextPage: null,
-        choices: null,
-
-        position: {x: 1601, y: 1397}
-    },
-    {
-        scene: "",
-        who: "Satah",
-        nameCol: "undefined",
-        voice: undefined,
         text: "...",
-        nextPage: 29,
+        nextPage: 17,
         choices: null,
 
-        position: {x: 2907, y: -2089}
+        position: {x: 963, y: 135}
+    },
+    {
+        scene: "",
+        who: "Tripa",
+        nameCol: "undefined",
+        voice: undefined,
+        text: "As much as I'd like to deny it, I need your help. For the sake my host.",
+        nextPage: 18,
+        choices: null,
+
+        position: {x: 964, y: 403}
+    },
+    {
+        scene: "",
+        who: "Tripa",
+        nameCol: "undefined",
+        voice: undefined,
+        text: "And I can't hold this on much longer.",
+        nextPage: 19,
+        choices: null,
+
+        position: {x: 964, y: 713}
     },
     {
         scene: "",
         who: "Soul",
         nameCol: "yellow",
         voice: undefined,
-        text: "Kidding.",
-        nextPage: 46,
+        text: "How can I help?",
+        nextPage: 20,
         choices: null,
 
-        position: {x: 2714, y: -2381}
+        position: {x: 1477, y: 464}
+    },
+    {
+        scene: "",
+        who: "Tripa",
+        nameCol: "undefined",
+        voice: undefined,
+        text: "Understand me.",
+        nextPage: 21,
+        choices: null,
+
+        position: {x: 1477, y: 734}
+    },
+    {
+        scene: "",
+        who: "Tripa",
+        nameCol: "undefined",
+        voice: undefined,
+        text: "And in extension, understand the being in whose domain we reside in.",
+        nextPage: 22,
+        choices: null,
+
+        position: {x: 1119, y: 1032}
     },
     {
         scene: "",
@@ -546,9 +260,30 @@ let Gemini1 = [
         voice: undefined,
         text: "...",
         nextPage: null,
-        choices: [["No wonder, this place is atrocious.", 47], ["Why am I here then?", 27]],
+        choices: [["This isn't easy for me.", 23], ["I do want to, but everything I say is just... caustic at this point.", 23]],
 
-        position: {x: 2164, y: -2353}
+        position: {x: 654, y: 1357}
+    },
+    {
+        scene: "",
+        who: "Tripa",
+        nameCol: "undefined",
+        voice: undefined,
+        text: "I know it isn't easy. ",
+        nextPage: 24,
+        choices: null,
+
+        position: {x: 200, y: 1671}
+    },
+    {
+        scene: "",
+        who: "Tripa",
+        nameCol: "undefined",
+        voice: undefined,
+        text: "But...",
+        nextPage: 17,
+        choices: null,
+
+        position: {x: 508, y: 672}
     },
 ];
-//CONVERSATIONS.push(ATestDialog);
