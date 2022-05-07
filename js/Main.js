@@ -20,7 +20,6 @@ var rightDialogRoomFin = false;
 var belowDialogRoomFin = false;
 
 // game loop properties
-//Practice Commit
 var loadComplete = false;
 var gameloop;
 const framesPerSecond = 30;
