@@ -512,7 +512,7 @@ let Gemini1 = [
         nameCol: "undefined",
         voice: undefined,
         text: "I sure hope someone is looking out for you too.",
-        nextPage: 46,
+        nextPage: null,
         choices: null,
 
         position: {x: 1601, y: 1397}
