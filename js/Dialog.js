@@ -94,6 +94,9 @@ function setSpeakerBg(speakerName) {
         case "Satah":
             style = 'brown'; 
             break
+        case "Unnamed":
+            style = 'black';
+            break
         default:
            style = '#000000';
             break  

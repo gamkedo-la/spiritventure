@@ -1,7 +1,7 @@
 let Tripa = [
     {
         scene: "",
-        who: "Soul",
+        who: "???",
         nameCol: "yellow",
         voice: undefined,
         text: "Hello.",
@@ -23,7 +23,7 @@ let Tripa = [
     },
     {
         scene: "",
-        who: "Soul",
+        who: "???",
         nameCol: "yellow",
         voice: undefined,
         text: "...",
@@ -45,7 +45,7 @@ let Tripa = [
     },
     {
         scene: "",
-        who: "Soul",
+        who: "???",
         nameCol: "yellow",
         voice: undefined,
         text: "...",
@@ -67,7 +67,7 @@ let Tripa = [
     },
     {
         scene: "",
-        who: "Soul",
+        who: "???",
         nameCol: "yellow",
         voice: undefined,
         text: "You know, why I'm here.",
@@ -89,7 +89,7 @@ let Tripa = [
     },
     {
         scene: "",
-        who: "Soul",
+        who: "???",
         nameCol: "yellow",
         voice: undefined,
         text: "...",
@@ -100,7 +100,7 @@ let Tripa = [
     },
     {
         scene: "",
-        who: "Soul",
+        who: "???",
         nameCol: "yellow",
         voice: undefined,
         text: "I'm not here to fix you.",
@@ -122,7 +122,7 @@ let Tripa = [
     },
     {
         scene: "",
-        who: "Soul",
+        who: "???",
         nameCol: "yellow",
         voice: undefined,
         text: "I'm here to listen.",
@@ -155,7 +155,7 @@ let Tripa = [
     },
     {
         scene: "",
-        who: "Soul",
+        who: "???",
         nameCol: "yellow",
         voice: undefined,
         text: "I shall make my way to the exit then.",
@@ -177,7 +177,7 @@ let Tripa = [
     },
     {
         scene: "",
-        who: "Soul",
+        who: "???",
         nameCol: "yellow",
         voice: undefined,
         text: "...",
@@ -210,7 +210,7 @@ let Tripa = [
     },
     {
         scene: "",
-        who: "Soul",
+        who: "???",
         nameCol: "yellow",
         voice: undefined,
         text: "How can I help?",
@@ -243,7 +243,7 @@ let Tripa = [
     },
     {
         scene: "",
-        who: "Soul",
+        who: "???",
         nameCol: "yellow",
         voice: undefined,
         text: "...",
@@ -279,7 +279,7 @@ let Tripa = [
 let Satah = [
     {
         scene: "",
-        who: "Soul",
+        who: "???",
         nameCol: "yellow",
         voice: undefined,
         text: "Hello-",
@@ -301,7 +301,7 @@ let Satah = [
     },
     {
         scene: "",
-        who: "Soul",
+        who: "???",
         nameCol: "yellow",
         voice: undefined,
         text: "I-I just want to tal-",
@@ -334,7 +334,7 @@ let Satah = [
     },
     {
         scene: "",
-        who: "Soul",
+        who: "???",
         nameCol: "yellow",
         voice: undefined,
         text: "...",
@@ -367,7 +367,7 @@ let Satah = [
     },
     {
         scene: "",
-        who: "Soul",
+        who: "???",
         nameCol: "yellow",
         voice: undefined,
         text: "I do agree, you should always be prepared. That's a smart move. Howeve-",
@@ -389,7 +389,7 @@ let Satah = [
     },
     {
         scene: "",
-        who: "Soul",
+        who: "???",
         nameCol: "yellow",
         voice: undefined,
         text: "...Can we slow down, I'm finding it really hard to keep up...",
@@ -422,7 +422,7 @@ let Satah = [
     },
     {
         scene: "",
-        who: "Soul",
+        who: "???",
         nameCol: "yellow",
         voice: undefined,
         text: "...",
@@ -466,7 +466,7 @@ let Satah = [
     },
     {
         scene: "",
-        who: "Soul",
+        who: "???",
         nameCol: "yellow",
         voice: undefined,
         text: "I can't promise either of things.",
@@ -521,7 +521,7 @@ let Satah = [
     },
     {
         scene: "",
-        who: "Soul",
+        who: "???",
         nameCol: "yellow",
         voice: undefined,
         text: "I'm here to help, or atleast I think I am. From what I know, your host seems to in distress which is putting it lightly really.",
@@ -532,7 +532,7 @@ let Satah = [
     },
     {
         scene: "",
-        who: "Soul",
+        who: "???",
         nameCol: "yellow",
         voice: undefined,
         text: "You're living proof of that. I want to understand more.",
@@ -587,7 +587,7 @@ let Satah = [
     },
     {
         scene: "",
-        who: "Soul",
+        who: "???",
         nameCol: "yellow",
         voice: undefined,
         text: "Wonderfully vague.",
@@ -609,7 +609,7 @@ let Satah = [
     },
     {
         scene: "",
-        who: "Soul",
+        who: "???",
         nameCol: "yellow",
         voice: undefined,
         text: "Why would this crumble? Sounds like you're... afraid. A delusion. Harsh?",
@@ -631,7 +631,7 @@ let Satah = [
     },
     {
         scene: "",
-        who: "Soul",
+        who: "???",
         nameCol: "yellow",
         voice: undefined,
         text: "Bang on, heh.",
@@ -653,7 +653,7 @@ let Satah = [
     },
     {
         scene: "",
-        who: "Soul",
+        who: "???",
         nameCol: "yellow",
         voice: undefined,
         text: "I just was not expecting... those choice of words. Interesting, so you're able to hear outside voices...",
@@ -675,7 +675,7 @@ let Satah = [
     },
     {
         scene: "",
-        who: "Soul",
+        who: "???",
         nameCol: "yellow",
         voice: undefined,
         text: "Presumptous, no?",
@@ -697,7 +697,7 @@ let Satah = [
     },
     {// id: 38
         scene: "",
-        who: "Soul",
+        who: "???",
         nameCol: "yellow",
         voice: undefined,
         text: "...",
@@ -719,7 +719,7 @@ let Satah = [
     },
     {
         scene: "",
-        who: "Soul",
+        who: "???",
         nameCol: "yellow",
         voice: undefined,
         text: "I-I... do not.",
@@ -752,7 +752,7 @@ let Satah = [
     },
     {
         scene: "",
-        who: "Soul",
+        who: "???",
         nameCol: "yellow",
         voice: undefined,
         text: "I-I'll do my best to consider what you've told me.",
@@ -763,7 +763,7 @@ let Satah = [
     },
     {
         scene: "",
-        who: "Soul",
+        who: "???",
         nameCol: "yellow",
         voice: undefined,
         text: "...Farewell.",
@@ -796,7 +796,7 @@ let Satah = [
     },
     {
         scene: "",
-        who: "Soul",
+        who: "???",
         nameCol: "yellow",
         voice: undefined,
         text: "Kidding.",
@@ -807,7 +807,7 @@ let Satah = [
     },
     {
         scene: "",
-        who: "Soul",
+        who: "???",
         nameCol: "yellow",
         voice: undefined,
         text: "...",
@@ -820,13 +820,226 @@ let Satah = [
 
 ///////////
 
-let testConvo2 = [
+let Gemini1 = [
     {
         scene: "",
-        who: "Soul",
+        who: "???",
         nameCol: "yellow",
         voice: undefined,
         text: "Hello, I am here to... I'm not sure why I'm here.",
+        nextPage: 1,
+        choices: null,
+
+        position: {x: 836, y: -675}
+    },
+    {
+        scene: "",
+        who: "Gemini",
+        nameCol: "undefined",
+        voice: undefined,
+        text: "Another lost ??? seeking eternal damnation...",
+        nextPage: 2,
+        choices: null,
+
+        position: {x: 836, y: -385}
+    },
+    {
+        scene: "",
+        who: "???",
+        nameCol: "yellow",
+        voice: undefined,
+        text: "...It's certainly not that. I know that you're important, and this strong sense that you can guide me on what to do next.",
+        nextPage: 4,
+        choices: null,
+
+        position: {x: 836, y: -95}
+    },
+    {
+        scene: "",
+        who: "Gemini",
+        nameCol: "undefined",
+        voice: undefined,
+        text: "...Go through those doors, and be wary of what may greet you.",
+        nextPage: 11,
+        choices: null,
+
+        position: {x: 752, y: 796}
+    },
+    {
+        scene: "",
+        who: "Gemini",
+        nameCol: "undefined",
+        voice: undefined,
+        text: "Guide you? Let me tell you why you’re here.",
+        nextPage: 5,
+        choices: null,
+
+        position: {x: 385, y: 264}
+    },
+    {
+        scene: "",
+        who: "Gemini",
+        nameCol: "undefined",
+        voice: undefined,
+        text: "You’re here to guide me. Not the other way around.",
+        nextPage: 6,
+        choices: null,
+
+        position: {x: 816, y: 269}
+    },
+    {
+        scene: "",
+        who: "Gemini",
+        nameCol: "undefined",
+        voice: undefined,
+        text: "Why? A cruel fate. You’re here to help me get out of this miserable pit by exploring those forsaken doors.",
+        nextPage: 7,
+        choices: null,
+
+        position: {x: 1252, y: 181}
+    },
+    {
+        scene: "",
+        who: "Gemini",
+        nameCol: "undefined",
+        voice: undefined,
+        text: "Others have tried, and failed utterly.",
+        nextPage: 8,
+        choices: null,
+
+        position: {x: 1242, y: 592}
+    },
+    {
+        scene: "",
+        who: "Gemini",
+        nameCol: "undefined",
+        voice: undefined,
+        text: "Don’t think you’re too special. You will fail too.",
+        nextPage: 9,
+        choices: null,
+
+        position: {x: 823, y: 548}
+    },
+    {
+        scene: "",
+        who: "???",
+        nameCol: "yellow",
+        voice: undefined,
+        text: "...",
+        nextPage: null,
+        choices: [["That's a nice way to get someone's help.", 10], ["I’m not sure how I can help, but I can try.", 3]],
+
+        position: {x: 313, y: 595}
+    },
+    {
+        scene: "",
+        who: "Gemini",
+        nameCol: "undefined",
+        voice: undefined,
+        text: "I have no choice. I didn't ask for this.",
+        nextPage: 3,
+        choices: null,
+
+        position: {x: 313, y: 937}
+    },
+    {
+        scene: "",
+        who: "Gemini",
+        nameCol: "undefined",
+        voice: undefined,
+        text: "You'll find my not-so-lovely emotions throwing a tantrum.",
+        nextPage: 12,
+        choices: null,
+
+        position: {x: 1261, y: 981}
+    },
+    {
+        scene: "",
+        who: "Gemini",
+        nameCol: "undefined",
+        voice: undefined,
+        text: "Which doors correspond to what? I do not know.",
+        nextPage: 13,
+        choices: null,
+
+        position: {x: 1684, y: 988}
+    },
+    {
+        scene: "",
+        who: "Gemini",
+        nameCol: "undefined",
+        voice: undefined,
+        text: "What will you do in there? I don't care.",
+        nextPage: 14,
+        choices: null,
+
+        position: {x: 1684, y: 1278}
+    },
+    {
+        scene: "",
+        who: "???",
+        nameCol: "yellow",
+        voice: undefined,
+        text: ",,,",
+        nextPage: null,
+        choices: [["You do care.", ], ["Mighty fine guidance there.", ]],
+
+        position: {x: 969, y: 1300}
+    },
+    {
+        scene: "",
+        who: "???",
+        nameCol: "yellow",
+        voice: undefined,
+        text: "I'll be seeing you around at the end of this.",
+        nextPage: 16,
+        choices: null,
+
+        position: {x: 969, y: 1622}
+    },
+    {
+        scene: "",
+        who: "Gemini",
+        nameCol: "undefined",
+        voice: undefined,
+        text: "Take-",
+        nextPage: 17,
+        choices: null,
+
+        position: {x: 1484, y: 1673}
+    },
+    {
+        scene: "",
+        who: "???",
+        nameCol: "yellow",
+        voice: undefined,
+        text: "What?",
+        nextPage: 18,
+        choices: null,
+
+        position: {x: 1484, y: 1943}
+    },
+    {
+        scene: "",
+        who: "Gemini",
+        nameCol: "undefined",
+        voice: undefined,
+        text: "Nevermind, go.",
+        nextPage: 19,
+        choices: null,
+
+        position: {x: 1484, y: 2213}
+    },
+];
+
+
+let testConvo2 = [
+    {
+        scene: "",
+        who: "???",
+        nameCol: "yellow",
+        voice: undefined,
+        text: "Hello, I am here to... I'm not sure why I'm here. But I know your name is Gemini",
         nextPage: 1,
         choices: null,
 
@@ -845,7 +1058,7 @@ let testConvo2 = [
     },
     {
         scene: "",
-        who: "Soul",
+        who: "???",
         nameCol: "yellow",
         voice: undefined,
         text: "...It's certainly not that. I know that you're important, and this strong sense that you can guide me on what to do next.",
@@ -889,7 +1102,7 @@ let testConvo2 = [
     },
     {
         scene: "",
-        who: "Soul",
+        who: "???",
         nameCol: "yellow",
         voice: undefined,
         text: "I...I'll do what I can.",
@@ -911,7 +1124,7 @@ let testConvo2 = [
     },
     {
         scene: "",
-        who: "Soul",
+        who: "???",
         nameCol: "yellow",
         voice: undefined,
         text: "See you around.",
@@ -947,7 +1160,7 @@ let Gemini_end = [
     },
     {
         scene: "",
-        who: "Soul",
+        who: "???",
         nameCol: "yellow",
         voice: undefined,
         text: "...",
@@ -991,7 +1204,7 @@ let Gemini_end = [
     },
     {
         scene: "",
-        who: "Soul",
+        who: "???",
         nameCol: "yellow",
         voice: undefined,
         text: "...",
@@ -1024,7 +1237,7 @@ let Gemini_end = [
     },
     {
         scene: "",
-        who: "Soul",
+        who: "???",
         nameCol: "yellow",
         voice: undefined,
         text: "What do you think?",
@@ -1090,7 +1303,7 @@ let Gemini_end = [
     },
     {
         scene: "",
-        who: "Soul",
+        who: "???",
         nameCol: "yellow",
         voice: undefined,
         text: "...",
@@ -1112,7 +1325,7 @@ let Gemini_end = [
     },
     {
         scene: "",
-        who: "Soul",
+        who: "???",
         nameCol: "yellow",
         voice: undefined,
         text: "Wrong. You asked because you care.",
@@ -1134,7 +1347,7 @@ let Gemini_end = [
     },
     {
         scene: "",
-        who: "Soul",
+        who: "???",
         nameCol: "yellow",
         voice: undefined,
         text: "There's this... knowing gnawing at me. I know you, even outside of this space.",
@@ -1145,7 +1358,7 @@ let Gemini_end = [
     },
     {
         scene: "",
-        who: "Soul",
+        who: "???",
         nameCol: "yellow",
         voice: undefined,
         text: "And somewhere, this care had once been transformed into magnificance.",
@@ -1178,7 +1391,7 @@ let Gemini_end = [
     },
     {
         scene: "",
-        who: "Soul",
+        who: "???",
         nameCol: "yellow",
         voice: undefined,
         text: "Or maybe I don't. Who cares? This, right now is real.",
@@ -1189,7 +1402,7 @@ let Gemini_end = [
     },
     {
         scene: "",
-        who: "Soul",
+        who: "???",
         nameCol: "yellow",
         voice: undefined,
         text: "Could be, my alternative sounds more... pleasing. Foolish, but possible.",
@@ -1233,7 +1446,7 @@ let Gemini_end = [
     },
     {
         scene: "",
-        who: "Soul",
+        who: "Spinian",
         nameCol: "yellow",
         voice: undefined,
         text: "Ok. Not gonna question where that came from.",
@@ -1247,7 +1460,7 @@ let Gemini_end = [
         who: "Gemini",
         nameCol: "undefined",
         voice: undefined,
-        text: "Yes, don't. Arbitary processes of the network.",
+        text: "Yes, don't. Arbitary processes of a network.",
         nextPage: 30,
         choices: null,
 
@@ -1277,7 +1490,7 @@ let Gemini_end = [
     },
     {
         scene: "",
-        who: "Soul",
+        who: "Spinian",
         nameCol: "yellow",
         voice: undefined,
         text: "...",
@@ -1321,7 +1534,7 @@ let Gemini_end = [
     },
     {
         scene: "",
-        who: "Soul",
+        who: "Spinian",
         nameCol: "yellow",
         voice: undefined,
         text: "What do we do now?",
@@ -1346,7 +1559,7 @@ let Gemini_end = [
 let Despond = [
     {
         scene: "",
-        who: "Soul",
+        who: "???",
         nameCol: "yellow",
         voice: undefined,
         text: "Greetings, I'm here to - ",
@@ -1368,7 +1581,7 @@ let Despond = [
     },
     {
         scene: "",
-        who: "Soul",
+        who: "???",
         nameCol: "yellow",
         voice: undefined,
         text: "Is it really that bad? You should perhaps - ",
@@ -1401,7 +1614,7 @@ let Despond = [
     },
     {
         scene: "",
-        who: "Soul",
+        who: "???",
         nameCol: "yellow",
         voice: undefined,
         text: "I care because I - ",
@@ -1412,7 +1625,7 @@ let Despond = [
     },
     {
         scene: "",
-        who: "Soul",
+        who: "???",
         nameCol: "yellow",
         voice: undefined,
         text: "And now, it looks like I'm seeing a mirror reflection. I want to be there for them, and in a way reflect and pay my due respects.",
@@ -1434,7 +1647,7 @@ let Despond = [
     },
     {
         scene: "",
-        who: "Soul",
+        who: "???",
         nameCol: "yellow",
         voice: undefined,
         text: "It's in my blood to delve into it. Perhaps, a flaw in my functioning but there's nothing I can do about it. ",
@@ -1489,7 +1702,7 @@ let Despond = [
     },
     {
         scene: "",
-        who: "Soul",
+        who: "???",
         nameCol: "yellow",
         voice: undefined,
         text: "...",
@@ -1500,7 +1713,7 @@ let Despond = [
     },
     {
         scene: "",
-        who: "Soul",
+        who: "???",
         nameCol: "yellow",
         voice: undefined,
         text: "I am however, here, and unrelenting by forces I cannot see, only know.",

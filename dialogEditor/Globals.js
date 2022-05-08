@@ -50,6 +50,7 @@ const Speaker = {
 	Satah:'Satah',
 	Tripa:'Tripa',
 	Gemini:'Gemini',
+	Unnamed: '???',
 	
 };
 //SoulColor is special, don't need to call out other colors separately
