@@ -50,7 +50,7 @@ let Tripa = [
         voice: undefined,
         text: "...",
         nextPage: null,
-        choices: [["I-I'm sorry?", 5], ["The door was open, and I did not know what I'd run into it honestly. Now I do.", 5]],
+        choices: [["I-I'm sorry?", 5], ["The door was open, and I honestly did not know what I'd run into. Now I do.", 5]],
 
         position: {x: 884, y: -3013}
     },
@@ -59,7 +59,7 @@ let Tripa = [
         who: "Tripa",
         nameCol: "undefined",
         voice: undefined,
-        text: "... State your purpose of visit.",
+        text: "... State the purpose of your visit.",
         nextPage: 6,
         choices: null,
 
@@ -81,7 +81,7 @@ let Tripa = [
         who: "Tripa",
         nameCol: "undefined",
         voice: undefined,
-        text: "You really think you quell the fury that resides within me?",
+        text: "You really think you can quell the fury that resides within me?",
         nextPage: 8,
         choices: null,
 
@@ -158,7 +158,7 @@ let Tripa = [
         who: "Soul",
         nameCol: "yellow",
         voice: undefined,
-        text: "I shall make my way to the exit then.",
+        text: "Shall make my way to the exit then?",
         nextPage: 15,
         choices: null,
 
@@ -202,7 +202,7 @@ let Tripa = [
         who: "Tripa",
         nameCol: "undefined",
         voice: undefined,
-        text: "And I can't hold this on much longer.",
+        text: "I can't hold onto this much longer.",
         nextPage: 19,
         choices: null,
 
@@ -345,7 +345,7 @@ let Tripa = [
         who: "Tripa",
         nameCol: "undefined",
         voice: undefined,
-        text: "Scorching rage? Infuriation that simmers and boils and causes blisters, so much so that you can't even function properly anymore?",
+        text: "Scorching RAGE? Infuriation that simmers and boils and causes blisters, so much so that you can't even function properly anymore?",
         nextPage: 32,
         choices: null,
 
@@ -389,7 +389,7 @@ let Tripa = [
         who: "Tripa",
         nameCol: "undefined",
         voice: undefined,
-        text: "You must have felt it, but never expressed it. Like my host, who can finds it hard to.",
+        text: "You must have felt it, but never expressed it. Like my host, who can find it hard to.",
         nextPage: 36,
         choices: null,
 
@@ -411,7 +411,7 @@ let Tripa = [
         who: "Soul",
         nameCol: "yellow",
         voice: undefined,
-        text: "It'd be easier if I had knew more about your host, Gemini rather than draw understanding through my own process.",
+        text: "It'd be easier if I had known more about your host, Gemini, rather than draw understanding through my own process.",
         nextPage: 38,
         choices: null,
 
@@ -433,7 +433,7 @@ let Tripa = [
         who: "Tripa",
         nameCol: "undefined",
         voice: undefined,
-        text: "Unfortunately, I can't get into the details of my host. It's... inaccessible. Blocked. I can't scrap anything out.",
+        text: "Unfortunately, I can't get into the details of my host. It's... inaccessible. Blocked. I can't scrape anything out.",
         nextPage: 41,
         choices: null,
 
@@ -559,7 +559,7 @@ let Satah = [
         who: "Satah",
         nameCol: "undefined",
         voice: undefined,
-        text: "Help? DId I just hear that, ahhh those sweet words",
+        text: "Help? Did I just hear that, ahhh those sweet words",
         nextPage: 10,
         choices: null,
 
@@ -625,7 +625,7 @@ let Satah = [
         who: "Satah",
         nameCol: "undefined",
         voice: undefined,
-        text: "*inhales sharply* I'm sorry... oh my that was so bad of me. How could I lash out on you like that-",
+        text: "*inhales sharply* I'm sorry... oh my that was so bad of me. How could I lash out at you like that-",
         nextPage: 13,
         choices: null,
 
@@ -638,7 +638,7 @@ let Satah = [
         voice: undefined,
         text: "...",
         nextPage: null,
-        choices: [["Take your time.", 14], ["You don't have to apologise. Caught you in the wrong time, is all.", 20], ["I'm going to speak now, if for nothing else, for you take a break.", 21]],
+        choices: [["Take your time.", 14], ["You don't have to apologize. Caught you at the wrong time, is all.", 20], ["I'm going to speak now, if for nothing else, for you take a break.", 21]],
 
         position: {x: 1810, y: -4142}
     },
@@ -735,7 +735,7 @@ let Satah = [
         who: "???",
         nameCol: "yellow",
         voice: undefined,
-        text: "I'm here to help, or at least I think I am. From what I know, your host seems to in distress which is putting it lightly really.",
+        text: "I'm here to help, or at least I think I am. From what I know, your host seems to be in distress... which is putting it lightly really.",
         nextPage: 23,
         choices: null,
 
@@ -878,7 +878,7 @@ let Satah = [
         who: "Satah",
         nameCol: "undefined",
         voice: undefined,
-        text: "... my host is scared of the other beings that reside here. I can't wander too, my host trusts me the most.",
+        text: "... my host is scared of the other beings that reside here. I can wander, my host trusts me the most.",
         nextPage: 36,
         choices: null,
 
@@ -1505,7 +1505,7 @@ let Gemini_end = [
         who: "Gemini",
         nameCol: "undefined",
         voice: undefined,
-        text: "And those items that you hold, what, did you think that you it could bestow some magical aura to",
+        text: "And those items that you hold, what, did you think that it could bestow some magical aura to you?",
         nextPage: 15,
         choices: null,
 
@@ -1705,7 +1705,7 @@ let Gemini_end = [
         voice: undefined,
         text: "...",
         nextPage: null,
-        choices: [["I'll live with that.", 34], ["That's the most I could ask for.", 35], ["I sad.", 33]],
+        choices: [["I'll live with that.", 34], ["That's the most I could ask for.", 35], ["I'm sad.", 33]],
 
         position: {x: 676, y: -407}
     },
@@ -1783,7 +1783,7 @@ let Despond = [
         who: "Despond",
         nameCol: "undefined",
         voice: undefined,
-        text: "Help me. Yes, I know and I appreciate that. However, I - my host does not realise the full extent of their pain. I do. This part may recover.",
+        text: "Help me. Yes, I know and I appreciate that. However, I - my host does not realize the full extent of their pain. I do. This part may recover.",
         nextPage: 2,
         choices: null,
 
