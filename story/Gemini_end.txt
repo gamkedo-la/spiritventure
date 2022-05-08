@@ -8,7 +8,7 @@ let Geminiend = [
         nextPage: 1,
         choices: null,
 
-        position: {x: 538, y: -461}
+        position: {x: 601, y: -3406}
     },
     {
         scene: "",
@@ -19,7 +19,7 @@ let Geminiend = [
         nextPage: 2,
         choices: null,
 
-        position: {x: 538, y: -191}
+        position: {x: 601, y: -3136}
     },
     {
         scene: "",
@@ -30,17 +30,160 @@ let Geminiend = [
         nextPage: null,
         choices: [["Yes, they were quite delightful.", 3], ["They weren't the most... civilised, but are important nonetheless.", ]],
 
-        position: {x: 549, y: 79}
+        position: {x: 708, y: -2887}
     },
     {
         scene: "",
         who: "Gemini",
         nameCol: "undefined",
         voice: undefined,
-        text: "",
+        text: "How congenial of you.",
         nextPage: 4,
         choices: null,
 
-        position: {x: 92, y: 370}
+        position: {x: 155, y: -2575}
+    },
+    {
+        scene: "",
+        who: "Gemini",
+        nameCol: "undefined",
+        voice: undefined,
+        text: "Typical.",
+        nextPage: 5,
+        choices: null,
+
+        position: {x: 1120, y: -2548}
+    },
+    {
+        scene: "",
+        who: "Gemini",
+        nameCol: "undefined",
+        voice: undefined,
+        text: "How... how were they?",
+        nextPage: 6,
+        choices: null,
+
+        position: {x: 647, y: -2227}
+    },
+    {
+        scene: "",
+        who: "Soul",
+        nameCol: "yellow",
+        voice: undefined,
+        text: "...",
+        nextPage: null,
+        choices: [["They were fine! Nothing to worry about you. Your stress is quite suprising actually, considering there's no real source?", 8], ["Under considerable distress.", 7]],
+
+        position: {x: 612, y: -1958}
+    },
+    {
+        scene: "",
+        who: "Gemini",
+        nameCol: "undefined",
+        voice: undefined,
+        text: "What a suprise.",
+        nextPage: 11,
+        choices: null,
+
+        position: {x: 1121, y: -1582}
+    },
+    {
+        scene: "",
+        who: "Gemini",
+        nameCol: "undefined",
+        voice: undefined,
+        text: "Re...Really?",
+        nextPage: 6,
+        choices: null,
+
+        position: {x: 109, y: -1697}
+    },
+    {
+        scene: "",
+        who: "Soul",
+        nameCol: "yellow",
+        voice: undefined,
+        text: "What do you think?",
+        nextPage: 10,
+        choices: null,
+
+        position: {x: 21, y: -1446}
+    },
+    {
+        scene: "",
+        who: "Gemini",
+        nameCol: "undefined",
+        voice: undefined,
+        text: "Of course not... no.",
+        nextPage: 11,
+        choices: null,
+
+        position: {x: 4, y: -1190}
+    },
+    {
+        scene: "",
+        who: "Gemini",
+        nameCol: "undefined",
+        voice: undefined,
+        text: "Hmph. Let me guess. Those fools had concern for me, handed you an item that's infinetesimely close to the limit of zero.",
+        nextPage: 12,
+        choices: null,
+
+        position: {x: 640, y: -1099}
+    },
+    {
+        scene: "",
+        who: "Gemini",
+        nameCol: "undefined",
+        voice: undefined,
+        text: "Your naivety is astounding. What did I tell you? A worthless effort.",
+        nextPage: 13,
+        choices: null,
+
+        position: {x: 643, y: -745}
+    },
+    {
+        scene: "",
+        who: "Gemini",
+        nameCol: "undefined",
+        voice: undefined,
+        text: "There is no respite for a thing such as I.",
+        nextPage: 14,
+        choices: null,
+
+        position: {x: 643, y: -455}
+    },
+    {
+        scene: "",
+        who: "Gemini",
+        nameCol: "undefined",
+        voice: undefined,
+        text: "And those items that you hold, what, did you think that you fiive some magical aura to",
+        nextPage: 15,
+        choices: null,
+
+        position: {x: 642, y: -165}
+    },
+    {
+        scene: "",
+        who: "Soul",
+        nameCol: "yellow",
+        voice: undefined,
+        text: "...",
+        nextPage: null,
+        choices: [["It's interesting to note that you had concern for what resides in you. You asked me how they were.", ], ["Those items are keepsakes. A reminder of you.", ]],
+
+        position: {x: 393, y: 139}
+    },
+    {
+        scene: "",
+        who: null,
+        nameCol: null,
+        voice: null,
+        text: "",
+        nextPage: 17,
+        choices: null,
+
+        position: {x: 393, y: 521}
     },
 ];
