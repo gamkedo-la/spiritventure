@@ -50,7 +50,7 @@ function Soul() {
         "quantity": 0,
         "animation": teardropAnim,
         "selected": false,
-        "flavor": "A single tear falling to earth."
+        "flavor": "A single tear falling to the planes. It loops back, and observing this phenomenon roots you to the spot and loosens its grasp after you've teared up."
       },
       {
         "name": "Boxing Glove",
@@ -59,7 +59,7 @@ function Soul() {
         "quantity": 0,
         "animation": boxingGlove,
         "selected": false,
-        "flavor": "Protect the fragile hand."
+        "flavor": "Protect the fragile hand. Worn out, holding it brings out a side unknown to even you. One that's frighteningly dangerous."
       },
       {
         "name": "Page",
@@ -68,7 +68,7 @@ function Soul() {
         "quantity": 0,
         "animation": pageFromABook,
         "selected": false,
-        "flavor": "Scribble Scribble."
+        "flavor": "Scribble, Scribble Scribble. That's all you can make out of it. Incoherent ramblings. Looking at it brings only one thought to mind: hurt."
       }
     ];
     this.reset();
