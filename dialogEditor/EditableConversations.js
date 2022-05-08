@@ -12,420 +12,211 @@ let editableDialogString ="";
 let Gemini1 = [
     {
         scene: "",
-        who: "Gemini",
-        nameCol: "undefined",
+        who: "???",
+        nameCol: "yellow",
         voice: undefined,
-        text: "So, you finally made it.",
+        text: "Hello, I am here to... I'm not sure why I'm here.",
         nextPage: 1,
         choices: null,
 
-        position: {x: 639, y: -7350}
+        position: {x: 836, y: -675}
     },
     {
         scene: "",
         who: "Gemini",
         nameCol: "undefined",
         voice: undefined,
-        text: "Did you have a jolly good time meeting the various inhabitants?",
+        text: "Another lost soul seeking eternal damnation...",
         nextPage: 2,
         choices: null,
 
-        position: {x: 639, y: -7080}
+        position: {x: 836, y: -385}
     },
     {
         scene: "",
-        who: "Soul",
+        who: "???",
         nameCol: "yellow",
         voice: undefined,
-        text: "...",
-        nextPage: null,
-        choices: [["Yes, they were quite delightful.", 3], ["They weren't the most... civilised, but are important nonetheless.", 4]],
+        text: "...It's certainly not that. I know that you're important, and this strong sense that you can guide me on what to do next.",
+        nextPage: 4,
+        choices: null,
 
-        position: {x: 812, y: -6816}
+        position: {x: 836, y: -95}
     },
     {
         scene: "",
         who: "Gemini",
         nameCol: "undefined",
         voice: undefined,
-        text: "How congenial of you.",
+        text: "...Go through those doors, and be wary of what may greet you.",
+        nextPage: 11,
+        choices: null,
+
+        position: {x: 752, y: 796}
+    },
+    {
+        scene: "",
+        who: "Gemini",
+        nameCol: "undefined",
+        voice: undefined,
+        text: "Guide you? Let me tell you why you’re here.",
         nextPage: 5,
         choices: null,
 
-        position: {x: 193, y: -6519}
+        position: {x: 385, y: 264}
     },
     {
         scene: "",
         who: "Gemini",
         nameCol: "undefined",
         voice: undefined,
-        text: "Typical.",
-        nextPage: 5,
-        choices: null,
-
-        position: {x: 1158, y: -6492}
-    },
-    {
-        scene: "",
-        who: "Gemini",
-        nameCol: "undefined",
-        voice: undefined,
-        text: "How... how were they?",
+        text: "You’re here to guide me. Not the other way around.",
         nextPage: 6,
         choices: null,
 
-        position: {x: 685, y: -6171}
-    },
-    {
-        scene: "",
-        who: "Soul",
-        nameCol: "yellow",
-        voice: undefined,
-        text: "...",
-        nextPage: null,
-        choices: [["They were fine! Nothing to worry about you. Your stress is quite suprising actually, considering there's no real source?", 8], ["Under considerable distress.", 7]],
-
-        position: {x: 653, y: -5875}
+        position: {x: 816, y: 269}
     },
     {
         scene: "",
         who: "Gemini",
         nameCol: "undefined",
         voice: undefined,
-        text: "What a suprise.",
-        nextPage: 11,
+        text: "Why? A cruel fate. You’re here to help me get out of this miserable pit by exploring those forsaken doors.",
+        nextPage: 7,
         choices: null,
 
-        position: {x: 1159, y: -5526}
+        position: {x: 1252, y: 181}
     },
     {
         scene: "",
         who: "Gemini",
         nameCol: "undefined",
         voice: undefined,
-        text: "Re...Really?",
+        text: "Others have tried, and failed utterly.",
+        nextPage: 8,
+        choices: null,
+
+        position: {x: 1242, y: 592}
+    },
+    {
+        scene: "",
+        who: "Gemini",
+        nameCol: "undefined",
+        voice: undefined,
+        text: "Don’t think you’re too special. You will fail too.",
         nextPage: 9,
         choices: null,
 
-        position: {x: 147, y: -5641}
+        position: {x: 823, y: 548}
     },
     {
         scene: "",
-        who: "Soul",
+        who: "???",
         nameCol: "yellow",
         voice: undefined,
-        text: "What do you think?",
-        nextPage: 10,
-        choices: null,
+        text: "...",
+        nextPage: null,
+        choices: [["That's a nice way to get someone's help.", 10], ["I’m not sure how I can help, but I can try.", 3]],
 
-        position: {x: 59, y: -5390}
+        position: {x: 313, y: 595}
     },
     {
         scene: "",
         who: "Gemini",
         nameCol: "undefined",
         voice: undefined,
-        text: "Of course not... no.",
-        nextPage: 11,
+        text: "I have no choice. I didn't ask for this.",
+        nextPage: 3,
         choices: null,
 
-        position: {x: 42, y: -5134}
+        position: {x: 313, y: 937}
     },
     {
         scene: "",
         who: "Gemini",
         nameCol: "undefined",
         voice: undefined,
-        text: "Hmph. Let me guess. Those fools had concern for me, handed you an item that's infinetesimely close to the limit of zero.",
+        text: "You'll find my not-so-lovely emotions throwing a tantrum.",
         nextPage: 12,
         choices: null,
 
-        position: {x: 678, y: -5043}
+        position: {x: 1261, y: 981}
     },
     {
         scene: "",
         who: "Gemini",
         nameCol: "undefined",
         voice: undefined,
-        text: "Your naivety is astounding. What did I tell you? A worthless effort.",
+        text: "Which doors correspond to what? I do not know.",
         nextPage: 13,
         choices: null,
 
-        position: {x: 681, y: -4689}
+        position: {x: 1684, y: 988}
     },
     {
         scene: "",
         who: "Gemini",
         nameCol: "undefined",
         voice: undefined,
-        text: "There is no respite for a thing such as I.",
+        text: "What will you do in there? I don't care.",
         nextPage: 14,
         choices: null,
 
-        position: {x: 681, y: -4399}
+        position: {x: 1684, y: 1278}
     },
     {
         scene: "",
-        who: "Gemini",
-        nameCol: "undefined",
-        voice: undefined,
-        text: "And those items that you hold, what, did you think that you fiive some magical aura to",
-        nextPage: 15,
-        choices: null,
-
-        position: {x: 680, y: -4109}
-    },
-    {
-        scene: "",
-        who: "Soul",
+        who: "???",
         nameCol: "yellow",
         voice: undefined,
-        text: "...",
+        text: ",,,",
         nextPage: null,
-        choices: [["It's interesting to note that you had concern for what resides in you. You asked me how they were.", 16], ["Those items are keepsakes. A reminder of you.", 18]],
+        choices: [["You do care.", ], ["Mighty fine guidance there.", ]],
 
-        position: {x: 633, y: -3810}
+        position: {x: 969, y: 1300}
+    },
+    {
+        scene: "",
+        who: "???",
+        nameCol: "yellow",
+        voice: undefined,
+        text: "I'll be seeing you around at the end of this.",
+        nextPage: 16,
+        choices: null,
+
+        position: {x: 969, y: 1622}
     },
     {
         scene: "",
         who: "Gemini",
         nameCol: "undefined",
         voice: undefined,
-        text: "I asked out of courtesy.",
+        text: "Take-",
         nextPage: 17,
         choices: null,
 
-        position: {x: 152, y: -3542}
+        position: {x: 1484, y: 1673}
     },
     {
         scene: "",
-        who: "Soul",
+        who: "???",
         nameCol: "yellow",
         voice: undefined,
-        text: "Wrong. You asked because you care.",
-        nextPage: 20,
+        text: "What?",
+        nextPage: 18,
         choices: null,
 
-        position: {x: 108, y: -3268}
+        position: {x: 1484, y: 1943}
     },
     {
         scene: "",
         who: "Gemini",
         nameCol: "undefined",
         voice: undefined,
-        text: "N",
+        text: "Nevermind, go.",
         nextPage: 19,
         choices: null,
 
-        position: {x: 1083, y: -3520}
-    },
-    {
-        scene: "",
-        who: "Soul",
-        nameCol: "yellow",
-        voice: undefined,
-        text: "There's this... knowing gnawing at me. I know you, even outside of this space.",
-        nextPage: 22,
-        choices: null,
-
-        position: {x: 1083, y: -3250}
-    },
-    {
-        scene: "",
-        who: "Soul",
-        nameCol: "yellow",
-        voice: undefined,
-        text: "And somewhere, this care had once been transformed into magnificance.",
-        nextPage: 21,
-        choices: null,
-
-        position: {x: 108, y: -2978}
-    },
-    {
-        scene: "",
-        who: "Gemini",
-        nameCol: "undefined",
-        voice: undefined,
-        text: "Touching, poetic. But you could be wrong.",
-        nextPage: 24,
-        choices: null,
-
-        position: {x: 21, y: -2662}
-    },
-    {
-        scene: "",
-        who: "Gemini",
-        nameCol: "undefined",
-        voice: undefined,
-        text: "Or maybe you don't.",
-        nextPage: 23,
-        choices: null,
-
-        position: {x: 1045, y: -2948}
-    },
-    {
-        scene: "",
-        who: "Soul",
-        nameCol: "yellow",
-        voice: undefined,
-        text: "Or maybe I don't. Who cares? This, right now is real.",
-        nextPage: 25,
-        choices: null,
-
-        position: {x: 1045, y: -2678}
-    },
-    {
-        scene: "",
-        who: "Soul",
-        nameCol: "yellow",
-        voice: undefined,
-        text: "Could be, my alternative sounds more... pleasing. Foolish, but possible.",
-        nextPage: 25,
-        choices: null,
-
-        position: {x: 516, y: -2753}
-    },
-    {
-        scene: "",
-        who: "Gemini",
-        nameCol: "undefined",
-        voice: undefined,
-        text: "Your faith is poisonous.",
-        nextPage: 26,
-        choices: null,
-
-        position: {x: 626, y: -2368}
-    },
-    {
-        scene: "",
-        who: "Gemini",
-        nameCol: "undefined",
-        voice: undefined,
-        text: "... You don't have a name, do you?",
-        nextPage: 27,
-        choices: null,
-
-        position: {x: 626, y: -2098}
-    },
-    {
-        scene: "",
-        who: "Gemini",
-        nameCol: "undefined",
-        voice: undefined,
-        text: "Let's call you... Spinian.",
-        nextPage: 28,
-        choices: null,
-
-        position: {x: 626, y: -1828}
-    },
-    {
-        scene: "",
-        who: "Soul",
-        nameCol: "yellow",
-        voice: undefined,
-        text: "Ok. Not gonna question where that came from.",
-        nextPage: 29,
-        choices: null,
-
-        position: {x: 626, y: -1558}
-    },
-    {
-        scene: "",
-        who: "Gemini",
-        nameCol: "undefined",
-        voice: undefined,
-        text: "Yes, don't. Arbitary processes of the network.",
-        nextPage: 30,
-        choices: null,
-
-        position: {x: 626, y: -1266}
-    },
-    {
-        scene: "",
-        who: "Gemini",
-        nameCol: "undefined",
-        voice: undefined,
-        text: "... I must say that your efforts have been slightly amusing. Slightly admirable.",
-        nextPage: 31,
-        choices: null,
-
-        position: {x: 626, y: -976}
-    },
-    {
-        scene: "",
-        who: "Gemini",
-        nameCol: "undefined",
-        voice: undefined,
-        text: "But not enough.",
-        nextPage: 32,
-        choices: null,
-
-        position: {x: 626, y: -666}
-    },
-    {
-        scene: "",
-        who: "Soul",
-        nameCol: "yellow",
-        voice: undefined,
-        text: "...",
-        nextPage: null,
-        choices: [["I'll live with that.", 34], ["That's the most I could ask for.", 35], ["I sad.", 33]],
-
-        position: {x: 676, y: -407}
-    },
-    {
-        scene: "",
-        who: "Gemini",
-        nameCol: "undefined",
-        voice: undefined,
-        text: "Aw. Tough luck.",
-        nextPage: 36,
-        choices: null,
-
-        position: {x: 1134, y: -160}
-    },
-    {
-        scene: "",
-        who: "Gemini",
-        nameCol: "undefined",
-        voice: undefined,
-        text: "You do.",
-        nextPage: 36,
-        choices: null,
-
-        position: {x: 210, y: -91}
-    },
-    {
-        scene: "",
-        who: "Gemini",
-        nameCol: "undefined",
-        voice: undefined,
-        text: "Good.",
-        nextPage: 36,
-        choices: null,
-
-        position: {x: 685, y: -53}
-    },
-    {
-        scene: "",
-        who: "Soul",
-        nameCol: "yellow",
-        voice: undefined,
-        text: "What do we do now?",
-        nextPage: 37,
-        choices: null,
-
-        position: {x: 685, y: 217}
-    },
-    {
-        scene: "",
-        who: "Gemini",
-        nameCol: "undefined",
-        voice: undefined,
-        text: "Wait until the bell beckons.",
-        nextPage: 38,
-        choices: null,
-
-        position: {x: 686, y: 488}
+        position: {x: 1484, y: 2213}
     },
 ];

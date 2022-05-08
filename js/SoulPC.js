@@ -309,8 +309,8 @@ function Soul() {
   }
 
   this.draw = function () {
-    var horizonBob = Math.sin(bobPhase*0.10)*10;
-    var verticalBob = Math.sin(bobPhase)*10;
+    var horizonBob = Math.sin(bobPhase*0.10)*5;
+    var verticalBob = Math.sin(bobPhase)*5;
     drawBitmapCenteredAtLocationWithRotation(this.myBitmap, this.x + horizonBob + camX, this.y + verticalBob + camY, 0.0);
     
   }

@@ -1030,18 +1030,17 @@ let Satah = [
 ];
 
 ///////////
-
 let Gemini1 = [
     {
         scene: "",
         who: "???",
-        nameCol: "yellow",
+        nameCol: "undefined",
         voice: undefined,
         text: "Hello, I am here to... I'm not sure why I'm here.",
         nextPage: 1,
         choices: null,
 
-        position: {x: 836, y: -675}
+        position: {x: 241, y: -1893}
     },
     {
         scene: "",
@@ -1052,18 +1051,18 @@ let Gemini1 = [
         nextPage: 2,
         choices: null,
 
-        position: {x: 836, y: -385}
+        position: {x: 241, y: -1603}
     },
     {
         scene: "",
         who: "???",
-        nameCol: "yellow",
+        nameCol: "undefined",
         voice: undefined,
         text: "...It's certainly not that. I know that you're important, and this strong sense that you can guide me on what to do next.",
         nextPage: 4,
         choices: null,
 
-        position: {x: 836, y: -95}
+        position: {x: 241, y: -1313}
     },
     {
         scene: "",
@@ -1074,7 +1073,7 @@ let Gemini1 = [
         nextPage: 11,
         choices: null,
 
-        position: {x: 752, y: 796}
+        position: {x: 157, y: -422}
     },
     {
         scene: "",
@@ -1085,7 +1084,7 @@ let Gemini1 = [
         nextPage: 5,
         choices: null,
 
-        position: {x: 385, y: 264}
+        position: {x: -210, y: -954}
     },
     {
         scene: "",
@@ -1096,7 +1095,7 @@ let Gemini1 = [
         nextPage: 6,
         choices: null,
 
-        position: {x: 816, y: 269}
+        position: {x: 221, y: -949}
     },
     {
         scene: "",
@@ -1107,7 +1106,7 @@ let Gemini1 = [
         nextPage: 7,
         choices: null,
 
-        position: {x: 1252, y: 181}
+        position: {x: 657, y: -1037}
     },
     {
         scene: "",
@@ -1118,7 +1117,7 @@ let Gemini1 = [
         nextPage: 8,
         choices: null,
 
-        position: {x: 1242, y: 592}
+        position: {x: 647, y: -626}
     },
     {
         scene: "",
@@ -1129,18 +1128,18 @@ let Gemini1 = [
         nextPage: 9,
         choices: null,
 
-        position: {x: 823, y: 548}
+        position: {x: 228, y: -670}
     },
     {
         scene: "",
         who: "???",
-        nameCol: "yellow",
+        nameCol: "undefined",
         voice: undefined,
         text: "...",
         nextPage: null,
         choices: [["That's a nice way to get someone's help.", 10], ["I’m not sure how I can help, but I can try.", 3]],
 
-        position: {x: 313, y: 595}
+        position: {x: -282, y: -623}
     },
     {
         scene: "",
@@ -1151,7 +1150,7 @@ let Gemini1 = [
         nextPage: 3,
         choices: null,
 
-        position: {x: 313, y: 937}
+        position: {x: -282, y: -281}
     },
     {
         scene: "",
@@ -1162,7 +1161,7 @@ let Gemini1 = [
         nextPage: 12,
         choices: null,
 
-        position: {x: 1261, y: 981}
+        position: {x: 666, y: -237}
     },
     {
         scene: "",
@@ -1173,7 +1172,7 @@ let Gemini1 = [
         nextPage: 13,
         choices: null,
 
-        position: {x: 1684, y: 988}
+        position: {x: 1089, y: -230}
     },
     {
         scene: "",
@@ -1184,29 +1183,29 @@ let Gemini1 = [
         nextPage: 14,
         choices: null,
 
-        position: {x: 1684, y: 1278}
+        position: {x: 1089, y: 60}
     },
     {
         scene: "",
         who: "???",
-        nameCol: "yellow",
+        nameCol: "undefined",
         voice: undefined,
         text: ",,,",
         nextPage: null,
-        choices: [["You do care.", ], ["Mighty fine guidance there.", ]],
+        choices: [["You do care.", 15], ["Mighty fine guidance there.", 15]],
 
-        position: {x: 969, y: 1300}
+        position: {x: 374, y: 82}
     },
     {
         scene: "",
         who: "???",
-        nameCol: "yellow",
+        nameCol: "undefined",
         voice: undefined,
         text: "I'll be seeing you around at the end of this.",
         nextPage: 16,
         choices: null,
 
-        position: {x: 969, y: 1622}
+        position: {x: 375, y: 402}
     },
     {
         scene: "",
@@ -1217,18 +1216,18 @@ let Gemini1 = [
         nextPage: 17,
         choices: null,
 
-        position: {x: 1484, y: 1673}
+        position: {x: 889, y: 455}
     },
     {
         scene: "",
         who: "???",
-        nameCol: "yellow",
+        nameCol: "undefined",
         voice: undefined,
         text: "What?",
         nextPage: 18,
         choices: null,
 
-        position: {x: 1484, y: 1943}
+        position: {x: 889, y: 725}
     },
     {
         scene: "",
@@ -1239,7 +1238,7 @@ let Gemini1 = [
         nextPage: 19,
         choices: null,
 
-        position: {x: 1484, y: 2213}
+        position: {x: 889, y: 995}
     },
 ];
 
