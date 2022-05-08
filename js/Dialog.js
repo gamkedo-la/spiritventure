@@ -274,6 +274,7 @@ function drawDialog() {
 
     // draw choice options
     if (dialogActiveConvo[dialogConvoStep].choices != null) {
+         document.getElementById('gameCanvas').style.cursor = 'pointer';
         //console.log(dialogActiveConvo[dialogConvoStep].choices.length+" AVAILABLE CHOICES AT DIALOG STEP "+dialogConvoStep);
         canvasContext.font = dialogChoiceFontSize + 'px Arial';
         for (let i = 0; i < dialogActiveConvo[dialogConvoStep].choices.length; i++) {
@@ -295,6 +296,7 @@ function drawDialog() {
             }
         }
     } else {
+        document.getElementById('gameCanvas').style.cursor = 'default';
         //console.log("NO CHOICES AT DIALOG STEP "+dialogConvoStep);
     }
 

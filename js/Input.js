@@ -148,6 +148,7 @@ function keyReleased(evt) {
         break;
       case KEY_I:
         showingInventory = !showingInventory; //toggle
+        document.getElementById('gameCanvas').style.cursor = 'pointer';
         break;
       case KEY_M:
         volumeControl.toggleMute();

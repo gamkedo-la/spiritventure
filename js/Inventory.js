@@ -19,6 +19,7 @@ function dist(x1, y1, x2, y2){
 
 function drawAnimatedInventory() {
     if (showingInventory == false) {
+        document.getElementById('gameCanvas').style.cursor = 'default';
         return;
     }
     inventoryAnimFrameDelay--;

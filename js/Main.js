@@ -103,7 +103,6 @@ function updateEverything() {
         p1.move();
 
       }
-     
       break;
 
     case STATE_PAUSE:
@@ -248,6 +247,7 @@ function DrawClickToPlay() {
   var wobble = Math.cos(performance.now()/1000)*25;
   drawText('Click to Play',281,311+wobble,42,'white');
   drawText('Click to Play',280,310+wobble,42,'black');
+  canvasContext.drawImage(playerPic,310-wobble,300+wobble);
 
   drawText('Click here to view credits',280-wobble/5,435,22,'black');
 }
