@@ -1356,7 +1356,7 @@ let Gemini_end = [
         nextPage: 1,
         choices: null,
 
-        position: {x: 956, y: 324}
+        position: {x: 639, y: -7350}
     },
     {
         scene: "",
@@ -1367,18 +1367,18 @@ let Gemini_end = [
         nextPage: 2,
         choices: null,
 
-        position: {x: 956, y: 594}
+        position: {x: 639, y: -7080}
     },
     {
         scene: "",
-        who: "???",
+        who: "Soul",
         nameCol: "yellow",
         voice: undefined,
         text: "...",
         nextPage: null,
-        choices: [["Yes, they were quite delightful.", 3], ["They weren't the most... civilized, but are important nonetheless.", 4]],
+        choices: [["Yes, they were quite delightful.", 3], ["They weren't the most... civilised, but are important nonetheless.", 4]],
 
-        position: {x: 1129, y: 858}
+        position: {x: 812, y: -6816}
     },
     {
         scene: "",
@@ -1386,10 +1386,10 @@ let Gemini_end = [
         nameCol: "undefined",
         voice: undefined,
         text: "How congenial of you.",
-        nextPage: 4,
+        nextPage: 5,
         choices: null,
 
-        position: {x: 510, y: 1155}
+        position: {x: 193, y: -6519}
     },
     {
         scene: "",
@@ -1400,7 +1400,7 @@ let Gemini_end = [
         nextPage: 5,
         choices: null,
 
-        position: {x: 1475, y: 1182}
+        position: {x: 1158, y: -6492}
     },
     {
         scene: "",
@@ -1411,29 +1411,29 @@ let Gemini_end = [
         nextPage: 6,
         choices: null,
 
-        position: {x: 1002, y: 1503}
+        position: {x: 685, y: -6171}
     },
     {
         scene: "",
-        who: "???",
+        who: "Soul",
         nameCol: "yellow",
         voice: undefined,
         text: "...",
         nextPage: null,
-        choices: [["They were fine! Nothing to worry about you. Your stress is quite surprising actually, considering there's no real source?", 8], ["Under considerable distress.", 7]],
+        choices: [["They were fine! Nothing to worry about you. Your stress is quite suprising actually, considering there's no real source?", 8], ["Under considerable distress.", 7]],
 
-        position: {x: 970, y: 1799}
+        position: {x: 653, y: -5875}
     },
     {
         scene: "",
         who: "Gemini",
         nameCol: "undefined",
         voice: undefined,
-        text: "What a surprise.",
+        text: "What a suprise.",
         nextPage: 11,
         choices: null,
 
-        position: {x: 1476, y: 2148}
+        position: {x: 1159, y: -5526}
     },
     {
         scene: "",
@@ -1441,21 +1441,21 @@ let Gemini_end = [
         nameCol: "undefined",
         voice: undefined,
         text: "Re...Really?",
-        nextPage: 6,
+        nextPage: 9,
         choices: null,
 
-        position: {x: 464, y: 2033}
+        position: {x: 147, y: -5641}
     },
     {
         scene: "",
-        who: "???",
+        who: "Soul",
         nameCol: "yellow",
         voice: undefined,
         text: "What do you think?",
         nextPage: 10,
         choices: null,
 
-        position: {x: 376, y: 2284}
+        position: {x: 59, y: -5390}
     },
     {
         scene: "",
@@ -1466,18 +1466,18 @@ let Gemini_end = [
         nextPage: 11,
         choices: null,
 
-        position: {x: 359, y: 2540}
+        position: {x: 42, y: -5134}
     },
     {
         scene: "",
         who: "Gemini",
         nameCol: "undefined",
         voice: undefined,
-        text: "Hmph. Let me guess. Those fools had concern for me, handed you an item that's infinitesimally close to the limit of zero.",
+        text: "Hmph. Let me guess. Those fools had concern for me, handed you an item that's infinetesimely close to the limit of zero.",
         nextPage: 12,
         choices: null,
 
-        position: {x: 995, y: 2631}
+        position: {x: 678, y: -5043}
     },
     {
         scene: "",
@@ -1488,7 +1488,7 @@ let Gemini_end = [
         nextPage: 13,
         choices: null,
 
-        position: {x: 998, y: 2985}
+        position: {x: 681, y: -4689}
     },
     {
         scene: "",
@@ -1499,29 +1499,29 @@ let Gemini_end = [
         nextPage: 14,
         choices: null,
 
-        position: {x: 998, y: 3275}
+        position: {x: 681, y: -4399}
     },
     {
         scene: "",
         who: "Gemini",
         nameCol: "undefined",
         voice: undefined,
-        text: "And those items that you hold, what, did you think that you it contains some magical aura to-",
+        text: "And those items that you hold, what, did you think that you fiive some magical aura to",
         nextPage: 15,
         choices: null,
 
-        position: {x: 997, y: 3565}
+        position: {x: 680, y: -4109}
     },
     {
         scene: "",
-        who: "???",
+        who: "Soul",
         nameCol: "yellow",
         voice: undefined,
         text: "...",
         nextPage: null,
         choices: [["It's interesting to note that you had concern for what resides in you. You asked me how they were.", 16], ["Those items are keepsakes. A reminder of you.", 18]],
 
-        position: {x: 950, y: 3864}
+        position: {x: 633, y: -3810}
     },
     {
         scene: "",
@@ -1532,18 +1532,18 @@ let Gemini_end = [
         nextPage: 17,
         choices: null,
 
-        position: {x: 469, y: 4132}
+        position: {x: 152, y: -3542}
     },
     {
         scene: "",
-        who: "???",
+        who: "Soul",
         nameCol: "yellow",
         voice: undefined,
         text: "Wrong. You asked because you care.",
         nextPage: 20,
         choices: null,
 
-        position: {x: 425, y: 4406}
+        position: {x: 108, y: -3268}
     },
     {
         scene: "",
@@ -1554,29 +1554,29 @@ let Gemini_end = [
         nextPage: 19,
         choices: null,
 
-        position: {x: 1400, y: 4154}
+        position: {x: 1083, y: -3520}
     },
     {
         scene: "",
-        who: "???",
+        who: "Soul",
         nameCol: "yellow",
         voice: undefined,
         text: "There's this... knowing gnawing at me. I know you, even outside of this space.",
         nextPage: 22,
         choices: null,
 
-        position: {x: 1400, y: 4424}
+        position: {x: 1083, y: -3250}
     },
     {
         scene: "",
-        who: "???",
+        who: "Soul",
         nameCol: "yellow",
         voice: undefined,
-        text: "And somewhere, this care had once been transformed into magnificence.",
+        text: "And somewhere, this care had once been transformed into magnificance.",
         nextPage: 21,
         choices: null,
 
-        position: {x: 425, y: 4696}
+        position: {x: 108, y: -2978}
     },
     {
         scene: "",
@@ -1587,7 +1587,7 @@ let Gemini_end = [
         nextPage: 24,
         choices: null,
 
-        position: {x: 338, y: 5012}
+        position: {x: 21, y: -2662}
     },
     {
         scene: "",
@@ -1598,29 +1598,29 @@ let Gemini_end = [
         nextPage: 23,
         choices: null,
 
-        position: {x: 1362, y: 4726}
+        position: {x: 1045, y: -2948}
     },
     {
         scene: "",
-        who: "???",
+        who: "Soul",
         nameCol: "yellow",
         voice: undefined,
         text: "Or maybe I don't. Who cares? This, right now is real.",
         nextPage: 25,
         choices: null,
 
-        position: {x: 1362, y: 4996}
+        position: {x: 1045, y: -2678}
     },
     {
         scene: "",
-        who: "???",
+        who: "Soul",
         nameCol: "yellow",
         voice: undefined,
         text: "Could be, my alternative sounds more... pleasing. Foolish, but possible.",
         nextPage: 25,
         choices: null,
 
-        position: {x: 833, y: 4921}
+        position: {x: 516, y: -2753}
     },
     {
         scene: "",
@@ -1631,7 +1631,7 @@ let Gemini_end = [
         nextPage: 26,
         choices: null,
 
-        position: {x: 943, y: 5306}
+        position: {x: 626, y: -2368}
     },
     {
         scene: "",
@@ -1642,7 +1642,7 @@ let Gemini_end = [
         nextPage: 27,
         choices: null,
 
-        position: {x: 943, y: 5576}
+        position: {x: 626, y: -2098}
     },
     {
         scene: "",
@@ -1653,29 +1653,29 @@ let Gemini_end = [
         nextPage: 28,
         choices: null,
 
-        position: {x: 943, y: 5846}
+        position: {x: 626, y: -1828}
     },
     {
         scene: "",
-        who: "Spinian",
+        who: "Soul",
         nameCol: "yellow",
         voice: undefined,
         text: "Ok. Not gonna question where that came from.",
         nextPage: 29,
         choices: null,
 
-        position: {x: 943, y: 6116}
+        position: {x: 626, y: -1558}
     },
     {
         scene: "",
         who: "Gemini",
         nameCol: "undefined",
         voice: undefined,
-        text: "Yes, don't. Arbitrary processes of a network.",
+        text: "Yes, don't. Arbitary processes of the network.",
         nextPage: 30,
         choices: null,
 
-        position: {x: 943, y: 6408}
+        position: {x: 626, y: -1266}
     },
     {
         scene: "",
@@ -1686,7 +1686,7 @@ let Gemini_end = [
         nextPage: 31,
         choices: null,
 
-        position: {x: 943, y: 6698}
+        position: {x: 626, y: -976}
     },
     {
         scene: "",
@@ -1697,18 +1697,18 @@ let Gemini_end = [
         nextPage: 32,
         choices: null,
 
-        position: {x: 943, y: 7008}
+        position: {x: 626, y: -666}
     },
     {
         scene: "",
-        who: "Spinian",
+        who: "Soul",
         nameCol: "yellow",
         voice: undefined,
         text: "...",
         nextPage: null,
         choices: [["I'll live with that.", 34], ["That's the most I could ask for.", 35], ["I sad.", 33]],
 
-        position: {x: 993, y: 7267}
+        position: {x: 676, y: -407}
     },
     {
         scene: "",
@@ -1719,7 +1719,7 @@ let Gemini_end = [
         nextPage: 36,
         choices: null,
 
-        position: {x: 1451, y: 7514}
+        position: {x: 1134, y: -160}
     },
     {
         scene: "",
@@ -1730,7 +1730,7 @@ let Gemini_end = [
         nextPage: 36,
         choices: null,
 
-        position: {x: 527, y: 7583}
+        position: {x: 210, y: -91}
     },
     {
         scene: "",
@@ -1741,18 +1741,18 @@ let Gemini_end = [
         nextPage: 36,
         choices: null,
 
-        position: {x: 1002, y: 7621}
+        position: {x: 685, y: -53}
     },
     {
         scene: "",
-        who: "Spinian",
+        who: "Soul",
         nameCol: "yellow",
         voice: undefined,
         text: "What do we do now?",
         nextPage: 37,
         choices: null,
 
-        position: {x: 1002, y: 7891}
+        position: {x: 685, y: 217}
     },
     {
         scene: "",
@@ -1763,7 +1763,7 @@ let Gemini_end = [
         nextPage: 38,
         choices: null,
 
-        position: {x: 1003, y: 8162}
+        position: {x: 686, y: 488}
     },
 ];
 
