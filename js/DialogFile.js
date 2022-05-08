@@ -1376,7 +1376,7 @@ let Gemini_end = [
         voice: undefined,
         text: "...",
         nextPage: null,
-        choices: [["Yes, they were quite delightful.", 3], ["They weren't the most... civilised, but are important nonetheless.", 4]],
+        choices: [["Yes, they were quite delightful.", 3], ["They weren't the most... civilized, but are important nonetheless.", 4]],
 
         position: {x: 812, y: -6816}
     },
@@ -1420,7 +1420,7 @@ let Gemini_end = [
         voice: undefined,
         text: "...",
         nextPage: null,
-        choices: [["They were fine! Nothing to worry about you. Your stress is quite suprising actually, considering there's no real source?", 8], ["Under considerable distress.", 7]],
+        choices: [["They were fine! Nothing to worry about you. Your stress is quite surprising actually, considering there's no real source?", 8], ["Under considerable distress.", 7]],
 
         position: {x: 653, y: -5875}
     },
@@ -1429,7 +1429,7 @@ let Gemini_end = [
         who: "Gemini",
         nameCol: "undefined",
         voice: undefined,
-        text: "What a suprise.",
+        text: "What a surprise.",
         nextPage: 11,
         choices: null,
 
@@ -1473,7 +1473,7 @@ let Gemini_end = [
         who: "Gemini",
         nameCol: "undefined",
         voice: undefined,
-        text: "Hmph. Let me guess. Those fools had concern for me, handed you an item that's infinetesimely close to the limit of zero.",
+        text: "Hmph. Let me guess. Those fools had concern for me, handed you an item that's infinitesimally close to the limit of zero.",
         nextPage: 12,
         choices: null,
 
@@ -1506,7 +1506,7 @@ let Gemini_end = [
         who: "Gemini",
         nameCol: "undefined",
         voice: undefined,
-        text: "And those items that you hold, what, did you think that you fiive some magical aura to",
+        text: "And those items that you hold, what, did you think that you it could bestow some magical aura to",
         nextPage: 15,
         choices: null,
 
@@ -1550,7 +1550,7 @@ let Gemini_end = [
         who: "Gemini",
         nameCol: "undefined",
         voice: undefined,
-        text: "N",
+        text: "N-",
         nextPage: 19,
         choices: null,
 
@@ -1572,7 +1572,7 @@ let Gemini_end = [
         who: "Soul",
         nameCol: "yellow",
         voice: undefined,
-        text: "And somewhere, this care had once been transformed into magnificance.",
+        text: "And somewhere, this care had once been transformed into magnificence.",
         nextPage: 21,
         choices: null,
 
@@ -1671,7 +1671,7 @@ let Gemini_end = [
         who: "Gemini",
         nameCol: "undefined",
         voice: undefined,
-        text: "Yes, don't. Arbitary processes of the network.",
+        text: "Yes, don't. Arbitrary processes of my network.",
         nextPage: 30,
         choices: null,
 
