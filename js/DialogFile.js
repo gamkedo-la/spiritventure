@@ -37,7 +37,7 @@ let Tripa = [
         who: "Tripa",
         nameCol: "undefined",
         voice: undefined,
-        text: "...How dare you enter here without my permission?",
+        text: "...How dare do you enter here without my permission?",
         nextPage: 4,
         choices: null,
 
@@ -403,7 +403,7 @@ let Satah = [
         who: "Satah",
         nameCol: "undefined",
         voice: undefined,
-        text: "How do I slow down what's inside? This piece of machinery, so utterly indescipherable.",
+        text: "How do I slow down what's inside? This piece of machinery, so utterly indecipherable.",
         nextPage: 12,
         choices: null,
 
@@ -524,7 +524,7 @@ let Satah = [
         who: "???",
         nameCol: "yellow",
         voice: undefined,
-        text: "I'm here to help, or atleast I think I am. From what I know, your host seems to in distress which is putting it lightly really.",
+        text: "I'm here to help, or at least I think I am. From what I know, your host seems to in distress which is putting it lightly really.",
         nextPage: 23,
         choices: null,
 
@@ -678,7 +678,7 @@ let Satah = [
         who: "???",
         nameCol: "yellow",
         voice: undefined,
-        text: "Presumptous, no?",
+        text: "Presumptuous, no?",
         nextPage: 37,
         choices: null,
 
@@ -1165,7 +1165,7 @@ let Gemini_end = [
         voice: undefined,
         text: "...",
         nextPage: null,
-        choices: [["Yes, they were quite delightful.", 3], ["They weren't the most... civilised, but are important nonetheless.", 4]],
+        choices: [["Yes, they were quite delightful.", 3], ["They weren't the most... civilized, but are important nonetheless.", 4]],
 
         position: {x: 1129, y: 858}
     },
@@ -1209,7 +1209,7 @@ let Gemini_end = [
         voice: undefined,
         text: "...",
         nextPage: null,
-        choices: [["They were fine! Nothing to worry about you. Your stress is quite suprising actually, considering there's no real source?", 8], ["Under considerable distress.", 7]],
+        choices: [["They were fine! Nothing to worry about you. Your stress is quite surprising actually, considering there's no real source?", 8], ["Under considerable distress.", 7]],
 
         position: {x: 970, y: 1799}
     },
@@ -1218,7 +1218,7 @@ let Gemini_end = [
         who: "Gemini",
         nameCol: "undefined",
         voice: undefined,
-        text: "What a suprise.",
+        text: "What a surprise.",
         nextPage: 11,
         choices: null,
 
@@ -1262,7 +1262,7 @@ let Gemini_end = [
         who: "Gemini",
         nameCol: "undefined",
         voice: undefined,
-        text: "Hmph. Let me guess. Those fools had concern for me, handed you an item that's infinetesimely close to the limit of zero.",
+        text: "Hmph. Let me guess. Those fools had concern for me, handed you an item that's infinitesimally close to the limit of zero.",
         nextPage: 12,
         choices: null,
 
@@ -1295,7 +1295,7 @@ let Gemini_end = [
         who: "Gemini",
         nameCol: "undefined",
         voice: undefined,
-        text: "And those items that you hold, what, did you think that you fiive some magical aura to",
+        text: "And those items that you hold, what, did you think that you it contains some magical aura to-",
         nextPage: 15,
         choices: null,
 
@@ -1361,7 +1361,7 @@ let Gemini_end = [
         who: "???",
         nameCol: "yellow",
         voice: undefined,
-        text: "And somewhere, this care had once been transformed into magnificance.",
+        text: "And somewhere, this care had once been transformed into magnificence.",
         nextPage: 21,
         choices: null,
 
@@ -1460,7 +1460,7 @@ let Gemini_end = [
         who: "Gemini",
         nameCol: "undefined",
         voice: undefined,
-        text: "Yes, don't. Arbitary processes of a network.",
+        text: "Yes, don't. Arbitrary processes of a network.",
         nextPage: 30,
         choices: null,
 
