@@ -42,8 +42,8 @@ function drawAnimatedInventory() {
 
     //menu heading
     let headerHeight = 50;
-    let headerWidth = 200;
-    let headerXOffset = - 50; 
+    let headerWidth = 160;
+    let headerXOffset = -262; 
     fillRoundedRectangle(
         canvasContext,
         (canvas.width - inventoryMargin * 2) / 2 - headerWidth + 300 / 2 + headerXOffset, //x, TODO: Center properly over the menu
@@ -56,8 +56,8 @@ function drawAnimatedInventory() {
     canvasContext.fillStyle = '#ffffff';
     canvasContext.font = 26 + 'px Arial';
     canvasContext.fillText(
-        "INVENTORY",
-        (canvas.width - inventoryMargin * 2) / 2 - headerWidth / 2 + 80 + headerXOffset, //x 
+        "Remnants",
+        (canvas.width - inventoryMargin * 2) / 2 - headerWidth / 2 + 80 + headerXOffset +5 , //x 
         inventoryMargin + 10 // y
     )
 
@@ -136,7 +136,7 @@ function drawInfoPanel(startX, startY, invItem) {
     let width = 240;
     let padding = 10;
     let verticalExtra = 30;
-    colorRect(startX, startY - verticalExtra, 240, 330 + verticalExtra*2, 'rgba(45,41,37,1.0)');
+    fillRoundedRectangle(canvasContext,startX, startY - verticalExtra, 240, 330 + verticalExtra*2, 'rgba(45,41,37,0.8)',4);
     if (invItem){
         canvasContext.fillStyle = '#f7f6f2';
         canvasContext.fillText(invItem.name, startX + 10, startY + 30, width - 2 * padding);
