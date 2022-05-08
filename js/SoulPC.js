@@ -262,6 +262,7 @@ function Soul() {
         break;
       case TILE_DESPOND:
         if (dialogDoneFlag == false){
+          NPCparticles();
           var pos = getPixelCoordAtTileIndex(walkIntoTileIndex);
           wrapText = [testConvo2[0].text];
           lineWrap();
@@ -271,6 +272,7 @@ function Soul() {
         break;
       case TILE_SATAH:
         if (dialogDoneFlag  == false){
+          NPCparticles();
           var pos = getPixelCoordAtTileIndex(walkIntoTileIndex);
           wrapText = [testConvo2[0].text];
           lineWrap();
@@ -280,6 +282,7 @@ function Soul() {
           break;
       case TILE_TRIPA:
           if (dialogDoneFlag == false){
+            NPCparticles();
             var pos = getPixelCoordAtTileIndex(walkIntoTileIndex);
             wrapText = [testConvo2[0].text];
             lineWrap();

@@ -837,7 +837,7 @@ let Gemini1 = [
         who: "Gemini",
         nameCol: "undefined",
         voice: undefined,
-        text: "Another lost ??? seeking eternal damnation...",
+        text: "Another lost soul seeking eternal damnation...",
         nextPage: 2,
         choices: null,
 

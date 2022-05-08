@@ -118,6 +118,7 @@ function tileTypeHasTransparency(checkTileType) {
           checkTileType == TILE_DOOR ||
           checkTileType == TILE_MIND ||
           checkTileType == TILE_DESPOND ||
+          checkTileType == TILE_GEMINI_END ||
           checkTileType == TILE_SATAH ||
           checkTileType == TILE_TRIPA ||
           checkTileType == TILE_VASE
