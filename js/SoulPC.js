@@ -266,7 +266,7 @@ function Soul() {
           var pos = getPixelCoordAtTileIndex(walkIntoTileIndex);
           wrapText = [testConvo2[0].text];
           lineWrap();
-          setupDialog(Despond, pos[0] - (dialogW / 2) + (TILE_W / 2), pos[1] - (dialogHOffset + (dialogHPerLine * wrapText.length)) - (TILE_H * 2.4));
+          setupDialog(Despond, pos[0] - (dialogW / 2) + (TILE_W / 2) -50, pos[1] - (dialogHOffset + (dialogHPerLine * wrapText.length)) - (TILE_H * 2.4)-50);
           sfx('dialog_start.wav');
         }
         break;
@@ -286,7 +286,7 @@ function Soul() {
             var pos = getPixelCoordAtTileIndex(walkIntoTileIndex);
             wrapText = [testConvo2[0].text];
             lineWrap();
-            setupDialog(Tripa, pos[0] - (dialogW / 2) + (TILE_W / 2), pos[1] - (dialogHOffset + (dialogHPerLine * wrapText.length)) - (TILE_H * 2.4));
+            setupDialog(Tripa, pos[0] - (dialogW / 2) + (TILE_W / 2) + 50, pos[1] - (dialogHOffset + (dialogHPerLine * wrapText.length)) - (TILE_H * 2.4)+ 50);
             sfx('dialog_start.wav');
           }
           break;
@@ -300,6 +300,7 @@ function Soul() {
             setupDialog(Gemini_end, pos[0] - (dialogW / 2) + (TILE_W / 2), pos[1] - (dialogHOffset + (dialogHPerLine * wrapText.length)) - (TILE_H * 2.4));
             sfx('dialog_start.wav');
           }
+          
           break;
       case TILE_WALL:
       default:
@@ -309,8 +310,8 @@ function Soul() {
   }
 
   this.draw = function () {
-    var horizonBob = Math.sin(bobPhase*0.10)*5;
-    var verticalBob = Math.sin(bobPhase)*5;
+    var horizonBob = Math.sin(bobPhase*0.10)*10;
+    var verticalBob = Math.sin(bobPhase)*10;
     drawBitmapCenteredAtLocationWithRotation(this.myBitmap, this.x + horizonBob + camX, this.y + verticalBob + camY, 0.0);
     
   }
