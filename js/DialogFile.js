@@ -1419,7 +1419,7 @@ let Gemini_end = [
         voice: undefined,
         text: "...",
         nextPage: null,
-        choices: [["They were fine! Nothing to worry about you. Your stress is quite surprising actually, considering there's no real source?", 8], ["Under considerable distress.", 7]],
+        choices: [["They were fine! Nothing to worry about. Your stress is surprising actually, considering there's no real source?", 8], ["Under considerable distress.", 7]],
 
         position: {x: 653, y: -5875}
     },
