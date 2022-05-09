@@ -150,7 +150,7 @@ function keyReleased(evt) {
         advanceDialog();
         break;
       case KEY_TAB:
-        tilemapEditor = !tilemapEditor;
+        //tilemapEditor = !tilemapEditor;
         document.getElementById("debugText").innerHTML = "Tilemap Editor: " + tilemapEditor;
         break;
       case KEY_I:
@@ -168,7 +168,7 @@ function keyReleased(evt) {
         }
         console.log('P key')
         break;
-      case KEY_LETTER_U:
+      /*case KEY_LETTER_U:
         console.log("Decrease Row");
         rooms[roomIndex][ROWS]--;
         rooms[roomIndex][GRID].splice(-rooms[roomIndex][COLS],rooms[roomIndex][COLS]);
@@ -193,7 +193,7 @@ function keyReleased(evt) {
         for(var i = 0; i<rooms[roomIndex][ROWS];i++){
           rooms[roomIndex][GRID].splice((i+1)*rooms[roomIndex][COLS]-1,0,TILE_GROUND);
         }
-        break;
+        break;*/
     }
     setKeyHoldState(evt.keyCode, p1, false);
   } // if loadComplete

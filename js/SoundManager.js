@@ -29,8 +29,8 @@ let currentSFX = [];
 let volumeControl = {
   // volume levels for query
   master: 1,
-  bgm: 1,
-  sfx: 1,
+  bgm: 0.8,
+  sfx: 0.5,
 
   // clamp revieved values
   checkVolumeValue(value) {
