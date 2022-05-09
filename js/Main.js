@@ -74,6 +74,7 @@ function animateTitlescreen() {
 }
 
 function StartGame() {
+  gameStarted = true;
   gameloop =
   setInterval(function() {
     updateEverything();
@@ -114,6 +115,10 @@ function updateEverything() {
 
 
 function drawEverything() {
+  if(showCredits) { // reached here for end of game sequence, not the same path as menu since drawEverything is going yet for menu
+    drawCredits();
+    return;
+  }
   //Drawing black background to avoid visual glitches
   colorRect(0, 0, canvas.width, canvas.height, "#000000FF");
   
@@ -176,13 +181,17 @@ function handleDialogBasedOnRoom (){
       break;
     case ROOM_TOP:
       console.log("To do endgame");
+      showCredits = true;
       break; 
   }
   if(rightDialogRoomFin && leftDialogRoomFin && belowDialogRoomFin){
-    rooms[ROOM_STARTING][GRID][8] = TILE_GROUND;
+    openEndRoom();
   }
 }
 
+function openEndRoom() {
+  rooms[ROOM_STARTING][GRID][8] = TILE_GROUND;
+}
 
 function drawInventoryTip() {
   var itemName = p1.inventory[addedItem].name;
@@ -281,7 +290,7 @@ var creditsList = [
 " ",
 "                    Game developed by members in HomeTeamGameDev.com - come make games with us!",
 " ",
-"                                                               - Click anywhere to start game -"
+"                                                               - Click anywhere to begin game -"
 ];
 
 function drawCredits() {

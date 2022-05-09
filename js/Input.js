@@ -78,12 +78,18 @@ function mouseMove(evt) {
   }
 }
 
+var gameStarted = false; // used as workaround for credits as end game scene to not restart game tick
+
 function mouseClick(evt) {
   if (loadComplete)
   {
     if(showCredits) {
-        startBGM();
-        StartGame();
+        if(gameStarted == false) {
+          startBGM();
+          StartGame();
+        } else { // end of game? hard reload to restore all states
+          location.reload();
+        }
         showCredits=false;
     } else if (gameloop != null) {      
       const dialogWasAdvanced = advanceDialog();
