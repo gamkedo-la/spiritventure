@@ -282,14 +282,14 @@ var creditsList = [
 "Bilal A. Cheema: Dialog choice system, music (sad room), dialog typing effect, dynamic chat box height, WASD support, camera panning, internal map editor",
 "Patrick McKeown: Teardrop sprite, floor and wall tile art, inventory item descriptions, room backtracking, songs (happy room, angry room, heavy drums track), Satah character, interaction particle spawning, pause button, audio compression, initial sound code, test dialog",
 "Evan Sklarski: Inventory tooltip system, sound manager code, title screen core functionality, room transition fix, dialog editing, font size fix, file reference refactor, additional sound integration, testing cheat, Linux compatibility fix",
-"Christer \"McFunkypants\" Kaitila: Title screen effects, assorted sound effects, book page sprite, dialog choice fix, sound integration, canvas stretch",
+"Christer \"McFunkypants\" Kaitila: Title screen effects, particle clouds, room lighting, assorted sound effects, book page sprite, dialog choice fix, sound integration, canvas stretch",
 "H Trayford: Dialog editor and related custom format (originally developed for Warped Radar), dialog editor additional bug fix, dialog mouse interaction",
 "Ryan Malm: Smoother camera movement fix tile seams",
 "Johan Östling: Sad vase of dead flowers",
 "Chris DeLeon: Dialog background animation code, choices word wrap, small bug fix",
+"Syed Daniyal Ali: Practice commit",
 " ",
 "                    Game developed by members in HomeTeamGameDev.com - come make games with us!",
-" ",
 "                                                               - Click anywhere to begin game -"
 ];
 
