@@ -84,6 +84,7 @@ function mouseClick(evt) {
     if(showCredits) {
         startBGM();
         StartGame();
+        showCredits=false;
     } else if (gameloop != null) {      
       const dialogWasAdvanced = advanceDialog();
       const dialogChoicesAvailable = checkDialogChoices();
